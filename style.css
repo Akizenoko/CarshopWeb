@@ -1,0 +1,177 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;  
+}
+
+body{
+    background-color: rgb(46, 39, 48);
+}
+
+#NavBar{
+    background-color: rgb(28, 22, 29);
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+}
+
+#button{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    text-align: center;
+    color: rgb(254, 248, 254);
+    border: 0px;
+    background-color: rgb(28, 22, 29);
+    height: 60px;
+    width: 150px;
+    transition: all 0.2s ease-in-out;
+}
+#button:hover{
+    font-size: 16px;
+    background-color: rgb(48, 32, 48);
+
+}
+
+/* Header style */
+
+#Header{
+    background-image: url(Assets/Images/Autorepair.webp);
+    background-position: center;
+    background-size: cover;
+    padding: 40px 30px;
+    background-blend-mode: darken;
+    background-color: rgba(44, 30, 45, 0.468);
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px 0px 50px 0px;
+}
+
+/* Header Info style */
+
+#Hinfo{
+    width: 700px;
+}
+
+#Hinfo h1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 3px 3px rgb(29, 16, 16, 0.7);
+    font-size: 100px;
+    color: rgb(254, 253, 255);
+}
+
+#Hinfo p{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 3px 3px rgb(29, 16, 16, 0.7);
+    font-size: 16px;
+    color: rgb(254, 253, 255);
+}
+
+/* End of Header Info style */
+
+/* Socials Info style */
+
+#socials{
+    margin: 30px 0px 0px 0px;
+    height: 130px;
+    width: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#socials img{
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25%;
+    border: 2px solid rgb(229, 223, 255);
+    margin: 0px 10px;
+    transition: all 0.2s ease-in-out;
+    opacity: 0.8;
+}
+
+#socials img:hover{
+    transform: translateY(-3px);
+    height: 60px;
+    border: 3px solid rgb(255, 255, 255);
+    opacity: 1;
+}
+
+#socials h1{
+    text-shadow: 3px 3px rgb(29, 16, 16, 0.7);
+    font-size: 16px;
+    color: aliceblue;
+    font-size: 25px;
+    flex-basis: 100%;         
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+}
+
+/* End of Socials Info style */
+
+/* End of Header style */
+
+/* Recommendations style */
+
+#Recommendations{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#Recommendations h1{
+    text-align: center;
+    color: aliceblue;
+    flex-basis: 100%;
+    margin: 0px 70px 30px 70px;
+}
+
+.shops{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+    border-radius: 15px;
+    background-color: rgb(77, 70, 84);
+    padding: 20px 30px 50px 20px;
+    margin: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.shops:hover{
+    background-color: rgb(90, 72, 109);
+    transform: translateY(-3px);
+}
+
+.shops img{
+    border-radius: 15px;
+    width: 170px;
+    height: 120px;
+}
+
+#recinfo{
+    color: aliceblue;
+    margin: 10px 0px 0px 0px;
+    width: 310px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+#recinfo h1{
+    margin: 0px 0px 10px 0px;
+
+}
+
+#recinfo p{
+    font-size: 13px;
+
+}
+
