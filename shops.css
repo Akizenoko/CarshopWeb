@@ -10,7 +10,7 @@ body{
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    background-image: linear-gradient( rgb(46, 39, 48),rgba(0, 0, 0, 0.609));
+    background-image: linear-gradient( rgba(101, 80, 107, 0.573),rgba(17, 1, 23, 0.79));
     background-color: rgb(46, 39, 48);
 }
 
@@ -130,8 +130,6 @@ body{
 #Shops{
     border-radius: 20px;
     margin: 10px;
-    background-image: linear-gradient(rgba(46, 39, 48, 0.436),rgba(83, 40, 90, 0.262));
-    background-color: rgb(52, 43, 52);
     flex-wrap: wrap;
     align-content: center;
     text-align: center;
@@ -142,7 +140,7 @@ body{
 }
 
 #ShopsAccount{
-    background-color: rgba(103, 81, 116, 0.508);
+    background-color: rgba(119, 89, 136, 0.246);
     flex-wrap: wrap;
     margin: 20px 10px 20px 10px;
     display: flex;
