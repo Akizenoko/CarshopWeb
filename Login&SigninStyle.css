@@ -46,20 +46,20 @@ body{
 }
 
 #LoginBox h1{
-    color: rgb(204, 253, 223);
+    color: rgb(214, 159, 241);
 }
 
 
 #LoginDetails{
     font-size: 13px;
-    color: rgb(229, 255, 233);
+    color: rgb(233, 195, 248);
     text-align: left;
     margin: 30px;
     width: 204px;
 }
 
 #LoginDetails p{
-    color: rgb(208, 254, 181);
+    color: rgb(181, 247, 227);
     text-align: right;
     font-size: 11px;
     margin: 6px 0px 0px 0px;
@@ -84,7 +84,7 @@ body{
 
 #LoginBox Button{
     margin: 20px 0px 10px 0px;
-    background-color: rgb(220, 248, 238);
+    background-color: rgb(235, 195, 247);
     color: rgb(59, 73, 73);
     font-weight: 900;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -96,7 +96,7 @@ body{
 }
 
 #LoginBox Button:hover{
-    background-color: rgb(159, 251, 219);
+    background-color: rgb(230, 139, 255);
     color: rgb(28, 44, 44);
     transform: translateY(-2px);
     
@@ -106,18 +106,18 @@ body{
     text-align: center;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 9px;
-    color: rgb(204, 253, 223);
+    color: rgb(216, 149, 250);
 }
 
 #LoginBox a{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(224, 196, 247);
+    color: rgb(169, 236, 224);
     text-decoration: none;
     transition: all 0.2s ease-in-out;
 }
 
 #LoginBox a:hover{
-    color: rgb(255, 137, 235);
+    color: rgb(137, 212, 255);
 }
 
 /* End of Login Page Design */
@@ -152,12 +152,12 @@ body{
 }
 
 #Sign-inBox h1{
-    color: rgb(204, 253, 223);
+    color: rgb(228, 184, 250);
 }
 
 #Sign-inDetails{
     font-size: 13px;
-    color: rgb(229, 255, 233);
+    color: rgb(245, 190, 255);
     text-align: left;
     margin: 30px;
     width: 204px;
@@ -182,7 +182,7 @@ body{
 
 #Sign-inBox Button{
     margin: 20px 0px 10px 0px;
-    background-color: rgb(220, 248, 238);
+    background-color: rgb(250, 185, 251);
     color: rgb(59, 73, 73);
     font-weight: 900;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -195,7 +195,7 @@ body{
 }
 
 #Sign-inBox Button:hover{
-    background-color: rgb(159, 251, 219);
+    background-color: rgb(226, 137, 251);
     color: rgb(28, 44, 44);
     transform: translateY(-2px);
     
@@ -205,7 +205,7 @@ body{
     text-align: center;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 9px;
-    color: rgb(204, 253, 223);
+    color: rgb(245, 154, 252);
 }
 
 #Sign-inBox p{
@@ -213,18 +213,18 @@ body{
     text-align: center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 10px;
-    color: rgb(228, 250, 229);
+    color: rgb(192, 161, 199);
 }
 
 #Sign-inBox a{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(224, 196, 247);
+    color: rgb(140, 255, 215);
     text-decoration: none;
     transition: all 0.2s ease-in-out;
 }
 
 #Sign-inBox a:hover{
-    color: rgb(255, 137, 235);
+    color: rgb(0, 255, 195);
 }
 
 /* Security Sign-in Page Design */
@@ -247,7 +247,7 @@ body{
 }
 
 #SecuritySignin label{
-    color: rgb(229, 255, 233);
+    color: rgb(244, 213, 253);
     font-size: 13px;
 
 }
@@ -256,13 +256,13 @@ body{
     margin: 40px 10px 0px -15px;
     width: 100px;
     text-align: center;
-    color: rgb(229, 255, 233);
+    color: rgb(232, 205, 255);
 }
 
 #RadioThingy h1{ 
     text-align: center;
     font-size: 15px;
-    color: rgb(229, 255, 233);
+    color: rgb(226, 171, 253);
 }
 
 #RadioThingyBox{
@@ -315,7 +315,7 @@ body{
 
 #DescriptionofMechanic textarea{
     padding: 10px;
-    color: rgb(209, 250, 226);
+    color: rgb(239, 209, 250);
     height: 100px;
     width: 200px;
     border-radius: 10px;
@@ -325,7 +325,7 @@ body{
 #TermsConditions{
     margin: 20px 0px 0px 0px;
     font-size: 13px;
-    color: rgb(209, 250, 226);
+    color: rgb(226, 197, 250);
 }
 
 #TermsConditions input{
