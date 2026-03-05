@@ -54,7 +54,7 @@ body{
     font-size: 13px;
     color: rgb(229, 255, 233);
     text-align: left;
-    margin: 20px 0px 20px -10px;
+    margin: 30px;
     width: 204px;
 }
 
@@ -103,8 +103,7 @@ body{
 }
 
 #LoginBox h2{
-    padding: 0px 25px 0px 0px;
-    text-align: right;
+    text-align: center;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 9px;
     color: rgb(204, 253, 223);
@@ -160,7 +159,7 @@ body{
     font-size: 13px;
     color: rgb(229, 255, 233);
     text-align: left;
-    margin: 20px 0px 20px -10px;
+    margin: 30px;
     width: 204px;
 }
 
@@ -203,8 +202,7 @@ body{
 }
 
 #Sign-inBox h2{
-    padding: 0px 25px 0px 0px;
-    text-align: right;
+    text-align: center;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 9px;
     color: rgb(204, 253, 223);
@@ -237,7 +235,7 @@ body{
 }
 
 #SecuritySignin{
-    text-align: left;
+    text-align: center;
     margin: 30px 0px 20px 0px;
 
 }
@@ -245,6 +243,7 @@ body{
 #SecuritySignin input{
     color: rgb(229, 255, 233);
     border-radius: 10px;
+    margin: 0px 0px 0px 44px;
 }
 
 #SecuritySignin label{

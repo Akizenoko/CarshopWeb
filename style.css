@@ -18,34 +18,111 @@ body{
 /* Nav Bar style */
 
 #NavBar{
+    text-decoration: none;
     background-color: rgb(28, 22, 29);
     padding: 0px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0px;
     z-index: 5;
+    box-shadow: 0px 0px 50px rgba(4, 4, 4, 0.412);
 }
 
-#button{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 14px;
+#mainnavbar button{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12px;
     text-align: center;
-    color: rgb(189, 252, 230);
+    color: rgb(227, 180, 245);
     border: 0px;
     background-color: rgb(28, 22, 29);
     height: 60px;
-    width: 150px;
+    padding: 0px 20px 0px 20px;
     transition: all 0.2s ease-in-out;
 }
-#button:hover{
-    font-size: 16px;
+
+#mainnavbar button:hover {
+    transform: translateY(-1px);
     background-color: rgb(48, 32, 48);
 
 }
 
+#formiscelanious img{
+    opacity: 0.8;
+    height: 25px;
+    transition: all 0.2s ease-in-out;
+}
+
+#bell{
+    margin: 0px 20px 0px 0px;
+}
+
+#chat{
+    margin: 0px 20px 0px 0px;
+}
+
+
+#formiscelanious img:hover{
+    opacity: 1;
+    height: 25px;
+    margin: 0px 20px 0px 0px;
+    transform: translateY(-2px);
+}
+
+#forprofile #profile{
+    height: 37px;
+    border-radius: 50%;
+    margin: 0px 20px 0px 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+#forprofile #profile:hover{
+    border: 2px solid rgb(152, 108, 196);
+    transform: translateY(-2px);
+}
+
 /* End of Nav Bar style */
+
+/* Search bar design */
+#Header{
+    flex-wrap: wrap;
+    background-color: rgb(28, 22, 29);
+    padding: 20px 10px 20px 10px;
+    display: flex;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+#Header h1{
+    color: rgb(192, 171, 227);
+    text-align: center;
+}
+
+#Searchbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#Searchbar input{
+    color: rgb(231, 202, 255);
+    border: 0px solid black;
+    padding: 10px 10px 10px 20px;
+    width: 250px;
+    border-radius: 20px;
+    background-color: rgb(47, 38, 49);
+}
+
+#Searchbar img{
+    opacity: 0.8;
+    height: 25px;
+    margin: 0px 10px 0px 10px;
+}
+
+
+/* End of Search bar design */
 
 /* Header style */
 
@@ -139,8 +216,9 @@ body{
 }
 
 #Recommendations h1{
+    font-size: 30px;
     text-align: center;
-    color: rgb(174, 245, 235);
+    color: rgb(247, 217, 250);
     flex-basis: 100%;
     margin: 0px 70px 30px 70px;
 }
@@ -151,14 +229,15 @@ body{
     flex-wrap: wrap;
     display: flex;
     border-radius: 15px;
-    background-color: rgb(77, 70, 84);
+    background-image: linear-gradient(rgba(61, 50, 63, 0.451), rgb(38, 32, 40));
+    background-color: rgba(77, 70, 84, 0.374);
     padding: 20px 30px 30px 10px;
     margin: 10px;
     transition: all 0.2s ease-in-out;
 }
 
 .shops:hover{
-    background-color: rgb(90, 72, 109);
+    background-color: rgba(90, 72, 109, 0.576);
     transform: translateY(-3px);
 }
 
@@ -179,7 +258,7 @@ body{
 }
 
 #recinfo h2{
-    color: rgb(164, 240, 228);
+    color: rgb(218, 168, 233);
     margin: 0px 0px 10px 0px;
 
 }
@@ -192,3 +271,65 @@ body{
 /* End of Recommendations Info style */
 
 /* End of Recommendations style */
+
+/* Suggested Accounts Style */
+
+#MechanicsRecommendation{
+    border-radius: 25px;
+    margin: 30px;
+    background-image: linear-gradient(rgba(46, 39, 48, 0.436),rgba(83, 40, 90, 0.262));
+    background-color: rgb(52, 43, 52);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+#MechanicsRecommendation h1{
+    color: rgb(240, 198, 240);
+    font-size: 30px;
+    margin: 30px 0px;
+    flex-basis: 100%;
+}
+
+.Profiles{
+    justify-content: center;
+    text-align: left;
+    flex-wrap: wrap;
+    display: flex;
+    border-radius: 40px;
+    padding: 25px;
+    margin: 20px;
+    background-color: rgba(103, 81, 116, 0.508);
+    transition: all 0.2s ease-in-out;
+}
+
+.Profiles:hover{
+    transform: translateY(-5px);
+    background-color: rgba(131, 89, 156, 0.508);
+}
+
+.Profiles img{
+    border-radius: 50%;
+    height: 60px;
+    margin: 0px 5px 15px 0px;
+}
+
+#ProfileInfo{
+    margin: 0px 0px 0px 20px;
+    width: 30vh;
+}
+
+#ProfileInfo h1{
+    font-size: 25px;
+    margin: 0px 0px 10px 0px;
+    color: rgb(240, 198, 240);
+}
+
+#ProfileInfo p{
+    font-size:15px;
+    color: rgb(249, 249, 249);
+}
+
+
+/* End of Suggested Accounts Style */
