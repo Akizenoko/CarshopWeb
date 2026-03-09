@@ -141,8 +141,16 @@ body{
     margin: 0px;
 }
 
-#Sign-Out h1{
-    color:aliceblue;
+#Sign-Out{
+    text-decoration: none;
+    color: aliceblue;
+    border: none;
+    padding: 10px 0px 10px 10px;
+    font-size: 15px;
+}
+
+#listsSidebar a{
+    text-decoration: none;
 }
 
 .Tabs{
@@ -172,7 +180,7 @@ body{
 /* Header style */
 
 #Header{
-    background-image: url(Assets/Images/Autorepair.webp);
+    background-image: url(../Assets/Images/Autorepair.webp);
     background-position: center;
     background-size: cover;
     padding: 40px 30px;
