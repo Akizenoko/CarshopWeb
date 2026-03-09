@@ -6,12 +6,11 @@
 }
 
 body{
-    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: center;
-    background-size:cover;
-    background-image: linear-gradient( rgb(46, 39, 48),rgba(0, 0, 0, 0.459));
+    background-size: cover;
+    background-image: linear-gradient( rgb(4, 5, 24),rgba(6, 11, 37, 0.609));
     background-color: rgb(46, 39, 48);
-    background-attachment:fixed ;
 }
 
 /* End of Global Selectors */
@@ -35,12 +34,13 @@ body{
 #LoginBox{
     flex-wrap: wrap;
     text-align: center;
-    box-shadow: 0 0 20px rgba(4, 4, 4, 0.448);
+    box-shadow: 0 0 20px rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     border-radius: 10px;
     width: 350px;
     height: 450px;
-    background-color: rgb(70, 64, 79);
+    background-image: linear-gradient(rgba(20, 20, 162, 0.354),rgba(35, 13, 94, 0.209));
+    background-color: rgba(110, 108, 151, 0.371);
     padding: 40px;
     margin: 70px;
 }
@@ -63,11 +63,11 @@ body{
     text-align: center;
     margin: 0px 0px 20px 0px;
     font-size: 10px;
-    color: rgb(255, 255, 255);
+    color: rgb(157, 203, 255);
 }
 
 #LoginDetails p{
-    color: rgb(255, 205, 253);
+    color: rgb(145, 255, 253);
     text-align: right;
     font-size: 11px;
     margin: 6px 0px 0px 0px;
@@ -83,11 +83,11 @@ body{
 }
 
 #LoginDetails input{
-    color: aliceblue;
-    background-color: rgb(68, 61, 78);
+    color: rgb(0, 0, 0);
+    background-color: rgb(251, 251, 252);
     padding: 7px 30px 7px 10px;
     border-radius: 5px;
-    border: 1px solid rgb(130, 120, 150);
+    border: 0px solid rgb(29, 17, 255);
 }
 
 #LoginBox Button{
@@ -104,7 +104,7 @@ body{
 }
 
 #LoginBox Button:hover{
-    background-color: rgb(249, 227, 255);
+    background-color: rgb(187, 198, 248);
     color: rgb(28, 44, 44);
     transform: translateY(-2px);
     
@@ -119,13 +119,13 @@ body{
 
 #LoginBox a{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(232, 175, 251);
+    color: rgb(116, 241, 250);
     text-decoration: none;
     transition: all 0.2s ease-in-out;
 }
 
 #LoginBox a:hover{
-    color: rgb(158, 255, 208);
+    color: rgb(158, 158, 255);
 }
 
 /* End of Login Page Design */
@@ -154,7 +154,8 @@ body{
     color: rgb(255, 255, 255);
     border-radius: 10px;
     width: 350px;
-    background-color: rgb(70, 64, 79);
+    background-image: linear-gradient(rgba(20, 20, 162, 0.354),rgba(35, 13, 94, 0.209));
+    background-color: rgba(110, 108, 151, 0.371);
     padding: 40px;
     margin: 70px;
 }
@@ -181,8 +182,8 @@ body{
 }
 
 #Sign-inDetails input{
-    color: aliceblue;
-    background-color: rgb(68, 61, 78);
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     padding: 7px 30px 7px 10px;
     border-radius: 5px;
     border: 1px solid rgb(130, 120, 150);
@@ -203,7 +204,7 @@ body{
 }
 
 #Sign-inBox Button:hover{
-    background-color: rgb(244, 210, 255);
+    background-color: rgb(188, 188, 251);
     color: rgb(28, 44, 44);
     transform: translateY(-2px);
     
@@ -234,13 +235,13 @@ body{
 
 #Sign-inBox a{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(233, 173, 255);
+    color: rgb(109, 221, 255);
     text-decoration: none;
     transition: all 0.2s ease-in-out;
 }
 
 #Sign-inBox a:hover{
-    color: rgb(0, 255, 195);
+    color: rgb(197, 195, 255);
 }
 
 /* Security Sign-in Page Design */
@@ -303,10 +304,9 @@ body{
 }
 
 #Location p{
-
     border-radius: 10px 10px 0px 0px;
     padding: 6px;
-    background-color: rgb(47, 39, 55);
+    background-color: rgb(34, 27, 81);
     flex-basis: 100%;
     font-size: 9px;
     margin: 0px 0px 0px 0px;

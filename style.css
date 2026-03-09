@@ -141,7 +141,12 @@ body{
     margin: 0px;
 }
 
+#Sign-Out h1{
+    color:aliceblue;
+}
+
 .Tabs{
+    text-decoration: none;
     border: none;
     color: aliceblue;
     background: none ;

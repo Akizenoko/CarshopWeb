@@ -6,12 +6,185 @@
 }
 
 body{
-    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: center;
-    background-size:cover;
-    background-image: linear-gradient( rgb(46, 39, 48),rgba(0, 0, 0, 0.459));
+    background-size: cover;
+    background-image: linear-gradient( rgb(4, 5, 24),rgba(6, 11, 37, 0.609));
     background-color: rgb(46, 39, 48);
-    background-attachment:fixed ;
+}
+
+body h1{
+    color: rgb(255, 255, 255);
+    margin: 30px 0px 0px 20px;
+    font-size: 20px;
 }
 
 /* End of Global Selectors */
+
+/* Header Style */
+#Header{
+    text-align: center;
+    padding: 10px;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    background-color: rgb(34, 40, 79);
+}
+
+#left{
+    margin: 0px 0px 0px 0px;
+    border-radius: 20px;
+    background-color: rgb(199, 245, 255);
+    text-align: center;
+}
+
+#left h3{
+   padding: 10px;
+   width: 60px;
+}
+
+#left a{
+    text-decoration: none;
+    color: rgb(34, 47, 67);
+    font-size: 10px;
+}
+
+#center{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 0px;
+}
+
+#center img{
+    margin: 0px 8px 0px 0px;
+    height: 20px;
+}
+
+#center input{
+    width: 170px;
+    background-color: rgb(231, 245, 251);
+    height: 25px;
+    padding: 5px 0px 5px 10px;
+    border-radius: 10px;
+}
+
+#right{
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 0px;
+}
+
+#right img{
+    height: 25px;
+    margin: 0px 10px 0px 0px;
+}
+
+/* End of Header Style */
+
+/*Profile Style */
+
+#Profile{
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+    border-radius: 25px ;
+    margin: 10px;
+    padding: 20px;
+    background-color: rgb(34, 40, 79);
+}
+
+#Profile img{
+    border: 1px solid rgb(166, 243, 255);
+    border-radius: 50%;
+    height: 70px;
+    margin: 0px 30px 0px 20px;
+}
+
+#ProfileInfo{
+    color: white;
+}
+
+#ProfileInfo h1{
+    margin: 0px 0px 5px 0px;
+    color: rgb(164, 250, 220);
+}
+
+#ProfileInfo p{
+    font-size: 15px;
+    margin: 0px 0px 0px 0px;
+    color: white;
+}
+/* End of Profile Style */
+
+/* Personal Info Style */
+#PersonalInformation{
+    color: white;
+    border-radius: 20px;
+    padding: 30px 20px 30px 20px;
+    margin: 20px 10px 10px 10px;
+    background-color: rgb(34, 40, 79);
+}
+#Head{
+    padding: 0px 10px 20px 0px;
+    justify-content: space-between;
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.282);
+}
+
+#Head p{
+    box-shadow: 0px 0px 8px rgba(0, 255, 30, 0.213);
+    font-size: 15px;
+    color: rgb(254, 254, 254);
+    border-radius: 7px;
+    padding: 5px 15px 5px 15px;
+    background-color: rgb(38, 178, 101);
+    transition: all 0.2s ease-in-out;
+}
+
+#Head p:hover{
+    transform: translateY(-2px);
+    box-shadow: 0px 0px 8px rgba(0, 255, 30, 0.546);
+}
+
+#Head h1{
+    margin: 0px;
+}
+
+#Pinfo{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: flex;
+    margin: 10px 180px 0px 0px;
+}
+
+#rows{
+    margin: 0px 0px 0px 0px;
+    flex-direction: column;
+    display: flex;
+    padding: 0px 0px 0px 20px;
+}
+
+#Tabs{
+    margin: 20px 0px 10px 0px;
+}
+
+#Tabs h3{
+    font-size: 15px;
+}
+
+#Tabs p{
+    font-size: 13px;
+}
+
+
+/* End of Personal Info Style */
+
