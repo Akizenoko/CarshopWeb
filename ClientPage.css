@@ -1,0 +1,220 @@
+/* Global Selectors */
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;  
+}
+
+body{
+    text-align: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient( rgba(101, 80, 107, 0.573),rgba(17, 1, 23, 0.79));
+    background-color: rgb(46, 39, 48);
+}
+
+/* End of Global Selectors */
+
+/* Nav Bar style */
+
+#NavBar{
+    text-decoration: none;
+    background-color: rgb(28, 22, 29);
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+    box-shadow: 0px 0px 50px rgba(4, 4, 4, 0.412);
+}
+
+#mainnavbar .button{
+    flex-wrap: nowrap;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    border: 0px;
+    background-color: rgb(28, 22, 29);
+    height: 60px;
+    padding: 0px 10px 0px 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+#mainnavbar .button:hover {
+    transform: translateY(-1px);
+    background-color: rgb(48, 32, 48);
+
+}
+
+#formiscelanious img{
+    opacity: 0.8;
+    height: 25px;
+    transition: all 0.2s ease-in-out;
+}
+
+#bell{
+    margin: 0px 20px 0px 0px;
+}
+
+#chat{
+    margin: 0px 20px 0px 0px;
+}
+
+
+#formiscelanious img:hover{
+    opacity: 1;
+    height: 25px;
+    margin: 0px 20px 0px 0px;
+    transform: translateY(-2px);
+}
+
+#forprofile #profile{
+    height: 37px;
+    border-radius: 50%;
+    margin: 0px 20px 0px 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+#forprofile #profile:hover{
+    border: 2px solid rgb(152, 108, 196);
+    transform: translateY(-2px);
+}
+
+/* End of Nav Bar style */
+
+/* Search bar design */
+#Header{
+    flex-wrap: wrap;
+    background-color: rgb(28, 22, 29);
+    padding: 20px 10px 20px 10px;
+    display: flex;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+#Header h1{
+    color: rgb(252, 252, 252);
+    text-align: center;
+}
+
+#Searchbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#Searchbar input{
+    color: rgb(255, 255, 255);
+    border: 0px solid black;
+    padding: 10px 10px 10px 20px;
+    width: 250px;
+    border-radius: 20px;
+    background-color: rgb(47, 38, 49);
+}
+
+#Searchbar img{
+    opacity: 0.8;
+    height: 25px;
+    margin: 0px 10px 0px 10px;
+}
+
+
+/* End of Search bar design */
+
+/* Mechanics design */
+
+#ListOfClients{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 15px;
+    padding: 15px 20px;
+}
+
+
+#ClientsAccount{
+    margin: 0px 0px 15px 0px;
+    width: 230px;    
+    height: 130px;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 12px; 
+    background-color: rgb(95, 79, 101);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.398);
+    transition: all 0.2s ease-in-out;
+}
+
+.profile-img{
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.detail-labels,
+.detail-values{
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+}
+
+.detail-labels p{
+    font-size: 11px;
+    color: rgba(255,255,255,0.6);
+}
+
+.detail-values p{
+    font-size: 13px;
+    color: white;
+}
+
+.from-section{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.from-icon{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.from-text{
+    visibility: hidden;
+}
+
+
+#ClientsAccount:hover{
+    transform: translateY(-2px);
+    background-color: rgb(116, 86, 126);
+}
+
+
+#ClientInfo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+}
+
+#ClientInfo h1{
+    color: white;
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+
+#ClientInfo p{
+    color: rgba(255,255,255,0.8);
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+/* End of Mechanics design */
