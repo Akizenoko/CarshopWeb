@@ -1,0 +1,352 @@
+/* Global Selectors */
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;  
+}
+
+body{
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient( rgb(4, 5, 24),rgba(6, 11, 37, 0.609));
+    background-color: rgb(46, 39, 48);
+}
+
+/* End of Global Selectors */
+
+/* Login Page Design */
+
+#Login{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    animation: login 0.4s ease-in-out;
+}
+
+@keyframes login{
+    0%{transform: translateY(13px); opacity: 0;}
+    100%{transform: translateY(0px); opacity: 1;}
+}
+
+#LoginBox{
+    flex-wrap: wrap;
+    text-align: center;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 350px;
+    height: 450px;
+    background-image: linear-gradient(rgba(20, 20, 162, 0.354),rgba(35, 13, 94, 0.209));
+    background-color: rgba(110, 108, 151, 0.371);
+    padding: 40px;
+    margin: 70px;
+}
+
+#LoginBox h1{
+    color: rgb(255, 255, 255);
+}
+
+
+#LoginDetails{
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin: 30px;
+    width: 204px;
+}
+
+#LoginBox h3{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+    font-size: 10px;
+    color: rgb(157, 203, 255);
+}
+
+#LoginDetails p{
+    color: rgb(145, 255, 253);
+    text-align: right;
+    font-size: 11px;
+    margin: 6px 0px 0px 0px;
+}
+
+#LoginDetails label{
+    transition: all 0.2s ease-in-out;
+}
+
+#LoginDetails:hover label{
+    margin: 0px 0px 0px 5px;
+    font-weight: bolder;
+}
+
+#LoginDetails input{
+    color: rgb(0, 0, 0);
+    background-color: rgb(251, 251, 252);
+    padding: 7px 30px 7px 10px;
+    border-radius: 5px;
+    border: 0px solid rgb(29, 17, 255);
+}
+
+#LoginBox Button{
+    margin: 20px 0px 10px 0px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(59, 73, 73);
+    font-weight: 900;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    width: 240px;
+    border-radius: 20px ;
+    padding: 10px 50px 10px 50px;
+    transition: all 0.2s ease-in-out;
+}
+
+#LoginBox Button:hover{
+    background-color: rgb(187, 198, 248);
+    color: rgb(28, 44, 44);
+    transform: translateY(-2px);
+    
+}
+
+#LoginBox h2{
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 9px;
+    color: rgb(255, 255, 255);
+}
+
+#LoginBox a{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(116, 241, 250);
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+#LoginBox a:hover{
+    color: rgb(158, 158, 255);
+}
+
+/* End of Login Page Design */
+
+
+/* Sign-in Page Design */
+
+#Sign-in{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    animation: signin 0.4s ease-in-out;
+}
+
+@keyframes signin{
+    0%{transform: translateY(15px); opacity: 0;}
+    100%{transform: translateY(0px); opacity: 1;}
+}
+
+#Sign-inBox{
+    flex-wrap: wrap;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(4, 4, 4, 0.448);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 350px;
+    background-image: linear-gradient(rgba(20, 20, 162, 0.354),rgba(35, 13, 94, 0.209));
+    background-color: rgba(110, 108, 151, 0.371);
+    padding: 40px;
+    margin: 70px;
+}
+
+#Sign-inBox h1{
+    color: rgb(248, 248, 248);
+}
+
+#Sign-inDetails{
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin: 30px;
+    width: 204px;
+}
+
+#Sign-inDetails label{
+    transition: all 0.2s ease-in-out;
+}
+
+#Sign-inDetails:hover label{
+    margin: 0px 0px 0px 5px;
+    font-weight: bolder;
+}
+
+#Sign-inDetails input{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    padding: 7px 30px 7px 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(130, 120, 150);
+}
+
+#Sign-inBox Button{
+    margin: 20px 0px 10px 0px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(59, 73, 73);
+    font-weight: 900;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    width: 250px;
+    height: 50px;
+    border-radius: 20px ;
+    padding: 10px 30px 10px 30px;
+    transition: all 0.2s ease-in-out;
+}
+
+#Sign-inBox Button:hover{
+    background-color: rgb(188, 188, 251);
+    color: rgb(28, 44, 44);
+    transform: translateY(-2px);
+    
+}
+
+#Sign-inBox h2{
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 9px;
+    color: rgb(255, 255, 255);
+}
+
+#Sign-inBox h3{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+    font-size: 10px;
+    color: rgb(157, 203, 255);
+}
+
+#Sign-inBox p{
+    margin: 40px 0px 10px 0px;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    color: rgb(255, 255, 255);
+}
+
+#Sign-inBox a{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(109, 221, 255);
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+#Sign-inBox a:hover{
+    color: rgb(197, 195, 255);
+}
+
+/* Security Sign-in Page Design */
+
+#Security2{
+    display: flex;
+    margin: 50px 0px 20px 0px;
+}
+
+#SecuritySignin{
+    text-align: center;
+    margin: 30px 0px 20px 0px;
+
+}
+
+#SecuritySignin input{
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: 0px 0px 0px 44px;
+}
+
+#SecuritySignin label{
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+
+}
+
+#RadioThingy{
+    margin: 40px 10px 0px -15px;
+    width: 100px;
+    text-align: center;
+    color: rgb(254, 253, 255);
+}
+
+#RadioThingy h1{ 
+    text-align: center;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+}
+
+#RadioThingyBox{
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+    font-size: 12px;
+    margin: 10px 0px 0px 0px;
+}
+
+#RadioThingyBox label{
+    margin: 5px 0px;
+}
+
+#RadioThingyBox input{
+    margin: 5px 10px 5px 0px;
+}
+
+#Map{
+    width: 170px;
+    display: flex;
+}
+
+#Location p{
+    border-radius: 10px 10px 0px 0px;
+    padding: 6px;
+    background-color: rgb(34, 27, 81);
+    flex-basis: 100%;
+    font-size: 9px;
+    margin: 0px 0px 0px 0px;
+}
+
+#Location iframe{
+    background-color: rgb(255, 255, 255);
+    height: 180px;
+    width: 200px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+#DescriptionofMechanic{
+    margin: 30px 0px 0px 0px;
+}
+
+#DescriptionofMechanic h1{
+    font-size: 15px;
+    margin: 10px 0px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#DescriptionofMechanic textarea{
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    height: 100px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: rgb(57, 49, 60);
+}
+
+#TermsConditions{
+    margin: 20px 0px 0px 0px;
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+}
+
+#TermsConditions input{
+    margin: 0px 7px 0px 0px;
+}
+/* End Security of Sign-in Page Design */
+
+/* End of Sign-in Page Design */
