@@ -280,7 +280,7 @@ body{
     flex-wrap: wrap;
     color: aliceblue;
     margin: 20px 10px 10px 10px;
-    justify-content: space-evenly;
+    justify-content: left;
     display: flex;
 }
 

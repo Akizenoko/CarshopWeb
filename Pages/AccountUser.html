@@ -1,110 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Style/AccountUser.css">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../Style/AccountUser.css" />
+  <title>Account | My Profile</title>
 </head>
 <body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="btn-link" href="LandingPage.html">← Back</a>
+    </header>
 
-<section id="Header">
-        <div id ="left">
-            <a href="LandingPage.html"><h3>Back</h3></a>
-        </div>
-        <div id ="center">
-            <img src="../Assets/Logo/magnifying-glass.png">
-            <input type="text" placeholder="Search">
-        </div>
-        <div id ="right">
-            <img src="../Assets/Logo/bell.png">
-            <img src="../Assets/Logo/email.png">
-        </div>
-</section>
-
-<h1>My profile</h1>
-
-<section id="Profile">
-<img src="../Assets/Profiles/mcado.jpg">
-<div id="ProfileInfo">
-    <h1>Your Name</h1>
-    <p>annonymous@gmail.com</p>
-    <p>Customer</p>
-    <p>street, country</p>
-</div>
-</section>
-
-<section id="PersonalInformation">
-<div id="Head">
-<h1>Personal Information</h1>
-<p>Edit</p>
-</div>
-<div id="Pinfo">
-    <div id="rows">
-        <div id="Tabs">
-            <h3>First Name</h3>
-            <p>First Name</p>
+    <main class="content">
+      <section class="section profile-card">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Your account</p>
+            <h1>My profile</h1>
+          </div>
+          <button class="btn-outline">Edit profile</button>
         </div>
 
-        <div id="Tabs">
-            <h3>Email Adress</h3>
-            <p>Annonymous@gmail.com</p>
+        <div class="profile-row">
+          <img src="../Assets/Profiles/mcado.jpg" alt="Profile" />
+          <div class="profile-meta">
+            <h2>Your Name</h2>
+            <p>annonymous@gmail.com</p>
+            <p class="caps">Customer</p>
+            <p>Street, Country</p>
+          </div>
         </div>
-    </div>
+      </section>
 
-    <div id="rows">
-        <div id="Tabs">
-            <h3>Last Name</h3>
-            <p>Last Name</p>
+      <section class="section card">
+        <div class="section-head">
+          <h2>Personal Information</h2>
+          <button class="btn-tiny">Edit</button>
         </div>
-
-        <div id="Tabs">
-            <h3>Phone Number</h3>
-            <p>0912345678910</p>
+        <div class="grid-2">
+          <div class="field"><h3>First Name</h3><p>Your first name</p></div>
+          <div class="field"><h3>Email Address</h3><p>annonymous@gmail.com</p></div>
+          <div class="field"><h3>Last Name</h3><p>Your last name</p></div>
+          <div class="field"><h3>Phone Number</h3><p>0912345678910</p></div>
+          <div class="field"><h3>Date of Birth</h3><p>01/17/2007</p></div>
+          <div class="field"><h3>User Role</h3><p>Customer</p></div>
         </div>
-    </div>
+      </section>
 
-    <div id="rows">
-        <div id="Tabs">
-            <h3>Date of Birth</h3>
-            <p>1-17-2007</p>
+      <section class="section card">
+        <div class="section-head">
+          <h2>Address</h2>
+          <button class="btn-tiny">Edit</button>
         </div>
-
-        <div id="Tabs">
-            <h3>User Role</h3>
-            <p>Customer</p>
+        <div class="grid-3">
+          <div class="field"><h3>Country</h3><p>Your Country</p></div>
+          <div class="field"><h3>City</h3><p>Your City</p></div>
+          <div class="field"><h3>Postal Code</h3><p>12345</p></div>
         </div>
-    </div>
-</div>
-</section>
-
-<section id="Address">
-
-    <div id="Adhead">
-    <h1>Address</h1>
-    <p>Edit</p>
-    </div>
-
-        <div id="Info">
-
-            <div id="Adtab">
-                <h3>Country</h3>
-                <p>Your Country</p>
-            </div>
-
-            <div id="Adtab">
-                <h3>City</h3>
-                <p>Your City</p>
-            </div>
-
-            <div id="Adtab">
-                <h3>Postal Code</h3>
-                <p>Postal Code</p>
-            </div>
-            
-        </div>
-
-</section>
-
+      </section>
+    </main>
+  </div>
 </body>
 </html>

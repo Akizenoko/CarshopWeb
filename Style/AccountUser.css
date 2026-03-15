@@ -1,250 +1,188 @@
-/* Global Selectors */
-*{
-    padding: 0%;
-    margin: 0%;
-    box-sizing: border-box;  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    background-image: linear-gradient( rgb(4, 5, 24),rgba(6, 11, 37, 0.609));
-    background-color: rgb(46, 39, 48);
+:root {
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --bg: #0b1224;
+  --border: #334155;
+  --primary: #38bdf8;
 }
 
-body h1{
-    color: rgb(255, 255, 255);
-    margin: 30px 0px 0px 20px;
-    font-size: 20px;
+body {
+  min-height: 100vh;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #0b1224 0%, #111827 100%);
+  color: var(--text);
+  padding: 12px;
 }
 
-/* End of Global Selectors */
-
-/* Header Style */
-#Header{
-    text-align: center;
-    padding: 10px;
-    flex-wrap: wrap;
-    border-radius: 20px;
-    margin: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    align-items: center;
-    background-color: rgb(34, 40, 79);
+.page-shell {
+  max-width: 940px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
-#left{
-    margin: 0px 0px 0px 0px;
-    border-radius: 20px;
-    background-color: rgb(199, 245, 255);
-    text-align: center;
+.topbar {
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(19, 44, 61, 0.9);
+  padding: 20px 12px;
+  gap: 8px;
+  align-items: start;
+  justify-content: left;
 }
 
-#left h3{
-   padding: 10px;
-   width: 60px;
+.btn-link {
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid #334155;
+  background: #111827;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 7px 12px;
+  transition: all 0.2s ease-in-out;
 }
 
-#left a{
-    text-decoration: none;
-    color: rgb(34, 47, 67);
-    font-size: 10px;
+.btn-link:hover{
+  background-color: #1a303a;
+
 }
 
-#center{
-    display: flex;
-    align-items: center;
-    align-content: center;
-    padding: 0px;
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-#center img{
-    margin: 0px 8px 0px 0px;
-    height: 20px;
+.top-actions img,
+.search-box img {
+  width: 18px;
+  height: 18px;
 }
 
-#center input{
-    width: 170px;
-    background-color: rgb(231, 245, 251);
-    height: 25px;
-    padding: 5px 0px 5px 10px;
-    border-radius: 10px;
+.content { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 12px; 
 }
 
-#right{
-    margin: 0px 0px 0px 0px;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    padding: 0px;
+.section {
+  background: rgba(20, 35, 47, 0.9);
+  border-radius: 14px;
+  border: 1px solid #334155;
+  padding: 16px;
 }
 
-#right img{
-    height: 25px;
-    margin: 0px 10px 0px 0px;
+.profile-card { 
+  border-left: 4px solid var(--primary); 
 }
 
-/* End of Header Style */
-
-/*Profile Style */
-
-#Profile{
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    flex-direction: row;
-    display: flex;
-    border-radius: 25px ;
-    margin: 10px;
-    padding: 20px;
-    background-color: rgb(34, 40, 79);
+.profile-row { 
+  display: flex; 
+  gap: 14px; 
+  align-items: center; 
+  flex-wrap: wrap; 
 }
 
-#Profile img{
-    border: 1px solid rgb(166, 243, 255);
-    border-radius: 50%;
-    height: 70px;
-    margin: 0px 30px 0px 20px;
+.profile-row img { 
+  width: 80px; 
+  height: 80px; 
+  border-radius: 50%;
+  border: 2px solid var(--primary); 
+  object-fit: cover; 
 }
 
-#ProfileInfo{
-    color: white;
+.profile-meta h2 { 
+  margin-bottom: 6px; 
+  font-size: 1.1rem; 
 }
 
-#ProfileInfo h1{
-    margin: 0px 0px 5px 0px;
-    color: rgb(164, 250, 220);
+.profile-meta p { 
+  margin: 2px 0; 
+  color: #cbd5e1; 
+  font-size: .9rem; 
 }
 
-#ProfileInfo p{
-    font-size: 15px;
-    margin: 0px 0px 0px 0px;
-    color: white;
-}
-/* End of Profile Style */
-
-/* Personal Info Style */
-#PersonalInformation{
-    color: white;
-    border-radius: 20px;
-    padding: 30px 20px 30px 20px;
-    margin: 20px 10px 10px 10px;
-    background-color: rgb(34, 40, 79);
+.caps { 
+text-transform: uppercase; 
+letter-spacing: .08em; 
+color: #94a3b8; 
+font-size: .8rem; 
 }
 
-#Head{
-    padding: 0px 10px 20px 0px;
-    justify-content: space-between;
-    display: flex;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.282);
+.section-head { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  margin-bottom: 10px; 
+  gap: 10px; }
+
+.section-head h2 { 
+  font-size: 1.1rem; 
+  margin: 0; 
 }
 
-#Head p{
-    box-shadow: 0px 0px 8px rgba(0, 255, 30, 0.213);
-    font-size: 15px;
-    color: rgb(254, 254, 254);
-    border-radius: 7px;
-    padding: 5px 15px 5px 15px;
-    background-color: rgb(38, 178, 101);
-    transition: all 0.2s ease-in-out;
+.eyebrow { 
+  font-size: .72rem; 
+  margin-bottom: 4px; 
+  letter-spacing: .12em; 
+  text-transform: uppercase; 
+  color: var(--muted); 
 }
 
-#Head p:hover{
-    transform: translateY(-2px);
-    box-shadow: 0px 0px 8px rgba(0, 255, 30, 0.546);
+.btn-outline, .btn-tiny { 
+  border: 1px solid #334155; 
+  background: #111827; 
+  color: #e2e8f0; 
+  border-radius: 10px; 
+  padding: 7px 12px; 
+  font-weight: 600; 
+  cursor: pointer; 
 }
 
-#Head h1{
-    margin: 0px;
+.btn-outline:hover, .btn-tiny:hover { 
+  background: #1f2937; 
 }
 
-#Pinfo{
-    justify-content: space-between;
-    flex-wrap: wrap;
-    display: flex;
-    margin: 10px 180px 0px 0px;
+.grid-2 { 
+  display: grid; 
+  grid-template-columns: repeat(2, minmax(0, 1fr)); 
+  gap: 10px; 
 }
 
-#rows{
-    margin: 0px 0px 0px 0px;
-    flex-direction: column;
-    display: flex;
-    padding: 0px 0px 0px 20px;
+.grid-3 { 
+  display: grid; 
+  grid-template-columns: repeat(3, minmax(0, 1fr)); 
+  gap: 10px; 
 }
 
-#Tabs{
-    margin: 20px 0px 10px 0px;
+.field { 
+border: 1px solid #334155; 
+border-radius: 10px; padding: 10px; 
+background: #161527; 
 }
 
-#Tabs h3{
-    font-size: 15px;
+.field h3 { 
+font-size: .83rem; 
+color: #e2e8f0; 
+margin-bottom: 5px; 
 }
 
-#Tabs p{
-    font-size: 13px;
+.field p { 
+font-size: .8rem; 
+color: #cbd5e1; 
+margin: 0; 
 }
 
-
-/* End of Personal Info Style */
-
-/* Adress Info Style */
-
-#Address{
-    color: white;
-    border-radius: 20px;
-    padding: 30px 20px 30px 20px;
-    margin: 20px 10px 10px 10px;
-    background-color: rgb(34, 40, 79);
+@media (max-width: 860px) {
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  .search-box input { width: 120px; }
+  .topbar { justify-content: center; }
 }
-
-#Adhead{
-    display: flex;
-    padding: 0px 10px 20px 0px;
-    justify-content: space-between;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.282);
-}
-
-#Adhead p{
-    box-shadow: 0px 0px 8px rgba(0, 255, 30, 0.213);
-    font-size: 15px;
-    color: rgb(254, 254, 254);
-    border-radius: 7px;
-    padding: 5px 15px 5px 15px;
-    background-color: rgb(38, 178, 101);
-    transition: all 0.2s ease-in-out;
-}
-
-#Adhead p:hover{
-    transform: translateY(-2px);
-    box-shadow: 0px 0px 8px rgba(0, 255, 30, 0.546);
-}
-
-#Adhead h1{
-    margin: 0px;
-}
-
-#Info{
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 10px 180px 0px 0px;
-    flex-direction: row;
-    display: flex;
-    padding: 0px 0px 0px 20px;
-}
-
-#Adtab{
-    margin: 20px 0px 10px 0px;
-}
-
-#Adtab h3{
-    font-size: 15px;
-}
-
-#Adtab p{
-    font-size: 13px;
-}
-
-/* End of Adress Info Style */
 

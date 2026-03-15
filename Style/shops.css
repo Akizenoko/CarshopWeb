@@ -247,7 +247,8 @@ body{
 #ShopsAccount{
     border: 1px solid rgba(255, 255, 255, 0.363);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
-    background-color: rgba(90, 109, 149, 0.246);
+    background-image: linear-gradient(rgba(7, 62, 125, 0.487),rgba(10, 10, 28, 0.661));
+    background-color: rgba(45, 71, 128, 0.246);
     margin: 20px 5px 20px 5px;
     justify-content: center;
     padding: 15px 5px 15px 15px;
@@ -258,7 +259,7 @@ body{
 
 #ShopsAccount:hover{
     transform: translateY(-2px);
-    background-color: rgba(60, 70, 147, 0.508);
+    background-color: rgba(58, 70, 162, 0.698);
 }
 
 #Section1{
