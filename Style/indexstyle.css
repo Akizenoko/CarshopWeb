@@ -75,7 +75,8 @@ nav a:hover{
 /* FEATURES */
 
 .AboutStuff{
-    column-gap: 50px;
+    flex-wrap: wrap;
+    gap: 50px;
     align-content: center;
     align-items: center;
     justify-content: center;
