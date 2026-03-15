@@ -181,6 +181,24 @@ color: #cbd5e1;
 margin: 0; 
 }
 
+.field h5{ 
+font-size: 13px; 
+color: #c3daf7; 
+margin: 10px 0px 0px 0px; 
+}
+
+.field a{ 
+text-decoration: none;
+font-size: 13px; 
+color: #52a5ff; 
+margin: 10px 0px 0px 0px; 
+transition: all 0.2s ease-in;
+}
+
+.field a:hover{
+color: #75efff; 
+}
+
 @media (max-width: 860px) {
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
   .search-box input { width: 120px; }
