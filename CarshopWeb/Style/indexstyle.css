@@ -1,0 +1,168 @@
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:#f0f7ff;
+}
+
+/* HEADER */
+
+header{
+  background:#050e24;
+  color:white;
+  padding:20px;
+  text-align:center;
+}
+
+/* NAVBAR */
+
+nav a:hover{
+  color:#93c5fd;
+}
+
+/* HERO SECTION */
+
+.hero{
+    background-size: cover;
+    background-blend-mode: darken;
+    background-color: #00042bab;
+    background-image: url(/Assets/Images/Carshop3.jpg);  
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:40px;
+    text-shadow: 3px 3px rgb(0, 0, 0);
+}
+
+.hero p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:18px;
+    margin-bottom:30px;
+    text-shadow: 4px 4px rgb(0, 0, 0);
+}
+
+/* BUTTON */
+
+.btn{
+    margin: 0px 10px;
+    border: 2px solid rgba(255, 255, 255, 0.401);
+    background:rgb(171, 240, 255);
+    color:#0f0251;
+    padding:12px 28px;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover{
+    background:#a4b6fe;
+}
+
+#btn1{
+    border: 1px solid rgba(255, 255, 255, 0.589);
+    color: #f0f7ff;
+    background-color: #0a1936;
+}
+
+#btn1:hover{
+    background-color: #0d2451;
+}
+
+/* FEATURES */
+
+.AboutStuff{
+    flex-wrap: wrap;
+    gap: 50px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 100px 0px 100px 0px;
+    background-color: #050e24;
+}
+
+.details{
+    width: 300px;
+    border: 1px solid rgba(255, 255, 255, 0.622);
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    justify-content: center;
+    background-color:rgba(34, 44, 94, 0.54) ;
+    color: #aafeff;
+    transition: all 0.2s ease-in-out;
+}
+
+.details:hover{
+    transform: translateY(-5px);
+    border-color: #4097a8;
+    background-color: #0d213a;
+}
+
+.details h2{
+    font-size: 40px;
+}
+
+.details h1{
+    font-size: 20px;
+}
+
+
+.features{
+    background-image: linear-gradient(rgba(3, 68, 132, 0.318),rgba(26, 4, 62, 0.342)) ;
+    background-color: #061335;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+    padding:50px 20px;
+}
+
+.card{
+    color: #d1f9ff;
+    background:rgba(181, 198, 255, 0.526);
+    width:260px;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0, 0, 0, 0.765);
+    border-top:5px solid #09d6ff;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    background:rgba(181, 208, 255, 0.402);
+}
+
+.card h3{
+  color:#affcff;
+}
+
+/* HOW IT WORKS */
+
+.how{
+    color: #ffffff;
+    background:#415888;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.how h2{
+    color:#ffffff;
+}
+
+/* FOOTER */
+
+footer{
+  background:#0f172a;
+  color:white;
+  text-align:center;
+  padding:20px;
+  margin: 0px;
+}
+
