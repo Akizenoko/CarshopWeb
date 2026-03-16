@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/home.css"> 
+    <title>Shop Owner Dashboard | Fixit</title>
+</head>
+
+<body>
+    <div id="NavBar">
+        <div id="forprofile">
+            <i class="fa-solid fa-circle-user" id="profile"></i>
+        </div>
+        
+        <div id="mainnavbar">
+            <a href="home.html"><button class="button">Home</button></a>
+            <a href="manageOrder.html"><button class="button">Manage Orders</button></a>
+            <a href="shopFinances.html"><button class="button">Shop Finances</button></a>
+        </div>
+
+        <div id="formiscelanious">
+            <i class="fa-solid fa-bell" id="bell"></i>
+            <i class="fa-solid fa-comment-dots" id="chat"></i>
+        </div>
+    </div>
+
+    <div id="sidebar">
+        <div id="listsSidebar">
+            <div id="SidebarProf">
+                <a href="shopsAccountPage.html"><i class="fa-regular fa-circle-user" style="font-size: 50px; color: #5bc0de;"></i></a>
+                <h2>Shop</h2>
+                <p>shop@Fixit.com</p>
+            </div>
+            
+            <button class="Tabs">
+                <i class="fa-solid fa-users"></i>
+                <h1>Staff List</h1>
+            </button>
+            <button class="Tabs">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                <h1>Performance</h1>
+            </button>
+            <button class="Tabs">
+                <i class="fa-solid fa-gear"></i>
+                <h1>Settings</h1>
+            </button>
+            <a href="index.html" style="text-decoration: none;">
+                <button class="Tabs" id="Sign-Out">
+                    
+                    <h1>Sign-out</h1>
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div id="Header">
+        <div id="Hinfo">
+            <h1>Admin View</h1>
+            <p>Welcome back! Your shop is currently <strong>OPEN</strong>.</p>
+        </div>
+
+        <div id="socials">
+            <h1>Daily Goal</h1>
+            <i class="fa-solid fa-chart-line" style="font-size: 50px; color: white;"></i>
+            <p style="color: white; font-size: 24px; margin-left: 10px;">85%</p>
+        </div>
+    </div>
+
+    <div id="Recommendations">
+        <h1>Shop Performance</h1>
+        <div class="shops">
+            <div id="recinfo">
+                <i class="fa-solid fa-money-bill-trend-up" style="color: #28a745;"></i>
+                <h2>₱12,500.00</h2>
+                <p>Today's Earnings</p>
+            </div>
+        </div>
+        <div class="shops">
+            <div id="recinfo">
+                <i class="fa-solid fa-screwdriver-wrench" style="color: #5bc0de;"></i>
+                <h2>8</h2>
+                <p>Active Repairs</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
