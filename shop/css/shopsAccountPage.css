@@ -1,0 +1,171 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;  
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    background-color: #111322; 
+    color: white; 
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+body > h1 {
+    margin: 20px 30px 10px 30px;
+}
+
+#Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #1b1e36;
+}
+
+#left h3 {
+
+    background-color: #add8e6; 
+    color: #111322;
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+}
+
+#line {
+    text-decoration: none;
+}
+
+#center {
+    display: flex;
+    align-items: center;
+    background-color: #e7f5fb; 
+    padding: 5px 15px;
+    border-radius: 20px;
+    width: 300px;
+}
+
+#center i {
+    color: #555;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+#center input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+}
+
+#right i {
+    font-size: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    color: rgb(200, 200, 200);
+    transition: all 0.3s ease;
+}
+
+#right i:hover {
+    transform: scale(1.15);
+    color: #eaeef0;
+}
+
+#Profile, #PersonalInformation, #Address {
+    background-color: #232743; 
+    margin: 0 30px 20px 30px;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+#Profile{
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+    margin: 0 30px 20px 30px;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+#Profile i{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    margin: 0px 30px 0px 20px;
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ProfileInfo{
+    color: white;
+}
+
+#ProfileInfo h1{
+    margin: 0px 0px 5px 0px;
+    color: rgb(164, 250, 220);
+}
+
+#ProfileInfo p{
+    font-size: 15px;
+    margin: 0px 0px 0px 0px;
+    color: white;
+}
+
+#Head, #Adhead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #3d426b;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+#Head p, #Adhead p {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+}
+
+#Pinfo, #Info {
+    display: flex;
+    justify-content: space-between;
+}
+
+#rows, #Adtab {
+    flex: 1;
+}
+
+#Tabs {
+    margin-bottom: 20px;
+}
+
+#Tabs h3, #Adtab h3 {
+    font-size: 14px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+#Tabs p, #Adtab p {
+    font-size: 13px;
+    color: #aaa;
+
+}

@@ -1,0 +1,140 @@
+* { 
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box; 
+    font-family: sans-serif; 
+}
+
+body {
+    background-color: #111322;
+    background-image: linear-gradient(rgb(4, 5, 24), rgba(6, 11, 37, 0.609));
+    color: white;
+
+    min-height: 100vh;
+}
+
+#NavBar {
+    background-color: rgb(17, 12, 48);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#profile { 
+    font-size: 30px; 
+    color: white; 
+    cursor: pointer; 
+    margin-left: 20px; 
+}
+
+#mainnavbar .button {
+    background: none; 
+    border: none; 
+    color: white;
+    padding: 0 15px; 
+    height: 60px; 
+    cursor: pointer;
+}
+
+#mainnavbar .button:hover { 
+    background-color: #232743; 
+}
+
+#formiscelanious i { 
+    font-size: 20px; 
+    color: white; 
+    margin-right: 20px; 
+    cursor: pointer; 
+}
+
+#sidebar {
+    position: fixed;
+    left: -250px; 
+    top: 0;
+    width: 220px;
+    height: 100vh;
+    background-color: #0c0137;
+    transition: 0.5s ease;
+    z-index: 99;
+    padding-top: 80px;
+}
+#sidebar.active { 
+    left: 0; 
+}
+
+#SidebarProf { 
+    text-align: center; 
+    margin-bottom: 30px; 
+}
+
+#SidebarProf h2 { 
+    font-size: 18px; 
+    margin-top: 10px; 
+}
+
+.Tabs {
+    width: 100%;
+    background: none; border: none; color: white;
+    display: flex; align-items: center;
+    padding: 15px 20px; cursor: pointer;
+}
+
+.Tabs:hover { 
+    background-color: #1c1840; 
+}
+
+.Tabs i { 
+    font-size: 18px; 
+    width: 30px; 
+    color: #5bc0de; 
+}
+
+.Tabs h1 { 
+    font-size: 15px; 
+    font-weight: normal; 
+}
+
+
+#ContentArea { 
+    padding: 40px; 
+}
+
+.OrderTable { 
+    width: 100%; 
+    border-collapse: collapse; 
+    background: rgba(255, 255, 255, 0.03); 
+    border-radius: 12px; 
+    overflow: hidden; 
+}
+
+.OrderTable th, .OrderTable td { 
+    padding: 20px; 
+    text-align: left; 
+    border-bottom: 1px solid #232743; 
+}
+
+.OrderTable th { 
+    color: #5bc0de; 
+    background: rgba(0, 0, 0, 0.2); 
+    text-transform: uppercase; 
+    font-size: 14px; 
+}
+
+.status-pending { 
+    color: #f0ad4e; 
+    font-weight: bold; 
+}
+
+.update-btn { 
+    padding: 8px 16px; 
+    background-color: #5bc0de; 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    color: white; 
+}
+
