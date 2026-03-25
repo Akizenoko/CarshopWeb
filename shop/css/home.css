@@ -1,18 +1,16 @@
-
 * { 
     padding: 0; 
     margin: 0; 
     box-sizing: border-box; 
-    font-family: sans-serif; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 }
 
 body {
-    background-color: #111322;
+    background-color: #0b0d17;
     background-image: linear-gradient(rgb(4, 5, 24), rgba(6, 11, 37, 0.609));
     color: white;
     min-height: 100vh;
 }
-
 
 #NavBar {
     background-color: rgb(17, 12, 48);
@@ -23,6 +21,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
+    border-bottom: 1px solid #232743;
 }
 
 #profile { 
@@ -39,6 +38,7 @@ body {
     padding: 0 15px;
     height: 60px; 
     cursor: pointer;
+    font-weight: 600;
 }
 
 #mainnavbar .button:hover { 
@@ -64,19 +64,14 @@ body {
     padding-top: 80px;
 }
 
-#sidebar.active { 
-    left: 0; 
-}
+#sidebar.active { left: 0; }
 
 #SidebarProf {
     text-align: center;
     margin-bottom: 30px; 
 }
 
-#SidebarProf h2 { 
-    font-size: 18px; 
-    margin-top: 10px; 
-}
+#SidebarProf h2 { font-size: 18px; margin-top: 10px; }
 
 .Tabs {
     width: 100%;
@@ -89,27 +84,17 @@ body {
     cursor: pointer;
 }
 
-.Tabs:hover { 
-    background-color: #1c1840; 
-}
-
-.Tabs i { 
-    font-size: 18px; 
-    width: 30px; 
-    color: #5bc0de; 
-}
-
-.Tabs h1 { 
-    font-size: 15px; 
-    font-weight: normal; 
-}
+.Tabs:hover { background-color: #1c1840; }
+.Tabs i { font-size: 18px; width: 30px; color: #5bc0de; }
+.Tabs h1 { font-size: 15px; font-weight: normal; }
 
 #Header {
-    background-color: rgba(45, 52, 112, 0.453);
+    background-color: rgba(45, 52, 112, 0.2);
     padding: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 #Recommendations { 
@@ -117,15 +102,14 @@ body {
     text-align: center; 
 }
 
-#Recommendations h1 { 
-    margin-bottom: 20px; 
-}
+#Recommendations h1 { margin-bottom: 25px; font-size: 24px; color: #5bc0de; }
 
 .shops {
     display: inline-block;
-    background-color: rgba(77, 70, 84, 0.374);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    padding: 20px;
+    padding: 25px;
     margin: 10px;
     width: 250px;
     transition: 0.3s;
@@ -133,10 +117,96 @@ body {
 
 .shops:hover { 
     transform: translateY(-5px); 
-    background-color: rgba(32, 31, 91, 0.734); 
+    background-color: rgba(91, 192, 222, 0.15); 
+    border-color: #5bc0de;
 }
 
-#recinfo i { 
-    font-size: 40px; 
-    margin-bottom: 10px; 
+#recinfo i { font-size: 40px; margin-bottom: 15px; }
+
+/* NEW ANALYTICS STYLES */
+
+#Analytics {
+    padding: 0 40px 60px 40px;
 }
+
+.analytics-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.chart-box, .table-box {
+    background: rgba(17, 12, 48, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    flex: 1;
+    min-width: 400px;
+}
+
+.chart-box h2, .table-box h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #5bc0de;
+}
+
+/* CSS Bar Chart Simulation */
+.bar-chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 200px;
+    padding: 10px;
+    border-bottom: 2px solid #334155;
+}
+
+.bar {
+    width: 30px;
+    background: linear-gradient(to top, #5bc0de, #28a745);
+    border-radius: 5px 5px 0 0;
+    position: relative;
+    transition: 0.3s;
+}
+
+.bar:hover { opacity: 0.8; }
+
+.bar::after {
+    content: attr(data-day);
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+/* Table Styles */
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.history-table th {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #334155;
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.history-table td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 14px;
+}
+
+.status-done {
+    background: rgba(40, 167, 69, 0.2);
+    color: #4ade80;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
