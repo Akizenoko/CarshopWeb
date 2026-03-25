@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="../Style/Admin.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div id="NavBar">
+    <button id="menuBtn">☰</button>
+    <h2>Admin Panel</h2>
+    <a href="../index.html">
+    <button id="logout">Logout</button>
+    </a>
+</div>
+
+<!-- SIDEBAR -->
+<div id="sidebar">
+    <h3>Menu</h3>
+    <button class="tab">Dashboard</button>
+    <button class="tab">Users</button>
+    <button class="tab">Mechanics</button>
+    <button class="tab">Reports</button>
+</div>
+
+<!-- MAIN -->
+<div id="main">
+
+    <!-- STATS -->
+    <div class="stats">
+        <div class="card">
+            <h2>120</h2>
+            <p>Users</p>
+        </div>
+        <div class="card">
+            <h2>45</h2>
+            <p>Mechanics</p>
+        </div>
+        <div class="card">
+            <h2>78</h2>
+            <p>Jobs Total</p>
+        </div>
+        <div class="card">
+            <h2>78</h2>
+            <p>Shops</p>
+        </div>
+        <div class="card">
+            <h2>67</h2>
+            <p>Visitors</p>
+        </div>
+        <div class="card">
+            <h2>₱350k</h2>
+            <p>Revenue</p>
+        </div>
+    </div>
+
+    <!-- DASHBOARD GRID -->
+    <div class="dashboardGrid">
+
+        <!-- CHARTS -->
+        <div class="section small">
+            <h2>Jobs Analytics</h2>
+            <canvas id="jobsChart"></canvas>
+        </div>
+
+        <div class="section small">
+            <h2>User Growth</h2>
+            <canvas id="usersChart"></canvas>
+        </div>
+
+        <!-- SYSTEM STATUS -->
+        <div class="section">
+            <h2>System Status</h2>
+            <p>🟢 Server: Online</p>
+            <p>🟢 Database: Connected</p>
+            <p>🟡 Maintenance: None</p>
+        </div>
+
+        <!-- QUICK ACTIONS -->
+        <div class="section">
+            <h2>Quick Actions</h2>
+            <button class="actionBtn">Add User</button>
+            <button class="actionBtn">Add Mechanic</button>
+            <button class="actionBtn">Generate Report</button>
+        </div>
+
+    </div>
+
+
+    <!-- RECENT ACTIVITY -->
+    <div class="section">
+        <h2>Recent Activity</h2>
+        <ul class="activity">
+            <li>User Juan registered</li>
+            <li>Mechanic Pedro accepted a job</li>
+            <li>New review added (5⭐)</li>
+            <li>System backup completed</li>
+        </ul>
+    </div>
+
+</div>
+
+<!-- CHART LIBRARY -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<!-- YOUR JS -->
+<script src="../Admin.js"></script>
+
+</body>
+</html>

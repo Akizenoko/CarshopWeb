@@ -373,37 +373,76 @@ body{
 
 }
 
-#Section2{
+#MS{
+    justify-content: start;
+    flex-basis: 100%;
+    width:40px;
+    display: flex;
+    gap: 15px;
+    font-weight: bolder;
+    font-size: 17px;
+    align-items: center;
     flex-wrap: wrap;
-    font-size: 13px;
-    width: 320px;
-    align-content: center;
-    align-items: center;
-    margin: 30px 0px 0px 0px;
-    color: rgb(255, 255, 255);
-    justify-content: space-between;
-    display: flex;
+    color: aliceblue;
+    margin: 20px 10px 10px 10px;
+}
+#MS strong{
+    color: rgb(130, 255, 232);
 }
 
-#Section2 img{
-    height: 20px;
-    width: 20px;
-}
-
-#storelocation{
+.stsShop {
+    font-size: 10px;
     width: 100px;
-    justify-content: space-between;
-    align-content: center;
-    align-items: center;
-    display: flex;
+    padding: 5px 5px;
+    border-radius: 20PX;
+    background-color: rgba(8, 41, 12, 0.647);
+    border: 1px solid rgba(115, 255, 0, 0.63);
+    text-align: center; 
 }
 
-#storeratings{
-    width: 180px;
-    justify-content: space-between;
+#buttonsforS{
+    flex-basis:100%;
+    margin: 30px 20px 0px 20px;
+    display: flex;
     align-content: center;
     align-items: center;
-    display: flex;
+    justify-content: end;
+
+}
+
+#btn1S{
+    background-color: rgba(23, 18, 70, 0.485);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(252, 255, 255);
+    border: 1px solid rgba(164, 185, 255, 0.755);
+    width: 90px;
+    border-radius: 30px;
+    margin: 0px 5px;
+    padding: 13px;
+    transition: all 0.2s ease-in-out;
+}
+
+#btn2S{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 13px ;
+    border: 1px solid rgba(255, 255, 255, 0.321);
+    background-color: rgb(173, 200, 255);
+    color: rgb(0, 0, 0);
+    width: 90px;
+    border-radius: 30px;
+    margin: 0px 5px;
+    padding: 13px;
+    transition: all 0.2s ease-in-out;
+}
+
+#btn2S:hover{
+    transform: translateY(-2px);
+    background-color: rgb(207, 207, 255) ;
+}
+
+#btn1S:hover{
+    transform: translateY(-2px);
+    background-color: rgb(19, 19, 89) ;
 }
 
 /* End of Recommendations Info style */
@@ -413,11 +452,13 @@ body{
 /* Suggested Accounts Style */
 
 #MechanicsRecommendation{
+    padding: 60px;
     border-radius: 25px;
     margin: 30px;
     background-image: linear-gradient(rgba(12, 15, 47, 0.436),rgba(3, 3, 39, 0.538));
     background-color: rgb(27, 34, 65);
     display: flex;
+    gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
@@ -431,12 +472,13 @@ body{
 }
 
 .Profiles{
+    border: 1px solid rgba(255, 255, 255, 0.444);
+    width: 500px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
     display: flex;
     border-radius: 40px;
     padding: 25px;
-    margin: 20px;
     background-color: rgba(45, 52, 112, 0.453);
     transition: all 0.2s ease-in-out;
 }
@@ -447,12 +489,15 @@ body{
 }
 
 .Profiles img{
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 50%;
     height: 60px;
     margin: 0px 5px 15px 0px;
 }
 
 #ProfileInfo{
+    flex-direction: column;
+    display: flex;
     text-align: left;
     margin: 0px 0px 0px 20px;
     width: 30vh;
@@ -469,7 +514,76 @@ body{
     color: rgb(249, 249, 249);
 }
 
+#MD{
+    justify-content: space-around;
+    flex-basis: 100%;
+    width:40px;
+    display: flex;
+    gap: 15px;
+    font-weight: bolder;
+    font-size: 17px;
+    align-items: center;
+    flex-wrap: wrap;
+    color: aliceblue;
+    margin: 20px 10px 10px 10px;
+}
+#MD strong{
+    color: rgb(130, 255, 232);
+}
 
+.sts {
+    font-size: 10px;
+    width: 70px;
+    padding: 5px 5px;
+    border-radius: 20PX;
+    background-color: rgba(8, 41, 12, 0.647);
+    border: 1px solid rgba(115, 255, 0, 0.63);
+    text-align: center; 
+}
+
+#buttonsforM{
+    margin: 0px 20px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#btn1{
+    background-color: rgba(23, 18, 70, 0.485);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(252, 255, 255);
+    border: 1px solid rgba(164, 185, 255, 0.755);
+    width: 90px;
+    border-radius: 30px;
+    margin: 0px 5px;
+    padding: 13px;
+    transition: all 0.2s ease-in-out;
+}
+
+#btn2{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 13px ;
+    border: 1px solid rgba(255, 255, 255, 0.321);
+    background-color: rgb(173, 200, 255);
+    color: rgb(0, 0, 0);
+    width: 90px;
+    border-radius: 30px;
+    margin: 0px 5px;
+    padding: 13px;
+    transition: all 0.2s ease-in-out;
+}
+
+#btn2:hover{
+    transform: translateY(-2px);
+    background-color: rgb(207, 207, 255) ;
+}
+
+#btn1:hover{
+    transform: translateY(-2px);
+    background-color: rgb(19, 19, 89) ;
+}
 /* End of Suggested Accounts Style */
 
 /* FOOTER */

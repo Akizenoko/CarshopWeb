@@ -65,6 +65,29 @@ textarea {
     border: 1px solid #ccc;
 }
 
+.rush{
+    background-color: #212242;
+    border-radius: 20px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    margin: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.525);
+    gap: 5px;
+    display: flex;
+
+}
+
+.rush input{
+    width: 30px;
+    scale: 1.8;
+}
+
+.rush p{
+    font-size: 15px;   
+}
+
 button{
     font-weight: bolder;
     font-size: 15px;
