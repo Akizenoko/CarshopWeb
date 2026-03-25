@@ -21,37 +21,83 @@ nav a:hover{
 
 /* HERO SECTION */
 
-.hero{
+
+.nav{
+    z-index: 5;
+    box-shadow: 0px 0px 50px rgba(4, 4, 4, 0.412);
+    background-color: rgb(17, 12, 48);
+    top:0px;
+    position: sticky;
+    justify-content: end;
+    display: flex;
+    padding: 0px 40px;
+    font-size: 15px;
+}
+.nav a{
+     text-decoration: none;
+}
+
+.nav p{
+    color: rgb(255, 255, 255);
+    margin: 0px;
+    padding: 20px 30px;
+    background-color: rgb(17, 12, 48);
+    transition: all 0.2s ease-in-out;
+}
+
+.nav p:hover{
+    background-color: rgb(50, 41, 114);
+}
+
+.header{
+    flex-wrap: wrap;
+    gap: 70px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+    padding: 100px 0px 200px 0px;
+    background-image: url(../Assets/Images/Carshop3.jpg);
     background-size: cover;
     background-blend-mode: darken;
-    background-color: #00042bab;
-    background-image: url(/Assets/Images/Carshop3.jpg);  
-    color:white;
+    background-color: #010635b7;
+}
+
+.header h1{
+    text-align: left;
+    font-size: 50px;
+
+}
+
+.header p{
+    width: 500px;
+    text-align: left;
+    font-size: 20px;
+
+}
+.header img{
+    border: 1px solid white;
+    border-radius: 20px;
+    height: 200px;
+}
+
+.hero{
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+    color:rgb(255, 255, 255);
     text-align:center;
-    padding:80px 20px;
+    padding:20px 20px;
 }
-
-.hero h1{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size:40px;
-    text-shadow: 3px 3px rgb(0, 0, 0);
-}
-
-.hero p{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size:18px;
-    margin-bottom:30px;
-    text-shadow: 4px 4px rgb(0, 0, 0);
-}
-
 /* BUTTON */
 
 .btn{
+    font-size: 20px;
     margin: 0px 10px;
-    border: 2px solid rgba(255, 255, 255, 0.401);
+    border: 1px solid rgb(255, 255, 255);
     background:rgb(171, 240, 255);
-    color:#0f0251;
-    padding:12px 28px;
+    color:hsl(0, 0%, 0%);
+    padding:20px 40px;
     text-decoration:none;
     border-radius:30px;
     font-weight:bold;
@@ -63,9 +109,9 @@ nav a:hover{
 }
 
 #btn1{
-    border: 1px solid rgba(255, 255, 255, 0.589);
+    border: 1px solid rgb(255, 255, 255);
     color: #f0f7ff;
-    background-color: #0a1936;
+    background-color: #0a1936cb;
 }
 
 #btn1:hover{
@@ -87,12 +133,12 @@ nav a:hover{
 
 .details{
     width: 300px;
-    border: 1px solid rgba(255, 255, 255, 0.622);
+    border: 1px solid rgba(255, 255, 255, 0.441);
     border-radius: 20px;
     text-align: center;
     padding: 20px;
     justify-content: center;
-    background-color:rgba(34, 44, 94, 0.54) ;
+    background-color:rgba(34, 44, 94, 0.304) ;
     color: #aafeff;
     transition: all 0.2s ease-in-out;
 }
@@ -113,24 +159,23 @@ nav a:hover{
 
 
 .features{
-    background-image: linear-gradient(rgba(3, 68, 132, 0.318),rgba(26, 4, 62, 0.342)) ;
     background-color: #061335;
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
     gap:30px;
-    padding:50px 20px;
+    padding:100px 20px;
 }
 
 .card{
-    color: #d1f9ff;
-    background:rgba(181, 198, 255, 0.526);
+    color: #ffffff;
+    background:rgba(90, 103, 148, 0.526);
     width:260px;
     padding:25px;
     border-radius:10px;
     text-align:center;
     box-shadow:0 5px 20px rgba(0, 0, 0, 0.765);
-    border-top:5px solid #09d6ff;
+    border-top:5px solid #6f6ac7;
     transition: all 0.3s ease-in-out;
 }
 
@@ -140,7 +185,7 @@ nav a:hover{
 }
 
 .card h3{
-  color:#affcff;
+  color:#d3d8ff;
 }
 
 /* HOW IT WORKS */

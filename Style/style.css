@@ -194,7 +194,7 @@ body{
     background-image: url(../Assets/Images/Autorepair.webp);
     background-position: center;
     background-size: cover;
-    padding: 40px 30px;
+    padding: 40px 30px 100px 30px;
     background-blend-mode: darken;
     background-color: rgba(38, 33, 73, 0.738);
     text-align: left;
@@ -269,6 +269,45 @@ body{
 /* End of Socials Info style */
 
 /* End of Header style */
+
+/* GetMech style */
+
+.GetMech{
+    flex-basis: 100%;
+    margin: 30px 0px 0px 0px;
+    justify-content: center;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.GetMech button{ 
+    text-decoration: none;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgba(255, 255, 255, 0.319);
+    font-size: 25px;
+    width: 300px;
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding: 30px;
+    transition: all 0.2s ease-in-out;
+}
+
+.GetMech button:hover{ 
+    color: rgb(22, 19, 86);
+    background-color: rgb(202, 237, 245);
+    text-decoration: none;
+    transform: translateY(-4px);
+}
+
+.GetMech a{ 
+    text-decoration: none;
+}
 
 /* Recommendations style */
 
@@ -432,3 +471,13 @@ body{
 
 
 /* End of Suggested Accounts Style */
+
+/* FOOTER */
+
+footer{
+    border: 1px solid rgb(71, 70, 70);
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin: 0px;
+}

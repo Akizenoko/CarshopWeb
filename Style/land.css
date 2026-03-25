@@ -214,9 +214,10 @@ body {
     background-color: rgba(38, 33, 73, 0.738);
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgba(130, 120, 150, 0.4);
+    padding: 80px 70px;
 }
 
 #Hinfo {
@@ -226,7 +227,7 @@ body {
 #Hinfo h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-shadow: 3px 3px rgba(29, 16, 16, 0.7);
-    font-size: 2rem;
+    font-size: 50px;
     color: rgb(254, 253, 255);
     margin-bottom: 10px;
 }
@@ -234,40 +235,93 @@ body {
 #Hinfo p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-shadow: 3px 3px rgba(29, 16, 16, 0.7);
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.75);
+    font-size: 18px;
+    color: rgb(255, 255, 255);
     max-width: 500px;
     line-height: 1.6;
 }
 
-#socials {
-    text-align: center;
-    margin: 30px 0px 0px 0px;
-}
-
-#socials h1 {
+.Availability{
     text-shadow: 3px 3px rgba(29, 16, 16, 0.7);
-    font-size: 0.9rem;
-    color: rgb(255, 255, 255);
-    flex-basis: 100%;
-    text-align: center;
-    margin: 0px 0px 10px 0px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
 }
 
-#socials img {
-    height: 60px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 25%;
-    border: 2px solid rgb(229, 223, 255);
-    margin: 0px 10px;
+.Availability button{
+    width: 180px;
+    margin-top: 20px;
+    border: 2px solid rgba(115, 255, 0, 0.592);
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgba(8, 41, 12, 0.647);
+    color: rgb(174, 255, 174);
+    font-weight: bolder;
+    transition: 0.3s;
+}
+
+/* Active class for Online */
+button.online {
+    border: 2px solid rgba(255, 0, 0, 0.542);
+    color: rgb(255, 190, 190);
+    background-color: rgba(35, 2, 2, 0.715);
+}
+
+/* ── Customer Served ── */
+
+.customerServedsec{
+    background-image: linear-gradient(rgba(20, 20, 162, 0.2), rgba(35, 13, 94, 0.15));
+    gap: 20px;
+    font-size: 15px;
+    justify-content: center;
+    display: flex;
+    padding: 30px;
+}
+
+.customerServed{
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(110, 108, 151, 0.2);
+    border: 1px solid rgba(130, 120, 150, 0.4);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    gap: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     transition: all 0.2s ease-in-out;
-    opacity: 0.8;
+
 }
 
-#socials img:hover {
-    transform: translateY(-3px);
-    border: 3px solid rgb(255, 255, 255);
-    opacity: 1;
+.customerServed:hover {
+    background-color: rgba(110, 108, 151, 0.371);
+    border-color: rgb(157, 203, 255);
+}
+
+.customerServed p{
+    color: aqua;
+    display: flex;
+    font-size: 30px;
+}
+
+.stars{
+    margin: 5px;
+    gap: 10px;
+    display: flex;
+}
+
+.stars img{
+   height: 25px;
+}
+
+strong{
+   color: rgb(0, 251, 255);
 }
 
 /* ── SECTION TITLES ── */
@@ -536,4 +590,14 @@ body {
     font-size: 0.88rem;
     color: rgba(255, 255, 255, 0.75);
     line-height: 1.5;
+}
+
+/* FOOTER */
+
+footer{
+    border: 1px solid rgb(71, 70, 70);
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin: 0px;
 }

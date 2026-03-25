@@ -110,11 +110,14 @@ body {
   font-size: .9rem; 
 }
 
-.caps { 
-text-transform: uppercase; 
-letter-spacing: .08em; 
-color: #94a3b8; 
-font-size: .8rem; 
+.caps {
+width: 90px;
+padding: 5px 5px;
+border-radius: 20PX;
+background-color: rgba(20, 89, 159, 0.548);
+border: 1px solid rgb(161, 231, 255);
+text-align: center; 
+font-size: 1px; 
 }
 
 .section-head { 
@@ -164,9 +167,17 @@ font-size: .8rem;
 }
 
 .field { 
+color: white;
 border: 1px solid #334155; 
 border-radius: 10px; padding: 10px; 
 background: #161527; 
+}
+
+.fieldSelect { 
+color: white;
+border: none;
+background: #161527; 
+padding: 0px 0px 0px 0px ;
 }
 
 .field h3 { 
@@ -203,5 +214,94 @@ color: #75efff;
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
   .search-box input { width: 120px; }
   .topbar { justify-content: center; }
+}
+
+/* Schedule Style */
+
+#Schedule {
+  border: 1px solid var(--border);
+    border-radius: 20px;
+    margin: 20px 5px 10px 5px;
+    padding: 10px 30px 40px 30px;
+    background: rgba(19, 44, 61, 0.9);
+    border-top: 1px solid rgba(130, 120, 150, 0.4);
+    border-bottom: 1px solid rgba(130, 120, 150, 0.4);
+}
+
+.HeadSched{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 0px 30px 0px;
+}
+
+.HeadSched h1{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.HeadSched h2{
+  background-color: #012130;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+#ScheduleGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 16px;
+}
+
+.ScheduleDay {
+    background-color: rgba(110, 108, 151, 0.2);
+    border: 1px solid rgba(130, 120, 150, 0.4);
+    border-radius: 10px;
+    padding: 18px 14px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+}
+
+.ScheduleDay:hover {
+    background-color: rgba(110, 108, 151, 0.371);
+    border-color: rgb(157, 203, 255);
+}
+
+.ScheduleDay h2 {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+    color: rgb(255, 255, 255);
+}
+
+.ScheduleDay p {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 6px;
+}
+
+.Available {
+    color: rgb(145, 255, 253) !important;
+    font-weight: 700;
+}
+
+.Busy {
+    color: rgb(188, 188, 251) !important;
+    font-weight: 700;
+}
+
+.Off {
+    color: rgba(255, 255, 255, 0.4) !important;
+    font-weight: 600;
+}
+
+/* End of Schedule Style */
+
+/* FOOTER */
+
+footer{
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin: 0px;
 }
 

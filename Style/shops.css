@@ -328,3 +328,13 @@ body{
 }
 
 /* End of Shops Account design */
+
+/* FOOTER */
+
+footer{
+    border: 1px solid rgb(71, 70, 70);
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin: 0px;
+}

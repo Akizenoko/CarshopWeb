@@ -15,8 +15,8 @@
         </div>
         
         <div id="mainnavbar">
-            <a href="MechLand.html"><button class="button">Home</button></a>
-            <a href="ClientPage.html"><button class="button">Clients</button></a>
+            <a href="MechLand.html"><button class="button">Dashboard</button></a>
+            <a href="ClientPage.html"><button class="button">Customers</button></a>
         </div>
 
         <div id="formiscelanious">
@@ -29,7 +29,7 @@
     <div id="sidebar">
         <div id="listsSidebar">
             <div id="SidebarProf">
-                <a href="AccountUser.html"><img src="../Assets/Profiles/mcado.jpg"></a>
+                <a href="AccountMechanic.html"><img src="../Assets/Profiles/mcado.jpg"></a>
                 <h2>Mechanic Name</h2>
                 <p>mechanic@gmail.com</p>
             </div>
@@ -51,92 +51,41 @@
 
     <div id="Header">
         <div id="Hinfo">
-            <h1>Welcome back, Mechanic!</h1>
+            <h1>Welcome, Mechanic!</h1>
             <p>Here's what's happening with your jobs today.
                Stay on top of your requests, active repairs, schedule, and reviews.</p>
-               
         </div>
-
-        <div id="socials">
-            <h1>Check us out on</h1>
-            <img src="../Assets/Logo/facebook.png"/>
-            <img src="../Assets/Logo/instagram.png"/>
-            <img src="../Assets/Logo/twitter.png"/>
+        <div class="Availability">
+            <h1>Available Today?</h1>
+            <button id="statusBtn">Available</button>
         </div>
+        
     </div>
 
-   
-    <div id="JobRequests">
-        <h1>Incoming Job Requests</h1>
+    <div class="customerServedsec">
+        <div class="customerServed">
+            <h1>Customer Served</h1>
+            <p>20</p>
+        </div>
 
-        <div class="JobCard" id="job1">
-            <div id="JobCardInfo">
-                <h2>Customer Name</h2>
-                <p><strong>Issue:</strong> Engine won't start</p>
-                <p><strong>Location:</strong> Zamboanga City</p>
-                <p><strong>Date Requested:</strong> March 13, 2025</p>
-            </div>
-            <div id="JobCardActions">
-                <button class="AcceptBtn">Accept</button>
-                <button class="DeclineBtn">Decline</button>
+        <div class="customerServed">
+            <h1>Average Rating</h1>
+            <div class="stars">
+            <img src="../Assets/Logo/star.png">
+            <img src="../Assets/Logo/star.png">
+            <img src="../Assets/Logo/star.png">
+            <img src="../Assets/Logo/star.png">
             </div>
         </div>
 
-        <div class="JobCard" id="job2">
-            <div id="JobCardInfo">
-                <h2>Customer Name</h2>
-                <p><strong>Issue:</strong> Brake pads replacement</p>
-                <p><strong>Location:</strong> Zamboanga City</p>
-                <p><strong>Date Requested:</strong> March 13, 2025</p>
-            </div>
-            <div id="JobCardActions">
-                <button class="AcceptBtn">Accept</button>
-                <button class="DeclineBtn">Decline</button>
-            </div>
+        <div class="customerServed">
+            <h1>Total Earnings</h1>
+            <p>200,000 php</p>
         </div>
 
-        <div class="JobCard" id="job3">
-            <div id="JobCardInfo">
-                <h2>Customer Name</h2>
-                <p><strong>Issue:</strong> Oil change and general checkup</p>
-                <p><strong>Location:</strong> Zamboanga City</p>
-                <p><strong>Date Requested:</strong> March 14, 2025</p>
-            </div>
-            <div id="JobCardActions">
-                <button class="AcceptBtn">Accept</button>
-                <button class="DeclineBtn">Decline</button>
-            </div>
-        </div>
-
-    </div>
-
-    <div id="ActiveRepairs">
-        <h1>Active / Ongoing Repairs</h1>
-
-        <div class="RepairCard" id="repair1">
-            <img src="../Assets/Profiles/mcado.jpg">
-            <div id="RepairInfo">
-                <h2>Customer Name</h2>
-                <p><strong>Job:</strong> Transmission fluid flush</p>
-                <p><strong>Status:</strong> In Progress</p>
-                <p><strong>Started:</strong> March 12, 2025</p>
-            </div>
-            <div id="RepairStatus">
-                <button class="UpdateBtn">Update Status</button>
-            </div>
-        </div>
-
-        <div class="RepairCard" id="repair2">
-            <img src="../Assets/Profiles/mcado.jpg">
-            <div id="RepairInfo">
-                <h2>Customer Name</h2>
-                <p><strong>Job:</strong> Tire rotation and alignment</p>
-                <p><strong>Status:</strong> Awaiting Parts</p>
-                <p><strong>Started:</strong> March 11, 2025</p>
-            </div>
-            <div id="RepairStatus">
-                <button class="UpdateBtn">Update Status</button>
-            </div>
+        <div class="customerServed">
+            <h1>Time on the Website</h1>
+            <p> 54 days</p>
         </div>
 
     </div>
@@ -190,9 +139,85 @@
 
         </div>
     </div>
+    
+    <div id="JobRequests">
+        <h1>Incoming Job Requests - 3</h1>
+
+        <div class="JobCard" id="job1">
+            <div id="JobCardInfo">
+                <h2>Customer Name</h2>
+                <p><strong>Issue:</strong> Engine won't start</p>
+                <p><strong>Location:</strong> Zamboanga City</p>
+                <p><strong>Date Requested:</strong> March 13, 2025</p>
+            </div>
+            <div id="JobCardActions">
+                <button class="AcceptBtn">Accept</button>
+                <button class="DeclineBtn">Decline</button>
+            </div>
+        </div>
+
+        <div class="JobCard" id="job2">
+            <div id="JobCardInfo">
+                <h2>Customer Name</h2>
+                <p><strong>Issue:</strong> Brake pads replacement</p>
+                <p><strong>Location:</strong> Zamboanga City</p>
+                <p><strong>Date Requested:</strong> March 13, 2025</p>
+            </div>
+            <div id="JobCardActions">
+                <button class="AcceptBtn">Accept</button>
+                <button class="DeclineBtn">Decline</button>
+            </div>
+        </div>
+
+        <div class="JobCard" id="job3">
+            <div id="JobCardInfo">
+                <h2>Customer Name</h2>
+                <p><strong>Issue:</strong> Oil change and general checkup</p>
+                <p><strong>Location:</strong> Zamboanga City</p>
+                <p><strong>Date Requested:</strong> March 14, 2025</p>
+            </div>
+            <div id="JobCardActions">
+                <button class="AcceptBtn">Accept</button>
+                <button class="DeclineBtn">Decline</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="ActiveRepairs">
+        <h1>Active / Ongoing Repairs - 2</h1>
+
+        <div class="RepairCard" id="repair1">
+            <img src="../Assets/Profiles/mcado.jpg">
+            <div id="RepairInfo">
+                <h2>Customer Name</h2>
+                <p><strong>Job:</strong> Transmission fluid flush</p>
+                <p><strong>Status:</strong> In Progress</p>
+                <p><strong>Started:</strong> March 12, 2025</p>
+            </div>
+            <div id="RepairStatus">
+                <button class="UpdateBtn">Update Status</button>
+            </div>
+        </div>
+
+        <div class="RepairCard" id="repair2">
+            <img src="../Assets/Profiles/mcado.jpg">
+            <div id="RepairInfo">
+                <h2>Customer Name</h2>
+                <p><strong>Job:</strong> Tire rotation and alignment</p>
+                <p><strong>Status:</strong> Awaiting Parts</p>
+                <p><strong>Started:</strong> March 11, 2025</p>
+            </div>
+            <div id="RepairStatus">
+                <button class="UpdateBtn">Update Status</button>
+            </div>
+        </div>
+
+    </div>
+
 
     <div id="Reviews">
-        <h1>Customer Reviews</h1>
+        <h1>Customer Reviews - 3</h1>
 
         <div class="ReviewCard" id="review1">
             <img src="../Assets/Profiles/mcado.jpg">
@@ -224,5 +249,8 @@
     </div>
 
 </body>
+<footer>
+<p>© 2026 PrecisionDrive Auto | Connecting Cars with Experts</p>
+</footer>
 <script src="../script.js"></script>
 </html>

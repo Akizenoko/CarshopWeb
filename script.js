@@ -11,3 +11,18 @@ document.addEventListener("click", (event) => {
     sidebar.classList.remove("active");
   }
 });
+
+const statusBtn = document.getElementById("statusBtn");
+
+// Add click event
+statusBtn.addEventListener("click", () => {
+    // Toggle the "online" class
+    statusBtn.classList.toggle("online");
+
+    // Change text depending on status
+    if (statusBtn.classList.contains("online")) {
+        statusBtn.innerText = "Unavailable";
+    } else {
+        statusBtn.innerText = "Available";
+    }
+});

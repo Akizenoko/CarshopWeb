@@ -3,67 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../Style/Login&SigninStyle.css" rel="stylesheet"/>
+    <link href="../Style/Msignin.css" rel="stylesheet"/>
     <title>Sign-in | PrecisionDrive Auto</title>
 </head>
 <body>
-    
-    <div id="Sign-in">
-        <div id="Sign-inBox">
 
-                <h1>Become a Mechanic!</h1>
-                    
-                <form action="MechLand.html">
-                    <div id="Sign-inDetails">
-                        <label>First Name</label>
-                        <input type="text" placeholder="First Name" required> 
-                    </div>
+<div id="signin">
+    <div id="signin-box">
 
-                    <div id="Sign-inDetails">
-                        <label>Middle Initial</label>
-                        <input type="text" placeholder="Middle Initial" required> 
-                    </div>
+        <h3>Join Our Team</h3>
+        <h1>Become a Mechanic!</h1>
 
-                    <div id="Sign-inDetails">
-                        <label>Last Name</label>
-                        <input type="text" placeholder="Last Name" required> 
-                    </div>
+        <form action="MechLand.html">
 
-                    <div id="Sign-inDetails">
-                        <label>Phone Number</label>
-                        <input type="tel" placeholder="Phone Number" required> 
-                    </div>
+            <!-- File Uploads -->
+            <fieldset class="form-group">
+                <legend>Documents</legend>
+                <div class="form-field">
+                    <label>Attach NBI Clearance</label>
+                    <input type="file">
+                </div>
+                <div class="form-field">
+                    <label>Attach Any Valid ID</label>
+                    <input type="file">
+                </div>
+                <div class="form-field">
+                    <label>Attach a Selfie</label>
+                    <input type="file">
+                </div>
+            </fieldset>
 
-                    <div id="SecuritySignin">
-                        <label>Attach NBI Clearance</label>
-                        <input type="file" required> 
-                    </div>
+            <!-- Description -->
+            <fieldset class="form-group">
+                <legend>About You</legend>
+                <div class="form-field">
+                    <label>Write a Short Description of Yourself</label>
+                    <textarea placeholder="Type here..."></textarea>
+                </div>
+            </fieldset>
 
-                    <div id="SecuritySignin">
-                        <label>Attach Any Form of Valid ID</label>
-                        <input type="file" required> 
-                    </div>
+            <!-- Terms -->
+            <div id="terms-conditions">
+                <input type="checkbox" required>
+                <label>Accept Terms and Conditions</label>
+            </div>
 
-                    <div id="SecuritySignin">
-                        <label>Attach a Selfie</label>
-                        <input type="file" required> 
-                    </div>
+            <button type="submit">Become Mechanic</button>
+        </form>
 
-                    <div id="DescriptionofMechanic">
-                        <h1>Write a Short description of yourself</h1>
-                        <textarea placeholder="TypeHere.." required></textarea>
-                    </div>
-                    
-                    <div id="TermsConditions">
-                        <input type="checkbox" required>
-                        <label> Accept Terms and Conditions </label>
-                    </div>
-
-                    <button type="submit">Sign-in as Mechanic</button>
-                </form> 
-        
-        </div>
     </div>
-    
+</div>
+
+<footer>
+    <p>© 2026 PrecisionDrive Auto | Connecting Cars with Experts</p>
+</footer>
+
 </body>
 </html>
