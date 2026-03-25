@@ -130,6 +130,20 @@ body h1{
     color: white;
 }
 
+.status{
+    display: flex;
+    gap: 20px;
+}
+
+.sts {
+width: 80px;
+padding: 5px 5px;
+border-radius: 20PX;
+background-color: rgba(8, 41, 12, 0.647);
+border: 1px solid rgba(115, 255, 0, 0.63);
+text-align: center; 
+}
+
 .caps {
 width: 90px;
 padding: 5px 5px;
@@ -178,6 +192,58 @@ font-size: 1px;
 }
 
 /* End of Profile Style */
+
+/* ── Customer Served ── */
+
+.customerServedsec{
+    flex-wrap: wrap;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    margin: 10px;
+    background-image: linear-gradient(rgba(20, 20, 162, 0.2), rgba(35, 13, 94, 0.15));
+    gap: 20px;
+    justify-content: center;
+    display: flex;
+    padding: 30px;
+}
+
+.customerServed{
+    text-align: center;
+    font-weight: bolder;
+    width: 250px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    background-color: rgba(110, 108, 151, 0.2);
+    border: 1px solid rgba(130, 120, 150, 0.4);
+    border-radius: 10px;
+    padding: 20px 24px;
+    gap: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+
+}
+
+.customerServed:hover {
+    background-color: rgba(110, 108, 151, 0.371);
+    border-color: rgb(157, 203, 255);
+}
+
+.customerServed p{
+    color: aqua;
+    display: flex;
+    font-size: 25px;
+}
+
+#stars{
+    font-size: 45px;
+}
+
+strong{
+   color: rgb(0, 251, 255);
+}
 
 /* Personal Info Style */
 #InfoMech{
@@ -436,6 +502,63 @@ font-size: 1px;
 }
 
 /* End of Schedule Style */
+
+/* ── REVIEWS ── */
+#Reviews {
+    padding: 20px;
+    margin: 20px 0px;
+    background-color: rgba(21, 16, 43, 0.6);
+}
+
+#Reviews h1{
+    color: rgb(197, 227, 254);
+    margin: 0px 0px 20px 0px;
+}
+
+.ReviewCard {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: rgba(120, 116, 207, 0.2);
+    border: 1px solid rgba(130, 120, 150, 0.4);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+}
+
+.ReviewCard:hover {
+    background-color: rgba(110, 108, 151, 0.371);
+    border-color: rgb(157, 203, 255);
+}
+
+.ReviewCard img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgb(157, 203, 255);
+    flex-shrink: 0;
+}
+
+#ReviewInfo h2 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+    color: rgb(255, 255, 255);
+}
+
+.Stars {
+    color: rgb(157, 203, 255);
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+}
+
+#ReviewInfo p {
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.5;
+}
 
 /* FOOTER */
 

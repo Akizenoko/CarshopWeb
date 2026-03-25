@@ -83,6 +83,14 @@ textarea {
     color: #fff;
 }
 
+input{
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.681);
+    padding: 10px;
+    background: none;
+    color: #fff;
+}
+
 /* ===== Terms ===== */
 #terms-conditions {
     display: flex;
