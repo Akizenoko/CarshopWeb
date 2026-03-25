@@ -1,171 +1,278 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --bg: #0b1224;
+  --border: #334155;
+  --primary: #38bdf8;
 }
 
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif; 
-    background-color: #111322; 
-    color: white; 
-    line-height: 1.6;
+  min-height: 100vh;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  background-image: linear-gradient( rgb(4, 5, 24),rgba(6, 11, 37, 0.609));
+  background-color: rgb(46, 39, 48);
+  color: var(--text);
+  padding: 12px;
 }
 
-h1 {
-    font-size: 20px;
+.page-shell {
+  max-width: 940px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
-body > h1 {
-    margin: 20px 30px 10px 30px;
+.topbar {
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(19, 44, 61, 0.9);
+  padding: 20px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-#Header {
+.btn-link {
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid #334155;
+  background: #111827;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 7px 12px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-link:hover{
+  background-color: #1a303a;
+}
+
+.content { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 12px; 
+}
+
+.section {
+  background: rgba(20, 35, 47, 0.9);
+  border-radius: 14px;
+  border: 1px solid #334155;
+  padding: 16px;
+}
+
+.profile-card { 
+  border-left: 4px solid var(--primary); 
+}
+
+.profile-row { 
+  display: flex; 
+  gap: 14px; 
+  align-items: center; 
+  flex-wrap: wrap; 
+}
+
+.profile-row img { 
+  width: 80px; 
+  height: 80px; 
+  border-radius: 50%;
+  border: 2px solid var(--primary); 
+  object-fit: cover; 
+}
+
+.profile-meta h2 { 
+  margin-bottom: 6px; 
+  font-size: 1.1rem; 
+}
+
+.profile-meta p { 
+  margin: 2px 0; 
+  color: #cbd5e1; 
+  font-size: .9rem; 
+}
+
+.caps {
+  display: inline-block;
+  width: auto;
+  padding: 5px 12px;
+  border-radius: 20px;
+  background-color: rgba(20, 89, 159, 0.548);
+  border: 1px solid rgb(161, 231, 255);
+  text-align: center; 
+  font-size: 0.75rem; 
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.section-head { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  margin-bottom: 10px; 
+  gap: 10px; 
+}
+
+.section-head h2 { 
+  font-size: 1.1rem; 
+  margin: 0; 
+}
+
+.eyebrow { 
+  font-size: .72rem; 
+  margin-bottom: 4px; 
+  letter-spacing: .12em; 
+  text-transform: uppercase; 
+  color: var(--muted); 
+}
+
+.btn-outline, .btn-tiny { 
+  border: 1px solid #334155; 
+  background: #111827; 
+  color: #e2e8f0; 
+  border-radius: 10px; 
+  padding: 7px 12px; 
+  font-weight: 600; 
+  cursor: pointer; 
+}
+
+.btn-outline:hover, .btn-tiny:hover { 
+  background: #1f2937; 
+}
+
+.grid-2 { 
+  display: grid; 
+  grid-template-columns: repeat(2, minmax(0, 1fr)); 
+  gap: 10px; 
+}
+
+.grid-3 { 
+  display: grid; 
+  grid-template-columns: repeat(3, minmax(0, 1fr)); 
+  gap: 10px; 
+}
+
+.field { 
+  color: white;
+  border: 1px solid #334155; 
+  border-radius: 10px; 
+  padding: 10px; 
+  background: #161527; 
+}
+
+.fieldSelect { 
+  color: white;
+  border: none;
+  background: #161527; 
+  width: 100%;
+  padding: 5px 0;
+  font-size: 0.8rem;
+}
+
+.field h3 { 
+  font-size: .83rem; 
+  color: #e2e8f0; 
+  margin-bottom: 5px; 
+}
+
+.field p { 
+  font-size: .8rem; 
+  color: #cbd5e1; 
+  margin: 0; 
+}
+
+@media (max-width: 860px) {
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  .topbar { justify-content: center; }
+}
+
+/* Schedule Style */
+#Schedule {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  margin: 20px 5px 10px 5px;
+  padding: 10px 30px 40px 30px;
+  background: rgba(19, 44, 61, 0.9);
+  border-top: 1px solid rgba(130, 120, 150, 0.4);
+  border-bottom: 1px solid rgba(130, 120, 150, 0.4);
+}
+
+.HeadSched{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 30px;
-    background-color: #1b1e36;
-}
-
-#left h3 {
-
-    background-color: #add8e6; 
-    color: #111322;
-    padding: 6px 20px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-family: Arial, sans-serif;
-    cursor: pointer;
-}
-
-#line {
-    text-decoration: none;
-}
-
-#center {
-    display: flex;
-    align-items: center;
-    background-color: #e7f5fb; 
-    padding: 5px 15px;
-    border-radius: 20px;
-    width: 300px;
-}
-
-#center i {
-    color: #555;
-    font-size: 14px;
-    margin-right: 10px;
-}
-
-#center input {
-    border: none;
-    background: transparent;
-    outline: none;
-    width: 100%;
-    font-size: 14px;
-}
-
-#right i {
-    font-size: 20px;
-    margin-left: 20px;
-    cursor: pointer;
-    color: rgb(200, 200, 200);
-    transition: all 0.3s ease;
-}
-
-#right i:hover {
-    transform: scale(1.15);
-    color: #eaeef0;
-}
-
-#Profile, #PersonalInformation, #Address {
-    background-color: #232743; 
-    margin: 0 30px 20px 30px;
-    padding: 25px 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-#Profile{
-    align-items: center;
-    justify-content: flex-start;
     flex-wrap: wrap;
-    flex-direction: row;
-    display: flex;
-    margin: 0 30px 20px 30px;
-    padding: 25px 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    justify-content: space-between;
+    margin: 10px 0px 30px 0px;
+    align-items: center;
 }
 
-#Profile i{
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 50%;
-    height: 70px;
-    width: 70px;
-    margin: 0px 30px 0px 20px;
-    font-size: 50px;
+.HeadSched h1{
     color: rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 20px;
 }
 
-#ProfileInfo{
-    color: white;
-}
-
-#ProfileInfo h1{
-    margin: 0px 0px 5px 0px;
-    color: rgb(164, 250, 220);
-}
-
-#ProfileInfo p{
+.HeadSched h2.btn-tiny{
+    background-color: #012130;
+    color: rgb(255, 255, 255);
     font-size: 15px;
-    margin: 0px 0px 0px 0px;
-    color: white;
 }
 
-#Head, #Adhead {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #3d426b;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
+#ScheduleGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 16px;
 }
 
-#Head p, #Adhead p {
-    background-color: #28a745;
-    color: white;
-    padding: 5px 20px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-family: Arial, sans-serif;
-    cursor: pointer;
+.ScheduleDay {
+    background-color: rgba(110, 108, 151, 0.2);
+    border: 1px solid rgba(130, 120, 150, 0.4);
+    border-radius: 10px;
+    padding: 18px 14px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
 }
 
-#Pinfo, #Info {
-    display: flex;
-    justify-content: space-between;
+.ScheduleDay:hover {
+    background-color: rgba(110, 108, 151, 0.371);
+    border-color: rgb(157, 203, 255);
 }
 
-#rows, #Adtab {
-    flex: 1;
+.ScheduleDay h2 {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+    color: rgb(255, 255, 255);
 }
 
-#Tabs {
-    margin-bottom: 20px;
+.ScheduleDay p {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 6px;
 }
 
-#Tabs h3, #Adtab h3 {
-    font-size: 14px;
-    color: white;
-    margin-bottom: 5px;
+.Available {
+    color: rgb(145, 255, 253) !important;
+    font-weight: 700;
 }
 
-#Tabs p, #Adtab p {
-    font-size: 13px;
-    color: #aaa;
+.Busy {
+    color: rgb(188, 188, 251) !important;
+    font-weight: 700;
+}
 
+.Off {
+    color: rgba(255, 255, 255, 0.4) !important;
+    font-weight: 600;
+}
+
+/* FOOTER */
+footer{
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin: 0px;
 }
