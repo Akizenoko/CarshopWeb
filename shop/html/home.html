@@ -30,7 +30,7 @@
         <div id="listsSidebar">
             <div id="SidebarProf">
                 <a href="shopsAccountPage.html"><i class="fa-regular fa-circle-user" style="font-size: 50px; color: #5bc0de;"></i></a>
-                <h2>Shop</h2>
+                <h2>PrecisionDrive Shop</h2>
                 <p>shop@Fixit.com</p>
             </div>
             
@@ -48,7 +48,7 @@
             </button>
             <a href="index.html" style="text-decoration: none;">
                 <button class="Tabs" id="Sign-Out">
-                    
+                    <i class="fa-solid fa-right-from-bracket"></i>
                     <h1>Sign-out</h1>
                 </button>
             </a>
@@ -58,18 +58,20 @@
     <div id="Header">
         <div id="Hinfo">
             <h1>Admin View</h1>
-            <p>Welcome back! Your shop is currently <strong>OPEN</strong>.</p>
+            <p>Welcome back! Your shop is currently <strong style="color: #4ade80;">OPEN</strong>.</p>
         </div>
 
         <div id="socials">
             <h1>Daily Goal</h1>
-            <i class="fa-solid fa-chart-line" style="font-size: 50px; color: white;"></i>
-            <p style="color: white; font-size: 24px; margin-left: 10px;">85%</p>
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <i class="fa-solid fa-chart-line" style="font-size: 40px; color: white;"></i>
+                <p style="color: white; font-size: 32px; margin-left: 15px; font-weight: bold;">85%</p>
+            </div>
         </div>
     </div>
 
     <div id="Recommendations">
-        <h1>Shop Performance</h1>
+        <h1>Live Shop Performance</h1>
         <div class="shops">
             <div id="recinfo">
                 <i class="fa-solid fa-money-bill-trend-up" style="color: #28a745;"></i>
@@ -84,9 +86,77 @@
                 <p>Active Repairs</p>
             </div>
         </div>
+        <div class="shops">
+            <div id="recinfo">
+                <i class="fa-solid fa-star" style="color: #fbbf24;"></i>
+                <h2>4.9</h2>
+                <p>Shop Rating</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="Analytics">
+        <div class="analytics-container">
+            <div class="chart-box">
+                <h2><i class="fa-solid fa-chart-area"></i> Weekly Revenue Trend</h2>
+                <div class="bar-chart">
+                    <div class="bar" style="height: 40%;" data-day="Mon"></div>
+                    <div class="bar" style="height: 60%;" data-day="Tue"></div>
+                    <div class="bar" style="height: 55%;" data-day="Wed"></div>
+                    <div class="bar" style="height: 85%;" data-day="Thu"></div>
+                    <div class="bar" style="height: 70%;" data-day="Fri"></div>
+                    <div class="bar" style="height: 95%;" data-day="Sat"></div>
+                    <div class="bar" style="height: 30%;" data-day="Sun"></div>
+                </div>
+            </div>
+
+            <div class="table-box">
+                <h2><i class="fa-solid fa-clock-history"></i> Recent Service History</h2>
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Service</th>
+                            <th>Customer</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mar 25</td>
+                            <td>Oil Change</td>
+                            <td>John Doe</td>
+                            <td>₱2,500</td>
+                            <td><span class="status-done">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Mar 24</td>
+                            <td>Engine Check</td>
+                            <td>Maria S.</td>
+                            <td>₱4,200</td>
+                            <td><span class="status-done">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Mar 24</td>
+                            <td>Brake Pads</td>
+                            <td>Kyle W.</td>
+                            <td>₱1,800</td>
+                            <td><span class="status-done">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Mar 23</td>
+                            <td>Tire Align</td>
+                            <td>Lito G.</td>
+                            <td>₱3,000</td>
+                            <td><span class="status-done">Completed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 
     <script src="../script.js"></script>
 </body>
-
 </html>
