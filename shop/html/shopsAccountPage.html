@@ -1,107 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="../css/shopsAccountPage.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <title>Shop Owner Profile | Fixit</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/shopsAccountPage.css" />
+  <title>Account | Shop Profile</title>
 </head>
 <body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="btn-link" href="MechLand.html">← Back</a>
+    </header>
 
-<section id="Header">
-    <div id="left">
-        <a id="line" href="home.html"><h3>Back</h3></a>
-    </div>
-    <div id="center">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="Search">
-    </div>
-    <div id="right">
-        <i class="fa-solid fa-bell"></i>
-        <i class="fa-solid fa-comment-dots"></i>
-    </div>
-</section>
-
-<h1>My shop profile</h1>
-
-<section id="Profile">
-    <i class="fa-regular fa-circle-user"></i>
-    <div id="ProfileInfo">
-        <h1>Owner Name</h1>
-        <p>owner@example.com</p>
-        <p>Shop Owner</p>
-        <p>Street, City, Country</p>
-    </div>
-</section>
-
-<section id="PersonalInformation">
-    <div id="Head">
-        <h1>Business Information</h1>
-        <p>Edit</p>
-    </div>
-    
-    <div id="Pinfo">
-        <div id="rows">
-            <div id="Tabs">
-                <h3>Shop Name</h3>
-                <p>My Fixit Shop</p>
-            </div>
-            <div id="Tabs">
-                <h3>Email Address</h3>
-                <p>owner@example.com</p>
-            </div>
+    <main class="content">
+      <section class="section profile-card">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Your business account</p>
+            <h1>Shop profile</h1>
+          </div>
+          <button class="btn-outline">Edit profile</button>
         </div>
 
-        <div id="rows">
-            <div id="Tabs">
-                <h3>Phone Number</h3>
-                <p>0912345678910</p>
-            </div>
-            <div id="Tabs">
-                <h3>Registration No.</h3>
-                <p>BR‑123456</p>
-            </div>
+        <div class="profile-row">
+          
+          <div class="profile-meta">
+            <h2>Bungkaniko Auto Center</h2>
+            <p>Bungkaniks@Shop.com</p>
+            <p class="caps">Shop Owner</p>
+            <p>Main Street, Zamboanga City</p>
+          </div>
+        </div>
+      </section>
+
+      <div id="Schedule">
+        <div class="HeadSched">
+          <h1>Shop Hours & Availability</h1>
+          <h2 class="btn-tiny">Edit</h2>
         </div>
 
-        <div id="rows">
-            <div id="Tabs">
-                <h3>Date of Establishment</h3>
-                <p>01‑17‑2015</p>
+        <div id="ScheduleGrid">
+            <div class="ScheduleDay" id="sched1">
+                <h2>Monday</h2>
+                <p>9:00 AM – 5:00 PM</p>
+                <p class="Available">Available</p>
             </div>
-            <div id="Tabs">
-                <h3>User Role</h3>
-                <p>Shop Owner</p>
+
+            <div class="ScheduleDay" id="sched2">
+                <h2>Tuesday</h2>
+                <p>9:00 AM – 5:00 PM</p>
+                <p class="Busy">Busy</p>
+            </div>
+
+            <div class="ScheduleDay" id="sched3">
+                <h2>Wednesday</h2>
+                <p>9:00 AM – 5:00 PM</p>
+                <p class="Available">Available</p>
+            </div>
+
+            <div class="ScheduleDay" id="sched4">
+                <h2>Thursday</h2>
+                <p>9:00 AM – 5:00 PM</p>
+                <p class="Busy">Busy</p>
+            </div>
+
+            <div class="ScheduleDay" id="sched5">
+                <h2>Friday</h2>
+                <p>9:00 AM – 3:00 PM</p>
+                <p class="Available">Available</p>
+            </div>
+
+            <div class="ScheduleDay" id="sched6">
+                <h2>Saturday</h2>
+                <p>10:00 AM – 2:00 PM</p>
+                <p class="Available">Available</p>
+            </div>
+
+            <div class="ScheduleDay" id="sched7">
+                <h2>Sunday</h2>
+                <p>—</p>
+                <p class="Off">Closed</p>
             </div>
         </div>
     </div>
-</section>
 
-<section id="Address">
-    <div id="Adhead">
-        <h1>Shop Address</h1>
-        <p>Edit</p>
-    </div>
-
-    <div id="Info">
-        <div id="Adtab">
-            <h3>Country</h3>
-            <p>Your Country</p>
+      <section class="section card">
+        <div class="section-head">
+          <h2>Business Information</h2>
+          <button class="btn-tiny">Edit</button>
         </div>
+        <div class="grid-2">
+          <div class="field"><h3>Shop Name</h3><p>Bungkaniko Auto Center</p></div>
+          <div class="field"><h3>Owner Name</h3><p>Phillip P. Ines</p></div>
+          <div class="field"><h3>Business License</h3><p>DTI-998234-2026</p></div>
+          <div class="field"><h3>Email Address</h3><p>Bungkaniks@Shop.com</p></div>
+          <div class="field"><h3>Phone Number</h3><p>09123456789</p></div>
+          <div class="field"><h3>Date Established</h3><p>67/67/6767</p></div>
+          <div class="field"><h3>Account Role</h3><p>Shop Owner</p></div>
+          <div class="field"><h3>Platform Member For:</h3><p>67 days</p></div>
+          <div class="field"><h3>Shop Specialty</h3><p>Bungkanik</p></div>
+        </div>
+      </section>
 
-        <div id="Adtab">
+      <section class="section card">
+        <div class="section-head">
+          <h2>Address</h2>
+          <button class="btn-tiny">Edit</button>
+        </div>
+        <div class="grid-3">
+          <div class="field">
+          <h3>Country</h3>
+            <select class="fieldSelect">
+              <option selected>Philippines</option>
+              <option>Germany</option>
+              <option>Japan</option>
+              <option>Switzerland</option>
+              <option>China</option>
+            </select>
+          </div>
+
+          <div class="field">
             <h3>City</h3>
-            <p>Your City</p>
-        </div>
+            <select class="fieldSelect">
+              <option selected>Zamboanga</option>
+              <option>Manila</option>
+              <option>Baguio</option>
+              <option>Isabela</option>
+              <option>Davao</option> 
+          </select>
+          </div>
 
-        <div id="Adtab">
-            <h3>Postal Code</h3>
-            <p>Postal Code</p>
-        </div>
-    </div>
-</section>
+          <div class="field">
+            <h3>Barangay</h3>
+            <select class="fieldSelect">
+              <option>Abong-Abong</option>
+              <option>Arena Blanco</option>
+              <option>Ayala</option>
+              <option>Baliwasan</option>
+              <option>Baluno</option>
+              <option>Boalan</option>
+              <option>Bolong</option>
+              <option>Buenavista</option>
+              <option>Bunguiao</option>
+              <option>Busay</option>
+              <option>Cabaluay</option>
+              <option>Cabatangan</option>
+              <option>Cacao</option>
+              <option>Calabasa</option>
+              <option>Calarian</option>
+              <option>Camino Nuevo</option>
+              <option>Campo Islam</option>
+              <option>Canelar</option>
+              <option>Capisan</option>
+              <option>Cawit</option>
+              <option>Culianan</option>
+              <option>Curuan</option>
+              <option>Dita</option>
+              <option>Divisoria</option>
+              <option>Dulian (Upper Bunguiao)</option>
+              <option>Dulian (Upper Pasonanca)</option>
+              <option>Guisao</option>
+              <option>Guiwan</option>
+              <option>Kasanyangan</option>
+              <option>La Paz</option>
+              <option>Labuan</option>
+              <option>Lamisahan</option>
+              <option>Landang Gua</option>
+              <option>Landang Laum</option>
+              <option>Lanzones</option>
+              <option>Lapakan</option>
+              <option>Latuan</option>
+              <option>Licomo</option>
+              <option>Limaong</option>
+              <option>Limpapa</option>
+              <option>Lubigan</option>
+              <option>Lumayang</option>
+              <option>Lumbangan</option>
+              <option>Lunzuran</option>
+              <option>Maasin</option>
+              <option>Malagutay</option>
+              <option>Mampang</option>
+              <option>Manalipa</option>
+              <option>Mangusu</option>
+              <option>Manicahan</option>
+              <option>Mariki</option>
+              <option>Mercedes</option>
+              <option>Muti</option>
+              <option>Pamucutan</option>
+              <option>Pangapuyan</option>
+              <option>Panubigan</option>
+              <option>Pasilmanta (Sacol Island)</option>
+              <option>Pasobolong</option>
+              <option>Pasonanca</option>
+              <option>Patalon</option>
+              <option>Putik</option>
+              <option>Quiniput</option>
+              <option>Recodo</option>
+              <option>Rio Hondo</option>
+              <option>Salaan</option>
+              <option>San Jose Cawa-Cawa</option>
+              <option>San Jose Gusu</option>
+              <option>San Ramon</option>
+              <option>San Roque</option>
+              <option>Santa Barbara</option>
+              <option>Santa Catalina</option>
+              <option>Santa Maria</option>
+              <option>Santo Niño</option>
+              <option>Sibulao</option>
+              <option>Sinubong</option>
+              <option>Sangali</option>
+              <option>Sta. Cruz</option>
+              <option>Sta. Maria</option>
+              <option>Talabaan</option>
+              <option>Taluksangay</option>
+              <option>Talon-Talon</option>
+              <option>Talisayan</option>
+              <option>Talon-Talon Loop</option>
+              <option>Tetuan</option>
+              <option>Tigbalabag</option>
+              <option>Tigtabon</option>
+              <option>Tolosa</option>
+              <option>Tugbungan</option>
+              <option>Tumaga</option>
+              <option>Tumalutab</option>
+              <option>Victoria</option>
+              <option>Vitali</option>
+              <option>Zambowood</option>
+          </select>
+          </div>
 
+          <div class="field"><h3>Postal Code</h3><p>6700</p></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  
+  <footer>
+    <p>© 2026 Bungkaniko Auto | Connecting Cars with Bungkaniks</p>
+  </footer>
 </body>
-
 </html>
