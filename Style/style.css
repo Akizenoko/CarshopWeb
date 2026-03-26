@@ -449,6 +449,123 @@ body{
 
 /* End of Recommendations style */
 
+/* Posted Issues style */
+
+.PostedIssues{
+    border-radius: 20px;
+    gap: 35px;
+    flex-direction: column;
+    display: flex;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    margin: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.203);
+    padding: 40px;
+}
+
+.statusofposts{
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+    display: flex;
+}
+
+
+.statusofposts h1{
+    align-content: center;
+    align-items: center;
+    color: rgb(255, 242, 180);
+    background-color: rgba(154, 130, 9, 0.525);
+    font-size: 17px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rgba(255, 247, 0, 0.681);
+    width: 150px;
+}
+
+.statusofposts #AcceptedStatus{
+    width: 150px;
+    align-content: center;
+    align-items: center;
+    color: rgb(184, 255, 180);
+    background-color: rgba(25, 97, 11, 0.525);
+    font-size: 17px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rgba(0, 255, 38, 0.681);
+}
+
+.IssueTab{
+    gap: 5px;
+    justify-content: space-between;
+    display: flex;
+    background-color: rgb(27, 27, 48);
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.358);
+    transition: all 0.2s ease-in-out;
+}
+
+.IssueTab:hover{
+    transform: translateY(-2px);
+    background-color: rgba(36, 36, 74, 0.67);
+    border: 1px solid rgba(255, 255, 255, 0.868);
+}
+
+.IssueInfo{
+    gap: 5px;
+    flex-direction: column;
+    display: flex;
+    border-radius: 20px;
+}
+
+.IssueInfo h1{
+    font-size: 23px;
+}
+
+.IssueInfo strong{
+    color: rgb(141, 236, 236);
+}
+
+.IssueButtons{
+    flex-wrap: wrap;
+    width: 260px;
+    align-items: end;
+    justify-content: flex-end;
+    display: flex;
+    gap: 15px;
+    border-radius: 20px;
+}
+
+.IssueButtons p{
+    color: rgb(255, 242, 180);
+    background-color: rgba(154, 130, 9, 0.525);
+    font-size: 17px;
+    border-radius: 10px;
+    margin: 0px 0px 0px 55px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rgba(255, 247, 0, 0.681);
+    width: 103px;
+}
+
+#Accepted{
+    width: 150px;
+    height: 60px;
+    align-content: center;
+    align-items: center;
+    color: rgb(184, 255, 180);
+    background-color: rgba(25, 97, 11, 0.525);
+    font-size: 17px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rgba(0, 255, 38, 0.681);
+}
+
 /* Suggested Accounts Style */
 
 #MechanicsRecommendation{

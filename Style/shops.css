@@ -288,45 +288,77 @@ body{
         padding: 5px 0px 5px 20px;
 }
 
-#Section2{
+#MS{
+    justify-content: start;
+    flex-basis: 100%;
+    width:100%;
+    display: flex;
+    gap: 15px;
+    font-weight: bolder;
+    font-size: 17px;
     align-items: center;
-    color:rgb(255, 255, 255);
+    flex-wrap: wrap;
+    color: aliceblue;
+    margin: 20px 10px 10px 10px;
+}
+#MS strong{
+    color: rgb(130, 255, 232);
+}
+
+.stsShop {
+    font-size: 10px;
+    width: 100px;
+    padding: 5px 5px;
+    border-radius: 20PX;
+    background-color: rgba(8, 41, 12, 0.647);
+    border: 1px solid rgba(115, 255, 0, 0.63);
+    text-align: center; 
+}
+
+#buttonsforS{
+    flex-basis:100%;
+    margin: -20px 20px 0px 20px;
     display: flex;
-    text-align: center;
-    margin: 20px 0px 0px 0px;
-    justify-content: space-evenly;
-}
-#storelocation {
-    display: flex;
-}
-
-#storelocation p{
-    font-size: 14px;
-}
-
-#storelocation img{
-    height: 15px;
-    margin: 0px 10px 0px 0px;
-}
-
-#storeratings{
+    align-content: center;
     align-items: center;
-    color:rgb(255, 255, 255);
-    display: flex;
-    text-align: center;
-    margin: 0px 0px 0px 20px;
+    justify-content: end;
+
 }
 
-#storeratings p{
-    margin: 0px 5px 0px 0px;
-    font-size: 16px;
+#btn1S{
+    background-color: rgba(23, 18, 70, 0.485);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(252, 255, 255);
+    border: 1px solid rgba(164, 185, 255, 0.755);
+    width: 90px;
+    border-radius: 30px;
+    margin: 0px 5px;
+    padding: 13px;
+    transition: all 0.2s ease-in-out;
 }
 
-#storeratings img{
-    height: 18px;
-    margin: 0px 0px 0px 5px;
+#btn2S{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 13px ;
+    border: 1px solid rgba(255, 255, 255, 0.321);
+    background-color: rgb(173, 200, 255);
+    color: rgb(0, 0, 0);
+    width: 90px;
+    border-radius: 30px;
+    margin: 0px 5px;
+    padding: 13px;
+    transition: all 0.2s ease-in-out;
 }
 
+#btn2S:hover{
+    transform: translateY(-2px);
+    background-color: rgb(207, 207, 255) ;
+}
+
+#btn1S:hover{
+    transform: translateY(-2px);
+    background-color: rgb(19, 19, 89) ;
+}
 /* End of Shops Account design */
 
 /* FOOTER */
