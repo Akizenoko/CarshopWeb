@@ -8,6 +8,9 @@ document.getElementById("loginForm").addEventListener("submit", function(e){
     if(email === "admin@gmail.com" && password === "admin123"){
         window.location.href = "admin.html";
     }
+    else if(email === "mechanic@gmail.com" && password === "mechanic123"){
+        window.location.href = "MechLand.html";
+    }
     else{
         // NORMAL USER
         window.location.href = "LandingPage.html";
