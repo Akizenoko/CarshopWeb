@@ -6,7 +6,7 @@ document.getElementById("loginForm").addEventListener("submit", function(e){
 
     // ADMIN ACCOUNT
     if(email === "admin@gmail.com" && password === "admin123"){
-        window.location.href = "Admin.html";
+        window.location.href = "admin.html";
     }
     else if(email === "mechanic@gmail.com" && password === "mechanic123"){
         window.location.href = "MechLand.html";
