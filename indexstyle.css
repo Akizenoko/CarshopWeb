@@ -42,7 +42,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 120px 20px 150px 20px;
-    background: url(../Assets/Images/Carshop3.jpg) center/cover no-repeat;
+    background: url(Assets/Images/Carshop3.jpg) center/cover no-repeat;
     overflow: hidden;
     color: #fff;
 }
