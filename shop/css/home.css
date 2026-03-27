@@ -6,11 +6,12 @@
 }
 
 body {
-    background-color: #0b0d17;
-    background-image: linear-gradient(rgb(4, 5, 24), rgba(6, 11, 37, 0.609));
+    background-color: #111322;
+    background-image: linear-gradient(rgb(4, 5, 24), rgba(6, 11, 37, 0.9));
     color: white;
     min-height: 100vh;
 }
+
 
 #NavBar {
     background-color: rgb(17, 12, 48);
@@ -21,192 +22,243 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 1px solid #232743;
 }
-
 #profile { 
     font-size: 30px; 
     color: white; 
     cursor: pointer; 
-    margin-left: 20px;
+    margin-left: 20px; 
+    transition: 0.3s; 
+}
+#profile:hover { 
+    color: #5bc0de; 
 }
 
-#mainnavbar .button {
+#mainnavbar .button { 
     background: none; 
     border: none; 
-    color: white;
-    padding: 0 15px;
+    color: white; 
+    padding: 0 15px; 
     height: 60px; 
-    cursor: pointer;
-    font-weight: 600;
+    cursor: pointer; 
+    transition: 0.3s; 
 }
-
 #mainnavbar .button:hover { 
     background-color: #232743; 
 }
-
 #formiscelanious i { 
     font-size: 20px; 
     color: white; 
     margin-right: 20px; 
-    cursor: pointer; 
+    cursor: pointer; opacity: 0.8; 
+}
+#formiscelanious i:hover { 
+    opacity: 1; 
 }
 
 #sidebar {
-    position: fixed;
+    position: fixed; 
     left: -250px; 
-    top: 0;
-    width: 220px;
+    top: 0; 
+    width: 220px; 
     height: 100vh;
-    background-color: #0c0137;
-    transition: 0.5s ease;
-    z-index: 99;
+    background-color: #0c0137; 
+    transition: 0.5s ease; 
+    z-index: 99; 
     padding-top: 80px;
 }
-
-#sidebar.active { left: 0; }
-
-#SidebarProf {
-    text-align: center;
+#sidebar.active { 
+    left: 0; 
+}
+#SidebarProf { 
+    text-align: center; 
     margin-bottom: 30px; 
 }
-
-#SidebarProf h2 { font-size: 18px; margin-top: 10px; }
-
-.Tabs {
-    width: 100%;
+.Tabs { 
+    width: 100%; 
     background: none; 
     border: none; 
-    color: white;
+    color: white; 
     display: flex; 
-    align-items: center;
-    padding: 15px 20px; 
-    cursor: pointer;
+    align-items: center; 
+    padding: 15px 20px; cursor: pointer; transition: 0.3s; 
 }
-
-.Tabs:hover { background-color: #1c1840; }
-.Tabs i { font-size: 18px; width: 30px; color: #5bc0de; }
-.Tabs h1 { font-size: 15px; font-weight: normal; }
-
+.Tabs:hover { 
+    background-color: #1c1840; 
+}
+.Tabs i { 
+    font-size: 18px; 
+    width: 30px; 
+    color: #5bc0de; 
+}
+.Tabs h1 { 
+    font-size: 14px; 
+    font-weight: normal; 
+}
 #Header {
-    background-color: rgba(45, 52, 112, 0.2);
-    padding: 50px;
+    background-image: linear-gradient(rgba(17, 19, 34, 0.75), rgba(17, 19, 34, 0.75)), url('../../Assets/Images/Autorepair.webp');
+    background-size: cover;
+    background-position: center;
+    height: 250px; 
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
+    padding: 0 10%;
+    border-bottom: 3px solid #5bc0de;
+}
+#HContent h1 { 
+    font-size: 32px; 
+    margin-bottom: 5px; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+}
+#HeaderGoal { 
+    margin-top: 15px; 
 }
 
-#Recommendations { 
-    padding: 40px; 
-    text-align: center; 
+.status-toggle {
+    border: none; 
+    padding: 8px 20px; 
+    border-radius: 20px;
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    font-size: 13px;
+}
+.open-style { 
+    background-color: #28a745; 
+    color: white; 
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.5); 
+}
+.close-style { 
+    background-color: #dc3545; 
+    color: white; 
+    box-shadow: 0 0 10px rgba(220, 53, 69, 0.5); 
 }
 
-#Recommendations h1 { margin-bottom: 25px; font-size: 24px; color: #5bc0de; }
-
-.shops {
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 25px;
-    margin: 10px;
-    width: 250px;
-    transition: 0.3s;
+.ContentSection { 
+    padding: 40px 10%; 
+}
+.SectionTitle { 
+    font-size: 20px; 
+    color: #5bc0de; 
+    margin-bottom: 25px; 
+    border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; 
 }
 
-.shops:hover { 
-    transform: translateY(-5px); 
-    background-color: rgba(91, 192, 222, 0.15); 
-    border-color: #5bc0de;
-}
-
-#recinfo i { font-size: 40px; margin-bottom: 15px; }
-
-/* NEW ANALYTICS STYLES */
-
-#Analytics {
-    padding: 0 40px 60px 40px;
-}
-
-.analytics-container {
+.GraphContainer {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.chart-box, .table-box {
-    background: rgba(17, 12, 48, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 20px;
-    flex: 1;
-    min-width: 400px;
-}
-
-.chart-box h2, .table-box h2 {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #5bc0de;
-}
-
-/* CSS Bar Chart Simulation */
-.bar-chart {
-    display: flex;
-    align-items: flex-end;
     justify-content: space-around;
-    height: 200px;
-    padding: 10px;
-    border-bottom: 2px solid #334155;
+    align-items: flex-end;
+    height: 180px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
-
-.bar {
+.Bar {
     width: 30px;
-    background: linear-gradient(to top, #5bc0de, #28a745);
+    background: linear-gradient(#5bc0de, #2d3470);
     border-radius: 5px 5px 0 0;
     position: relative;
-    transition: 0.3s;
+    transition: 0.4s ease;
+}
+.Bar span { 
+    position: absolute; 
+    top: -20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    font-size: 10px; 
+}
+.Bar::after { 
+    content: attr(data-day); 
+    position: absolute; 
+    bottom: -22px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    font-size: 11px; color: #aaa; 
 }
 
-.bar:hover { opacity: 0.8; }
-
-.bar::after {
-    content: attr(data-day);
-    position: absolute;
-    bottom: -25px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 12px;
-    color: #94a3b8;
-}
-
-/* Table Styles */
-.history-table {
+.OrderTable {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.OrderTable th { 
+    background: rgba(91, 192, 222, 0.15); 
+    color: #5bc0de; 
+    padding: 15px; 
+    text-align: left; 
+}
+.OrderTable td { 
+    padding: 15px; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03); 
+    font-size: 14px; 
 }
 
-.history-table th {
-    text-align: left;
-    padding: 12px;
-    border-bottom: 1px solid #334155;
-    color: #94a3b8;
-    font-size: 14px;
+.JobCard {
+    background: rgba(255,255,255,0.05); 
+    padding: 20px; 
+    border-radius: 10px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 15px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+.AcceptBtn { 
+    background: white; 
+    color: black; 
+    border: none; 
+    padding: 10px 25px; 
+    border-radius: 20px; 
+    font-weight: bold; cursor: pointer; transition: 0.3s; 
+}
+.DeclineBtn { 
+    background: transparent; 
+    color: #5bc0de; 
+    border: 1px solid #5bc0de; 
+    padding: 10px 25px; 
+    border-radius: 20px; cursor: pointer; margin-left: 10px; 
+    transition: 0.3s; 
 }
 
-.history-table td {
-    padding: 12px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    font-size: 14px;
+#ScheduleGrid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); 
+    gap: 10px; 
+}
+.ScheduleDay { 
+    background: rgba(255, 255, 255, 0.05); 
+    padding: 15px; 
+    border-radius: 8px; 
+    text-align: center; 
+    border: 1px solid rgba(255, 255, 255, 0.1); }
+.status-tag { font-size: 10px; 
+    padding: 3px 8px; 
+    border-radius: 4px; 
+    display: inline-block; 
+    margin-top: 10px; 
+    font-weight: bold; }
+.avail { 
+    background: rgba(40, 167, 69, 0.2); 
+    color: #28a745; 
+}
+.busy { 
+    background: rgba(220, 53, 69, 0.2); 
+    color: #dc3545; 
+}
+.off { 
+    background: rgba(255, 255, 255, 0.1); 
+    color: #888; 
 }
 
-.status-done {
-    background: rgba(40, 167, 69, 0.2);
-    color: #4ade80;
-    padding: 4px 8px;
-    border-radius: 6px;
-    font-size: 12px;
+footer { 
+    text-align: center; 
+    padding: 40px; 
+    color: #555; 
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    font-size: 13px; 
 }
-
