@@ -86,10 +86,11 @@ body{
     color:white;
     text-align:left;
     cursor:pointer;
+    transition: all 0.1s ease-in-out;
 }
 
 .tab:hover{
-    background:#03265e;
+    background:#03095e;
 }
 
 /* MAIN */
@@ -113,6 +114,14 @@ body{
     padding:20px;
     border-radius:10px;
     text-align:center;
+    transition: all 0.2s ease-out;
+}
+
+.card:hover{
+    color: #77e4ff;
+    scale: 1.03;
+    border: 1px solid rgba(115, 241, 255, 0.775);
+    background:#27325d;
 }
 
 /* SECTIONS */

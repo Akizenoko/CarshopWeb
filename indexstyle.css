@@ -36,6 +36,7 @@ body {
 
 /* HERO SECTION */
 .header {
+    gap: 40px;
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -176,6 +177,14 @@ body {
     background: #0b1236;
 }
 
+.about-stats h1{
+    font-size: 45px;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
 .stat-card {
     width: 250px;
     padding: 30px;
@@ -209,6 +218,14 @@ body {
     gap: 30px;
     padding: 100px 20px;
     background-color: #061335;
+}
+
+.features h1{
+    font-size: 45px;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
 }
 
 .feature-card {
