@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request Mechanic</title>
+
+<link rel="stylesheet" href="styles/RequestForm.css">
+
+<!-- Leaflet (Map) -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="form-box">
+        <a href="Home_Page_For_Users.html">
+        <h4>← Back</h4>
+        </a>
+    <h2>🧑‍🔧 Inquire</h2>
+
+        <!-- Location -->
+        <label>Pickup Location</label>
+        <input type="text" id="location" placeholder="Detecting location...">
+
+        <button>📍 Use My Address</button>
+        <button onclick="getLocation()">📍 Use Current My Location</button>
+
+        <!-- Map -->
+        <div id="map"></div>
+
+        <!-- Service -->
+        <label>Service Type</label>
+        <select>
+            <option>Flat Tire</option>
+            <option>Battery Jumpstart</option>
+            <option>Engine Repair</option>
+            <option>Oil Change</option>
+            <option>Other (Requires Details)</option>
+        </select>
+        <label>Details</label>
+        <textarea placeholder="Describe Issue"></textarea>
+
+        <!-- Car Type -->
+        <label>Vehicle Type</label>
+        <select>
+            <option value="">-- Choose Vehicle Type --</option>
+            <option value="sedan">Sedan</option>
+            <option value="SportsCar">Sports Car</option>
+            <option value="hatchback">Hatchback</option>
+            <option value="suv">SUV</option>
+            <option value="pickup">Pickup Truck</option>
+            <option value="van">Van</option>
+            <option value="motorcycle">Motorcycle</option>
+            <option value="truck">Truck (Heavy Duty)</option>
+            <option value="electric">Electric Vehicle</option>
+        </select>
+
+        <!-- Brand -->
+        <label>Brand</label>
+        <select>
+            <option value="">-- Select Brand --</option>
+            <option value="toyota">Toyota</option>
+            <option value="honda">Honda</option>
+            <option value="mitsubishi">Mitsubishi</option>
+            <option value="nissan">Nissan</option>
+            <option value="ford">Ford</option>
+            <option value="chevrolet">Chevrolet</option>
+            <option value="hyundai">Hyundai</option>
+            <option value="kia">Kia</option>
+            <option value="mazda">Mazda</option>
+            <option value="suzuki">Suzuki</option>
+            <option value="isuzu">Isuzu</option>
+            <option value="bmw">BMW</option>
+            <option value="mercedes">Mercedes-Benz</option>
+            <option value="audi">Audi</option>
+            <option value="tesla">Tesla</option>
+        </select>
+
+        <!-- Model -->
+        <input type="text" placeholder="Model (e.g. Vios)">
+
+        <div class="rush">
+        <input type="checkbox">
+        <p> In A Rush (Additional Cost) </p>
+        </div>
+
+        <label>Phone Number</label>
+        <input type="tel" placeholder="0912345678910">
+        <button>Use Saved Phone Number</button>
+        
+        <a href="List_Of_Mechanics.html">
+            <button class="request-btn">Inquire</button>
+        </a>
+</div>
+
+</div>
+
+<script src="scripts/Form.js"></script>
+
+</body>
+</html>
