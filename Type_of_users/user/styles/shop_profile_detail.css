@@ -65,8 +65,8 @@ body {
 }
 
 .shop-avatar {
-    width: 90px;
-    height: 90px;
+    width: 330px;
+    height: 190px;
     border-radius: 16px;
     background: rgba(58, 114, 255, 0.25);
     border: 2px solid rgba(164, 243, 255, 0.5);
@@ -157,6 +157,28 @@ body {
     color: #fff;
     border: 1px solid rgba(255, 255, 255, 0.15);
 }
+
+/* ── Owner Profile ── */
+
+.Owner_Shop{
+    margin: 10px;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+.Owner_Shop img{
+    height: 55px;
+    border-radius: 50%;
+    border: 1px solid white;
+    transition: all 0.2s ease-in-out;
+}
+
+.Owner_Shop img:hover{
+    scale: 1.07;
+    border: 1.5px solid rgb(0, 255, 247);
+}
+
 
 /* ── Stats ── */
 .stats-section {
@@ -383,6 +405,10 @@ body {
 }
 
 .services-grid {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -395,6 +421,56 @@ body {
     padding: 6px 16px;
     font-size: 12px;
     color: #a8d4ff;
+}
+
+/* ── Members ── */
+.shop_members{
+    border: 1px solid rgba(255, 255, 255, 0.196) ;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #0e1b42;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    display: flex;
+    margin: 20px;
+    padding: 40px;
+}
+
+.member_profile{
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.277);
+    padding: 30px;
+    background-color: #041036;
+    gap: 10px;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.member_profile img{
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid white;
+    transition: all 0.2s ease-in-out;
+}
+
+.member_profile img:hover{
+    scale: 1.07;
+    border: 1.5px solid rgb(0, 255, 242);
+}
+
+.member_profile h4{
+    font-size: 12px;
+    color: #f6f6f6;
+}
+
+.shop_members h1{
+    flex-basis: 100%;
+    color: #f6f6f6;
 }
 
 /* ── Reviews ── */

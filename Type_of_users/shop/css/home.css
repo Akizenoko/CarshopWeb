@@ -6,6 +6,10 @@
     font-family: sans-serif; 
 }
 
+a{
+    text-decoration: none;
+}
+
 body {
     background-color: #111322;
     background-image: linear-gradient(rgb(4, 5, 24), rgba(6, 11, 37, 0.609));
@@ -62,6 +66,10 @@ body {
     transition: 0.5s ease;
     z-index: 99;
     padding-top: 80px;
+}
+
+#sidebar h1{
+    color: white;
 }
 
 #sidebar.active { 

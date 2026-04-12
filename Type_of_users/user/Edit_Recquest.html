@@ -24,7 +24,7 @@
 
         <!-- Location -->
         <label>Pickup Location</label>
-        <input type="text" id="location" placeholder="Detecting location...">
+        <input type="text" id="location" placeholder="Bolong, Zamboanga City">
 
         <button onclick="getLocation()">📍 Use Current My Location</button>
         <button>📍 Use My Address</button>
@@ -35,21 +35,24 @@
         <!-- Service -->
         <label>Service Type</label>
         <select>
+            <option>Oil Change</option>
             <option>Flat Tire</option>
             <option>Battery Jumpstart</option>
             <option>Engine Repair</option>
-            <option>Oil Change</option>
             <option>Other (Requires Details)</option>
         </select>
+
         <label>Details</label>
         <textarea placeholder="Describe Issue"></textarea>
+        <label>Attach Photo</label>
+        <input type="file">
 
         <!-- Car Type -->
         <label>Vehicle Type</label>
         <select>
+            <option value="SportsCar">Sports Car</option>
             <option value="">-- Choose Vehicle Type --</option>
             <option value="sedan">Sedan</option>
-            <option value="SportsCar">Sports Car</option>
             <option value="hatchback">Hatchback</option>
             <option value="suv">SUV</option>
             <option value="pickup">Pickup Truck</option>
@@ -62,6 +65,7 @@
         <!-- Brand -->
         <label>Brand</label>
         <select>
+            <option value="bmw">BMW</option>
             <option value="">-- Select Brand --</option>
             <option value="toyota">Toyota</option>
             <option value="honda">Honda</option>
@@ -74,14 +78,13 @@
             <option value="mazda">Mazda</option>
             <option value="suzuki">Suzuki</option>
             <option value="isuzu">Isuzu</option>
-            <option value="bmw">BMW</option>
             <option value="mercedes">Mercedes-Benz</option>
             <option value="audi">Audi</option>
             <option value="tesla">Tesla</option>
         </select>
 
         <!-- Model -->
-        <input type="text" placeholder="Model (e.g. Vios)">
+        <input type="text" placeholder="BMW M3 GTR">
 
         <div class="rush">
         <input type="checkbox">

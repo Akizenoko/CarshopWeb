@@ -13,6 +13,10 @@ body {
     min-height: 100vh;
 }
 
+a{
+    text-decoration: none;
+}
+
 #NavBar {
     background-color: rgb(17, 12, 48);
     height: 60px;
@@ -61,6 +65,10 @@ body {
     transition: 0.5s ease;
     z-index: 99;
     padding-top: 80px;
+}
+
+#sidebar h1{
+    color: white;
 }
 
 #sidebar.active { 

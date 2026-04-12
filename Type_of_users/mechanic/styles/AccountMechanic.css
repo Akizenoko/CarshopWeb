@@ -296,6 +296,34 @@ color: #75efff;
 
 /* End of Schedule Style */
 
+/* Add Shop */
+
+.AddShop{
+  font-size: 15px;
+  color: #c5eeff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 30px;
+}
+
+.AddShop button{
+  padding: 15px;
+  color: rgb(119, 244, 255);
+  border: 1px solid rgb(119, 244, 255);
+  border-radius: 20px;
+  background-color: #244a9727;
+  transition: all 0.2s ease-in-out;
+}
+
+.AddShop button:hover{
+  scale: 1.02;
+  background-color: #3f65b049;
+}
+
 /* FOOTER */
 
 footer{
