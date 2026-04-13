@@ -16,11 +16,6 @@ body {
     animation: signin 0.4s ease-in-out;
 }
 
-@keyframes signin {
-    0% { transform: translateY(15px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
-}
-
 #signin-box {
     width: 400px;
     max-width: 100%;
