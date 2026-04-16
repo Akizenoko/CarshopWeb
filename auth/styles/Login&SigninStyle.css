@@ -1,0 +1,256 @@
+/* Global Selectors */
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;  
+}
+
+body{
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient( rgb(4, 5, 24),rgba(6, 11, 37, 0.609));
+    background-color: rgb(46, 39, 48);
+}
+
+/* End of Global Selectors */
+
+/* Login Page Design */
+
+#Login{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    animation: login 0.4s ease-in-out;
+}
+
+@keyframes login{
+    0%{transform: translateY(13px); opacity: 0;}
+    100%{transform: translateY(0px); opacity: 1;}
+}
+
+#LoginBox{
+    flex-wrap: wrap;
+    text-align: center;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    width: 350px;
+    height: 450px;
+    background-image: linear-gradient(rgba(20, 20, 162, 0.354),rgba(35, 13, 94, 0.209));
+    background-color: rgba(110, 108, 151, 0.371);
+    padding: 40px;
+    margin: 70px;
+}
+
+#LoginBox h1{
+    color: rgb(255, 255, 255);
+}
+
+
+#LoginDetails{
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin: 30px;
+    width: 204px;
+}
+
+#LoginBox h3{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+    font-size: 10px;
+    color: rgb(157, 203, 255);
+}
+
+#LoginDetails p{
+    color: rgb(145, 255, 253);
+    text-align: right;
+    font-size: 11px;
+    margin: 6px 0px 0px 0px;
+}
+
+#LoginDetails label{
+    transition: all 0.2s ease-in-out;
+}
+
+#LoginDetails:hover label{
+    margin: 0px 0px 0px 5px;
+    font-weight: bolder;
+}
+
+#LoginDetails input{
+    color: rgb(0, 0, 0);
+    background-color: rgb(251, 251, 252);
+    padding: 7px 30px 7px 10px;
+    border-radius: 5px;
+    border: 0px solid rgb(29, 17, 255);
+}
+
+#LoginBox Button{
+    margin: 20px 0px 10px 0px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(59, 73, 73);
+    font-weight: 900;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    width: 240px;
+    border-radius: 20px ;
+    padding: 10px 50px 10px 50px;
+    transition: all 0.2s ease-in-out;
+}
+
+#LoginBox Button:hover{
+    background-color: rgb(187, 198, 248);
+    color: rgb(28, 44, 44);
+    transform: translateY(-2px);
+    
+}
+
+#LoginBox h2{
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 9px;
+    color: rgb(255, 255, 255);
+}
+
+#LoginBox a{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(116, 241, 250);
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+#LoginBox a:hover{
+    color: rgb(158, 158, 255);
+}
+
+/* End of Login Page Design */
+
+
+/* ===== Container ===== */
+#signin {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 10px;
+}
+
+/* ===== Sign-in Box ===== */
+#signin-box {
+    width: 600px;
+    max-width: 100%;
+    padding: 40px 30px;
+    border-radius: 12px;
+    background: rgba(20,20,162,0.25);
+    box-shadow: 0 0 25px rgba(0,0,0,0.35);
+    color: #fff;
+    text-align: center;
+}
+
+#signin-box h1 {
+    color: #f8f8f8;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+#signin-box h3 {
+    font-family: Georgia, serif;
+    color: #9dcbff;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* ===== Form Groups ===== */
+form fieldset {
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+form fieldset legend {
+    padding: 0 5px;
+    font-size: 14px;
+    color: #c0d8ff;
+}
+
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.form-field {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field label {
+    margin-bottom: 5px;
+    font-size: 13px;
+    text-align: left;
+}
+
+.form-field input,
+.form-field select {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #827896;
+    font-size: 13px;
+}
+
+/* ===== Buttons ===== */
+#signin-box button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 25px;
+    border: none;
+    background-color: #fff;
+    color: #3b4949;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#signin-box button:hover {
+    background-color: #bcbcfc;
+    color: #1c2c2c;
+    transform: translateY(-2px);
+}
+
+/* ===== Links ===== */
+#signin-box h2 {
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+#signin-box h2 a {
+    color: #6dddff;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+#signin-box h2 a:hover {
+    color: #c5c3ff;
+}
+
+/* ===== Footer ===== */
+footer {
+    border-top: 1px solid #474646;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 650px) {
+    .form-field { flex: 1 1 100%; }
+    #signin-box { padding: 30px 20px; }
+}

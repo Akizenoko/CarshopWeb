@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ── Reset ── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Base ── */
+a{
+  text-decoration: none;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: linear-gradient(160deg, #020d1f 0%, #041228 50%, #071a38 100%);
+  min-height: 100vh;
+  color: #e0eaf8;
+}
+
+/* ── Wrapper ── */
+.wrap {
+  padding: 2.5rem 1.25rem;
+}
+
+/* ── Card ── */
+.card {
+  max-width: 700px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(90, 145, 220, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* ── Card Header ── */
+.goback{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  color: #e0eaf8;
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  border-radius: 20px;
+  width: 80px;
+  padding: 10px;
+  height: 35px;
+  background-color:rgb(13, 58, 129) ;
+  transition: all 0.2s ease-in-out;
+}
+
+.goback:hover{
+  color: #041228;
+  background-color: #85b7eb;
+}
+
+.card-header {
+  background: #06214c;
+  padding: 1.75rem 2.5rem;
+  border-bottom: 1px solid rgba(90, 145, 220, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  background: rgba(56, 130, 235, 0.2);
+  border: 1px solid rgba(90, 145, 220, 0.35);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.brand-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.brand-text h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.brand-text .subtitle {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 3px;
+}
+
+/* ── Sections ── */
+.section {
+  padding: 2rem 2.5rem;
+}
+
+.team-section {
+  padding: 2rem 2.5rem 2.5rem;
+  background: rgba(56, 130, 235, 0.025);
+}
+
+/* ── Section Label ── */
+.section-label {
+  font-family: 'Syne', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(130, 175, 240, 0.55);
+  margin-bottom: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(90, 145, 220, 0.12);
+}
+
+.team-count {
+  font-size: 11px;
+  color: rgba(130, 175, 240, 0.45);
+  font-weight: 400;
+  margin-left: 6px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* ── Grid ── */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* ── Input Group ── */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-group.full {
+  grid-column: 1 / -1;
+}
+
+label {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.839);
+  letter-spacing: 0.02em;
+}
+
+input,
+textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(90, 145, 220, 0.2);
+  border-radius: 10px;
+  padding: 10px 14px;
+  color: #e0eaf8;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  width: 100%;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(130, 165, 220, 0.3);
+}
+
+input:focus,
+textarea:focus {
+  border-color: rgba(56, 130, 235, 0.55);
+  background: rgba(56, 130, 235, 0.06);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* ── Submit Button ── */
+.btn-submit {
+  width: 100%;
+  padding: 20px;
+ background-color: #a6f5fd;
+  border: 1px solid rgba(90, 145, 220, 0.4);
+  border-radius: 12px;
+  color: #21248f;
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+  margin-top: 8px;
+}
+
+.btn-submit:hover {
+  opacity: 0.78;
+  transform: translateY(-1px);
+}
+
+.btn-submit:active {
+  transform: scale(0.98);
+}
+
+/* ── Divider ── */
+.divider {
+  border: none;
+  border-top: 1px solid rgba(90, 145, 220, 0.12);
+}
+
+/* ── Tabs ── */
+.tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 1.25rem;
+}
+
+.tab {
+  padding: 7px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid rgba(90, 145, 220, 0.2);
+  background: transparent;
+  color: rgba(160, 195, 245, 0.6);
+  transition: all 0.2s;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.tab.active {
+  background: rgba(22, 81, 184, 0.35);
+  border-color: rgba(90, 145, 220, 0.5);
+  color: #b5d4f4;
+}
+
+/* ── Search Row ── */
+.search-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.search-input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(90, 145, 220, 0.2);
+  border-radius: 10px;
+  padding: 10px 14px;
+  color: #e0eaf8;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.search-input::placeholder {
+  color: rgba(130, 165, 220, 0.3);
+}
+
+.search-input:focus {
+  border-color: rgba(56, 130, 235, 0.55);
+  background: rgba(56, 130, 235, 0.06);
+}
+
+.btn-search {
+  padding: 10px 20px;
+  background-color: #a6f5fd;
+  border: 1px solid rgba(90, 145, 220, 0.35);
+  border-radius: 10px;
+  color: #0c2071;
+  font-family: 'Syne', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.btn-search:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+/* ── Filter Row ── */
+.filter-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.filter-chip {
+  padding: 5px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  border: 1px solid rgba(90, 145, 220, 0.18);
+  background: transparent;
+  color: rgba(160, 195, 245, 0.55);
+  transition: all 0.2s;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.filter-chip.active {
+  background: rgba(56, 130, 235, 0.15);
+  border-color: rgba(90, 145, 220, 0.45);
+  color: #b5d4f4;
+}
+
+/* ── Results Area ── */
+.results-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ── Mechanic Card ── */
+.mechanic-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(90, 145, 220, 0.15);
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.mechanic-card:hover {
+  border-color: rgba(90, 145, 220, 0.32);
+  background: rgba(56, 130, 235, 0.05);
+}
+
+/* ── Avatar ── */
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(22, 81, 184, 0.3);
+  border: 1px solid rgba(90, 145, 220, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Syne', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #85b7eb;
+  flex-shrink: 0;
+}
+
+/* ── Mechanic Info ── */
+.mech-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.mech-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #e0eaf8;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.mech-id {
+  font-size: 11px;
+  color: rgba(130, 175, 240, 0.4);
+  font-weight: 400;
+}
+
+.mech-role {
+  font-size: 12px;
+  color: rgba(160, 195, 245, 0.55);
+  margin-top: 2px;
+}
+
+.mech-contact {
+  font-size: 12px;
+  color: rgba(130, 175, 240, 0.5);
+  margin-top: 1px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.mech-contact svg {
+  width: 11px;
+  height: 11px;
+  flex-shrink: 0;
+}
+
+/* ── Add Button ── */
+.btn-add {
+  padding: 7px 15px;
+  background: transparent;
+  border: 1px solid rgba(56, 130, 235, 0.38);
+  border-radius: 8px;
+  color: rgba(130, 175, 240, 0.85);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.btn-add:hover {
+  background: rgba(56, 130, 235, 0.12);
+  border-color: rgba(90, 145, 220, 0.6);
+  color: #b5d4f4;
+}
+
+.btn-add.added {
+  background: rgba(20, 160, 90, 0.1);
+  border-color: rgba(20, 160, 90, 0.35);
+  color: rgba(100, 210, 155, 0.85);
+  cursor: default;
+}
+
+/* ── No Results ── */
+.no-results {
+  text-align: center;
+  padding: 2rem;
+  color: rgba(130, 165, 220, 0.35);
+  font-size: 13px;
+}
+
+/* ── Team Card ── */
+.team-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(90, 145, 220, 0.14);
+  border-radius: 14px;
+  padding: 13px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+/* ── Remove Button ── */
+.rm-btn {
+  margin-left: auto;
+  background: rgba(200, 50, 50, 0.08);
+  border: 1px solid rgba(200, 50, 50, 0.18);
+  color: rgba(220, 120, 120, 0.7);
+  border-radius: 6px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 15px;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.rm-btn:hover {
+  background: rgba(200, 50, 50, 0.2);
+}
+
+/* ── Empty Team ── */
+.empty-team {
+  text-align: center;
+  padding: 1.75rem 1rem;
+  color: rgba(130, 165, 220, 0.3);
+  font-size: 13px;
+  border: 1px dashed rgba(90, 145, 220, 0.13);
+  border-radius: 14px;
+}
+
+.empty-team svg {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto 10px;
+  display: block;
+  opacity: 0.25;
+}
+
+/* ── Responsive ── */
+@media (max-width: 500px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .card-header,
+  .section,
+  .team-section {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .search-row {
+    flex-direction: column;
+  }
+
+  .btn-search {
+    width: 100%;
+  }
+}

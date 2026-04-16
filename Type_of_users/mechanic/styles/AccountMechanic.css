@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --bg: #0b1224;
+  --border: #334155;
+  --primary: #38bdf8;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  background-image: linear-gradient( rgb(4, 5, 24),rgba(6, 11, 37, 0.609));
+  background-color: rgb(46, 39, 48);
+  color: var(--text);
+  padding: 12px;
+}
+
+.page-shell {
+  max-width: 940px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.topbar {
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(19, 44, 61, 0.9);
+  padding: 20px 12px;
+  gap: 8px;
+  align-items: start;
+  justify-content: left;
+}
+
+.btn-link {
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid #334155;
+  background: #111827;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 7px 12px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-link:hover{
+  background-color: #1a303a;
+
+}
+
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-actions img,
+.search-box img {
+  width: 18px;
+  height: 18px;
+}
+
+.content { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 12px; 
+}
+
+.section {
+  background: rgba(20, 35, 47, 0.9);
+  border-radius: 14px;
+  border: 1px solid #334155;
+  padding: 16px;
+}
+
+.profile-card { 
+  border-left: 4px solid var(--primary); 
+}
+
+.profile-row { 
+  display: flex; 
+  gap: 14px; 
+  align-items: center; 
+  flex-wrap: wrap; 
+}
+
+.profile-row img { 
+  width: 80px; 
+  height: 80px; 
+  border-radius: 50%;
+  border: 2px solid var(--primary); 
+  object-fit: cover; 
+}
+
+.profile-meta h2 { 
+  margin-bottom: 6px; 
+  font-size: 1.1rem; 
+}
+
+.profile-meta p { 
+  margin: 2px 0; 
+  color: #cbd5e1; 
+  font-size: .9rem; 
+}
+
+.caps {
+width: 90px;
+padding: 5px 5px;
+border-radius: 20PX;
+background-color: rgba(20, 89, 159, 0.548);
+border: 1px solid rgb(161, 231, 255);
+text-align: center; 
+font-size: 1px; 
+}
+
+.section-head { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  margin-bottom: 10px; 
+  gap: 10px; }
+
+.section-head h2 { 
+  font-size: 1.1rem; 
+  margin: 0; 
+}
+
+.eyebrow { 
+  font-size: .72rem; 
+  margin-bottom: 4px; 
+  letter-spacing: .12em; 
+  text-transform: uppercase; 
+  color: var(--muted); 
+}
+
+.btn-outline, .btn-tiny { 
+  border: 1px solid #334155; 
+  background: #111827; 
+  color: #e2e8f0; 
+  border-radius: 10px; 
+  padding: 7px 12px; 
+  font-weight: 600; 
+  cursor: pointer; 
+}
+
+.btn-outline:hover, .btn-tiny:hover { 
+  background: #1f2937; 
+}
+
+.grid-2 { 
+  display: grid; 
+  grid-template-columns: repeat(2, minmax(0, 1fr)); 
+  gap: 10px; 
+}
+
+.grid-3 { 
+  display: grid; 
+  grid-template-columns: repeat(3, minmax(0, 1fr)); 
+  gap: 10px; 
+}
+
+.field { 
+color: white;
+border: 1px solid #334155; 
+border-radius: 10px; padding: 10px; 
+background: #161527; 
+}
+
+.fieldSelect { 
+color: white;
+border: none;
+background: #161527; 
+padding: 0px 0px 0px 0px ;
+}
+
+.field h3 { 
+font-size: .83rem; 
+color: #e2e8f0; 
+margin-bottom: 5px; 
+}
+
+.field p { 
+font-size: .8rem; 
+color: #cbd5e1; 
+margin: 0; 
+}
+
+.field h5{ 
+font-size: 13px; 
+color: #c3daf7; 
+margin: 10px 0px 0px 0px; 
+}
+
+.field a{ 
+text-decoration: none;
+font-size: 13px; 
+color: #52a5ff; 
+margin: 10px 0px 0px 0px; 
+transition: all 0.2s ease-in;
+}
+
+.field a:hover{
+color: #75efff; 
+}
+
+@media (max-width: 860px) {
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  .search-box input { width: 120px; }
+  .topbar { justify-content: center; }
+}
+
+/* Schedule Style */
+
+#Schedule {
+  border: 1px solid var(--border);
+    border-radius: 20px;
+    margin: 20px 5px 10px 5px;
+    padding: 10px 30px 40px 30px;
+    background: rgba(19, 44, 61, 0.9);
+    border-top: 1px solid rgba(130, 120, 150, 0.4);
+    border-bottom: 1px solid rgba(130, 120, 150, 0.4);
+}
+
+.HeadSched{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 0px 30px 0px;
+}
+
+.HeadSched h1{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.HeadSched h2{
+  background-color: #012130;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+#ScheduleGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 16px;
+}
+
+.ScheduleDay {
+    background-color: rgba(110, 108, 151, 0.2);
+    border: 1px solid rgba(130, 120, 150, 0.4);
+    border-radius: 10px;
+    padding: 18px 14px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+}
+
+.ScheduleDay:hover {
+    background-color: rgba(110, 108, 151, 0.371);
+    border-color: rgb(157, 203, 255);
+}
+
+.ScheduleDay h2 {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+    color: rgb(255, 255, 255);
+}
+
+.ScheduleDay p {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 6px;
+}
+
+.Available {
+    color: rgb(145, 255, 253) !important;
+    font-weight: 700;
+}
+
+.Busy {
+    color: rgb(188, 188, 251) !important;
+    font-weight: 700;
+}
+
+.Off {
+    color: rgba(255, 255, 255, 0.4) !important;
+    font-weight: 600;
+}
+
+/* End of Schedule Style */
+
+/* Add Shop */
+
+.AddShop{
+  font-size: 15px;
+  color: #c5eeff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: 30px;
+}
+
+.AddShop button{
+  padding: 15px;
+  color: rgb(119, 244, 255);
+  border: 1px solid rgb(119, 244, 255);
+  border-radius: 20px;
+  background-color: #244a9727;
+  transition: all 0.2s ease-in-out;
+}
+
+.AddShop button:hover{
+  scale: 1.02;
+  background-color: #3f65b049;
+}
+
+/* FOOTER */
+
+footer{
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin: 0px;
+}
+

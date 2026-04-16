@@ -1,0 +1,546 @@
+/* ── Global ── */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgb(4, 5, 24), rgba(6, 11, 37, 0.609));
+    background-color: rgb(46, 39, 48);
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+/* ── Header ── */
+#Header {
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(34, 40, 79);
+}
+
+#left {
+    border-radius: 20px;
+    background-color: rgb(199, 245, 255);
+    text-align: center;
+}
+
+#left h3 {
+    padding: 10px;
+    width: 60px;
+}
+
+#left a {
+    text-decoration: none;
+    color: rgb(34, 47, 67);
+    font-size: 10px;
+}
+
+/* ── Page Label ── */
+.page-label {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 20px 20px 10px;
+}
+
+/* ── Profile Section ── */
+#Profile {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 24px;
+    background-image: linear-gradient(rgba(69, 69, 156, 0.25), rgba(30, 9, 82, 0.74));
+    background-color: rgba(22, 40, 83, 0.92);
+}
+
+.shop-avatar {
+    width: 330px;
+    height: 190px;
+    border-radius: 16px;
+    background: rgba(58, 114, 255, 0.25);
+    border: 2px solid rgba(164, 243, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #a4f3ff;
+    flex-shrink: 0;
+}
+
+#ProfileInfo {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.status-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.status-row h1 {
+    color: rgb(164, 250, 220);
+    font-size: 24px;
+    margin: 0;
+}
+
+#ProfileInfo p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+.badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.badge-open {
+    background: rgba(8, 41, 12, 0.6);
+    border: 1px solid rgba(115, 255, 0, 0.5);
+    color: #91ffb0;
+}
+
+.badge-type {
+    background: rgba(20, 89, 159, 0.5);
+    border: 1px solid rgba(161, 231, 255, 0.5);
+    color: #a1e7ff;
+}
+
+#ProfileActions {
+    display: flex;
+    gap: 12px;
+    margin-left: auto;
+}
+
+.profile-btn {
+    padding: 12px 26px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    transition: all 0.15s;
+    min-width: 120px;
+}
+
+.profile-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.btn-follow {
+    background: rgba(164, 236, 254, 0.95);
+    color: #06213a;
+}
+
+.btn-inquire {
+    background: rgba(37, 52, 109, 0.95);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ── Owner Profile ── */
+
+.Owner_Shop{
+    margin: 10px;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+.Owner_Shop img{
+    height: 55px;
+    border-radius: 50%;
+    border: 1px solid white;
+    transition: all 0.2s ease-in-out;
+}
+
+.Owner_Shop img:hover{
+    scale: 1.07;
+    border: 1.5px solid rgb(0, 255, 247);
+}
+
+
+/* ── Stats ── */
+.stats-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    margin: 10px;
+    padding: 24px;
+    background-image: linear-gradient(rgba(20, 20, 162, 0.2), rgba(35, 13, 94, 0.15));
+}
+
+.stat-card {
+    text-align: center;
+    font-weight: 700;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(110, 108, 151, 0.2);
+    border: 1px solid rgba(130, 120, 150, 0.4);
+    border-radius: 10px;
+    padding: 20px 24px;
+    gap: 12px;
+    transition: all 0.2s;
+}
+
+.stat-card:hover {
+    background-color: rgba(110, 108, 151, 0.37);
+    border-color: rgb(157, 203, 255);
+}
+
+.stat-card h2 {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.stat-card p {
+    color: aqua;
+    font-size: 24px;
+}
+
+/* ── Schedule ── */
+#Schedule {
+    border-radius: 20px;
+    margin: 10px;
+    padding: 20px 24px 30px;
+    background: rgba(18, 24, 63, 0.95);
+    border: 1px solid rgba(130, 120, 150, 0.4);
+}
+
+#Schedule h1 {
+    color: #fff;
+    font-size: 20px;
+    margin: 0 0 18px;
+}
+
+#ScheduleGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+}
+
+.ScheduleDay {
+    background-color: rgba(110, 108, 151, 0.2);
+    border: 1px solid rgba(130, 120, 150, 0.4);
+    border-radius: 10px;
+    padding: 16px 10px;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.ScheduleDay:hover {
+    background-color: rgba(110, 108, 151, 0.37);
+    border-color: rgb(157, 203, 255);
+}
+
+.ScheduleDay h2 {
+    font-size: 13px;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.ScheduleDay p {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 6px;
+}
+
+.Available { color: rgb(145, 255, 253) !important; font-weight: 700; }
+.Busy      { color: rgb(188, 188, 251) !important; font-weight: 700; }
+.Off       { color: rgba(255, 255, 255, 0.35) !important; font-weight: 600; }
+
+/* ── Shop Info ── */
+#InfoSection {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+#ProfileDetails {
+    width: 100%;
+    color: white;
+    border-radius: 18px;
+    padding: 18px;
+    background: rgba(18, 24, 63, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#Head {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+#Head h1 {
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+}
+
+#Pinfo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rows {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+}
+
+.Tabs {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.Tabs h3 {
+    font-size: 12px;
+    color: #d4e2ff;
+    margin: 0;
+}
+
+.Tabs p {
+    font-size: 13px;
+    color: #f7f7f7;
+    margin: 0;
+}
+
+/* ── Address ── */
+#Address {
+    background: rgba(19, 23, 55, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 14px;
+}
+
+#Adhead {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    margin-bottom: 14px;
+}
+
+#Adhead h1 {
+    color: #fff;
+    font-size: 16px;
+    margin: 0;
+}
+
+#Info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.Adtab {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.Adtab h3 {
+    font-size: 12px;
+    color: #d7e7ff;
+    margin: 0;
+}
+
+.Adtab p {
+    font-size: 13px;
+    color: #f6f6f6;
+    margin: 0;
+}
+
+/* ── Services ── */
+#Services {
+    margin: 10px;
+    padding: 20px 24px;
+    background: rgba(18, 24, 63, 0.95);
+    border: 1px solid rgba(130, 120, 150, 0.4);
+    border-radius: 20px;
+}
+
+#Services h1 {
+    color: #fff;
+    font-size: 18px;
+    margin: 0 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.services-grid {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.service-tag {
+    background: rgba(58, 114, 255, 0.18);
+    border: 1px solid rgba(100, 160, 255, 0.3);
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 12px;
+    color: #a8d4ff;
+}
+
+/* ── Members ── */
+.shop_members{
+    border: 1px solid rgba(255, 255, 255, 0.196) ;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #0e1b42;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    display: flex;
+    margin: 20px;
+    padding: 40px;
+}
+
+.member_profile{
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.277);
+    padding: 30px;
+    background-color: #041036;
+    gap: 10px;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.member_profile img{
+    width: 60px;
+    border-radius: 50%;
+    border: 1px solid white;
+    transition: all 0.2s ease-in-out;
+}
+
+.member_profile img:hover{
+    scale: 1.07;
+    border: 1.5px solid rgb(0, 255, 242);
+}
+
+.member_profile h4{
+    font-size: 12px;
+    color: #f6f6f6;
+}
+
+.shop_members h1{
+    flex-basis: 100%;
+    color: #f6f6f6;
+}
+
+/* ── Reviews ── */
+#Reviews {
+    padding: 20px;
+    margin: 10px 10px 20px;
+    background-color: rgba(21, 16, 43, 0.6);
+    border-radius: 20px;
+}
+
+#Reviews h1 {
+    color: rgb(197, 227, 254);
+    font-size: 18px;
+    margin: 0 0 18px;
+}
+
+.ReviewCard {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background-color: rgba(120, 116, 207, 0.2);
+    border: 1px solid rgba(130, 120, 150, 0.4);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    transition: all 0.2s;
+}
+
+.ReviewCard:hover {
+    background-color: rgba(110, 108, 151, 0.37);
+    border-color: rgb(157, 203, 255);
+}
+
+.reviewer-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(58, 114, 255, 0.3);
+    border: 1px solid rgba(157, 203, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: #a4f3ff;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.ReviewInfo h2 {
+    font-size: 14px;
+    color: #fff;
+    margin: 0 0 4px;
+}
+
+.Stars {
+    color: rgb(157, 203, 255);
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.ReviewInfo p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.65);
+    line-height: 1.5;
+}
+
+/* ── Footer ── */
+footer {
+    border: 1px solid rgb(71, 70, 70);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
