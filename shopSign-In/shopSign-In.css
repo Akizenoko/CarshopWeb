@@ -1,0 +1,128 @@
+body {
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgb(4,5,24), rgba(6,11,37,0.61));
+    background-color: rgb(46,39,48);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+#signin {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 10px;
+    animation: signin 0.4s ease-in-out;
+}
+
+#signin-box {
+    width: 400px;
+    max-width: 100%;
+    padding: 40px 30px;
+    border-radius: 12px;
+    background: rgba(20,20,162,0.25);
+    box-shadow: 0 0 25px rgba(0,0,0,0.35);
+    color: #fff;
+    text-align: center;
+}
+
+#signin-box h1 {
+    color: #f8f8f8;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+#signin-box h3 {
+    font-family: Georgia, serif;
+    color: #9dcbff;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+form fieldset {
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+form fieldset legend {
+    padding: 0 5px;
+    font-size: 14px;
+    color: #c0d8ff;
+}
+
+.form-group, .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-field label {
+    font-size: 13px;
+    color: #e0e0e0;
+}
+
+textarea {
+    resize: none;
+    min-height: 100px;
+    background-color: rgba(46, 53, 74, 0.9);
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #827896;
+}
+
+input {
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.681);
+    padding: 10px;
+    background: none;
+    color: #fff;
+}
+
+#terms-conditions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+#terms-conditions input {
+    width: 16px;
+    height: 16px;
+}
+
+#signin-box button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 25px;
+    border: none;
+    background-color: #fff;
+    color: #3b4949;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#signin-box button:hover {
+    background-color: #bcbcfc;
+    color: #1c2c2c;
+    transform: translateY(-2px);
+}
+
+footer {
+    border-top: 1px solid rgb(71,70,70);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 500px) {
+    #signin-box { padding: 30px 20px; width: 100%; }
+}

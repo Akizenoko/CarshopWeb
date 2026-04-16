@@ -10,16 +10,12 @@
 
 <body>
     <div id="NavBar">
-        <div id="forprofile">
-            <i class="fa-solid fa-circle-user" id="profile"></i>
-        </div>
-        
+        <div id="forprofile"><i class="fa-solid fa-circle-user" id="profile"></i></div>
         <div id="mainnavbar">
             <a href="home.html"><button class="button">Home</button></a>
             <a href="manageOrder.html"><button class="button">Manage Orders</button></a>
             <a href="shopFinances.html"><button class="button">Shop Finances</button></a>
         </div>
-
         <div id="formiscelanious">
             <i class="fa-solid fa-bell" id="bell"></i>
             <i class="fa-solid fa-comment-dots" id="chat"></i>
@@ -30,58 +26,111 @@
         <div id="listsSidebar">
             <div id="SidebarProf">
                 <a href="shopsAccountPage.html"><i class="fa-regular fa-circle-user" style="font-size: 50px; color: #5bc0de;"></i></a>
-                <h2>Shop</h2>
-                <p>shop@Fixit.com</p>
+                <h2>Bungkaniko Auto Center</h2>
+                <p>Bungkaniks@Shop.com</p>
             </div>
-            
-            <button class="Tabs">
-                <i class="fa-solid fa-users"></i>
-                <h1>Staff List</h1>
-            </button>
-            <button class="Tabs">
-                <i class="fa-solid fa-arrow-trend-up"></i>
-                <h1>Performance</h1>
-            </button>
-            <button class="Tabs">
-                <i class="fa-solid fa-gear"></i>
-                <h1>Settings</h1>
-            </button>
-                <a href="../../../index.html"><button class="Tabs" id="Sign-Out"><h1>Sign-out</h1></button></a>
+            <button class="Tabs"><i class="fa-solid fa-users"></i><h1>Staff List</h1></button>
+            <button class="Tabs"><i class="fa-solid fa-arrow-trend-up"></i><h1>Performance</h1></button>
+            <button class="Tabs"><i class="fa-solid fa-gear"></i><h1>Settings</h1></button>
+            <a href="../../index.html" style="text-decoration: none;">
+                <button class="Tabs" id="Sign-Out"><h1>Sign-out</h1></button>
+            </a>
         </div>
     </div>
 
     <div id="Header">
-        <div id="Hinfo">
-            <h1>Admin View</h1>
-            <p>Welcome back! Your shop is currently <strong>OPEN</strong>.</p>
-        </div>
-
-        <div id="socials">
-            <h1>Daily Goal</h1>
-            <i class="fa-solid fa-chart-line" style="font-size: 50px; color: white;"></i>
-            <p style="color: white; font-size: 24px; margin-left: 10px;">85%</p>
-        </div>
-    </div>
-
-    <div id="Recommendations">
-        <h1>Shop Performance</h1>
-        <div class="shops">
-            <div id="recinfo">
-                <i class="fa-solid fa-money-bill-trend-up" style="color: #28a745;"></i>
-                <h2>₱12,500.00</h2>
-                <p>Today's Earnings</p>
-            </div>
-        </div>
-        <div class="shops">
-            <div id="recinfo">
-                <i class="fa-solid fa-screwdriver-wrench" style="color: #5bc0de;"></i>
-                <h2>8</h2>
-                <p>Active Repairs</p>
+        <div id="HContent">
+            <h2 style="color: #5bc0de; font-size: 18px; margin-bottom: 5px;">Mabuhay!</h2>
+            <h1>Welcome back, Owner</h1>
+            <p>Shop Status: 
+                <button id="shopStatusBtn" class="status-toggle open-style">OPEN</button>
+            </p>
+            <div id="HeaderGoal">
+                <h3>Daily Goal Progress</h3>
+                <div style="display: flex; align-items: center; margin-top: 5px;">
+                    <i class="fa-solid fa-chart-line" style="font-size: 25px; color: white;"></i>
+                    <p style="color: white; font-size: 24px; margin-left: 10px; font-weight: bold;">85%</p>
+                </div>
             </div>
         </div>
     </div>
+
+    <div class="ContentSection">
+        <h1 class="SectionTitle">Weekly Schedule</h1>
+        <div id="ScheduleGrid">
+            <div class="ScheduleDay"><h4>Mon</h4><p>9am-5pm</p><span class="status-tag avail">Available</span></div>
+            <div class="ScheduleDay"><h4>Tue</h4><p>9am-5pm</p><span class="status-tag busy">Busy</span></div>
+            <div class="ScheduleDay"><h4>Wed</h4><p>9am-5pm</p><span class="status-tag avail">Available</span></div>
+            <div class="ScheduleDay"><h4>Thu</h4><p>9am-5pm</p><span class="status-tag busy">Busy</span></div>
+            <div class="ScheduleDay"><h4>Fri</h4><p>9am-3pm</p><span class="status-tag avail">Available</span></div>
+            <div class="ScheduleDay"><h4>Sat</h4><p>10am-2pm</p><span class="status-tag avail">Available</span></div>
+            <div class="ScheduleDay"><h4>Sun</h4><p>—</p><span class="status-tag off">Closed</span></div>
+        </div>
+    </div>
+
+    <div class="ContentSection">
+        <h1 class="SectionTitle">Weekly Revenue Analytics</h1>
+        <div class="GraphContainer">
+            <div class="Bar" style="height: 60%;" data-day="Mon"><span>₱12k</span></div>
+            <div class="Bar" style="height: 45%;" data-day="Tue"><span>₱9k</span></div>
+            <div class="Bar" style="height: 85%;" data-day="Wed"><span>₱17k</span></div>
+            <div class="Bar" style="height: 30%;" data-day="Thu"><span>₱6k</span></div>
+            <div class="Bar" style="height: 70%;" data-day="Fri"><span>₱14k</span></div>
+            <div class="Bar" style="height: 95%;" data-day="Sat"><span>₱19k</span></div>
+            <div class="Bar" style="height: 10%;" data-day="Sun"><span>₱2k</span></div>
+        </div>
+    </div>
+
+    <div class="ContentSection">
+        <h1 class="SectionTitle">Recent Order History</h1>
+        <table class="OrderTable">
+            <thead>
+                <tr>
+                    <th>Customer</th>
+                    <th>Service</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cyrus Macayan</td>
+                    <td>Oil Change</td>
+                    <td>March 25</td>
+                    <td>₱1,500.00</td>
+                    <td><span class="status-tag avail">Completed</span></td>
+                </tr>
+                <tr>
+                    <td>Rudolf Santos</td>
+                    <td>Engine Tune-up</td>
+                    <td>March 22</td>
+                    <td>₱5,500.00</td>
+                    <td><span class="status-tag avail">Completed</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="ContentSection">
+        <h1 class="SectionTitle">Incoming Job Requests</h1>
+        <div class="JobCard">
+            <div class="JobInfo">
+                <h3>Juan Dela Cruz</h3>
+                <p><strong>Issue:</strong> Engine won't start</p>
+                <p><i class="fa-solid fa-location-dot"></i> Zamboanga City</p>
+            </div>
+            <div class="JobActions">
+                <button class="AcceptBtn">Accept</button>
+                <button class="DeclineBtn">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Bungkaniko Auto Center | Fixit Automotive Platform</p>
+    </footer>
 
     <script src="../script.js"></script>
 </body>
-
 </html>
