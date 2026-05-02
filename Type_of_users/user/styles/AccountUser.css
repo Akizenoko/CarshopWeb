@@ -3,20 +3,24 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(0, 255, 204) rgba(8, 20, 85, 0.536);
 }
 
 :root {
   --text: #e2e8f0;
   --muted: #94a3b8;
   --bg-dark: #0b1224;
-  --card-bg: rgba(20, 35, 47, 0.9);
-  --border: #334155;
+  --card-bg: rgba(13, 31, 45, 0.607);
+  --border: #6599e39a;
   --primary: #38bdf8;
   --primary-glow: #38bdf866;
 }
 
 body {
-  background: linear-gradient(145deg, #0a1a2f 0%, #0b2b44 100%);
+  background-image: linear-gradient( rgb(0, 62, 67),rgba(8, 8, 65, 0.609));
+  background-color: rgb(46, 39, 48);
+  font-family: "Poppins", sans-serif;
   color: var(--text);
 }
 
@@ -29,25 +33,25 @@ body {
 
 /* ---------- TOP BAR ---------- */
 .topbar {
-  border: 1px solid var(--border);
-  background: rgba(19, 44, 61, 0.9);
-  padding: 1rem 1.2rem;
+  border-bottom: 1px solid var(--border);
+  background: rgba(10, 32, 47, 0.9);
+  padding: 15px;
 }
 
 .btn-link {
   text-decoration: none;
   color: var(--text);
   border: 1px solid #334155;
-  background: #111827;
-  border-radius: 2rem;
+  background: #0f4a4c9a;
+  border-radius: 10px;
   font-weight: 600;
-  padding: 0.5rem 1.2rem;
+  padding: 10px 20px;
   transition: all 0.2s ease;
   display: inline-block;
 }
 
 .btn-link:hover {
-  background: #1f3a4b;
+  background: #205778;
   transform: translateX(-2px);
 }
 
@@ -68,10 +72,6 @@ body {
   transition: 0.2s;
 }
 
-.profile-card {
-  border-left: 4px solid var(--primary);
-}
-
 .section-head {
   display: flex;
   align-items: center;
@@ -81,9 +81,14 @@ body {
   margin-bottom: 1rem;
 }
 
+.section-head h1{
+  color: #15ffcc93;
+  font-size: 30px;
+}
+
 .section-head h2 {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 25px;
+  font-weight: 500;
 }
 
 .eyebrow {
@@ -103,22 +108,24 @@ body {
 }
 
 .profile-row img {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   border: 2px solid var(--primary);
   object-fit: cover;
 }
 
 .profile-meta h2 {
+  font-weight: 700;
   margin-bottom: 0.3rem;
-  font-size: 1.3rem;
+  font-size: 30px;
 }
 
 .profile-meta p {
+  font-weight: 300;
   margin: 0.2rem 0;
   color: #cbd5e1;
-  font-size: 0.85rem;
+  font-size: 15px;
 }
 
 .badge-role {
@@ -135,10 +142,10 @@ body {
 /* Buttons */
 .btn-outline, .btn-tiny {
   border: 1px solid var(--border);
-  background: #111827;
+  background: #023e56a6;
   color: var(--text);
   border-radius: 2rem;
-  padding: 0.5rem 1rem;
+  padding: 13px 35px;
   font-weight: 600;
   cursor: pointer;
   transition: 0.2s;
@@ -168,19 +175,21 @@ body {
   border: 1px solid var(--border);
   border-radius: 1rem;
   padding: 0.8rem;
-  background: #161527;
+  background: #101527;
 }
 
 .field h3 {
-  font-size: 0.75rem;
+  font-weight: 700;
+  font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: #a0b8d4;
+  color: #5bb3b9;
   margin-bottom: 0.4rem;
 }
 
 .field p {
-  font-size: 0.9rem;
+  font-weight: 300;
+  font-size: 15px;
   color: var(--text);
   word-break: break-word;
 }
@@ -276,23 +285,3 @@ body {
     color: #8ca3c7;
 }
 
-/* Responsive */
-@media (max-width: 720px) {
-  body {
-    padding: 0.8rem;
-  }
-  .grid-2, .grid-3 {
-    grid-template-columns: 1fr;
-  }
-  .section {
-    padding: 1rem;
-  }
-  .profile-row {
-    flex-direction: column;
-    text-align: center;
-  }
-  .section-head {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}

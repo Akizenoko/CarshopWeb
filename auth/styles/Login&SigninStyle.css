@@ -1,247 +1,249 @@
-/* Global Selectors */
-*{
-    padding: 0%;
-    margin: 0%;
-    box-sizing: border-box;  
+/* ---------- GLOBAL (Matches User Homepage Theme) ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(0, 255, 204) rgba(8, 20, 85, 0.536);
 }
 
-body{
+body {
+    font-family: "Poppins", sans-serif;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    background-image: linear-gradient( rgb(4, 5, 24),rgba(6, 11, 37, 0.609));
+    background-image: linear-gradient( rgb(0, 62, 67),rgba(8, 8, 65, 0.609));
     background-color: rgb(46, 39, 48);
+    color: #f0f4fa;
+    min-height: 100vh;
 }
 
-/* End of Global Selectors */
+/* ---------- NAVBAR ---------- */
+.nav-auth {
+    background-color: #062234;
+    padding: 40px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    box-shadow: 0px 0px 50px rgba(4, 4, 4, 0.412);
+    height: 70px;
+}
 
-/* Login Page Design */
+.nav-auth h1 {
+    color: rgb(146, 255, 237);
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
 
-#Login{
-    flex-wrap: wrap;
+.nav-auth a {
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 0 15px;
+    height: 70px;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    font-size: 0.95rem;
+}
+
+.nav-auth a:hover {
+    background-color: rgba(255, 255, 255, 0.055);
+}
+
+/* ---------- AUTH CONTAINERS ---------- */
+.auth-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    align-content: center;
-    animation: login 0.4s ease-in-out;
+    padding: 50px 20px;
+    min-height: calc(100vh - 70px - 250px);
 }
 
-@keyframes login{
-    0%{transform: translateY(13px); opacity: 0;}
-    100%{transform: translateY(0px); opacity: 1;}
+.auth-card {
+    background: rgba(9, 37, 78, 0.5);
+    backdrop-filter: blur(8px);
+    border-radius: 32px;
+    border: 1px solid rgba(120, 158, 223, 0.5);
+    padding: 40px 35px;
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    animation: fadeUp 0.4s ease-out;
 }
 
-#LoginBox{
-    flex-wrap: wrap;
+/* For signup – wider */
+.auth-card-wide {
+    max-width: 750px;
+}
+
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(15px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.auth-card h1 {
+    font-size: 2rem;
+    font-weight: 600;
     text-align: center;
-    box-shadow: 0 0 20px rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    border-radius: 10px;
-    width: 350px;
-    height: 450px;
-    background-image: linear-gradient(rgba(20, 20, 162, 0.354),rgba(35, 13, 94, 0.209));
-    background-color: rgba(110, 108, 151, 0.371);
-    padding: 40px;
-    margin: 70px;
+    color: #9efff0;
+    margin-bottom: 10px;
 }
 
-#LoginBox h1{
-    color: rgb(255, 255, 255);
-}
-
-
-#LoginDetails{
-    font-size: 13px;
-    color: rgb(255, 255, 255);
-    text-align: left;
-    margin: 30px;
-    width: 204px;
-}
-
-#LoginBox h3{
-    font-family:Georgia, 'Times New Roman', Times, serif;
+.auth-card h3 {
     text-align: center;
-    margin: 0px 0px 20px 0px;
-    font-size: 10px;
-    color: rgb(157, 203, 255);
-}
-
-#LoginDetails p{
-    color: rgb(145, 255, 253);
-    text-align: right;
-    font-size: 11px;
-    margin: 6px 0px 0px 0px;
-}
-
-#LoginDetails label{
-    transition: all 0.2s ease-in-out;
-}
-
-#LoginDetails:hover label{
-    margin: 0px 0px 0px 5px;
-    font-weight: bolder;
-}
-
-#LoginDetails input{
-    color: rgb(0, 0, 0);
-    background-color: rgb(251, 251, 252);
-    padding: 7px 30px 7px 10px;
-    border-radius: 5px;
-    border: 0px solid rgb(29, 17, 255);
-}
-
-#LoginBox Button{
-    margin: 20px 0px 10px 0px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(59, 73, 73);
-    font-weight: 900;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 15px;
-    width: 240px;
-    border-radius: 20px ;
-    padding: 10px 50px 10px 50px;
-    transition: all 0.2s ease-in-out;
-}
-
-#LoginBox Button:hover{
-    background-color: rgb(187, 198, 248);
-    color: rgb(28, 44, 44);
-    transform: translateY(-2px);
-    
-}
-
-#LoginBox h2{
-    text-align: center;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 9px;
-    color: rgb(255, 255, 255);
-}
-
-#LoginBox a{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(116, 241, 250);
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
-}
-
-#LoginBox a:hover{
-    color: rgb(158, 158, 255);
-}
-
-/* End of Login Page Design */
-
-
-/* ===== Container ===== */
-#signin {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 30px 10px;
-}
-
-/* ===== Sign-in Box ===== */
-#signin-box {
-    width: 600px;
-    max-width: 100%;
-    padding: 40px 30px;
-    border-radius: 12px;
-    background: rgba(20,20,162,0.25);
-    box-shadow: 0 0 25px rgba(0,0,0,0.35);
-    color: #fff;
-    text-align: center;
-}
-
-#signin-box h1 {
-    color: #f8f8f8;
-    margin-bottom: 15px;
-    font-size: 28px;
-}
-
-#signin-box h3 {
-    font-family: Georgia, serif;
-    color: #9dcbff;
-    font-size: 14px;
+    font-size: 0.85rem;
+    color: #bbd4ff;
     margin-bottom: 25px;
+    font-weight: 400;
 }
 
-/* ===== Form Groups ===== */
-form fieldset {
-    border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 8px;
+/* ---------- FORM ELEMENTS ---------- */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #cbd5e1;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 14px;
+    background: rgba(20, 28, 50, 0.7);
+    border: 1px solid rgba(120, 158, 223, 0.4);
+    border-radius: 14px;
+    color: white;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #00e0ff;
+    background: rgba(20, 28, 50, 0.9);
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Forgot password link */
+.forgot-link {
+    text-align: right;
+    margin-top: 6px;
+}
+
+.forgot-link a {
+    color: #6efff0;
+    font-size: 0.7rem;
+    text-decoration: none;
+}
+
+.forgot-link a:hover {
+    text-decoration: underline;
+}
+
+/* Fieldset groups for signup */
+fieldset {
+    border: 1px solid rgba(120, 158, 223, 0.3);
+    border-radius: 20px;
     padding: 15px 20px;
     margin-bottom: 20px;
 }
 
-form fieldset legend {
-    padding: 0 5px;
-    font-size: 14px;
-    color: #c0d8ff;
+legend {
+    padding: 0 10px;
+    font-size: 0.85rem;
+    color: #9efff0;
+    width: auto;
 }
 
-.form-group {
+.form-row {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+    margin-bottom: 15px;
 }
 
-.form-field {
-    flex: 1 1 45%;
-    display: flex;
-    flex-direction: column;
+.form-row .form-group {
+    flex: 1;
+    margin-bottom: 0;
 }
 
-.form-field label {
-    margin-bottom: 5px;
-    font-size: 13px;
-    text-align: left;
+/* File upload */
+.file-upload {
+    border: 1px solid rgba(120, 158, 223, 0.4);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    margin: 15px 0;
 }
 
-.form-field input,
-.form-field select {
-    padding: 10px 12px;
-    border-radius: 6px;
-    border: 1px solid #827896;
-    font-size: 13px;
+.file-upload label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
 }
 
-/* ===== Buttons ===== */
-#signin-box button {
-    margin-top: 15px;
+.file-upload input {
+    background: rgba(10, 24, 57, 0.6);
+    padding: 10px;
+    border-radius: 30px;
     width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: 25px;
+}
+
+/* Buttons */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background: #00ffd0;
     border: none;
-    background-color: #fff;
-    color: #3b4949;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #021c36;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s;
+    margin-top: 10px;
 }
 
-#signin-box button:hover {
-    background-color: #bcbcfc;
-    color: #1c2c2c;
-    transform: translateY(-2px);
+.btn-submit:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.05);
+    box-shadow: 0 6px 14px rgba(0, 255, 200, 0.3);
 }
 
-/* ===== Links ===== */
-#signin-box h2 {
-    font-size: 12px;
-    margin-top: 15px;
+/* Switch auth link */
+.switch-auth {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #cbd5e1;
 }
 
-#signin-box h2 a {
-    color: #6dddff;
+.switch-auth a {
+    color: #6efff0;
     text-decoration: none;
-    transition: all 0.2s ease-in-out;
+    font-weight: 600;
 }
 
-#signin-box h2 a:hover {
-    color: #c5c3ff;
+.switch-auth a:hover {
+    text-decoration: underline;
 }
 
-/* ===== Footer ===== */
+/* ---------- FOOTER (Same as Homepage) ---------- */
 .simple-footer {
     background: #06173b;
     border-top: 1px solid #2a4b77;
@@ -300,27 +302,19 @@ form fieldset legend {
     color: #8ca3c7;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 650px) {
-    .form-field { flex: 1 1 100%; }
-    #signin-box { padding: 30px 20px; }
-}
-
-#liscence{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 20px;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.327);
-}
-
-#liscence input{
-    background-color: #0a1839a2;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.439);
-    padding: 20px;
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 550px) {
+    .auth-card {
+        padding: 25px 20px;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .nav-auth {
+        padding: 0 15px;
+    }
+    .nav-auth h1 {
+        font-size: 1.2rem;
+    }
 }

@@ -1,51 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Reports</title>
-<link rel="stylesheet" href="styles/Styles.css">
+    <meta charset="UTF-8">
+    <title>Reports</title>
+    <link rel="stylesheet" href="styles/Styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">\
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts/admin.js" defer></script>
 </head>
 
 <body>
 
-<div id="NavBar">
-    <button id="menuBtn">☰</button>
-    <h2>Admin Panel</h2>
-    <a href="../../index.html">
-    <button id="logout">Logout</button>
-    </a>
-</div>
+    <div id="NavBar">
+        <button id="menuBtn">☰</button>
+        <h2>Admin Panel</h2><a href="../../index.html">
+            <button id="logout">Logout</button>
+        </a>
+    </div>
 
-<div id="sidebar">
-    <h3>Menu</h3>
-    <a href="Admin.html"><button class="tab">Dashboard</button></a>
-    <a href="users.html"><button class="tab">Users</button></a>
-    <a href="mechanics.html"><button class="tab">Mechanics</button></a>
-    <a href="reports.html"><button class="tab active">Reports</button></a>
-    <a href="../../index.html"><button class="tab">Logout</button></a>
-</div>
+    <div id="sidebar">
+        <h3>Control Panel</h3>
+        <a href="Admin.html"><button class="tab active">Dashboard</button></a>
+        <a href="users.html"><button class="tab">Users</button></a>
+        <a href="mechanics.html"><button class="tab">Mechanics</button></a>
+        <a href="shops.html"><button class="tab">Shops</button></a>
+        <a href="reports.html"><button class="tab">Reports</button></a>
+        <a href="../../index.html"><button class="tab">Logout</button></a>
+    </div>
 
-<div id="main">
-
-<div class="section">
-<h2>Monthly Report</h2>
-<p>Total Jobs: 842</p>
-<p>Revenue: ₱1,240,000</p>
-<p>Avg Rating: 4.7 ⭐</p>
-<p>New Users: 320</p>
-</div>
-
-<div class="section">
-<h2>Top Shops</h2>
-<ul>
-<li>Speed Garage - 120 jobs</li>
-<li>AutoFix Pasig - 98 jobs</li>
-<li>Prime Motors - 87 jobs</li>
-</ul>
-</div>
-
-</div>
-
-<script src="scripts/admin.js"></script>
+    <div id="main">
+        <div class="dashboard-grid">
+            <div class="section">
+                <h2>Monthly Overview</h2>
+                <p>Total Jobs: 842</p>
+                <p>Revenue: 1,240,000 PHP</p>
+                <p>Avg Rating: 4.7</p>
+                <p>New Users: 320</p>
+                <p>Total Violations: 47</p>
+                <button class="btn-primary" onclick="alert('Full report exported')">Export Report</button>
+            </div>
+            <div class="section">
+                <h2>Violation Trends</h2>
+                <canvas id="violationChart" height="150"></canvas>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Top Shops by Performance</h2>
+            <ul class="activity-list">
+                <li>Speed Garage - 120 jobs | 2 violations</li>
+                <li>AutoFix Pasig - 98 jobs | 0 violations</li>
+                <li>Prime Motors - 87 jobs | 5 violations</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Violation Breakdown</h2>
+            <ul class="activity-list">
+                <li>Spam / Fake reviews: 18 cases</li>
+                <li>No-show / Cancellations: 12 cases</li>
+                <li>Late response (shops): 10 cases</li>
+                <li>Inappropriate conduct: 7 cases</li>
+            </ul>
+            <button class="btn-warning" onclick="alert('Resolved violations cleared')">Clear Resolved Violations</button>
+        </div>
+    </div>
 </body>
 </html>

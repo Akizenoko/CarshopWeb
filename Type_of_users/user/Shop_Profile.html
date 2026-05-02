@@ -2,72 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>AutoCare Center | PrecisionDrive Auto</title>
+    <!-- Google Fonts + Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/shop_profile_detail.css">
-    <title>Shop Profile | PrecisionDrive Auto</title>
 </head>
 <body>
- 
-<!-- Header -->
-<section id="Header">
-    <div id="left">
-        <a href="Shops_For_Users.html"><h3>Back</h3></a>
-    </div>
-</section>
- 
+
+<!-- Header - back button styled like mechanic's topbar -->
+<header class="topbar">
+    <a class="btn-link" href="Shops_For_Users.html">← Back to Shops</a>
+</header>
+
 <h1 class="page-label">Shop Profile</h1>
- 
-<!-- Profile Section -->
-<section id="Profile">
-    <img src="../../Assets/Images/Carshop2.jpg" class="shop-avatar"></img>
-    <div id="ProfileInfo">
+
+<!-- Profile Section – using glassmorphism from mechanic theme -->
+<section class="shop-profile-card">
+    <img src="../../Assets/Images/Carshop2.jpg" class="shop-avatar" alt="AutoCare shop">
+    <div class="profile-info">
         <div class="status-row">
             <h1>AutoCare Center</h1>
             <span class="badge badge-open">Open Now</span>
             <span class="badge badge-type">Auto Repair</span>
         </div>
         <p>shop@gmail.com</p>
-        <p>Canelar, Zamboanga, Phillippines</p>
+        <p>Canelar, Zamboanga, Philippines</p>
         <div class="Owner_Shop">
-        <a href="Mechanic_Profile_For_Users.html"><img src="../../Assets/Profiles/mcado.jpg"></a>
-        <div>
-        <h3>Owner</h3>
-        <p>Name: Mechanic Name</p>
-        </div>
+            <a href="Mechanic_Profile_For_Users.html"><img src="../../Assets/Profiles/mcado.jpg" alt="owner"></a>
+            <div>
+                <h3>Owner / Lead Mechanic</h3>
+                <p>Mechanic Name · 9 years exp.</p>
+            </div>
         </div>
     </div>
-    <div id="ProfileActions">
-        <button class="profile-btn btn-follow">Follow</button>
-        <button class="profile-btn btn-inquire">Inquire</button>
+    <div class="profile-actions">
+        <button class="btn-follow">Follow</button>
+        <button class="btn-inquire">Inquire</button>
     </div>
 </section>
- 
-<!-- Stats -->
-<div class="stats-section">
-    <div class="stat-card">
-        <h2>Customers Served</h2>
+
+<!-- Stats grid with modern mechanic style cards -->
+<div class="stats-grid-shop">
+    <div class="stat-card-modern">
+        <h3>Customers Served</h3>
         <p>67</p>
     </div>
-    <div class="stat-card">
-        <h2>Average Rating</h2>
-        <p>★★★★</p>
+    <div class="stat-card-modern">
+        <h3>Average Rating</h3>
+        <p>★★★★☆</p>
     </div>
-    <div class="stat-card">
-        <h2>Employees</h2>
+    <div class="stat-card-modern">
+        <h3>Employees</h3>
         <p>6</p>
     </div>
-    <div class="stat-card">
-        <h2>Followers</h2>
-        <p>6,700</p>
+    <div class="stat-card-modern">
+        <h3>Followers</h3>
+        <p>6.7k</p>
     </div>
-    <div class="stat-card">
-        <h2>Established</h2>
-        <p>1 yrs</p>
+    <div class="stat-card-modern">
+        <h3>Established</h3>
+        <p>2025</p>
     </div>
 </div>
-<!-- Services -->
-<div id="Services">
-    <h1>Services Offered</h1>
+
+<!-- Services Offered – clean rounded tags -->
+<section class="services-section">
+    <h2>Services Offered</h2>
     <div class="services-grid">
         <span class="service-tag">Engine Repair</span>
         <span class="service-tag">Oil Change</span>
@@ -78,192 +81,170 @@
         <span class="service-tag">Transmission</span>
         <span class="service-tag">Body Work</span>
     </div>
-</div>
+</section>
 
-<!-- Schedule -->
-<div id="Schedule">
-    <h1>Schedule & Availability</h1>
-    <div id="ScheduleGrid">
-        <div class="ScheduleDay">
-            <h2>Monday</h2>
+<!-- Weekly Schedule with day-status badges (mechanic style) -->
+<section class="schedule-shop">
+    <h2>Schedule & Availability</h2>
+    <div class="schedule-grid-shop">
+        <div class="schedule-card">
+            <h3>Monday</h3>
             <p>9:00 AM – 5:00 PM</p>
-            <p class="Available">Open</p>
+            <span class="day-status available">Available</span>
         </div>
-        <div class="ScheduleDay">
-            <h2>Tuesday</h2>
+        <div class="schedule-card">
+            <h3>Tuesday</h3>
             <p>9:00 AM – 5:00 PM</p>
-            <p class="Busy">Busy</p>
+            <span class="day-status busy">Busy</span>
         </div>
-        <div class="ScheduleDay">
-            <h2>Wednesday</h2>
+        <div class="schedule-card">
+            <h3>Wednesday</h3>
             <p>9:00 AM – 5:00 PM</p>
-            <p class="Available">Open</p>
+            <span class="day-status available">Open</span>
         </div>
-        <div class="ScheduleDay">
-            <h2>Thursday</h2>
+        <div class="schedule-card">
+            <h3>Thursday</h3>
             <p>9:00 AM – 5:00 PM</p>
-            <p class="Busy">Busy</p>
+            <span class="day-status busy">Busy</span>
         </div>
-        <div class="ScheduleDay">
-            <h2>Friday</h2>
+        <div class="schedule-card">
+            <h3>Friday</h3>
             <p>9:00 AM – 3:00 PM</p>
-            <p class="Available">Open</p>
+            <span class="day-status available">Open</span>
         </div>
-        <div class="ScheduleDay">
-            <h2>Saturday</h2>
+        <div class="schedule-card">
+            <h3>Saturday</h3>
             <p>10:00 AM – 2:00 PM</p>
-            <p class="Available">Open</p>
+            <span class="day-status available">Open</span>
         </div>
-        <div class="ScheduleDay">
-            <h2>Sunday</h2>
+        <div class="schedule-card">
+            <h3>Sunday</h3>
             <p>—</p>
-            <p class="Off">Closed</p>
+            <span class="day-status off">Closed</span>
         </div>
     </div>
-</div>
+</section>
 
-<!-- Shop Info -->
-<div id="InfoSection">
-    <section id="ProfileDetails">
-        <div id="Head">
-            <h1>Shop Information</h1>
+<!-- Shop Information (Personal Info + Address unified) -->
+<div class="info-wrapper-shop">
+    <section class="info-card">
+        <div class="section-header">
+            <h2>Shop Information</h2>
         </div>
-        
-        <div id="Pinfo">
-            <div class="rows">
-                <div class="Tabs">
-                    <h3>Shop Name</h3>
-                    <p>AutoCare Center</p>
-                </div>
-                <div class="Tabs">
-                    <h3>Owner</h3>
-                    <p>John Doe</p>
-                </div>
-            </div>
-            <div class="rows">
-                <div class="Tabs">
-                    <h3>Email Address</h3>
-                    <p>shop@gmail.com</p>
-                </div>
-                <div class="Tabs">
-                    <h3>Phone Number</h3>
-                    <p>+1 (912) 345-6789</p>
-                </div>
-            </div>
-            <div class="rows">
-                <div class="Tabs">
-                    <h3>Employees</h3>
-                    <p>6</p>
-                </div>
-                <div class="Tabs">
-                    <h3>Established</h3>
-                    <p>1/12/25</p>
-                </div>
-            </div>
+        <div class="info-grid-double">
+            <div class="info-field"><h3>Shop Name</h3><p>AutoCare Center</p></div>
+            <div class="info-field"><h3>Owner</h3><p>John Doe</p></div>
+            <div class="info-field"><h3>Email Address</h3><p>shop@gmail.com</p></div>
+            <div class="info-field"><h3>Phone Number</h3><p>+1 (912) 345-6789</p></div>
+            <div class="info-field"><h3>Employees</h3><p>6 Mechanics</p></div>
+            <div class="info-field"><h3>Established</h3><p>January 2025</p></div>
         </div>
- 
-        <div id="Address">
-            <div id="Adhead">
-                <h1>Address</h1>
-            </div>
-            <div id="Info">
-                <div class="Adtab">
-                    <h3>Country</h3>
-                    <p>Phillippines</p>
-                </div>
-                <div class="Adtab">
-                    <h3>City</h3>
-                    <p>Zamboanga</p>
-                </div>
-                <div class="Adtab">
-                    <h3>Postal Code</h3>
-                    <p>90017</p>
-                </div>
-                <div class="Adtab">
-                    <h3>Street</h3>
-                    <p>Canelar</p>
-                </div>
-            </div>
+    </section>
+
+    <section class="info-card">
+        <div class="section-header">
+            <h2>Location Details</h2>
+        </div>
+        <div class="info-grid-double">
+            <div class="info-field"><h3>Country</h3><p>Philippines</p></div>
+            <div class="info-field"><h3>City</h3><p>Zamboanga</p></div>
+            <div class="info-field"><h3>Postal Code</h3><p>90017</p></div>
+            <div class="info-field"><h3>Street</h3><p>Canelar, Zamboanga del Sur</p></div>
         </div>
     </section>
 </div>
 
-<div class="shop_members">
-<h1>Members</h1>
-<div class="member_profile">
-    <a href="Mechanic_Profile_For_Users.html"><img src="../../Assets/Profiles/mcado.jpg"></a>
-    <h4>Mechanic Name</h4>
-    <h4>+63 920 876 5432</h4>
-</div>
-
-<div class="member_profile">
-    <a href="Mechanic_Profile_For_Users.html"><img src="../../Assets/Profiles/mcado.jpg"></a>
-    <h4>Mechanic Name</h4>
-    <h4>+63 920 876 5432</h4>
-</div>
-
-<div class="member_profile">
-    <a href="Mechanic_Profile_For_Users.html"><img src="../../Assets/Profiles/mcado.jpg"></a>
-    <h4>Mechanic Name</h4>
-    <h4>+63 920 876 5432</h4>
-</div>
-
-<div class="member_profile">
-    <a href="Mechanic_Profile_For_Users.html"><img src="../../Assets/Profiles/mcado.jpg"></a>
-    <h4>Mechanic Name</h4>
-    <h4>+63 920 876 5432</h4>
-</div>
-
-<div class="member_profile">
-    <a href="Mechanic_Profile_For_Users.html"><img src="../../Assets/Profiles/mcado.jpg"></a>
-    <h4>Mechanic Name</h4>
-    <h4>+63 920 876 5432</h4>
-</div>
-
-<div class="member_profile">
-    <a href="Mechanic_Profile_For_Users.html"><img src="../../Assets/Profiles/mcado.jpg"></a>
-    <h4>Mechanic Name</h4>
-    <h4>+63 920 876 5432</h4>
-</div>
-
-</div>
- 
- 
-<!-- Reviews -->
-<div id="Reviews">
-    <h1>Customer Reviews – 3</h1>
- 
-    <div class="ReviewCard">
-        <img src="../../Assets/Profiles/mcado.jpg" class="reviewer-avatar"></img>
-        <div class="ReviewInfo">
-            <h2>Jake R.</h2>
-            <p class="Stars">★★★★★</p>
-            <p>"Excellent service. Fixed my engine issue same day and the pricing was very fair."</p>
+<!-- Team Members (former "shop_members" with mechanic theme cards) -->
+<section class="team-members-section">
+    <h2>Shop Mechanics & Crew</h2>
+    <div class="members-grid">
+        <div class="member-profile-card">
+            <a href="Mechanic_Profile_For_Users.html"><img src="../../Assets/Profiles/mcado.jpg" alt="mechanic"></a>
+            <h4>Ramon Delgado</h4>
+            <p>annonymous@gmail.com</p>
+        </div>
+        <div class="member-profile-card">
+            <a href="Mechanic_Profile_For_Users.html"><img src="../../Assets/Profiles/mcado.jpg" alt="mechanic"></a>
+            <h4>Luis Mendez</h4>
+            <p>annonymous@gmail.com</p>
+        </div>
+        <div class="member-profile-card">
+            <a href="Mechanic_Profile_For_Users.html"><img src="../../Assets/Profiles/mcado.jpg" alt="mechanic"></a>
+            <h4>Sofia Cruz</h4>
+            <p>annonymous@gmail.com</p>
+        </div>
+        <div class="member-profile-card">
+            <a href="Mechanic_Profile_For_Users.html"><img src="../../Assets/Profiles/mcado.jpg" alt="mechanic"></a>
+            <h4>Marcus Tan</h4>
+            <p>annonymous@gmail.com</p>
+        </div>
+        <div class="member-profile-card">
+            <a href="Mechanic_Profile_For_Users.html"><img src="../../Assets/Profiles/mcado.jpg" alt="mechanic"></a>
+            <h4>Ellie Rivera</h4>
+            <p>annonymous@gmail.com</p>
+        </div>
+        <div class="member-profile-card">
+            <a href="Mechanic_Profile_For_Users.html"><img src="../../Assets/Profiles/mcado.jpg" alt="mechanic"></a>
+            <h4>Carlos Yu</h4>
+            <p>annonymous@gmail.com</p>
         </div>
     </div>
- 
-    <div class="ReviewCard">
-        <img src="../../Assets/Profiles/mcado.jpg" class="reviewer-avatar"></img>
-        <div class="ReviewInfo">
-            <h2>Maria L.</h2>
-            <p class="Stars">★★★★☆</p>
-            <p>"Very professional staff, clean shop. Will definitely come back for future repairs."</p>
+</section>
+
+<!-- Customer Reviews - mechanic profile style review cards -->
+<h2 id="reviews">Customer Reviews - 4 reviews</h2>
+<section class="reviews-shop-section">
+    <div class="review-card-shop">
+        <img src="../../Assets/Profiles/mcado.jpg" alt="customer">
+        <div class="review-content-shop">
+            <h3>Jake R.</h3>
+            <div class="stars">★★★★★</div>
+            <p>"Excellent service. Fixed my engine issue same day and pricing was very fair. Professional staff."</p>
         </div>
     </div>
- 
-    <div class="ReviewCard">
-        <img src="../../Assets/Profiles/mcado.jpg" class="reviewer-avatar"></img>
-        <div class="ReviewInfo">
-            <h2>Carl P.</h2>
-            <p class="Stars">★★★★★</p>
-            <p>"Quick diagnosis and transparent about costs. Highly recommended to everyone."</p>
+    <div class="review-card-shop">
+        <img src="../../Assets/Profiles/mcado.jpg" alt="customer">
+        <div class="review-content-shop">
+            <h3>Maria L.</h3>
+            <div class="stars">★★★★☆</div>
+            <p>"Very professional team, clean shop. Will definitely come back for future repairs."</p>
         </div>
     </div>
-</div>
- 
-<footer>
-    <p>© 2026 PrecisionDrive Auto | Connecting Cars with Experts</p>
+    <div class="review-card-shop">
+        <img src="../../Assets/Profiles/mcado.jpg" alt="customer">
+        <div class="review-content-shop">
+            <h3>Carl P.</h3>
+            <div class="stars">★★★★★</div>
+            <p>"Quick diagnosis, transparent about costs. Highly recommended to everyone."</p>
+        </div>
+    </div>
+    <div class="review-card-shop">
+        <img src="../../Assets/Profiles/mcado.jpg" alt="customer">
+        <div class="review-content-shop">
+            <h3>Diana S.</h3>
+            <div class="stars">★★★★★</div>
+            <p>"Super friendly mechanics, explained everything before starting repairs. Best shop in town!"</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer (mechanic profile theme) -->
+<footer class="simple-footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img src="../../Assets/Logo/facebook.png" alt="FB"></a>
+            <a href="#"><img src="../../Assets/Logo/instagram.png" alt="IG"></a>
+            <a href="#"><img src="../../Assets/Logo/twitter.png" alt="Twitter"></a>
+        </div>
+        <p class="footer-copyright">© 2026 PrecisionDrive Auto | Connecting Cars with Experts</p>
+    </div>
 </footer>
- 
+
 </body>
 </html>

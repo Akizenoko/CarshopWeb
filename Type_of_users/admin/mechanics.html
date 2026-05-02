@@ -1,67 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Mechanics</title>
-<link rel="stylesheet" href="styles/Styles.css">
+    <meta charset="UTF-8">
+    <title>Mechanics Management</title>
+    <link rel="stylesheet" href="styles/Styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="scripts/admin.js" defer></script>
 </head>
 
 <body>
 
-<div id="NavBar">
-    <button id="menuBtn">☰</button>
-    <h2>Admin Panel</h2>
-    <a href="../../index.html">
-    <button id="logout">Logout</button>
-    </a>
-</div>
+    <div id="NavBar">
+        <button id="menuBtn">☰</button>
+        <h2>Admin Panel</h2>
+        <a href="../../index.html">
+            <button id="logout">Logout</button>
+        </a>
+    </div>
 
-<div id="sidebar">
-    <h3>Menu</h3>
-    <a href="Admin.html"><button class="tab">Dashboard</button></a>
-    <a href="users.html"><button class="tab">Users</button></a>
-    <a href="mechanics.html"><button class="tab active">Mechanics</button></a>
-    <a href="reports.html"><button class="tab">Reports</button></a>
-    <a href="../../index.html"><button class="tab">Logout</button></a>
-</div>
+    <div id="sidebar">
+        <h3>Control Panel</h3>
+        <a href="Admin.html"><button class="tab active">Dashboard</button></a>
+        <a href="users.html"><button class="tab">Users</button></a>
+        <a href="mechanics.html"><button class="tab">Mechanics</button></a>
+        <a href="shops.html"><button class="tab">Shops</button></a>
+        <a href="reports.html"><button class="tab">Reports</button></a>
+        <a href="../../index.html"><button class="tab">Logout</button></a>
+    </div>
 
-<div id="main">
+    <div id="main">
+        <div class="section">
+            <h2>Mechanic Management</h2>
+            <div class="search-bar">
+                <input type="text" id="mechSearch" placeholder="Search mechanics..." onkeyup="filterMechanics()">
+                <button class="btn-primary" onclick="openModal('createMechModal')">Add Mechanic</button>
+            </div>
+            <div class="table-container">
+                <table id="mechanicTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Shop</th>
+                            <th>Location</th>
+                            <th>Status</th>
+                            <th>Violations</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div id="mechPagination" class="pagination"></div>
+        </div>
+    </div>
 
-<div class="section">
-<h2>Mechanics</h2>
-
-<table>
-<tr>
-<th>Name</th><th>Shop</th><th>Location</th><th>Status</th>
-</tr>
-
-<tr>
-<td>Pedro Ramos</td>
-<td>Ramos Auto Repair</td>
-<td>Pasig</td>
-<td class="status-active">Available</td>
-</tr>
-
-<tr>
-<td>Mark Velasco</td>
-<td>Speed Garage</td>
-<td>Makati</td>
-<td class="status-busy">Busy</td>
-</tr>
-
-<tr>
-<td>Leo Fernandez</td>
-<td>QuickFix Auto</td>
-<td>QC</td>
-<td class="status-offline">Offline</td>
-</tr>
-
-</table>
-
-</div>
-
-</div>
-
-<script src="scripts/Admin.js"></script>
+    <div id="createMechModal" class="modal">
+        <div class="modal-content">
+            <h3>Add Mechanic</h3>
+            <input id="mechName" placeholder="Full Name">
+            <input id="mechShopAssign" placeholder="Shop Name">
+            <input id="mechLocation" placeholder="Location">
+            <div class="modal-buttons">
+                <button class="btn-primary" onclick="addMechanicRow()">Create</button>
+                <button class="btn-danger" onclick="closeModal('createMechModal')">Cancel</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

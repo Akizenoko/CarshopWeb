@@ -1,548 +1,597 @@
-/* ── Global ── */
+/* ---------- GLOBAL (Mechanic Profile Theme) ---------- */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     scrollbar-width: thin;
     scrollbar-color: rgb(0, 255, 204) rgba(8, 20, 85, 0.536);
 }
 
+:root {
+    --bg-dark: #0a1a2f;
+    --bg-card: rgba(9, 37, 78, 0.44);
+    --border-light: rgba(120, 158, 223, 0.702);
+    --text-white: #f0f4fa;
+    --text-muted: #cbd5e1;
+    --cyan: #00e0ff;
+    --available-green: #2e7d32;
+    --busy-red: #b33b2c;
+    --off-gray: #5a626e;
+}
+
 body {
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    background-image: linear-gradient(rgb(4, 5, 24), rgba(6, 11, 37, 0.609));
+    font-family: "Poppins", sans-serif;
+    background-image: linear-gradient(rgb(0, 62, 67), rgba(8, 8, 65, 0.75));
     background-color: rgb(46, 39, 48);
+    color: var(--text-white);
     min-height: 100vh;
-    font-family: sans-serif;
 }
 
-/* ── Header ── */
-#Header {
-    padding: 10px;
-    border-radius: 20px;
-    margin: 10px;
+/* Header (back button styled like topbar from mechanic profile) */
+.topbar {
+    border-bottom: 1px solid var(--border-light);
+    background: rgba(10, 32, 47, 0.85);
+    backdrop-filter: blur(8px);
+    padding: 15px 25px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: rgb(34, 40, 79);
 }
 
-#left {
-    border-radius: 20px;
-    background-color: rgb(199, 245, 255);
-    text-align: center;
-}
-
-#left h3 {
-    padding: 10px;
-    width: 60px;
-}
-
-#left a {
+.btn-link {
     text-decoration: none;
-    color: rgb(34, 47, 67);
-    font-size: 10px;
-}
-
-/* ── Page Label ── */
-.page-label {
-    color: #fff;
-    font-size: 20px;
-    font-weight: 700;
-    margin: 20px 20px 10px;
-}
-
-/* ── Profile Section ── */
-#Profile {
-    display: flex;
+    color: var(--text-white);
+    border: 1px solid #334155;
+    background: #0f4a4c9a;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 8px 20px;
+    transition: all 0.2s ease;
+    display: inline-flex;
     align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(2px);
+}
+
+.btn-link:hover {
+    background: #205778;
+    transform: translateX(-3px);
+    border-color: var(--cyan);
+}
+
+.page-label {
+    font-size: 50px;
+    font-weight: 600;
+    margin: 15px 25px 5px 25px;
+    letter-spacing: -0.2px;
+    color: #00ffccad;
+    width: fit-content;
+}
+
+/* Profile Section – mimicking mechanic hero card */
+.shop-profile-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(8px);
+    border-radius: 2rem;
+    padding: 1.5rem;
+    display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    border-radius: 20px;
-    margin: 10px;
-    padding: 24px;
-    background-image: linear-gradient(rgba(69, 69, 156, 0.25), rgba(30, 9, 82, 0.74));
-    background-color: rgba(22, 40, 83, 0.92);
+    align-items: center;
+    gap: 28px;
+    border: 1px solid var(--border-light);
+    margin: 15px 20px 20px 20px;
+    transition: all 0.2s;
 }
 
 .shop-avatar {
-    width: 330px;
+    width: 290px;
     height: 190px;
-    border-radius: 16px;
-    background: rgba(58, 114, 255, 0.25);
-    border: 2px solid rgba(164, 243, 255, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 28px;
-    font-weight: 700;
-    color: #a4f3ff;
-    flex-shrink: 0;
+    border-radius: 1.5rem;
+    object-fit: cover;
+    border: 2px solid var(--cyan);
+    background: #091e2e;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: 0.2s;
 }
 
-#ProfileInfo {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+.profile-info {
     flex: 1;
 }
 
 .status-row {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
     flex-wrap: wrap;
+    margin-bottom: 10px;
 }
 
 .status-row h1 {
-    color: rgb(164, 250, 220);
-    font-size: 24px;
-    margin: 0;
-}
-
-#ProfileInfo p {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.7);
-    margin: 0;
+    font-size: 1.9rem;
+    color: #9efff0;
+    font-weight: 600;
+    letter-spacing: -0.3px;
 }
 
 .badge {
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 11px;
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    border-radius: 3rem;
+    font-size: 0.7rem;
     font-weight: 700;
 }
 
 .badge-open {
-    background: rgba(8, 41, 12, 0.6);
-    border: 1px solid rgba(115, 255, 0, 0.5);
-    color: #91ffb0;
+    background: rgba(46, 125, 50, 0.85);
+    border: 1px solid #8bc34a;
+    color: #e6ffe6;
 }
 
 .badge-type {
-    background: rgba(20, 89, 159, 0.5);
-    border: 1px solid rgba(161, 231, 255, 0.5);
-    color: #a1e7ff;
+    background: rgba(20, 89, 159, 0.8);
+    border: 1px solid #9acdff;
+    color: #e2f0ff;
 }
 
-#ProfileActions {
+.profile-info p {
+    margin: 6px 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.Owner_Shop {
     display: flex;
-    gap: 12px;
+    align-items: center;
+    gap: 14px;
+    margin-top: 15px;
+    background: rgba(0, 30, 40, 0.5);
+    padding: 8px 15px 8px 10px;
+    border-radius: 50px;
+    width: fit-content;
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(120, 200, 230, 0.3);
+}
+
+.Owner_Shop img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--cyan);
+    object-fit: cover;
+    transition: 0.2s ease;
+}
+
+.Owner_Shop img:hover {
+    transform: scale(1.05);
+    border-color: white;
+}
+
+.Owner_Shop div h3 {
+    font-size: 0.85rem;
+    color: #c3e2ff;
+}
+
+.Owner_Shop div p {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 18px;
     margin-left: auto;
 }
 
-.profile-btn {
-    padding: 12px 26px;
-    border-radius: 12px;
-    font-size: 14px;
+.btn-follow, .btn-inquire {
+    border: none;
+    padding: 12px 28px;
+    border-radius: 3rem;
     font-weight: 700;
     cursor: pointer;
-    border: none;
-    transition: all 0.15s;
-    min-width: 120px;
-}
-
-.profile-btn:hover {
-    transform: translateY(-2px);
-    opacity: 0.9;
+    transition: 0.2s;
+    font-size: 0.9rem;
+    min-width: 125px;
 }
 
 .btn-follow {
-    background: rgba(164, 236, 254, 0.95);
-    color: #06213a;
+    background: #00ffd0;
+    color: #021c36;
 }
 
 .btn-inquire {
-    background: rgba(37, 52, 109, 0.95);
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: white;
+    color: #021c36;
 }
 
-/* ── Owner Profile ── */
-
-.Owner_Shop{
-    margin: 10px;
-    align-items: center;
-    display: flex;
-    gap: 10px;
+.btn-follow:hover, .btn-inquire:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.08);
+    box-shadow: 0 6px 14px rgba(0,255,200,0.2);
 }
 
-.Owner_Shop img{
-    height: 55px;
-    border-radius: 50%;
-    border: 1px solid white;
-    transition: all 0.2s ease-in-out;
-}
-
-.Owner_Shop img:hover{
-    scale: 1.07;
-    border: 1.5px solid rgb(0, 255, 247);
-}
-
-
-/* ── Stats ── */
-.stats-section {
+/* Stats Grid – modern card style */
+.stats-grid-shop {
     display: flex;
     flex-wrap: wrap;
-    gap: 14px;
+    gap: 20px;
     justify-content: center;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    margin: 10px;
-    padding: 24px;
-    background-image: linear-gradient(rgba(20, 20, 162, 0.2), rgba(35, 13, 94, 0.15));
+    margin: 20px;
 }
 
-.stat-card {
+.stat-card-modern {
+    background: rgba(20, 28, 50, 0.55);
+    backdrop-filter: blur(4px);
+    border: 1px solid var(--border-light);
+    border-radius: 1.5rem;
+    padding: 1rem 1.5rem;
     text-align: center;
+    min-width: 150px;
+    width: 270px;
+    transition: 0.2s;
+}
+
+.stat-card-modern:hover {
+    background: rgba(45, 44, 77, 0.5);
+    border-color: var(--cyan);
+    transform: translateY(-4px);
+}
+
+.stat-card-modern h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.stat-card-modern p {
+    font-size: 1.8rem;
     font-weight: 700;
-    width: 220px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(110, 108, 151, 0.2);
-    border: 1px solid rgba(130, 120, 150, 0.4);
-    border-radius: 10px;
-    padding: 20px 24px;
-    gap: 12px;
-    transition: all 0.2s;
+    color: var(--cyan);
 }
 
-.stat-card:hover {
-    background-color: rgba(110, 108, 151, 0.37);
-    border-color: rgb(157, 203, 255);
+/* Services section */
+.services-section {
+    background: var(--bg-card);
+    backdrop-filter: blur(3px);
+    border-radius: 1.8rem;
+    padding: 1.5rem;
+    margin: 20px;
+    border: 1px solid var(--border-light);
 }
 
-.stat-card h2 {
-    color: #fff;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.stat-card p {
-    color: aqua;
-    font-size: 24px;
-}
-
-/* ── Schedule ── */
-#Schedule {
-    border-radius: 20px;
-    margin: 10px;
-    padding: 20px 24px 30px;
-    background: rgba(18, 24, 63, 0.95);
-    border: 1px solid rgba(130, 120, 150, 0.4);
-}
-
-#Schedule h1 {
-    color: #fff;
-    font-size: 20px;
-    margin: 0 0 18px;
-}
-
-#ScheduleGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 12px;
-}
-
-.ScheduleDay {
-    background-color: rgba(110, 108, 151, 0.2);
-    border: 1px solid rgba(130, 120, 150, 0.4);
-    border-radius: 10px;
-    padding: 16px 10px;
-    text-align: center;
-    transition: all 0.2s;
-}
-
-.ScheduleDay:hover {
-    background-color: rgba(110, 108, 151, 0.37);
-    border-color: rgb(157, 203, 255);
-}
-
-.ScheduleDay h2 {
-    font-size: 13px;
-    color: #fff;
-    margin-bottom: 6px;
-}
-
-.ScheduleDay p {
-    font-size: 11px;
-    color: rgba(255, 255, 255, 0.6);
-    margin-bottom: 6px;
-}
-
-.Available { color: rgb(145, 255, 253) !important; font-weight: 700; }
-.Busy      { color: rgb(188, 188, 251) !important; font-weight: 700; }
-.Off       { color: rgba(255, 255, 255, 0.35) !important; font-weight: 600; }
-
-/* ── Shop Info ── */
-#InfoSection {
-    display: flex;
-    justify-content: center;
-    margin: 10px;
-}
-
-#ProfileDetails {
-    width: 100%;
-    color: white;
-    border-radius: 18px;
-    padding: 18px;
-    background: rgba(18, 24, 63, 0.95);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
-
-#Head {
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-#Head h1 {
-    color: #fff;
-    font-size: 18px;
-    margin: 0;
-}
-
-#Pinfo {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.rows {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 10px;
-}
-
-.Tabs {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 10px 14px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.Tabs h3 {
-    font-size: 12px;
-    color: #d4e2ff;
-    margin: 0;
-}
-
-.Tabs p {
-    font-size: 13px;
-    color: #f7f7f7;
-    margin: 0;
-}
-
-/* ── Address ── */
-#Address {
-    background: rgba(19, 23, 55, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 12px;
-    padding: 14px;
-}
-
-#Adhead {
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    margin-bottom: 14px;
-}
-
-#Adhead h1 {
-    color: #fff;
-    font-size: 16px;
-    margin: 0;
-}
-
-#Info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-}
-
-.Adtab {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 10px 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.Adtab h3 {
-    font-size: 12px;
-    color: #d7e7ff;
-    margin: 0;
-}
-
-.Adtab p {
-    font-size: 13px;
-    color: #f6f6f6;
-    margin: 0;
-}
-
-/* ── Services ── */
-#Services {
-    margin: 10px;
-    padding: 20px 24px;
-    background: rgba(18, 24, 63, 0.95);
-    border: 1px solid rgba(130, 120, 150, 0.4);
-    border-radius: 20px;
-}
-
-#Services h1 {
-    color: #fff;
-    font-size: 18px;
-    margin: 0 0 16px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+.services-section h2 {
+    font-weight: 200;
+    font-size: 30px;
+    margin-bottom: 1rem;
 }
 
 .services-grid {
-    text-align: center;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
+    margin-top: 10px;
 }
 
 .service-tag {
-    background: rgba(58, 114, 255, 0.18);
-    border: 1px solid rgba(100, 160, 255, 0.3);
-    border-radius: 20px;
-    padding: 6px 16px;
-    font-size: 12px;
-    color: #a8d4ff;
+    background: rgba(0, 180, 200, 0.18);
+    border: 1px solid rgba(0, 210, 220, 0.5);
+    border-radius: 40px;
+    padding: 8px 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #cef3ff;
+    transition: 0.2s;
 }
 
-/* ── Members ── */
-.shop_members{
-    border: 1px solid rgba(255, 255, 255, 0.196) ;
-    text-align: center;
-    border-radius: 20px;
-    background-color: #0e1b42;
-    flex-wrap: wrap;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    display: flex;
+.service-tag:hover {
+    background: rgba(0, 230, 230, 0.3);
+    border-color: var(--cyan);
+    transform: translateY(-2px);
+}
+
+/* Schedule Section - inspired by mechanic profile */
+.schedule-shop {
+    background: var(--bg-card);
+    border-radius: 1.8rem;
+    padding: 1.5rem;
     margin: 20px;
-    padding: 40px;
+    border: 1px solid var(--border-light);
 }
 
-.member_profile{
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.277);
-    padding: 30px;
-    background-color: #041036;
-    gap: 10px;
-    align-content: center;
-    align-items: center;
+.schedule-shop h2 {
+    font-weight: 200;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.schedule-grid-shop {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
+}
+
+.schedule-card {
+    background: rgba(5, 72, 91, 0.7);
+    border-radius: 1.2rem;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.2s;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.schedule-card:hover {
+    background: rgba(0, 191, 255, 0.25);
+    transform: translateY(-5px);
+    border-color: var(--cyan);
+}
+
+.schedule-card h3 {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.schedule-card p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin: 6px 0;
+}
+
+.day-status {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.8rem;
+    border-radius: 2rem;
+}
+
+.day-status.available {
+    background: #1b5e2a;
+    border: 1px solid #6fbf4c;
+    color: #c8ffb0;
+}
+
+.day-status.busy {
+    background: #a13e2d;
+    border: 1px solid #ff784b;
+    color: #ffe0cc;
+}
+
+.day-status.off {
+    background: #4a5568;
+    border: 1px solid #b0c4de;
+    color: #eef2ff;
+}
+
+/* Info wrapper (personal + address) */
+.info-wrapper-shop {
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
+    margin: 20px;
 }
 
-.member_profile img{
-    width: 60px;
-    border-radius: 50%;
-    border: 1px solid white;
-    transition: all 0.2s ease-in-out;
+.info-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(4px);
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border-light);
 }
 
-.member_profile img:hover{
-    scale: 1.07;
-    border: 1.5px solid rgb(0, 255, 242);
+.section-header {
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    padding-bottom: 0.6rem;
+    margin-bottom: 1.2rem;
 }
 
-.member_profile h4{
-    font-size: 12px;
-    color: #f6f6f6;
+.section-header h2 {
+    font-weight: 500;
+    font-size: 1.4rem;
 }
 
-.shop_members h1{
-    flex-basis: 100%;
-    color: #f6f6f6;
+.info-grid-double {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
 }
 
-/* ── Reviews ── */
-#Reviews {
-    padding: 20px;
-    margin: 10px 10px 20px;
-    background-color: rgba(21, 16, 43, 0.6);
-    border-radius: 20px;
+.info-field {
+    background: rgba(255,255,255,0.05);
+    border-radius: 1rem;
+    padding: 0.7rem 1rem;
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
-#Reviews h1 {
-    color: rgb(197, 227, 254);
-    font-size: 18px;
-    margin: 0 0 18px;
+.info-field h3 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-muted);
+    margin-bottom: 4px;
 }
 
-.ReviewCard {
+.info-field p {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Members section (team) */
+.team-members-section {
+    background: rgba(10, 25, 45, 0.6);
+    border-radius: 1.8rem;
+    margin: 20px;
+    padding: 1.5rem;
+    border: 1px solid var(--border-light);
+}
+
+.team-members-section h2 {
+    font-weight: 200;
+    font-size: 30px;
+    margin-bottom: 1.5rem;
+}
+
+.members-grid {
     display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    background-color: rgba(120, 116, 207, 0.2);
-    border: 1px solid rgba(130, 120, 150, 0.4);
-    border-radius: 12px;
-    padding: 16px 20px;
-    margin-bottom: 12px;
-    transition: all 0.2s;
-}
-
-.ReviewCard:hover {
-    background-color: rgba(110, 108, 151, 0.37);
-    border-color: rgb(157, 203, 255);
-}
-
-.reviewer-avatar {
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    background: rgba(58, 114, 255, 0.3);
-    border: 1px solid rgba(157, 203, 255, 0.5);
-    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    color: #a4f3ff;
-    font-weight: 700;
-    flex-shrink: 0;
 }
 
-.ReviewInfo h2 {
-    font-size: 14px;
-    color: #fff;
-    margin: 0 0 4px;
-}
-
-.Stars {
-    color: rgb(157, 203, 255);
-    font-size: 13px;
-    margin-bottom: 6px;
-}
-
-.ReviewInfo p {
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.65);
-    line-height: 1.5;
-}
-
-/* ── Footer ── */
-footer {
-    border: 1px solid rgb(71, 70, 70);
-    color: white;
+.member-profile-card {
+    background: rgba(4, 16, 54, 0.85);
+    backdrop-filter: blur(4px);
+    border-radius: 1.3rem;
+    padding: 20px 18px;
     text-align: center;
-    padding: 25px;
+    transition: 0.2s;
+    width: 200px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.member-profile-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--cyan);
+    background: #0a1c42;
+}
+
+.member-profile-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--cyan);
+    margin-bottom: 12px;
+    transition: 0.2s;
+}
+
+.member-profile-card img:hover {
+    scale: 1.03;
+    border-color: white;
+}
+
+.member-profile-card h4 {
+    font-size: 0.9rem;
+    margin: 8px 0 4px;
+}
+
+.member-profile-card p {
+    font-size: 0.7rem;
+    color: #b9dcff;
+}
+
+/* Reviews section */
+.reviews-shop-section {
+    overflow: auto;
+    margin: 20px;
+    border-radius: 1.8rem;
+    padding: 60px;
+    height: 400px;
+}
+
+#reviews{
+    font-weight: 200;
+    font-size: 30px;
+    margin: 70px 20px 20px 40px;
+}
+
+.review-card-shop {
+    display: flex;
+    gap: 1rem;
+    background: rgba(18, 24, 63, 0.7);
+    border-radius: 1.2rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-light);
+    transition: 0.2s;
+}
+
+.review-card-shop:hover {
+    background: rgba(110, 108, 151, 0.3);
+    border-color: var(--cyan);
+}
+
+.review-card-shop img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--cyan);
+}
+
+.review-content-shop h3 {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.stars {
+    color: #ffc107;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+
+.review-content-shop p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+/* Footer */
+.simple-footer {
+    background: #06173b;
+    border-top: 1px solid #2a4b77;
+    padding: 2rem 1rem;
+    margin-top: 2.5rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.footer-links a {
+    color: #bbd4ff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.footer-social img {
+    width: 28px;
+    height: 28px;
+    background: white;
+    border-radius: 50%;
+    padding: 4px;
+    transition: transform 0.2s;
+}
+
+.footer-social img:hover {
+    transform: translateY(-3px);
+}
+
+.footer-copyright {
+    font-size: 0.75rem;
+    color: #8ca3c7;
 }

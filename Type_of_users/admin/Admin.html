@@ -1,116 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Admin Dashboard</title>
-
-<link rel="stylesheet" href="styles/Admin.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | PrecisionDrive</title>
+    <link rel="stylesheet" href="styles/Styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts/admin.js" defer></script>
 </head>
-
 <body>
 
-<!-- NAVBAR -->
 <div id="NavBar">
     <button id="menuBtn">☰</button>
-    <h2>Admin Panel</h2>
-    <a href="../../index.html">
-    <button id="logout">Logout</button>
-    </a>
+    <h2>PrecisionDrive Admin</h2>
+    <a href="../../index.html"><button id="logout">Logout</button></a>
 </div>
 
-<!-- SIDEBAR -->
 <div id="sidebar">
-    <h3>Menu</h3>
-    <a href="Admin.html"><button class="tab">Dashboard</button></a>
+    <h3>Control Panel</h3>
+    <a href="Admin.html"><button class="tab active">Dashboard</button></a>
     <a href="users.html"><button class="tab">Users</button></a>
     <a href="mechanics.html"><button class="tab">Mechanics</button></a>
+    <a href="shops.html"><button class="tab">Shops</button></a>
     <a href="reports.html"><button class="tab">Reports</button></a>
     <a href="../../index.html"><button class="tab">Logout</button></a>
 </div>
 
-<!-- MAIN -->
 <div id="main">
-
-    <!-- STATS -->
-    <div class="stats">
-        <div class="card">
-            <h2>667</h2>
-            <p>Users</p>
-        </div>
-        <div class="card">
-            <h2>120</h2>
-            <p>Mechanics</p>
-        </div>
-        <div class="card">
-            <h2>200</h2>
-            <p>Jobs Total</p>
-        </div>
-        <div class="card">
-            <h2>87</h2>
-            <p>Shops</p>
-        </div>
-        <div class="card">
-            <h2>167</h2>
-            <p>Daily Visitors</p>
-        </div>
-        <div class="card">
-            <h2>₱350k</h2>
-            <p>Revenue</p>
-        </div>
+    <div class="stats-grid">
+        <div class="stat-card"><h2>667</h2><p>Total Users</p></div>
+        <div class="stat-card"><h2>120</h2><p>Mechanics</p></div>
+        <div class="stat-card"><h2>48</h2><p>Shops</p></div>
+        <div class="stat-card"><h2>350k</h2><p>Revenue (PHP)</p></div>
+        <div class="stat-card"><h2>12</h2><p>Violations</p></div>
+        <div class="stat-card"><h2>87%</h2><p>Active Rate</p></div>
     </div>
 
-    <!-- DASHBOARD GRID -->
-    <div class="dashboardGrid">
-
-        <!-- CHARTS -->
-        <div class="section small">
+    <div class="dashboard-grid">
+        <div class="section">
             <h2>Jobs Analytics</h2>
-            <canvas id="jobsChart"></canvas>
+            <canvas id="jobsChart" height="150"></canvas>
         </div>
-
-        <div class="section small">
+        <div class="section">
             <h2>User Growth</h2>
-            <canvas id="usersChart"></canvas>
+            <canvas id="usersChart" height="150"></canvas>
         </div>
-
-        <!-- SYSTEM STATUS -->
         <div class="section">
             <h2>System Status</h2>
-            <p>🟢 Server: Online</p>
-            <p>🟢 Database: Connected</p>
-            <p>🟡 Maintenance: None</p>
+            <p>Server: Online</p>
+            <p>Database: Connected</p>
+            <p>Backup: Idle</p>
+            <p>Security: Active</p>
         </div>
-
-        <!-- QUICK ACTIONS -->
         <div class="section">
-            <h2>Quick Actions</h2>
-            <button class="actionBtn">Add User</button>
-            <button class="actionBtn">Add Mechanic</button>
-            <button class="actionBtn">Generate Report</button>
+            <h2>Recent Violations</h2>
+            <ul class="activity-list">
+                <li>User john_doe - Spam review (3 violations)</li>
+                <li>Shop Speed Garage - Late response (2 violations)</li>
+                <li>Mechanic Mark V. - No-show (1 violation)</li>
+            </ul>
+            <button class="btn-primary" onclick="alert('Violation report exported')">View All Violations</button>
         </div>
-
     </div>
 
-
-    <!-- RECENT ACTIVITY -->
     <div class="section">
-        <h2>Recent Activity</h2>
-        <ul class="activity">
-            <li>User Juan registered</li>
-            <li>Mechanic Pedro accepted a job</li>
-            <li>New review added (5⭐)</li>
-            <li>System backup completed</li>
+        <h2>Recent Activity Log</h2>
+        <ul class="activity-list">
+            <li>Admin terminated user carlo_reyes (violation: spam)</li>
+            <li>New shop Green Auto registered</li>
+            <li>Mechanic Pedro Ramos violation cleared after warning</li>
         </ul>
     </div>
-
 </div>
-
-<!-- CHART LIBRARY -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-<!--JS -->
-<script src="scripts/Admin.js"></script>
 
 </body>
 </html>
