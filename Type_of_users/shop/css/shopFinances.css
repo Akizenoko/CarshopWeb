@@ -27,61 +27,62 @@ a{
     top: 0;
     z-index: 100;
 }
-
-#profile { 
-    font-size: 30px; 
-    color: white; 
-    cursor: pointer; 
-    margin-left: 20px; 
+#profile{ 
+    margin: 0px 0px 0px 20px;
+    border-radius: 50% ;
+    width: 40px; 
+    transition: all 0.2s ease-in-out;
+}
+#profile:hover {
+    border: 1px solid lightblue;
+    scale: 1.08;
 }
 
-#mainnavbar .button {
+#mainnavbar .button { 
     background: none; 
     border: none; 
-    color: white;
+    color: white; 
     padding: 0 15px; 
     height: 60px; 
-    cursor: pointer;
+    cursor: pointer; 
+    transition: 0.3s; 
 }
-
 #mainnavbar .button:hover { 
     background-color: #232743; 
 }
-
 #formiscelanious i { 
     font-size: 20px; 
     color: white; 
     margin-right: 20px; 
-    cursor: pointer; 
+    cursor: pointer; opacity: 0.8; 
+}
+#formiscelanious i:hover { 
+    opacity: 1; 
 }
 
 #sidebar {
-    position: fixed;
+    position: fixed; 
     left: -250px; 
-    top: 0;
-    width: 220px;
+    top: 0; 
+    width: 220px; 
     height: 100vh;
-    background-color: #0c0137;
-    transition: 0.5s ease;
-    z-index: 99;
+    background-color: #0c0137; 
+    transition: 0.5s ease; 
+    z-index: 99; 
     padding-top: 80px;
 }
 
-#sidebar h1{
-    color: white;
+#profileSidebar{
+    border-radius: 50%;
+    width: 60px;
 }
 
 #sidebar.active { 
     left: 0; 
 }
-
 #SidebarProf { 
     text-align: center; 
     margin-bottom: 30px; 
-}
-#SidebarProf h2 { 
-    font-size: 18px; 
-    margin-top: 10px; 
 }
 
 .Tabs {
@@ -111,8 +112,8 @@ a{
 }
 
 .OrderTable { 
+    border: 1px solid rgba(255, 255, 255, 0.317);
     width: 100%; 
-    border-collapse: collapse; 
     background: rgba(255, 255, 255, 0.03); 
     border-radius: 12px; 
     overflow: hidden; 
@@ -145,6 +146,7 @@ a{
 }
 
 .finance-cards {
+    margin-top: 20px;
     display: flex;
     gap: 20px;
     margin-bottom: 40px;

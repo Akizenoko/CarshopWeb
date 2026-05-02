@@ -3,56 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Request Mechanic</title>
-
-<link rel="stylesheet" href="styles/RequestForm.css">
+<title>Request Edit</title>
 
 <!-- Leaflet (Map) -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
+<!-- External CSS & JS -->
+<link rel="stylesheet" href="styles/RequestForm.css">
 </head>
 <body>
 
 <div class="container">
-
     <div class="form-box">
-        <a href="Home_Page_For_Users.html">
-        <h4>← Back</h4>
-        </a>
-    <h2>Edit Posted Issue</h2>
+        <a href="Home_Page_For_Users.html">← Back</a>
+        <h2>Edit Request</h2>
 
         <!-- Location -->
         <label>Pickup Location</label>
-        <input type="text" id="location" placeholder="Bolong, Zamboanga City">
-
-        <button onclick="getLocation()">📍 Use Current My Location</button>
-        <button>📍 Use My Address</button>
+        <input type="text" id="location" placeholder="Detecting location...">
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button id="useAddressBtn">📍 Use My Address</button>
+            <button id="currentLocationBtn">📍 Use Current My Location</button>
+        </div>
 
         <!-- Map -->
         <div id="map"></div>
 
-        <!-- Service -->
+        <!-- Service Type -->
         <label>Service Type</label>
-        <select>
-            <option>Oil Change</option>
-            <option>Flat Tire</option>
-            <option>Battery Jumpstart</option>
-            <option>Engine Repair</option>
-            <option>Other (Requires Details)</option>
+        <select id="serviceType">
+            <option value="flat_tire">Flat Tire</option>
+            <option value="battery">Battery Jumpstart</option>
+            <option value="engine_repair">Engine Repair</option>
+            <option value="oil_change">Oil Change</option>
+            <option value="other">Other (Requires Details)</option>
         </select>
 
         <label>Details</label>
-        <textarea placeholder="Describe Issue"></textarea>
+        <textarea id="issueDetails" placeholder="Describe Issue"></textarea>
         <label>Attach Photo</label>
-        <input type="file">
+        <input type="file" id="photoUpload">
 
-        <!-- Car Type -->
+        <!-- Vehicle Type -->
         <label>Vehicle Type</label>
-        <select>
-            <option value="SportsCar">Sports Car</option>
-            <option value="">-- Choose Vehicle Type --</option>
+        <select id="vehicleType">
             <option value="sedan">Sedan</option>
+            <option value="SportsCar">Sports Car</option>
             <option value="hatchback">Hatchback</option>
             <option value="suv">SUV</option>
             <option value="pickup">Pickup Truck</option>
@@ -64,8 +61,7 @@
 
         <!-- Brand -->
         <label>Brand</label>
-        <select>
-            <option value="bmw">BMW</option>
+        <select id="brand">
             <option value="">-- Select Brand --</option>
             <option value="toyota">Toyota</option>
             <option value="honda">Honda</option>
@@ -78,31 +74,56 @@
             <option value="mazda">Mazda</option>
             <option value="suzuki">Suzuki</option>
             <option value="isuzu">Isuzu</option>
+            <option value="bmw">BMW</option>
             <option value="mercedes">Mercedes-Benz</option>
             <option value="audi">Audi</option>
             <option value="tesla">Tesla</option>
         </select>
 
         <!-- Model -->
-        <input type="text" placeholder="BMW M3 GTR">
+        <input type="text" id="model" placeholder="Model (e.g. Vios)">
 
         <div class="rush">
-        <input type="checkbox">
-        <p> In A Rush (Additional Cost) </p>
+            <input type="checkbox" id="rushCheckbox">
+            <p> In A Rush (Additional Cost +30%) </p>
         </div>
-        
+
         <label>Phone Number</label>
-        <input type="tel" placeholder="0912345678910">
-        <button>Use Saved Phone Number</button>
+        <input type="tel" id="phoneNumber" placeholder="0912345678910">
+        <button id="useSavedPhoneBtn">Use Saved Phone Number</button>
+
+        <!-- Cost Estimator Section (PHP) -->
+        <div class="cost-panel" id="costPanel">
+            <div class="cost-row"><span>🔧 Service base:</span><span id="serviceCost">₱0</span></div>
+            <div class="cost-row"><span>🚗 Vehicle adjustment:</span><span id="vehicleExtra">₱0</span></div>
+            <div class="cost-row"><span>⚡ Rush fee (30%):</span><span id="rushFee">₱0</span></div>
+            <div class="cost-row total-cost"><span>💰 Estimated total:</span><span id="totalCost">₱0</span></div>
+             <div class="cost-row"><p>Notice: Pricing might not be accurate, it still depends on the mechanic for the final pricing.</p></div>
+        </div>
 
         <a href="Home_Page_For_Users.html">
             <button class="request-btn">Save Edit</button>
         </a>
-</div>
-
+    </div>
 </div>
 
 <script src="scripts/Form.js"></script>
-
 </body>
+
+<footer class="simple-footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img src="../../Assets/Logo/facebook.png" alt="FB"></a>
+            <a href="#"><img src="../../Assets/Logo/instagram.png" alt="IG"></a>
+            <a href="#"><img src="../../Assets/Logo/twitter.png" alt="Twitter"></a>
+        </div>
+        <p class="footer-copyright">© 2026 PrecisionDrive Auto | Connecting Cars with Experts</p>
+    </div>
+</footer>
 </html>

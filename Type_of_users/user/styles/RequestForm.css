@@ -1,120 +1,235 @@
-body{
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    background-image: linear-gradient( rgb(4, 5, 24),rgba(6, 11, 37, 0.609));
-    background-color: rgb(46, 39, 48);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(0, 255, 204) rgb(6, 21, 103);
+}
+
+body {  
+    background: linear-gradient(145deg, #0a1a2f 0%, #0b2b44 100%);  
 }
 
 .container {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    margin: 40px;
 }
 
+/* Main form card – dark blue & white accent */
 .form-box {
-    color: rgb(255, 255, 255);
-    background-image: linear-gradient(rgba(20, 20, 162, 0.354),rgba(35, 13, 94, 0.209));
-    background-color: rgba(110, 108, 151, 0.371);
-    padding: 20px;
-    width: 400px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 700px;
+    flex-direction: column;
+    display: flex;
+    background-image: linear-gradient(rgb(5, 173, 142),rgb(0, 73, 168));
+    border-radius: 2rem;
+    padding: 2rem 2rem 2rem 2rem;
+    box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    transition: all 0.2s;
 }
 
-a {
+.form-box h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #ffffff;
+    align-items: center;
+}
+
+.form-box a {
     text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 0.5rem;
+    transition: 0.2s;
 }
-
-h2 {
-    margin-bottom: 15px;
-}
-
-h4 {
-    color: aliceblue;
+.form-box a:hover {
+    color: #0b3b57;
+    transform: translateX(-3px);
 }
 
 label {
+    font-weight: 600;
+    color: #ffffff;
+    margin-top: 1rem;
     display: block;
-    margin-top: 10px;
-    font-weight: bold;
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
 }
 
-select {
+input, select, textarea {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+    padding: 0.8rem 1rem;
+    margin-top: 0.4rem;
+    border-radius: 1.2rem;
+    border: 1.5px solid #e2edff;
+    background: #fefefe;
+    font-size: 0.9rem;
+    transition: 0.2s;
 }
 
-input{
-    width: 95%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #2c7cb6;
+    box-shadow: 0 0 0 3px rgba(44,124,182,0.1);
 }
 
-textarea {
-    height: 80px;
-    width: 95%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-}
-
-.rush{
-    background-color: #212242;
-    border-radius: 20px;
-    align-content: center;
+button {
+    background: #1f4059c1;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    margin-top: 0.8rem;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 0.85rem;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 85%;
-    margin: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.525);
-    gap: 5px;
-    display: flex;
-
-}
-
-.rush input{
-    width: 30px;
-    scale: 1.8;
-}
-
-.rush p{
-    font-size: 15px;   
-}
-
-button{
-    font-weight: bolder;
-    font-size: 15px;
-    color: #0c14a6;
-    background-color: rgb(255, 255, 255);
-    margin-top: 10px;
-    padding: 10px;
-    width: 100%;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+    gap: 8px;
 }
 
 button:hover {
-    opacity: 0.9;
+    background-color: #0b2b44;
+    transform: scale(0.98);
+}
+
+/* map container */
+#map {
+    height: 220px;
+    border-radius: 1.5rem;
+    margin: 1rem 0 0.5rem 0;
+    border: 2px solid #cde3f5;
+    overflow: hidden;
+}
+
+.rush {
+    background-color: #12ff0128;
+    border-radius: 20px;
+    border: 1px solid white;
+    padding: 20px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 1rem 0 0.2rem;
+}
+.rush input {
+    width: 30px;
+    height: 30px;
+    margin-top: 0;
+    accent-color: #76ff6c;
+}
+.rush p {
+    margin: 0;
+    font-weight: 500;
+    color: #00ff22;
+}
+
+/* cost estimator panel */
+.cost-panel {
+    background: #00294daf;
+    border-radius: 1.5rem;
+    padding: 1rem 1.2rem;
+    margin: 1.5rem 0 1rem;
+}
+.cost-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin: 8px 0;
+    color: #ffffff;
+}
+.total-cost {
+    font-weight: 800;
+    font-size: 1.3rem;
+    border-top: 2px dashed #9bc0da;
+    padding-top: 8px;
+    margin-top: 8px;
+    color: #9affe7;
 }
 
 .request-btn {
-    font-weight: bolder;
-    background: #72d5ff;
-    color: rgb(0, 0, 0);
-    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+    background: #0f3b5c;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+.request-btn:hover {
+    background: #183141;
 }
 
-/* Map */
-#map {
-    height: 250px;
-    margin-top: 10px;
-    border-radius: 10px;
+hr {
+    margin: 1rem 0;
+    border: 1px solid #dce5f0;
+}
+
+/* FOOTER */
+.simple-footer {
+    background: #06173b;
+    border-top: 1px solid #2a4b77;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.footer-links a {
+    color: #bbd4ff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.footer-social img {
+    width: 28px;
+    height: 28px;
+    background: white;
+    border-radius: 50%;
+    padding: 4px;
+    transition: transform 0.2s;
+}
+
+.footer-social img:hover {
+    transform: translateY(-3px);
+}
+
+.footer-copyright {
+    font-size: 0.75rem;
+    color: #8ca3c7;
 }

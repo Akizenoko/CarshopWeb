@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(0, 255, 204) rgba(8, 20, 85, 0.536);
+}
+
+body {
+    background: linear-gradient(145deg, #020625 0%, #06032e 100%);
+    min-height: 100vh;
+    padding: 2rem 1.5rem;
+}
+
+/* main container */
+.dashboard-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* header card style */
+.hero-card {
+    background: #07193d;
+    border-radius: 2rem;
+    padding: 1.8rem 2rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    backdrop-filter: blur(2px);
+}
+
+.hero-title {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.hero-title i {
+    background: #1e4b6e;
+    padding: 10px;
+    border-radius: 60%;
+    color: #7ab7ef;
+}
+
+.badge-warranty {
+    background: #0f3b5c;
+    color: #b9e2ff;
+    border-radius: 60px;
+    padding: 0.5rem 1.2rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.subhead {
+    color: #cbd5e6;
+    margin-top: 12px;
+    font-size: 0.95rem;
+    border-left: 3px solid #2c7cb6;
+    padding-left: 1rem;
+}
+
+/* stats quick bar */
+.stats-row {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    border-radius: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid rgba(59, 130, 246, 0.5);
+    flex: 1;
+    min-width: 160px;
+    color: rgb(61, 255, 216);
+}
+
+/* repairs grid */
+.repairs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 1.8rem;
+}
+
+.repair-card {
+    border: 1px solid rgba(0, 255, 225, 0.626);
+    background: rgb(38, 52, 97);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.2s;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.repair-card:hover{
+    transform: translateY(-5px);
+    border: 1px solid lightblue;
+}
+
+.card-header {
+    border-bottom: 1px solid rgb(0, 255, 251);
+    background: #094981;
+    padding: 1rem 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.car-name {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #d5fff9;
+}
+
+.mechanic-badge {
+    background: #eaf3ff;
+    padding: 0.2rem 0.7rem;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #1c5a83;
+}
+
+.card-body {
+    padding: 1rem 1.2rem;
+}
+
+.service-detail {
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 0.7rem;
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+}
+
+.date-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    margin: 10px 0;
+    color: #8afffd;
+    border-bottom: 1px dashed #dce5f0;
+    padding-bottom: 8px;
+}
+
+.warranty-status {
+    background: #ecf7f0;
+    border-radius: 1rem;
+    padding: 0.6rem;
+    margin: 12px 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.active-warranty {
+    padding: 15px;
+    background: #b6dffb;
+    color: #004945;
+}
+
+.expired-warranty {
+    padding: 15px;
+    background: #f9e6e6;
+    color: #ff0000;
+}
+
+.claimed-badge {
+    background: #e6e9f0;
+    color: #2b3b4e;
+}
+
+.btn-claim {
+    background: #4d954a;
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.1s linear;
+    font-size: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-claim:disabled {
+    background: #0f767c;
+    cursor: not-allowed;
+    opacity: .5;
+}
+
+.claim-status-text {
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-top: 6px;
+    color: #2b6c3e;
+}
+
+.reset-btn {
+    background: rgba(255, 255, 240, 0.15);
+    border: 1px solid #4488bb;
+    color: white;
+}
+
+footer {
+    margin-top: 3rem;
+    text-align: center;
+    color: #a6c1e0;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 680px) {
+    body {
+        padding: 1rem;
+    }
+    .hero-title {
+        font-size: 1.4rem;
+    }
+}
+
+#back{
+    background: none;
+    border-radius: 10px;
+    border:1px solid rgba(255, 255, 255, 0.496);
+    color: #ffffff;
+    margin: 0px 0px 20px 5px;
+    padding: 12px;
+    transition: all 0.2s ease-in-out;
+}
+
+#back:hover{
+    scale: 1.04;
+    background:fixed;
+    background-color: #132b73;
+}

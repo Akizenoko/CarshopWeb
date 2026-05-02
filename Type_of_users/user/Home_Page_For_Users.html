@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles/Home_Page_User_Style.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Home | PrecisionDrive Auto</title>
 </head>
 
@@ -41,6 +44,12 @@
                 <img src="../../Assets/Logo/email.png">
                 <h1>Email</h1>
             </Button>
+            <a href="UserFinishedInquiry.html">
+            <Button class="Tabs">
+                <img src="../../Assets/Logo/check.png">
+                <h1>Check History and Warranties</h1>
+            </Button>
+            </a>
             <Button class="Tabs">
                 <img src="../../Assets/Logo/settings.png">
                 <h1>Settings</h1>
@@ -69,54 +78,76 @@
             <img src="../../Assets/Logo/twitter.png"/>
         </div>
 
+    </div>
+    
+    <div id="FindMechanicSection">
+        
         <div class="GetMech">
+            <h1>Your Car <strong>BROKEN?</strong> Find Mechanics Now!</h1>
             <a href="Request_Mechanic.html">
-            <button>Find Mechanic</button>
+                <button>Find Mechanic</button>
             </a>
         </div>
+        
+        <div>
+            <div class="statusofposts">
+                <h2>Posted / Inquired Issues - 3</h2>
+                <h1 id="AcceptedStatus">Accepted - 2</h1>
+                <h1>Pending - 1</h1>
+            </div>
+            <div class="PostedIssues">
+                
+                <div class="IssueTab">
+                    
+                    <div class="IssueInfo">
+                        <h1>Issue: <strong>Oil Leakage</strong></h1>
+                        <p>Issue Was: <strong>Inquired to John Kaisen</strong></p>
+                        <p>Vehicle Type: <strong>Sports Car</strong></p>
+                        <p>Brand: <strong>BMW</strong></p>
+                        <p>Model: <strong>BMW M3 GTR</strong></p>
+                        <p>Location: <strong>Bolong, Zamboanga City</strong></p>
+                        <p>Posted On: <strong>01/17/2026</strong></p>
 
-    </div>
-    <div class="PostedIssues">
-        <div class="statusofposts">
-            <h2>Posted / Inquired Issues - 2</h2>
-            <h1 id="AcceptedStatus">Accepted - 1</h1>
-            <h1>Pending - 1</h1>
-        </div>
+                    </div>
 
-        <div class="IssueTab">
+                    <div class="IssueButtons">
+                        <p>Pending</p>
+                        <button id="btn2">Cancel</button>
+                        <a href="Edit_Recquest.html">
+                        <button id="btn1">Edit</button>
+                        </a>
+                    </div>
+                </div>
 
-            <div class="IssueInfo">
-                <h1>Issue: <strong>Oil Leakage</strong></h1>
-                <p>Issue Was: <strong>Inquired to John Kaisen</strong></p>
-                <p>Vehicle Type: <strong>Sports Car</strong></p>
-                <p>Brand: <strong>BMW</strong></p>
-                <p>Model: <strong>BMW M3 GTR</strong></p>
-                <p>Location: <strong>Bolong, Zamboanga City</strong></p>
-                <p>Posted On: <strong>01/17/2026</strong></p>
+                <div class="IssueTab">
+                    <div class="IssueInfo">
+                        <h1>Issue: <strong>Change Oil</strong></h1>
+                        <p>Issue Was: <strong>Posted</strong></p>
+                        <p>Vehicle Type: <strong>Sports Car</strong></p>
+                        <p>Brand: <strong>Mercedes</strong></p>
+                        <p>Model: <strong>F1 Car</strong></p>
+                        <p>Location: <strong>Address</strong></p>
+                        <p>Posted On: <strong>01/17/2026</strong></p>
+
+                    </div>
+                        <p id="Accepted">Accepted</p>
+                </div>
+
+                <div class="IssueTab">
+                    <div class="IssueInfo">
+                        <h1>Issue: <strong>Change Oil</strong></h1>
+                        <p>Issue Was: <strong>Posted</strong></p>
+                        <p>Vehicle Type: <strong>Sports Car</strong></p>
+                        <p>Brand: <strong>Mercedes</strong></p>
+                        <p>Model: <strong>F1 Car</strong></p>
+                        <p>Location: <strong>Address</strong></p>
+                        <p>Posted On: <strong>01/17/2026</strong></p>
+
+                    </div>
+                        <p id="Accepted">Accepted</p>
+                </div>
 
             </div>
-
-            <div class="IssueButtons">
-                <p>Pending</p>
-                <button id="btn2">Cancel</button>
-                <a href="Edit_Recquest.html">
-                <button id="btn1">Edit</button>
-                </a>
-            </div>
-        </div>
-
-        <div class="IssueTab">
-            <div class="IssueInfo">
-                <h1>Issue: <strong>Change Oil</strong></h1>
-                <p>Issue Was: <strong>Posted</strong></p>
-                <p>Vehicle Type: <strong>Sports Car</strong></p>
-                <p>Brand: <strong>Mercedes</strong></p>
-                <p>Model: <strong>F1 Car</strong></p>
-                <p>Location: <strong>Address</strong></p>
-                <p>Posted On: <strong>01/17/2026</strong></p>
-
-            </div>
-                <p id="Accepted">Accepted</p>
         </div>
 
     </div>
@@ -315,34 +346,25 @@
             </div>
         </div>
 
-        <div class="Profiles" id="Profile1">
-            <img src="../../Assets/Profiles/mcado.jpg">
-            <div id="ProfileInfo">
-                <h1>Mechanic Name</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                    Deserunt harum autem magnam, 
-                    </p>
-            </div>
-
-            <div id="MD">
-                <p class="sts">Available</p>
-                <p>Location: <strong>Location here</strong></p>
-                <p>Ratings: <strong>★★★★★</strong></p>
-                <p>Customers Served: <strong>67</strong></p>
-
-                <div id="buttonsforM">
-                    <a href="Inquire.html"><button id="btn1">Inquire</button></a>
-                    <a href="Mechanic_Profile_For_Users.html"><button id="btn2">Profile</button></a>
-                </div>
-            </div>
-        </div>
-
     </div>
 
 </body>
 
-<footer>
-<p>© 2026 PrecisionDrive Auto | Connecting Cars with Experts</p>
+<footer class="simple-footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img src="../../Assets/Logo/facebook.png" alt="FB"></a>
+            <a href="#"><img src="../../Assets/Logo/instagram.png" alt="IG"></a>
+            <a href="#"><img src="../../Assets/Logo/twitter.png" alt="Twitter"></a>
+        </div>
+        <p class="footer-copyright">© 2026 PrecisionDrive Auto | Connecting Cars with Experts</p>
+    </div>
 </footer>
 
 <script src="../../Sidebar_Script.js"></script>

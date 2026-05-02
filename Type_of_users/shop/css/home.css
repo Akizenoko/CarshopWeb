@@ -23,15 +23,15 @@ body {
     top: 0;
     z-index: 100;
 }
-#profile { 
-    font-size: 30px; 
-    color: white; 
-    cursor: pointer; 
-    margin-left: 20px; 
-    transition: 0.3s; 
+#profile{ 
+    margin: 0px 0px 0px 20px;
+    border-radius: 50% ;
+    width: 40px; 
+    transition: all 0.2s ease-in-out;
 }
-#profile:hover { 
-    color: #5bc0de; 
+#profile:hover {
+    border: 1px solid lightblue;
+    scale: 1.08;
 }
 
 #mainnavbar .button { 
@@ -67,6 +67,12 @@ body {
     z-index: 99; 
     padding-top: 80px;
 }
+
+#profileSidebar{
+    border-radius: 50%;
+    width: 60px;
+}
+
 #sidebar.active { 
     left: 0; 
 }

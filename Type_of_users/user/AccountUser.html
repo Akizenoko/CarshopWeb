@@ -3,16 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles/AccountUser.css"" />
-  <title>Account | My Profile</title>
+  <title>Account | My Profile - PrecisionDrive</title>
+  <link rel="stylesheet" href="styles/AccountUser.css" />
 </head>
+
 <body>
   <div class="page-shell">
     <header class="topbar">
-      <a class="btn-link" href="Home_Page_For_Users.html">← Back</a>
+      <a class="btn-link" href="Home_Page_For_Users.html">← Back to Home</a>
     </header>
 
     <main class="content">
+      <!-- Profile summary card -->
       <section class="section profile-card">
         <div class="section-head">
           <div>
@@ -21,18 +23,18 @@
           </div>
           <button class="btn-outline">Edit profile</button>
         </div>
-
         <div class="profile-row">
           <img src="../../Assets/Profiles/mcado.jpg" alt="Profile" />
           <div class="profile-meta">
             <h2>Your Name</h2>
-            <p>annonymous@gmail.com</p>
-            <p class="caps">Customer</p>
+            <p>anonymous@gmail.com</p>
+            <span class="badge-role">Customer</span>
             <p>Street, Country</p>
           </div>
         </div>
       </section>
 
+      <!-- Personal Information -->
       <section class="section card">
         <div class="section-head">
           <h2>Personal Information</h2>
@@ -40,14 +42,16 @@
         </div>
         <div class="grid-2">
           <div class="field"><h3>First Name</h3><p>Your first name</p></div>
+          <div class="field"><h3>Middle Name</h3><p>Your middle name</p></div>
           <div class="field"><h3>Last Name</h3><p>Your last name</p></div>
-          <div class="field"><h3>Email Address</h3><p>annonymous@gmail.com</p></div>
+          <div class="field"><h3>Email Address</h3><p>anonymous@gmail.com</p></div>
           <div class="field"><h3>Phone Number</h3><p>0912345678910</p></div>
           <div class="field"><h3>Date of Birth</h3><p>01/17/2007</p></div>
-          <div class="field"><h3>User Role</h3><p>Customer</p><h5>Have the skills? Become a <a href="../../auth/Mechanic-sign-in.html">Mechanic!</a></h5></div>
+          <div class="field"><h3>User Role</h3><p>Customer</p><p class="role-hint">Have the skills? <a href="../../auth/Mechanic-sign-in.html">Become a Mechanic!</a></p></div>
         </div>
       </section>
 
+      <!-- Address section -->
       <section class="section card">
         <div class="section-head">
           <h2>Address</h2>
@@ -55,135 +59,84 @@
         </div>
         <div class="grid-3">
           <div class="field">
-          <h3>Country</h3>
+            <h3>Country</h3>
             <select class="fieldSelect">
-              <option value="">Philippines</option>
-              <option value="">Germany</option>
-              <option value="">Japan</option>
-              <option value="">Switzerland</option>
-              <option value="">China</option>
+              <option>Philippines</option>
+              <option>Germany</option>
+              <option>Japan</option>
+              <option>Switzerland</option>
+              <option>China</option>
             </select>
           </div>
-
           <div class="field">
             <h3>City</h3>
             <select class="fieldSelect">
-              <option value="">Zamboanga</option>
-              <option value="">Manila</option>
-              <option value="">Baguio</option>
-              <option value="">Isabela</option>
-              <option value="">Davao</option> 
-          </select>
+              <option>Zamboanga</option>
+              <option>Manila</option>
+              <option>Baguio</option>
+              <option>Isabela</option>
+              <option>Davao</option>
+            </select>
           </div>
-
           <div class="field">
             <h3>Barangay</h3>
             <select class="fieldSelect">
-              <option>Abong-Abong</option>
-              <option>Arena Blanco</option>
-              <option>Ayala</option>
-              <option>Baliwasan</option>
-              <option>Baluno</option>
-              <option>Boalan</option>
-              <option>Bolong</option>
-              <option>Buenavista</option>
-              <option>Bunguiao</option>
-              <option>Busay</option>
-              <option>Cabaluay</option>
-              <option>Cabatangan</option>
-              <option>Cacao</option>
-              <option>Calabasa</option>
-              <option>Calarian</option>
-              <option>Camino Nuevo</option>
-              <option>Campo Islam</option>
-              <option>Canelar</option>
-              <option>Capisan</option>
-              <option>Cawit</option>
-              <option>Culianan</option>
-              <option>Curuan</option>
-              <option>Dita</option>
-              <option>Divisoria</option>
-              <option>Dulian (Upper Bunguiao)</option>
-              <option>Dulian (Upper Pasonanca)</option>
-              <option>Guisao</option>
-              <option>Guiwan</option>
-              <option>Kasanyangan</option>
-              <option>La Paz</option>
-              <option>Labuan</option>
-              <option>Lamisahan</option>
-              <option>Landang Gua</option>
-              <option>Landang Laum</option>
-              <option>Lanzones</option>
-              <option>Lapakan</option>
-              <option>Latuan</option>
-              <option>Licomo</option>
-              <option>Limaong</option>
-              <option>Limpapa</option>
-              <option>Lubigan</option>
-              <option>Lumayang</option>
-              <option>Lumbangan</option>
-              <option>Lunzuran</option>
-              <option>Maasin</option>
-              <option>Malagutay</option>
-              <option>Mampang</option>
-              <option>Manalipa</option>
-              <option>Mangusu</option>
-              <option>Manicahan</option>
-              <option>Mariki</option>
-              <option>Mercedes</option>
-              <option>Muti</option>
-              <option>Pamucutan</option>
-              <option>Pangapuyan</option>
-              <option>Panubigan</option>
-              <option>Pasilmanta (Sacol Island)</option>
-              <option>Pasobolong</option>
-              <option>Pasonanca</option>
-              <option>Patalon</option>
-              <option>Putik</option>
-              <option>Quiniput</option>
-              <option>Recodo</option>
-              <option>Rio Hondo</option>
-              <option>Salaan</option>
-              <option>San Jose Cawa-Cawa</option>
-              <option>San Jose Gusu</option>
-              <option>San Ramon</option>
-              <option>San Roque</option>
-              <option>Santa Barbara</option>
-              <option>Santa Catalina</option>
-              <option>Santa Maria</option>
-              <option>Santo Niño</option>
-              <option>Sibulao</option>
-              <option>Sinubong</option>
-              <option>Sangali</option>
-              <option>Sta. Cruz</option>
-              <option>Sta. Maria</option>
-              <option>Talabaan</option>
-              <option>Taluksangay</option>
-              <option>Talon-Talon</option>
-              <option>Talisayan</option>
-              <option>Talon-Talon Loop</option>
-              <option>Tetuan</option>
-              <option>Tigbalabag</option>
-              <option>Tigtabon</option>
-              <option>Tolosa</option>
-              <option>Tugbungan</option>
-              <option>Tumaga</option>
-              <option>Tumalutab</option>
-              <option>Victoria</option>
-              <option>Vitali</option>
-              <option>Zambowood</option>
-          </select>
+              <option>Abong-Abong</option> <option>Arena Blanco</option> <option>Ayala</option>
+              <option>Baliwasan</option> <option>Baluno</option> <option>Boalan</option>
+              <option>Bolong</option> <option>Buenavista</option> <option>Bunguiao</option>
+              <option>Busay</option> <option>Cabaluay</option> <option>Cabatangan</option>
+              <option>Cacao</option> <option>Calabasa</option> <option>Calarian</option>
+              <option>Camino Nuevo</option> <option>Campo Islam</option> <option>Canelar</option>
+              <option>Capisan</option> <option>Cawit</option> <option>Culianan</option>
+              <option>Curuan</option> <option>Dita</option> <option>Divisoria</option>
+              <option>Dulian (Upper Bunguiao)</option> <option>Dulian (Upper Pasonanca)</option>
+              <option>Guisao</option> <option>Guiwan</option> <option>Kasanyangan</option>
+              <option>La Paz</option> <option>Labuan</option> <option>Lamisahan</option>
+              <option>Landang Gua</option> <option>Landang Laum</option> <option>Lanzones</option>
+              <option>Lapakan</option> <option>Latuan</option> <option>Licomo</option>
+              <option>Limaong</option> <option>Limpapa</option> <option>Lubigan</option>
+              <option>Lumayang</option> <option>Lumbangan</option> <option>Lunzuran</option>
+              <option>Maasin</option> <option>Malagutay</option> <option>Mampang</option>
+              <option>Manalipa</option> <option>Mangusu</option> <option>Manicahan</option>
+              <option>Mariki</option> <option>Mercedes</option> <option>Muti</option>
+              <option>Pamucutan</option> <option>Pangapuyan</option> <option>Panubigan</option>
+              <option>Pasilmanta (Sacol Island)</option> <option>Pasobolong</option>
+              <option>Pasonanca</option> <option>Patalon</option> <option>Putik</option>
+              <option>Quiniput</option> <option>Recodo</option> <option>Rio Hondo</option>
+              <option>Salaan</option> <option>San Jose Cawa-Cawa</option> <option>San Jose Gusu</option>
+              <option>San Ramon</option> <option>San Roque</option> <option>Santa Barbara</option>
+              <option>Santa Catalina</option> <option>Santa Maria</option> <option>Santo Niño</option>
+              <option>Sibulao</option> <option>Sinubong</option> <option>Sangali</option>
+              <option>Sta. Cruz</option> <option>Sta. Maria</option> <option>Talabaan</option>
+              <option>Taluksangay</option> <option>Talon-Talon</option> <option>Talisayan</option>
+              <option>Talon-Talon Loop</option> <option>Tetuan</option> <option>Tigbalabag</option>
+              <option>Tigtabon</option> <option>Tolosa</option> <option>Tugbungan</option>
+              <option>Tumaga</option> <option>Tumalutab</option> <option>Victoria</option>
+              <option>Vitali</option> <option>Zambowood</option>
+            </select>
           </div>
-
           <div class="field"><h3>Postal Code</h3><p>12345</p></div>
         </div>
       </section>
     </main>
+
+    <footer class="simple-footer">
+      <div class="footer-content">
+          <div class="footer-links">
+              <a href="#">About Us</a>
+              <a href="#">Contact</a>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+          </div>
+          <div class="footer-social">
+              <a href="#"><img src="../../Assets/Logo/facebook.png" alt="FB"></a>
+              <a href="#"><img src="../../Assets/Logo/instagram.png" alt="IG"></a>
+              <a href="#"><img src="../../Assets/Logo/twitter.png" alt="Twitter"></a>
+          </div>
+          <p class="footer-copyright">© 2026 PrecisionDrive Auto | Connecting Cars with Experts</p>
+      </div>
+    </footer>
+
   </div>
 </body>
-
-<footer>
-<p>© 2026 PrecisionDrive Auto | Connecting Cars with Experts</p>
-</footer>
-
 </html>

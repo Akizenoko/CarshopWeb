@@ -3,13 +3,16 @@
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;  
+    scrollbar-width: thin;
+    scrollbar-color: rgb(0, 255, 204) rgba(8, 20, 85, 0.536);
 }
 
 body{
+    font-family: "Poppins", sans-serif;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    background-image: linear-gradient( rgb(4, 5, 24),rgba(6, 11, 37, 0.609));
+    background-image: linear-gradient( rgb(0, 98, 107),rgba(2, 18, 99, 0.609));
     background-color: rgb(46, 39, 48);
 }
 
@@ -19,7 +22,7 @@ body{
 
 #NavBar{
     text-decoration: none;
-    background-color: rgb(17, 12, 48);
+    background-color: #062234;
     padding: 0px;
     display: flex;
     justify-content: space-between;
@@ -32,20 +35,18 @@ body{
 
 #mainnavbar .button{
     flex-wrap: nowrap;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 12px;
     text-align: center;
     color: rgb(255, 255, 255);
     border: 0px;
-    background-color: rgb(17, 12, 48);
+    background: none;
     height: 60px;
     padding: 0px 10px 0px 10px;
     transition: all 0.2s ease-in-out;
 }
 
 #mainnavbar .button:hover {
-    transform: translateY(-1px);
-    background-color: rgb(28, 24, 64)
+    background-color: rgba(255, 255, 255, 0.055)
 
 }
 
@@ -93,16 +94,16 @@ body{
     color: aliceblue;
     padding: 15px 0px 0px 0px;
     top: 60px;
-    z-index: 6;
+    z-index: 6; 
     position: fixed;
     left: -250px;
     width: 220px;
     height: 100vh;
-    background-image: linear-gradient(rgb(12, 1, 55),rgb(1, 1, 34));
+     background-image: linear-gradient(rgb(2, 57, 69),rgb(0, 0, 39));
     background-color: rgba(110, 108, 151, 0.371);
     border-right: 1px solid rgba(130, 120, 150, 0.4);
     overflow-y: auto;
-    box-shadow: 0 0 20px rgb(0, 0, 0);
+    box-shadow: 0 30px 20px 0px rgb(0, 0, 0);
     transition: all 0.3s ease-in-out ;
 }
 
@@ -171,8 +172,8 @@ body{
 }
 
 .Tabs:hover {
-    background-color: rgba(20, 20, 162, 0.354);
-    color: rgb(157, 203, 255);
+    background-color: rgba(20, 129, 162, 0.354);
+    color: rgb(120, 255, 131);
     transform: translateY(-2px);
 }
 
@@ -193,15 +194,16 @@ body{
 /* Search bar design */
 #Header{
     flex-wrap: wrap;
-    background-color: rgb(17, 12, 48);
-    padding: 20px 10px 20px 10px;
+    background-color: rgba(17, 12, 48, 0.746);
+    padding: 30px 10px 40px 10px;
     display: flex;
     align-content: center;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-around;
 }
 
 #Header h1{
+    font-weight: 200;
     color: rgb(252, 252, 252);
     text-align: center;
 }
@@ -232,141 +234,232 @@ body{
 
 /* Shops Account design */
 
-#Shops{
+/* Main container – deep blue border & white interior */
+#ShopsAccount {
+    background: #1c6867;
     border-radius: 20px;
-    margin: 0px;
-    flex-wrap: wrap;
-    align-content: center;
-    text-align: center;
+    box-shadow: 0 12px 28px rgba(0, 40, 80, 0.15);
     display: flex;
-    justify-content: space-around;
-    padding: 15px 20px 15px 20px;
-
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: all 0.25s ease;
+    margin: 20px 40px 20px 40px;
+    border: 2px solid #cde3f588;
 }
 
-#ShopsAccount{
-    border: 1px solid rgba(255, 255, 255, 0.363);
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
-    background-image: linear-gradient(rgba(30, 50, 88, 0.614),rgba(3, 3, 53, 0.353));
-    background-color: rgba(49, 55, 69, 0.305);
-    margin: 20px 5px 20px 5px;
+#ShopsAccount:hover {
+    background-color: #00acb8a8;
+    transform: translateY(-2px);
+    box-shadow: 0 20px 32px rgba(0, 55, 100, 0.2);
+    border-color: #b9eaff;
+}
+
+#Section1 {
+    border-right: 2px solid rgb(0, 184, 163);
+    flex: 2;
+    display: flex;
+    gap: 1.2rem;
+    padding: 1.2rem;
+    align-items: center;
+    background: linear-gradient(135deg, #001b49 0%, #00485ab2 100%);
+}
+
+#Section1 img {
+    width: 410px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+#ShopsInfo h1 {
+    font-weight: 300;
+    color: #b0fff2;  
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.2px;
+}
+
+#ShopsInfo p {
+    color: #d7eeff;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+#MS {
+    flex: 1.2;
+    background: #031335c5;
+    padding: 20px 40px 20px 20px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    padding: 15px 5px 15px 15px;
-    border-radius: 20px;
-    width: 400px;
-    transition: all 0.2s ease-in-out;
+    gap: 5px;
 }
 
-#ShopsAccount:hover{
-    transform: translateY(-2px);
-    background-color: rgba(42, 47, 90, 0.698);
-}
-
-#Section1{
+#MS p {
+    font-weight: 700;
+    margin: 0;
+    font-size: 15px;
+    color: #00ffdd;
     display: flex;
-}
-
-#Section1 img{
-        height: 125px;
-        border-radius: 20px;
-}
-
-#ShopsInfo{
-    color: aliceblue;
-
-}
-
-#ShopsInfo p{
-        font-size: 12px;
-        text-align: left;
-        padding: 10px 0px 5px 20px;
-}
-
-#ShopsInfo h1{
-        font-size: 21px;
-        text-align: left;
-        padding: 5px 0px 5px 20px;
-}
-
-#MS{
-    justify-content: start;
-    flex-basis: 100%;
-    width:100%;
-    display: flex;
-    gap: 15px;
-    font-weight: bolder;
-    font-size: 17px;
     align-items: center;
+    gap: 8px;
+}
+
+#MS p strong {
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.stsShop{
+    border: 1px solid rgba(255, 255, 255, 0.535);
+    background: #005833af;
+    color: rgb(89, 255, 133) !important;
+    font-weight: 400;
+    font-size: 12px !important;
+    padding: 5px 10px;
+    border-radius: 40px;
+    display: inline-block;
+    width: fit-content;
+    margin-top: 0.2rem;
+}
+
+#buttonsforS {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 0.6rem;
     flex-wrap: wrap;
-    color: aliceblue;
-    margin: 20px 10px 10px 10px;
-}
-#MS strong{
-    color: rgb(130, 255, 232);
 }
 
-.stsShop {
-    font-size: 10px;
+#btn1S, #btn2S {
+    border: none;
+    padding: 0.55rem 1.4rem;
+    border-radius: 3rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+#btn1S {
+    font-weight: 400;
     width: 100px;
-    padding: 5px 5px;
-    border-radius: 20PX;
-    background-color: rgba(8, 41, 12, 0.647);
-    border: 1px solid rgba(115, 255, 0, 0.63);
-    text-align: center; 
+    background: #118d5b;   
+    color: rgb(255, 255, 255);
+    box-shadow: 0 2px 6px rgba(0, 50, 80, 0.2);
+    border: 1px solid #2c7cb6;
 }
 
-#buttonsforS{
-    flex-basis:100%;
-    margin: -20px 20px 0px 20px;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: end;
-
+#btn1S:hover {
+    background: #4cb390;
+    transform: scale(0.98);
 }
 
-#btn1S{
-    background-color: rgba(23, 18, 70, 0.485);
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(252, 255, 255);
-    border: 1px solid rgba(164, 185, 255, 0.755);
-    width: 90px;
-    border-radius: 30px;
-    margin: 0px 5px;
-    padding: 13px;
-    transition: all 0.2s ease-in-out;
+#btn2S {
+    font-weight: 400;
+    width: 100px;
+    background: transparent;
+    color: #ffffff;
+    border: 1.5px solid #2c7cb6;
 }
 
-#btn2S{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 13px ;
-    border: 1px solid rgba(255, 255, 255, 0.321);
-    background-color: rgb(173, 200, 255);
-    color: rgb(0, 0, 0);
-    width: 90px;
-    border-radius: 30px;
-    margin: 0px 5px;
-    padding: 13px;
-    transition: all 0.2s ease-in-out;
+#btn2S:hover {
+    background: #00336d;
+    transform: scale(0.98);
 }
 
-#btn2S:hover{
-    transform: translateY(-2px);
-    background-color: rgb(207, 207, 255) ;
+/* Star rating color – golden blue tone? but keep classic gold */
+#MS p:nth-child(2) strong {
+    font-size: 23px;
+    color: #eaff00;
+    letter-spacing: 2px;
 }
-
-#btn1S:hover{
-    transform: translateY(-2px);
-    background-color: rgb(19, 19, 89) ;
-}
-/* End of Shops Account design */
 
 /* FOOTER */
+.simple-footer {
+    background: #06173b;
+    border-top: 1px solid #2a4b77;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
 
-footer{
-    border: 1px solid rgb(71, 70, 70);
-    color:white;
-    text-align:center;
-    padding:25px;
-    margin: 0px;
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.footer-links a {
+    color: #bbd4ff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.footer-social img {
+    width: 28px;
+    height: 28px;
+    background: white;
+    border-radius: 50%;
+    padding: 4px;
+    transition: transform 0.2s;
+}
+
+.footer-social img:hover {
+    transform: translateY(-3px);
+}
+
+.footer-copyright {
+    font-size: 0.75rem;
+    color: #8ca3c7;
+}
+
+
+/* Responsive */
+@media (max-width: 700px) {
+    #ShopsAccount {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #Section1 {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.2rem;
+    }
+
+    #Section1 img {
+        width: 250px;
+        height: 150px;
+    }
+
+    #MS {
+        border-left: none;
+        border-top: 2px solid #d9e9fa;
+        padding: 1.2rem;
+    }
+
+    #buttonsforS {
+        justify-content: flex-start;
+    }
 }
