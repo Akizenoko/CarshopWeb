@@ -10,7 +10,9 @@
 <body>
 
     <div id="NavBar">
-        <img id="profile" src="../../../Assets/Profiles/mcado.jpg">
+        <div id="nav-left">
+            <img id="profile" src="../../../Assets/Profiles/mcado.jpg" alt="Menu Trigger">
+        </div>
         <div id="mainnavbar">
             <a href="home.html"><button class="button">Dashboard</button></a>
             <a href="manageOrder.html"><button class="button">Manage Customers</button></a>
@@ -24,12 +26,12 @@
 
     <div id="sidebar">
         <div id="listsSidebar">
-            <div id="SidebarProf">
+            <div id="SidebarProp">
                 <a href="shopsAccountPage.html"><img id="profileSidebar" src="../../../Assets/Profiles/mcado.jpg"/></a>
                 <h2>Bungkaniko Auto Center</h2>
                 <p>Bungkaniks@Shop.com</p>
             </div>
-            <button class="Tabs"><i class="fa-solid fa-users"></i><h1>Staff List</h1></button>
+            <button class="Tabs" onclick="openStaffModal()"><i class="fa-solid fa-users"></i><h1>Staff List</h1></button>
             <button class="Tabs"><i class="fa-solid fa-arrow-trend-up"></i><h1>Performance</h1></button>
             <button class="Tabs"><i class="fa-solid fa-gear"></i><h1>Settings</h1></button>
             <a href="../../mechanic/Mechanic_Homepage.html" style="text-decoration: none;">
@@ -42,31 +44,116 @@
     </div>
 
     <div id="ContentArea">
-        <h1>Shop Finances</h1>
-        
+        <div class="header-section">
+            <h1>Shop Finances</h1>
+            <div class="header-actions">
+                <input type="date" class="date-input">
+                <button class="btn-primary"><i class="fa-solid fa-plus"></i> New Transaction</button>
+            </div>
+        </div>
         
         <div class="finance-cards">
-            <div class="card"><h3>Total Revenue</h3><p> ₱12,450</p></div>
-            <div class="card"><h3>Pending Payments</h3><p> ₱1,200</p></div>
-            <div class="card"><h3>Monthly Profit</h3><p> ₱8,320</p></div>
+            <div class="card">
+                <h3>Total Revenue</h3>
+                <p>₱12,450</p>
+                <span class="growth-label positive"><i class="fa-solid fa-caret-up"></i> +15%</span>
+            </div>
+            <div class="card">
+                <h3>Pending Payments</h3>
+                <p>₱1,200</p>
+                <button class="btn-outline">View Unpaid</button>
+            </div>
+            <div class="card">
+                <h3>Monthly Profit</h3>
+                <p>₱8,320</p>
+                <span class="growth-label negative"><i class="fa-solid fa-caret-down"></i> -2%</span>
+            </div>
         </div>
 
-        <table class="OrderTable">
-            <thead>
-                <tr>
-                    <th>Date</th>
-                    <th>Description</th>
-                    <th>Category</th>
-                    <th>Amount</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Mar 12, 2026</td><td>Engine Oil Purchase</td><td>Supplies</td><td style="color: #ff4d4d;">-₱200</td><td>Completed</td></tr>
-                <tr><td>Mar 11, 2026</td><td>Service: Engine Tune-up</td><td>Service</td><td style="color: #5bc0de;">+₱450</td><td>Completed</td></tr>
-            </tbody>
-        </table>
+        <div class="table-wrapper">
+            <table class="OrderTable">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Amount</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="clickable-row" onclick="openFinanceModal('Mar 12, 2026', 'Engine Tune-up', 'Service', '₱150', '₱300', '₱300', 'Juan Dela Cruz')">
+                        <td>Mar 12, 2026</td>
+                        <td>Engine Tune-up</td>
+                        <td><span class="status-pill progress">Service</span></td>
+                        <td class="amt-good">+₱300</td>
+                        <td><button class="update-btn">Details</button></td>
+                    </tr>
+                    <tr class="clickable-row" onclick="openFinanceModal('Mar 11, 2026', 'Battery Jumpstart', 'Service', '₱0', '₱200', '₱200', 'Ricardo Dalisay')">
+                        <td>Mar 11, 2026</td>
+                        <td>Battery Jumpstart</td>
+                        <td><span class="status-pill progress">Service</span></td>
+                        <td class="amt-good">+₱200</td>
+                        <td><button class="update-btn">Details</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
+
+    <div id="financeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeFinanceModal()">&times;</span>
+            <h2 id="mDesc">Transaction Details</h2>
+            <hr style="opacity: 0.1; margin: 15px 0;">
+            <div class="modal-body">
+                <div class="detail-item"><strong>Date:</strong> <span id="mDate"></span></div>
+                <div class="detail-item"><strong>Mechanic:</strong> <span id="mMech"></span></div>
+                
+                <div class="action-box">
+                    <h3>Financial Breakdown</h3>
+                    <div class="line"><span>Materials:</span> <span id="mMat" style="color: #e74c3c;"></span></div>
+                    <div class="line"><span>Labor Fee:</span> <span id="mFee" style="color: #2ecc71;"></span></div>
+                    <hr style="margin: 10px 0; opacity: 0.1;">
+                    <div class="line" style="font-weight: bold; font-size: 1.1em;">
+                        <span>Total Profit:</span> <span id="mTotal" style="color: #2ecc71;"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="staffModal" class="modal">
+        <div class="modal-content staff-modal">
+            <div class="modal-header">
+                <h2>Shop Mechanics</h2>
+                <span class="close-btn" onclick="closeStaffModal()">&times;</span>
+            </div>
+            <button class="btn-primary" style="width: 100%; margin-bottom: 20px;">
+                <i class="fa-solid fa-plus"></i> Add New Mechanic
+            </button>
+            <div class="staff-list-container">
+                <div class="staff-card">
+                    <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
+                    <div class="staff-info">
+                        <h3>Ricardo Dalisay</h3>
+                        <p>Senior Mechanic</p>
+                    </div>
+                    <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+                </div>
+                <div class="staff-card">
+                    <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
+                    <div class="staff-info">
+                        <h3>Cardo Dalistep</h3>
+                        <p>Junior Mechanic</p>
+                    </div>
+                    <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
 
     <script src="../script.js"></script>
 </body>

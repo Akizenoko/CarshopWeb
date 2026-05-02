@@ -29,7 +29,7 @@
                 <h2>Bungkaniko Auto Center</h2>
                 <p>Bungkaniks@Shop.com</p>
             </div>
-            <button class="Tabs"><i class="fa-solid fa-users"></i><h1>Staff List</h1></button>
+            <button class="Tabs" onclick="openStaffModal()"><i class="fa-solid fa-users"></i><h1>Staff List</h1></button>
             <button class="Tabs"><i class="fa-solid fa-arrow-trend-up"></i><h1>Performance</h1></button>
             <button class="Tabs"><i class="fa-solid fa-gear"></i><h1>Settings</h1></button>
             <a href="../../mechanic/Mechanic_Homepage.html" style="text-decoration: none;">
@@ -128,44 +128,33 @@
                 <button class="DeclineBtn">Decline</button>
             </div>
         </div>
+    </div>
 
-        <div class="JobCard">
-            <div class="JobInfo">
-                <h3>Juan Dela Cruz</h3>
-                <p><strong>Issue:</strong> Engine won't start</p>
-                <p><i class="fa-solid fa-location-dot"></i> Zamboanga City</p>
-            </div>
-            <div class="JobActions">
-                <button class="AcceptBtn">Accept</button>
-                <button class="DeclineBtn">Decline</button>
-            </div>
-        </div>
-
-        <div class="JobCard">
-            <div class="JobInfo">
-                <h3>Juan Dela Cruz</h3>
-                <p><strong>Issue:</strong> Engine won't start</p>
-                <p><i class="fa-solid fa-location-dot"></i> Zamboanga City</p>
-            </div>
-            <div class="JobActions">
-                <button class="AcceptBtn">Accept</button>
-                <button class="DeclineBtn">Decline</button>
-            </div>
-        </div>
-
-        <div class="JobCard">
-            <div class="JobInfo">
-                <h3>Juan Dela Cruz</h3>
-                <p><strong>Issue:</strong> Engine won't start</p>
-                <p><i class="fa-solid fa-location-dot"></i> Zamboanga City</p>
-            </div>
-            <div class="JobActions">
-                <button class="AcceptBtn">Accept</button>
-                <button class="DeclineBtn">Decline</button>
+    <div id="staffModal" class="modal">
+        <div class="modal-content staff-modal">
+            <span class="close-btn" onclick="closeStaffModal()">&times;</span>
+            <h2>Shop Mechanics</h2>
+            <button class="add-staff-btn"><i class="fa-solid fa-plus"></i> Add New Mechanic</button>
+            <div class="staff-list-container">
+                <div class="staff-card">
+                    <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
+                    <div class="staff-info">
+                        <h3>Ricardo Dalisay</h3>
+                        <p>Senior Mechanic</p>
+                    </div>
+                    <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+                </div>
+                <div class="staff-card">
+                    <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
+                    <div class="staff-info">
+                        <h3>Cardo Dalistep</h3>
+                        <p>Junior Mechanic</p>
+                    </div>
+                    <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+                </div>
             </div>
         </div>
     </div>
-    
 
     <footer>
         <p>© 2026 Bungkaniko Auto Center | Fixit Automotive Platform</p>
