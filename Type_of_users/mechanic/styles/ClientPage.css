@@ -1,23 +1,26 @@
-/* Global Selectors */
-*{
+/* =============================================
+   Global Selectors
+   ============================================= */
+* {
     padding: 0%;
     margin: 0%;
-    box-sizing: border-box;  
+    box-sizing: border-box;
 }
- 
-body{
+
+body {
     text-align: center;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    background-image: linear-gradient( rgb(4, 5, 24),rgba(6, 11, 37, 0.609));
+    background-image: linear-gradient(rgb(4, 5, 24), rgba(6, 11, 37, 0.609));
     background-color: rgb(46, 39, 48);
 }
- 
-/* End of Global Selectors */
- 
-/* Nav Bar style */
-#NavBar{
+
+
+/* =============================================
+   Nav Bar
+   ============================================= */
+#NavBar {
     text-decoration: none;
     background-color: rgb(17, 12, 48);
     padding: 0px;
@@ -29,10 +32,10 @@ body{
     z-index: 5;
     box-shadow: 0px 0px 50px rgba(4, 4, 4, 0.412);
 }
- 
-#mainnavbar .button{
+
+#mainnavbar .button {
     flex-wrap: nowrap;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 12px;
     text-align: center;
     color: rgb(255, 255, 255);
@@ -42,43 +45,44 @@ body{
     padding: 0px 10px 0px 10px;
     transition: all 0.2s ease-in-out;
 }
- 
+
 #mainnavbar .button:hover {
     transform: translateY(-1px);
     background-color: rgb(28, 24, 64);
 }
- 
-#formiscelanious img{
+
+#formiscelanious img {
     opacity: 0.8;
     height: 25px;
     transition: all 0.2s ease-in-out;
 }
- 
-#bell{ margin: 0px 20px 0px 0px; }
-#chat{ margin: 0px 20px 0px 0px; }
- 
-#formiscelanious img:hover{
+
+#bell { margin: 0px 20px 0px 0px; }
+#chat { margin: 0px 20px 0px 0px; }
+
+#formiscelanious img:hover {
     opacity: 1;
     height: 25px;
     margin: 0px 20px 0px 0px;
     transform: translateY(-2px);
 }
- 
-#forprofile #profile{
+
+#forprofile #profile {
     height: 37px;
     border-radius: 50%;
     margin: 0px 20px 0px 20px;
     transition: all 0.2s ease-in-out;
 }
- 
-#forprofile #profile:hover{
+
+#forprofile #profile:hover {
     border: 2px solid rgb(133, 160, 229);
     transform: translateY(-2px);
 }
-/* End of Nav Bar style */
 
-/* Side Bar style */
 
+/* =============================================
+   Side Bar
+   ============================================= */
 #sidebar {
     color: aliceblue;
     padding: 15px 0px 0px 0px;
@@ -88,16 +92,16 @@ body{
     left: -250px;
     width: 220px;
     height: 100vh;
-    background-image: linear-gradient(rgb(12, 1, 55),rgb(1, 1, 34));
+    background-image: linear-gradient(rgb(12, 1, 55), rgb(1, 1, 34));
     background-color: rgba(110, 108, 151, 0.371);
     border-right: 1px solid rgba(130, 120, 150, 0.4);
     overflow-y: auto;
     box-shadow: 0 0 20px rgb(0, 0, 0);
-    transition: all 0.3s ease-in-out ;
+    transition: all 0.3s ease-in-out;
 }
 
-#sidebar.active{
-  left: 0;
+#sidebar.active {
+    left: 0;
 }
 
 #listsSidebar {
@@ -177,10 +181,11 @@ body{
     font-weight: 500;
 }
 
-/* End of Side Bar style */
- 
-/* Search bar design */
-#Header{
+
+/* =============================================
+   Search Bar
+   ============================================= */
+#Header {
     flex-wrap: wrap;
     background-color: rgb(17, 12, 48);
     padding: 20px 10px 20px 10px;
@@ -189,19 +194,19 @@ body{
     align-items: flex-start;
     justify-content: space-around;
 }
- 
-#Header h1{
+
+#Header h1 {
     color: rgb(252, 252, 252);
     text-align: center;
 }
- 
-#Searchbar{
+
+#Searchbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
- 
-#Searchbar input{
+
+#Searchbar input {
     color: rgb(255, 255, 255);
     border: 0px solid black;
     padding: 10px 10px 10px 20px;
@@ -209,15 +214,17 @@ body{
     border-radius: 20px;
     background-color: rgb(38, 49, 95);
 }
- 
-#Searchbar img{
+
+#Searchbar img {
     opacity: 0.8;
     height: 25px;
     margin: 0px 10px 0px 10px;
 }
-/* End of Search bar design */
- 
-/* Section label + divider */
+
+
+/* =============================================
+   Section Labels
+   ============================================= */
 .section-label {
     color: rgba(133, 160, 229, 1);
     font-size: 1.4rem;
@@ -227,24 +234,25 @@ body{
     padding: 14px 0px 0px 20px;
     margin: 0;
 }
- 
+
 .section-divider {
     border: none;
     border-top: 1px solid rgba(133, 160, 229, 0.3);
     margin: 6px 20px 0px 20px;
 }
- 
-/* ── Grid container ── */
-.ListOfClients { 
+
+
+/* =============================================
+   Client Cards Grid
+   ============================================= */
+.ListOfClients {
     justify-content: center;
     flex-wrap: wrap;
     display: flex;
-    grid-template-columns: repeat(5, 1fr); 
     gap: 30px 20px;
     padding: 10px 20px 14px 20px;
 }
-  
-/* ── Card ── */
+
 .ClientsAccount {
     display: flex;
     flex-direction: column;
@@ -254,24 +262,23 @@ body{
     border-radius: 16px;
     background-image: linear-gradient(rgba(79, 108, 153, 0.252), rgba(29, 1, 93, 0.127));
     background-color: rgba(33, 36, 64, 0.558);
-    border: 1px solid rgba(255,255,255,0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.398);
     transition: all 0.2s ease-in-out;
 }
- 
+
 .ClientsAccount:hover {
     transform: translateY(-2px);
     background-color: rgba(48, 46, 90, 0.538);
 }
- 
-/* ── Card internals ── */
+
 .ClientInfo {
     display: flex;
     align-items: center;
     gap: 10px;
     text-align: left;
 }
- 
+
 .profile-img {
     height: 65px;
     width: 65px;
@@ -279,12 +286,12 @@ body{
     object-fit: cover;
     flex-shrink: 0;
 }
- 
+
 .client-text {
     flex: 1;
     min-width: 0;
 }
- 
+
 .ClientInfo h1 {
     color: white;
     font-size: 20px;
@@ -293,40 +300,39 @@ body{
     overflow: hidden;
     text-overflow: ellipsis;
 }
- 
+
 .ClientInfo p {
-    color: rgba(255,255,255,0.8);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 15px;
     margin-bottom: 3px;
 }
- 
+
 .infoclient {
     gap: 14px;
     display: flex;
     margin-top: 3px;
 }
- 
+
 .detail-labels,
 .detail-values {
     display: flex;
     flex-direction: column;
 }
- 
+
 .detail-labels p {
     font-size: 10px;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255, 255, 255, 0.6);
 }
- 
+
 .detail-values p {
     font-size: 15px;
     color: white;
 }
- 
-.from-section { display: flex; align-items: center; gap: 6px; }
-.from-icon { width: 14px; height: 14px; border-radius: 50%; }
-.from-text { visibility: hidden; }
- 
-/* ── Issue field ── */
+
+
+/* =============================================
+   Issue Field
+   ============================================= */
 .issue {
     margin-top: 15px;
     font-size: 14px;
@@ -337,40 +343,447 @@ body{
     padding: 4px 8px;
     text-align: left;
 }
- 
+
 .issue strong {
     color: rgba(255, 255, 255, 0.85);
 }
- 
-/* ── Inquiry button ── */
+
+
+/* =============================================
+   Status Badges
+   ============================================= */
+.status-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.s-pending {
+    background-color: rgba(186, 117, 23, 0.2);
+    color: #EF9F27;
+    border: 1px solid rgba(186, 117, 23, 0.45);
+}
+
+.s-accepted {
+    background-color: rgba(23, 117, 186, 0.2);
+    color: #85B7EB;
+    border: 1px solid rgba(23, 117, 186, 0.45);
+}
+
+.s-inprogress {
+    background-color: rgba(83, 74, 183, 0.2);
+    color: #AFA9EC;
+    border: 1px solid rgba(83, 74, 183, 0.45);
+}
+
+.s-completed {
+    background-color: rgba(63, 109, 17, 0.2);
+    color: #97C459;
+    border: 1px solid rgba(63, 109, 17, 0.45);
+}
+
+
+/* =============================================
+   Button Row
+   ============================================= */
+.btn-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
 .inquiry-btn {
-    display: block;
-    width: 100%;
-    margin-top: 20px;
+    flex: 1;
     padding: 5px 0;
     background: transparent;
     border: 1px solid rgba(133, 160, 229, 0.6);
     color: rgba(133, 160, 229, 1);
     border-radius: 10px;
-    font-size: 15px;
+    font-size: 14px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
- 
+
 .inquiry-btn:hover {
     background-color: rgba(133, 160, 229, 0.15);
     border-color: rgba(133, 160, 229, 1);
     transform: translateY(-1px);
 }
 
-/* FOOTER */
+/* "View Details" is a label styled as a button */
+.details-btn {
+    flex: 1;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+}
 
-footer{
+.details-btn:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-1px);
+}
+
+
+/* =============================================
+   Modal — Checkbox Hack (no JS needed)
+   ============================================= */
+.modal-toggle {
+    display: none;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-toggle:checked + .ClientsAccount + .modal-overlay {
+    display: flex;
+}
+
+.modal-box {
+    position: relative;
+    background-image: linear-gradient(rgb(12, 1, 55), rgb(5, 5, 38));
+    background-color: rgb(13, 15, 40);
+    border: 1px solid rgba(133, 160, 229, 0.3);
+    border-radius: 18px;
+    padding: 24px;
+    width: 500px;
+    max-width: 95vw;
+    max-height: 85vh;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+    display: block;
+}
+
+.modal-close:hover {
+    color: #ffffff;
+}
+
+
+/* =============================================
+   Modal — Header
+   ============================================= */
+.modal-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(133, 160, 229, 0.2);
+}
+
+.modal-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(133, 160, 229, 0.5);
+    flex-shrink: 0;
+}
+
+.modal-header h2 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.modal-header p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 13px;
+}
+
+
+/* =============================================
+   Modal — Sections
+   ============================================= */
+.modal-section {
+    margin-bottom: 18px;
+}
+
+.modal-section-title {
+    color: rgba(133, 160, 229, 0.9);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(133, 160, 229, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.modal-issue-full {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    background-color: rgba(38, 49, 95, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+
+
+/* =============================================
+   Modal — Contact Fields
+   ============================================= */
+.modal-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 13px;
+}
+
+.modal-field:last-child {
+    border-bottom: none;
+}
+
+.modal-field-label {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.modal-field-value {
+    color: rgba(255, 255, 255, 0.9);
+    text-align: right;
+    max-width: 65%;
+    word-break: break-all;
+}
+
+
+/* =============================================
+   Modal — Vehicle History Entries
+   ============================================= */
+.history-entry {
+    background-color: rgba(38, 49, 95, 0.35);
+    border-left: 2px solid rgba(133, 160, 229, 0.5);
+    padding: 8px 12px;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 8px;
+}
+
+.history-entry:last-child {
+    margin-bottom: 0;
+}
+
+.history-date {
+    color: rgba(133, 160, 229, 0.9);
+    font-size: 11px;
+    margin-bottom: 3px;
+    font-weight: 600;
+}
+
+.history-desc {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 13px;
+}
+
+.history-cost {
+    color: #97C459;
+    font-size: 11px;
+    margin-top: 3px;
+    font-weight: 600;
+}
+
+
+/* =============================================
+   Cost Estimator — Category Block
+   ============================================= */
+.cost-category {
+    background-color: rgba(20, 25, 60, 0.5);
+    border: 1px solid rgba(133, 160, 229, 0.12);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.cost-category-label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background-color: rgba(133, 160, 229, 0.08);
+    color: rgba(133, 160, 229, 0.85);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 7px 12px;
+    border-bottom: 1px solid rgba(133, 160, 229, 0.12);
+}
+
+.cost-category-label i {
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+/* =============================================
+   Cost Estimator — Line Items
+   ============================================= */
+.cost-rows {
+    padding: 4px 0;
+}
+
+.cost-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 12px;
+    font-size: 12.5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    transition: background-color 0.15s ease;
+}
+
+.cost-row:last-child {
+    border-bottom: none;
+}
+
+.cost-row:hover {
+    background-color: rgba(133, 160, 229, 0.06);
+}
+
+.cost-item-name {
+    color: rgba(255, 255, 255, 0.72);
+    flex: 1;
+    padding-right: 12px;
+}
+
+.cost-item-price {
+    color: rgba(255, 255, 255, 0.92);
+    font-weight: 600;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+/* =============================================
+   Cost Estimator — Subtotals
+   ============================================= */
+.cost-subtotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 12px;
+    background-color: rgba(133, 160, 229, 0.06);
+    border-top: 1px solid rgba(133, 160, 229, 0.15);
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.cost-subtotal span:first-child {
+    color: rgba(133, 160, 229, 0.75);
+    text-transform: uppercase;
+    font-size: 10.5px;
+    letter-spacing: 0.04em;
+}
+
+.cost-subtotal span:last-child {
+    color: rgba(133, 160, 229, 1);
+    font-variant-numeric: tabular-nums;
+}
+
+/* =============================================
+   Cost Estimator — Grand Total
+   ============================================= */
+.cost-grand-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 14px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(151, 196, 89, 0.12), rgba(63, 109, 17, 0.18));
+    border: 1px solid rgba(151, 196, 89, 0.3);
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.cost-grand-total span:first-child {
+    color: rgba(151, 196, 89, 0.85);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.cost-grand-total span:last-child {
+    color: #97C459;
+    font-size: 17px;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.01em;
+}
+
+/* =============================================
+   Cost Estimator — Disclaimer Note
+   ============================================= */
+.cost-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.38);
+    line-height: 1.5;
+    font-style: italic;
+    padding: 0 2px;
+}
+
+.cost-note i {
+    color: rgba(133, 160, 229, 0.5);
+    font-size: 11px;
+    margin-top: 1px;
+    flex-shrink: 0;
+}
+
+
+/* =============================================
+   Footer
+   ============================================= */
+footer {
     border: 1px solid rgb(71, 70, 70);
-    color:white;
-    text-align:center;
-    padding:25px;
+    color: white;
+    text-align: center;
+    padding: 25px;
     margin: 0px;
 }
