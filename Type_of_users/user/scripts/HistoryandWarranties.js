@@ -176,14 +176,9 @@ function loadFromLocalStorage() {
     saveToLocalStorage();
 }
 
-function resetToDemo() {
-    if (confirm("Reset to demo history? all current custom repairs will be replaced with example repairs (including active/expired warranty cases).")) {
-        repairs = loadDefaultRepairs();
         saveToLocalStorage();
         renderDashboard();
-    }
-}
-
+        
 // ---- Event Listeners after DOM ready ----
 document.addEventListener('DOMContentLoaded', () => {
     loadFromLocalStorage();
