@@ -125,13 +125,9 @@ window.requestFreeRepair = function (repairId) {
         renderDashboard();
         return;
     }
-    const confirmMsg = `⚠️ Confirm: You are reporting that the SAME issue (${repair.service}) reappeared within the 14-day guarantee. The mechanic (${repair.mechanic}) will fix it again FREE of charge. This incident is permanently recorded. Continue?`;
-    if (confirm(confirmMsg)) {
         repairs[repairIndex].freeRepairClaimed = true;
         saveToLocalStorage();
         renderDashboard();
-        alert(`✅ Free repair requested for your ${repair.car}. Mechanic ${repair.mechanic} has been notified. You will not pay for this fix. Incident recorded in history.`);
-    }
 };
 // default demo data (with various warranty ages & one already claimed)
 function loadDefaultRepairs() {
