@@ -10,7 +10,9 @@
 <body>
 
     <div id="NavBar">
-        <img id="profile" src="../../../Assets/Profiles/mcado.jpg">
+        <div id="nav-left">
+            <img id="profile" src="../../../Assets/Profiles/mcado.jpg" alt="Menu Trigger" onclick="toggleSidebar()">
+        </div>
         <div id="mainnavbar">
             <a href="home.html"><button class="button">Dashboard</button></a>
             <a href="manageOrder.html"><button class="button">Manage Customers</button></a>
@@ -24,12 +26,12 @@
 
     <div id="sidebar">
         <div id="listsSidebar">
-            <div id="SidebarProf">
+            <div id="SidebarProp">
                 <a href="shopsAccountPage.html"><img id="profileSidebar" src="../../../Assets/Profiles/mcado.jpg"/></a>
                 <h2>Bungkaniko Auto Center</h2>
                 <p>Bungkaniks@Shop.com</p>
             </div>
-            <button class="Tabs"><i class="fa-solid fa-users"></i><h1>Staff List</h1></button>
+            <button class="Tabs" onclick="openStaffModal()"><i class="fa-solid fa-users"></i><h1>Staff List</h1></button>
             <button class="Tabs"><i class="fa-solid fa-arrow-trend-up"></i><h1>Performance</h1></button>
             <button class="Tabs"><i class="fa-solid fa-gear"></i><h1>Settings</h1></button>
             <a href="../../mechanic/Mechanic_Homepage.html" style="text-decoration: none;">
@@ -42,24 +44,92 @@
     </div>
 
     <div id="ContentArea">
-        <h1>Manage Costumers</h1>
-        <table class="OrderTable">
-            <thead>
-                <tr>
-                    <th>Order ID</th>
-                    <th>Customer</th>
-                    <th>Service</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>#FIX-5521</td><td>Juan Dela Cruz</td><td>Engine Tune-up</td><td class="status-pending">Pending</td><td><button class="update-btn">Update</button></td></tr>
-                <tr><td>#FIX-5522</td><td>Juan Dela Cruz</td><td>Oil Change</td><td class="status-pending">Pending</td><td><button class="update-btn">Update</button></td></tr>
-                <tr><td>#FIX-5523</td><td>Juan Dela Cruz</td><td>Brake Inspection</td><td class="status-pending">Pending</td><td><button class="update-btn">Update</button></td></tr>
-                <tr><td>#FIX-5524</td><td>Juan Dela Cruz</td><td>Tire Rotation</td><td class="status-pending">Pending</td><td><button class="update-btn">Update</button></td></tr>
-            </tbody>
-        </table>
+        <div class="header-section">
+            <h1>Manage Orders</h1>
+            <div class="header-actions">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="orderSearch" placeholder="Search Order ID..." onkeyup="filterOrders()">
+                </div>
+            </div>
+        </div>
+
+        <div class="filter-row">
+            <button class="filter-btn active" onclick="filterByStatus('all', this)">All Orders</button>
+            <button class="filter-btn" onclick="filterByStatus('Pending', this)">Pending</button>
+            <button class="filter-btn" onclick="filterByStatus('In Progress', this)">In Progress</button>
+            <button class="filter-btn" onclick="filterByStatus('Completed', this)">Completed</button>
+            <button class="filter-btn" onclick="filterByStatus('Cancelled', this)">Cancelled</button>
+        </div>
+        
+        <div class="table-wrapper">
+            <table class="OrderTable" id="ordersTable">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Contact</th>
+                        <th>Service</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="clickable-row" data-status="Pending">
+                        <td>#FIX-5521</td>
+                        <td>Juan Dela Cruz</td>
+                        <td><a href="manageOrder.html" class="contact-link"><i class="fa-solid fa-phone"></i> 09123456789</a></td>
+                        <td>Engine Tune-up</td>
+                        <td><span class="status-pill pending">Pending</span></td>
+                        <td><button class="update-btn" onclick="openOrderModal('#FIX-5521', 'Juan Dela Cruz', 'Engine Tune-up', 'Pending', '09123456789', 'Toyota Vios')">Update</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="staffModal" class="modal">
+        <div class="modal-content staff-modal">
+            <span class="close-btn" onclick="closeStaffModal()">&times;</span>
+            <h2>Shop Mechanics</h2>
+            <button class="add-staff-btn"><i class="fa-solid fa-plus"></i> Add New Mechanic</button>
+            <div class="staff-list-container">
+                <div class="staff-card">
+                    <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
+                    <div class="staff-info">
+                        <h3>Ricardo Dalisay</h3>
+                        <p>Senior Mechanic</p>
+                    </div>
+                    <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeOrderModal()">&times;</span>
+            <h2 id="modalOrderID">Order Details</h2>
+            <hr style="opacity: 0.1; margin: 15px 0;">
+            <div class="modal-body">
+                <div class="detail-item"><strong>Customer:</strong> <span id="mCustName"></span></div>
+                <div class="detail-item"><strong>Contact:</strong> <span id="mCustPhone"></span></div>
+                <div class="detail-item"><strong>Vehicle:</strong> <span id="mVehicle"></span></div>
+                <div class="detail-item"><strong>Service:</strong> <span id="mService"></span></div>
+                <div class="detail-item"><strong>Status:</strong> <span id="mStatus"></span></div>
+                
+                <div class="action-box">
+                    <h3>Update Status</h3>
+                    <select id="statusSelect">
+                        <option value="Pending">Pending</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                        <option value="Cancelled">Cancelled</option>
+                    </select>
+                    <button class="save-btn" onclick="closeOrderModal()">Save Changes</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="../script.js"></script>
