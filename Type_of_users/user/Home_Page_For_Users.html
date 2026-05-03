@@ -36,14 +36,12 @@
                 <h2>Account Name</h2>
                 <p>Annonymous@gmail.com</p>
             </div>
+            <a href="Connections.html">
             <Button class="Tabs">
                 <img src="../../Assets/Logo/multiple-users-silhouette.png">
                 <h1>Connections</h1>
             </Button>
-            <Button class="Tabs">
-                <img src="../../Assets/Logo/email.png">
-                <h1>Email</h1>
-            </Button>
+            </a>
             <a href="UserFinishedInquiry.html">
             <Button class="Tabs">
                 <img src="../../Assets/Logo/check.png">
@@ -172,7 +170,7 @@
                 <p class="stsShop">Shop Available</p>
                 
                 <div id="buttonsforS">
-                    <button id="btn1S">Inquire</button>
+                    <a href="inquire_shop.html"><button id="btn1S">Inquire</button></a>
                     <a href="Shop_Profile.html"><button id="btn2S">Info</button></a>
                 </div>
             </div>
@@ -197,7 +195,7 @@
                 <p class="stsShop">Shop Available</p>
                 
                 <div id="buttonsforS">
-                    <button id="btn1S">Inquire</button>
+                    <a href="inquire_shop.html"><button id="btn1S">Inquire</button></a>
                     <a href="Shop_Profile.html"><button id="btn2S">Info</button></a>
                 </div>
             </div>
@@ -222,7 +220,7 @@
                 <p class="stsShop">Shop Available</p>
                 
                 <div id="buttonsforS">
-                    <button id="btn1S">Inquire</button>
+                    <a href="inquire_shop.html"><button id="btn1S">Inquire</button></a>
                     <a href="Shop_Profile.html"><button id="btn2S">Info</button></a>
                 </div>
             </div>
@@ -247,7 +245,7 @@
                 <p class="stsShop">Shop Available</p>
                 
                 <div id="buttonsforS">
-                    <button id="btn1S">Inquire</button>
+                    <a href="inquire_shop.html"><button id="btn1S">Inquire</button></a>
                     <a href="Shop_Profile.html"><button id="btn2S">Info</button></a>
                 </div>
             </div>
@@ -350,22 +348,112 @@
 
 </body>
 
-<footer class="simple-footer">
-    <div class="footer-content">
-        <div class="footer-links">
-            <a href="#">About Us</a>
-            <a href="#">Contact</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+ <!-- NOTIFICATIONS MODAL -->
+    <div id="notificationsModal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2><i class="fas fa-bell"></i> Notifications</h2>
+                <button class="close-modal" onclick="closeModal('notificationsModal')">&times;</button>
+            </div>
+            <div id="notificationsList">
+                <div class="notification-item">
+                    <div class="notification-title">Job Accepted</div>
+                    <p>Your engine repair request was accepted by AutoCare Center.</p>
+                    <div class="notification-time">2 hours ago</div>
+                </div>
+                <div class="notification-item">
+                    <div class="notification-title">Warranty Reminder</div>
+                    <p>Your transmission warranty expires in 5 days. Schedule a checkup.</p>
+                    <div class="notification-time">Yesterday</div>
+                </div>
+                <div class="notification-item">
+                    <div class="notification-title">Payment Successfully Transfered</div>
+                    <p>₱5,000 was sent to Itadori Yuuji (Mechanic).</p>
+                    <div class="notification-time">2 days ago</div>
+                </div>
+                <div class="notification-item">
+                    <div class="notification-title">New Message</div>
+                    <p>Mechanic Juan Dela Cruz sent you a message about your oil change.</p>
+                    <div class="notification-time">3 days ago</div>
+                </div>
+            </div>
         </div>
-        <div class="footer-social">
-            <a href="#"><img src="../../Assets/Logo/facebook.png" alt="FB"></a>
-            <a href="#"><img src="../../Assets/Logo/instagram.png" alt="IG"></a>
-            <a href="#"><img src="../../Assets/Logo/twitter.png" alt="Twitter"></a>
-        </div>
-        <p class="footer-copyright">© 2026 PrecisionDrive Auto | Connecting Cars with Experts</p>
     </div>
-</footer>
+
+    <!-- CHAT MODAL -->
+    <div id="chatModal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2><i class="fas fa-comment-dots"></i> Messages</h2>
+                <button class="close-modal" onclick="closeModal('chatModal')">&times;</button>
+            </div>
+            <div id="chatList">
+                <div class="chat-item">
+                    <div class="chat-sender">AutoCare Center</div>
+                    <div class="chat-preview">Your car is ready for pickup. We’ve completed the engine repair...</div>
+                    <div class="chat-time">10:30 AM</div>
+                </div>
+                <div class="chat-item">
+                    <div class="chat-sender">Juan Dela Cruz (Mechanic)</div>
+                    <div class="chat-preview">Hi! I’ve reviewed your brake issue. When can you bring the car?</div>
+                    <div class="chat-time">Yesterday</div>
+                </div>
+                <div class="chat-item">
+                    <div class="chat-sender">Speed Garage</div>
+                    <div class="chat-preview">Thank you for your inquiry. We can schedule your oil change tomorrow.</div>
+                    <div class="chat-time">Apr 2, 2026</div>
+                </div>
+                <div class="chat-item">
+                    <div class="chat-sender">Support Team</div>
+                    <div class="chat-preview">Your warranty claim has been approved. Please visit any partner shop.</div>
+                    <div class="chat-time">Mar 30, 2026</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER (unchanged) ========== -->
+    <footer class="simple-footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="../../Assets/Logo/facebook.png" alt="FB"></a>
+                <a href="#"><img src="../../Assets/Logo/instagram.png" alt="IG"></a>
+                <a href="#"><img src="../../Assets/Logo/twitter.png" alt="Twitter"></a>
+            </div>
+            <p class="footer-copyright">© 2026 PrecisionDrive Auto | Connecting Cars with Experts</p>
+        </div>
+    </footer>
+
+    <script src="../../Sidebar_Script.js"></script>
+    <script>
+        // Open modal by ID
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+        // Attach click events to bell and chat icons after page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const bellIcon = document.getElementById('bell');
+            const chatIcon = document.getElementById('chat');
+            if (bellIcon) bellIcon.addEventListener('click', () => openModal('notificationsModal'));
+            if (chatIcon) chatIcon.addEventListener('click', () => openModal('chatModal'));
+        });
+        // Close modal when clicking outside the modal box
+        window.addEventListener('click', function(e) {
+            if (e.target.classList.contains('modal-overlay')) {
+                e.target.style.display = 'none';
+            }
+        });
+    </script>
+</body>
 
 <script src="../../Sidebar_Script.js"></script>
 </html>

@@ -2,241 +2,177 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../css/shopsAccountPage.css" />
-  <title>Account | Shop Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Shop Account | PrecisionDrive Auto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/shopsAccountPage.css">
 </head>
 <body>
-  <div class="page-shell">
-    <header class="topbar">
-      <a class="btn-link" href="home.html">← Back</a>
-    </header>
 
-    <main class="content">
-      <section class="section profile-card">
-        <div class="section-head">
-          <div>
-            <p class="eyebrow">Your business account</p>
-            <h1>Shop profile</h1>
-          </div>
-          <button class="btn-outline">Edit profile</button>
+<div class="page-shell">
+  <!-- Topbar -->
+  <header class="topbar">
+    <a class="btn-link" href="home.html"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
+  </header>
+
+  <!-- Profile Hero (glass card with shop details) -->
+  <section class="profile-hero">
+    <img src="../../../Assets/Images/Carshop2.jpg" alt="Shop Avatar" class="shop-avatar">
+    <div class="profile-info">
+      <div class="status-row">
+        <h1>Bungkaniko Auto Center</h1>
+        <span class="badge badge-open">Open Now</span>
+        <span class="badge badge-type">Auto Repair</span>
+      </div>
+      <p><i class="fas fa-envelope"></i> Bungkaniks@Shop.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> Main Street, Zamboanga City, Philippines</p>
+      <div class="owner-shop">
+        <img src="../../../Assets/Profiles/mcado.jpg" alt="Owner">
+        <div>
+          <h3>Owner</h3>
+          <p>Phillip P. Ines · 12 years exp.</p>
         </div>
-
-        <div class="profile-row">
-          
-          <div class="profile-meta">
-            <h2>Bungkaniko Auto Center</h2>
-            <p>Bungkaniks@Shop.com</p>
-            <p class="caps">Shop Owner</p>
-            <p>Main Street, Zamboanga City</p>
-          </div>
-        </div>
-      </section>
-
-      <div id="Schedule">
-        <div class="HeadSched">
-          <h1>Shop Hours & Availability</h1>
-          <h2 class="btn-tiny">Edit</h2>
-        </div>
-
-        <div id="ScheduleGrid">
-            <div class="ScheduleDay" id="sched1">
-                <h2>Monday</h2>
-                <p>9:00 AM – 5:00 PM</p>
-                <p class="Available">Available</p>
-            </div>
-
-            <div class="ScheduleDay" id="sched2">
-                <h2>Tuesday</h2>
-                <p>9:00 AM – 5:00 PM</p>
-                <p class="Busy">Busy</p>
-            </div>
-
-            <div class="ScheduleDay" id="sched3">
-                <h2>Wednesday</h2>
-                <p>9:00 AM – 5:00 PM</p>
-                <p class="Available">Available</p>
-            </div>
-
-            <div class="ScheduleDay" id="sched4">
-                <h2>Thursday</h2>
-                <p>9:00 AM – 5:00 PM</p>
-                <p class="Busy">Busy</p>
-            </div>
-
-            <div class="ScheduleDay" id="sched5">
-                <h2>Friday</h2>
-                <p>9:00 AM – 3:00 PM</p>
-                <p class="Available">Available</p>
-            </div>
-
-            <div class="ScheduleDay" id="sched6">
-                <h2>Saturday</h2>
-                <p>10:00 AM – 2:00 PM</p>
-                <p class="Available">Available</p>
-            </div>
-
-            <div class="ScheduleDay" id="sched7">
-                <h2>Sunday</h2>
-                <p>—</p>
-                <p class="Off">Closed</p>
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="profile-actions">
+      <button class="btn-outline"><i class="fas fa-edit"></i> Edit Profile</button>
+      <button class="btn-primary"><i class="fas fa-chart-line"></i> Insights</button>
+    </div>
+  </section>
 
-      <section class="section card">
-        <div class="section-head">
-          <h2>Business Information</h2>
-          <button class="btn-tiny">Edit</button>
-        </div>
-        <div class="grid-2">
-          <div class="field"><h3>Shop Name</h3><p>Bungkaniko Auto Center</p></div>
-          <div class="field"><h3>Owner Name</h3><p>Phillip P. Ines</p></div>
-          <div class="field"><h3>Business License</h3><p>DTI-998234-2026</p></div>
-          <div class="field"><h3>Email Address</h3><p>Bungkaniks@Shop.com</p></div>
-          <div class="field"><h3>Phone Number</h3><p>09123456789</p></div>
-          <div class="field"><h3>Date Established</h3><p>67/67/6767</p></div>
-          <div class="field"><h3>Account Role</h3><p>Shop Owner</p></div>
-          <div class="field"><h3>Platform Member For:</h3><p>67 days</p></div>
-          <div class="field"><h3>Shop Specialty</h3><p>Bungkanik</p></div>
-        </div>
-      </section>
-
-      <section class="section card">
-        <div class="section-head">
-          <h2>Address</h2>
-          <button class="btn-tiny">Edit</button>
-        </div>
-        <div class="grid-3">
-          <div class="field">
-          <h3>Country</h3>
-            <select class="fieldSelect">
-              <option selected>Philippines</option>
-              <option>Germany</option>
-              <option>Japan</option>
-              <option>Switzerland</option>
-              <option>China</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <h3>City</h3>
-            <select class="fieldSelect">
-              <option selected>Zamboanga</option>
-              <option>Manila</option>
-              <option>Baguio</option>
-              <option>Isabela</option>
-              <option>Davao</option> 
-          </select>
-          </div>
-
-          <div class="field">
-            <h3>Barangay</h3>
-            <select class="fieldSelect">
-              <option>Abong-Abong</option>
-              <option>Arena Blanco</option>
-              <option>Ayala</option>
-              <option>Baliwasan</option>
-              <option>Baluno</option>
-              <option>Boalan</option>
-              <option>Bolong</option>
-              <option>Buenavista</option>
-              <option>Bunguiao</option>
-              <option>Busay</option>
-              <option>Cabaluay</option>
-              <option>Cabatangan</option>
-              <option>Cacao</option>
-              <option>Calabasa</option>
-              <option>Calarian</option>
-              <option>Camino Nuevo</option>
-              <option>Campo Islam</option>
-              <option>Canelar</option>
-              <option>Capisan</option>
-              <option>Cawit</option>
-              <option>Culianan</option>
-              <option>Curuan</option>
-              <option>Dita</option>
-              <option>Divisoria</option>
-              <option>Dulian (Upper Bunguiao)</option>
-              <option>Dulian (Upper Pasonanca)</option>
-              <option>Guisao</option>
-              <option>Guiwan</option>
-              <option>Kasanyangan</option>
-              <option>La Paz</option>
-              <option>Labuan</option>
-              <option>Lamisahan</option>
-              <option>Landang Gua</option>
-              <option>Landang Laum</option>
-              <option>Lanzones</option>
-              <option>Lapakan</option>
-              <option>Latuan</option>
-              <option>Licomo</option>
-              <option>Limaong</option>
-              <option>Limpapa</option>
-              <option>Lubigan</option>
-              <option>Lumayang</option>
-              <option>Lumbangan</option>
-              <option>Lunzuran</option>
-              <option>Maasin</option>
-              <option>Malagutay</option>
-              <option>Mampang</option>
-              <option>Manalipa</option>
-              <option>Mangusu</option>
-              <option>Manicahan</option>
-              <option>Mariki</option>
-              <option>Mercedes</option>
-              <option>Muti</option>
-              <option>Pamucutan</option>
-              <option>Pangapuyan</option>
-              <option>Panubigan</option>
-              <option>Pasilmanta (Sacol Island)</option>
-              <option>Pasobolong</option>
-              <option>Pasonanca</option>
-              <option>Patalon</option>
-              <option>Putik</option>
-              <option>Quiniput</option>
-              <option>Recodo</option>
-              <option>Rio Hondo</option>
-              <option>Salaan</option>
-              <option>San Jose Cawa-Cawa</option>
-              <option>San Jose Gusu</option>
-              <option>San Ramon</option>
-              <option>San Roque</option>
-              <option>Santa Barbara</option>
-              <option>Santa Catalina</option>
-              <option>Santa Maria</option>
-              <option>Santo Niño</option>
-              <option>Sibulao</option>
-              <option>Sinubong</option>
-              <option>Sangali</option>
-              <option>Sta. Cruz</option>
-              <option>Sta. Maria</option>
-              <option>Talabaan</option>
-              <option>Taluksangay</option>
-              <option>Talon-Talon</option>
-              <option>Talisayan</option>
-              <option>Talon-Talon Loop</option>
-              <option>Tetuan</option>
-              <option>Tigbalabag</option>
-              <option>Tigtabon</option>
-              <option>Tolosa</option>
-              <option>Tugbungan</option>
-              <option>Tumaga</option>
-              <option>Tumalutab</option>
-              <option>Victoria</option>
-              <option>Vitali</option>
-              <option>Zambowood</option>
-          </select>
-          </div>
-
-          <div class="field"><h3>Postal Code</h3><p>6700</p></div>
-        </div>
-      </section>
-    </main>
+  <!-- Stats Grid -->
+  <div class="stats-grid">
+    <div class="stat-card"><h3>Customers Served</h3><p>1,247</p></div>
+    <div class="stat-card"><h3>Avg Rating</h3><p>★★★★½</p></div>
+    <div class="stat-card"><h3>Employees</h3><p>6</p></div>
+    <div class="stat-card"><h3>Followers</h3><p>2.3k</p></div>
+    <div class="stat-card"><h3>Established</h3><p>2023</p></div>
   </div>
-  
-  <footer>
-    <p>© 2026 Bungkaniko Auto | Connecting Cars with Bungkaniks</p>
+
+  <!-- Services Offered -->
+  <section class="services-section">
+    <h2><i class="fas fa-wrench"></i> Services Offered</h2>
+    <div class="services-grid">
+      <span class="service-tag">Engine Repair</span>
+      <span class="service-tag">Oil Change</span>
+      <span class="service-tag">Brake Service</span>
+      <span class="service-tag">Tire Rotation</span>
+      <span class="service-tag">AC Repair</span>
+      <span class="service-tag">Diagnostics</span>
+      <span class="service-tag">Transmission</span>
+      <span class="service-tag">Body Work</span>
+      <span class="service-tag">Electrical</span>
+      <span class="service-tag">Suspension</span>
+    </div>
+    <div class="edit-actions">
+      <button class="btn-tiny"><i class="fas fa-plus"></i> Add Service</button>
+      <button class="btn-tiny"><i class="fas fa-edit"></i> Edit</button>
+    </div>
+  </section>
+
+  <!-- Business Information & Address (two-column layout) -->
+  <div class="info-grid">
+    <section class="info-card">
+      <div class="section-header">
+        <h2>Business Information</h2>
+        <button class="btn-tiny">Edit</button>
+      </div>
+      <div class="info-fields">
+        <div class="field"><h3>Shop Name</h3><p>Bungkaniko Auto Center</p></div>
+        <div class="field"><h3>Owner Name</h3><p>Phillip P. Ines</p></div>
+        <div class="field"><h3>Business License</h3><p>DTI-998234-2026</p></div>
+        <div class="field"><h3>Email Address</h3><p>Bungkaniks@Shop.com</p></div>
+        <div class="field"><h3>Phone Number</h3><p>+63 912 345 6789</p></div>
+        <div class="field"><h3>Date Established</h3><p>Jan 15, 2023</p></div>
+        <div class="field"><h3>Account Role</h3><p>Shop Owner</p></div>
+        <div class="field"><h3>Platform Member Since</h3><p>67 days</p></div>
+        <div class="field"><h3>Shop Specialty</h3><p>Engine & Transmission</p></div>
+      </div>
+    </section>
+
+    <section class="info-card">
+      <div class="section-header">
+        <h2>Address & Location</h2>
+        <button class="btn-tiny">Edit</button>
+      </div>
+      <div class="address-fields">
+        <div class="field"><h3>Country</h3><select class="fieldSelect"><option selected>Philippines</option><option>Germany</option><option>Japan</option></select></div>
+        <div class="field"><h3>City</h3><select class="fieldSelect"><option selected>Zamboanga</option><option>Manila</option><option>Davao</option></select></div>
+        <div class="field"><h3>Barangay</h3><select class="fieldSelect"><option>Canelar</option><option>Pasonanca</option><option>Tumaga</option></select></div>
+        <div class="field"><h3>Postal Code</h3><p>7000</p></div>
+        <div class="field"><h3>Street Address</h3><p>1234 Main St, Zamboanga City</p></div>
+      </div>
+      <div class="map-placeholder">
+        <i class="fas fa-map-marked-alt"></i> <span>Interactive map preview</span>
+      </div>
+    </section>
+  </div>
+
+  <!-- Weekly Schedule -->
+  <section class="schedule-shop">
+    <div class="schedule-header">
+      <h2><i class="fas fa-calendar-alt"></i> Shop Hours & Availability</h2>
+      <button class="btn-tiny">Edit Hours</button>
+    </div>
+    <div class="schedule-grid">
+      <div class="schedule-card"><h3>Monday</h3><p>9:00 AM – 5:00 PM</p><span class="day-status available">Open</span></div>
+      <div class="schedule-card"><h3>Tuesday</h3><p>9:00 AM – 5:00 PM</p><span class="day-status busy">Full</span></div>
+      <div class="schedule-card"><h3>Wednesday</h3><p>9:00 AM – 5:00 PM</p><span class="day-status available">Open</span></div>
+      <div class="schedule-card"><h3>Thursday</h3><p>9:00 AM – 5:00 PM</p><span class="day-status busy">Full</span></div>
+      <div class="schedule-card"><h3>Friday</h3><p>9:00 AM – 3:00 PM</p><span class="day-status available">Open</span></div>
+      <div class="schedule-card"><h3>Saturday</h3><p>10:00 AM – 2:00 PM</p><span class="day-status available">Open</span></div>
+      <div class="schedule-card"><h3>Sunday</h3><p>—</p><span class="day-status off">Closed</span></div>
+    </div>
+  </section>
+
+  <!-- Team Members -->
+  <section class="team-section">
+    <div class="section-header">
+      <h2><i class="fas fa-users"></i> Shop Mechanics & Crew</h2>
+      <button class="btn-tiny"><i class="fas fa-user-plus"></i> Manage</button>
+    </div>
+    <div class="members-grid">
+      <div class="member-card"><img src="../../../Assets/Profiles/mcado.jpg" alt="Ramon"><h4>Ramon Delgado</h4><p>Senior Mechanic</p><p class="member-email">ramon@bungkaniko.com</p></div>
+      <div class="member-card"><img src="../../../Assets/Profiles/mcado.jpg" alt="Luis"><h4>Luis Mendez</h4><p>Engine Specialist</p><p class="member-email">luis@bungkaniko.com</p></div>
+      <div class="member-card"><img src="../../../Assets/Profiles/mcado.jpg" alt="Sofia"><h4>Sofia Cruz</h4><p>Diagnostics Expert</p><p class="member-email">sofia@bungkaniko.com</p></div>
+      <div class="member-card"><img src="../../../Assets/Profiles/mcado.jpg" alt="Marcus"><h4>Marcus Tan</h4><p>Transmission Tech</p><p class="member-email">marcus@bungkaniko.com</p></div>
+      <div class="member-card"><img src="../../../Assets/Profiles/mcado.jpg" alt="Ellie"><h4>Ellie Rivera</h4><p>Body & Paint</p><p class="member-email">ellie@bungkaniko.com</p></div>
+      <div class="member-card"><img src="../../../Assets/Profiles/mcado.jpg" alt="Carlos"><h4>Carlos Yu</h4><p>Electrical Systems</p><p class="member-email">carlos@bungkaniko.com</p></div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews -->
+  <section class="reviews-section">
+    <h2><i class="fas fa-star"></i> Customer Reviews · 4.8 ★ (47 reviews)</h2>
+    <div class="reviews-container">
+      <div class="review-card"><img src="../../../Assets/Profiles/mcado.jpg" alt="Jake"><div><h3>Jake R.</h3><div class="stars">★★★★★</div><p>"Fixed my engine issue same day. Very professional."</p></div></div>
+      <div class="review-card"><img src="../../../Assets/Profiles/mcado.jpg" alt="Maria"><div><h3>Maria L.</h3><div class="stars">★★★★☆</div><p>"Clean shop, friendly staff. Will come back."</p></div></div>
+      <div class="review-card"><img src="../../../Assets/Profiles/mcado.jpg" alt="Carl"><div><h3>Carl P.</h3><div class="stars">★★★★★</div><p>"Transparent pricing, excellent work."</p></div></div>
+    </div>
+    <button class="btn-outline" style="margin-top: 1rem;">View All Reviews</button>
+  </section>
+
+  <!-- Footer -->
+  <footer class="simple-footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <div class="footer-social">
+        <a href="#"><img src="../../../Assets/Logo/facebook.png" alt="FB"></a>
+        <a href="#"><img src="../../../Assets/Logo/instagram.png" alt="IG"></a>
+        <a href="#"><img src="../../../Assets/Logo/twitter.png" alt="Twitter"></a>
+      </div>
+      <p class="footer-copyright">© 2026 Bungkaniko Auto Center | Powered by PrecisionDrive Auto</p>
+    </div>
   </footer>
+</div>
+
 </body>
 </html>

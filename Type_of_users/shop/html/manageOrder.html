@@ -3,135 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Orders | PrecisionDrive Auto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="../css/manageOrder.css" rel="stylesheet"/>
-    <title>Manage Orders | Fixit</title>
+    <link rel="stylesheet" href="../css/manageOrder.css">
 </head>
 <body>
 
-    <div id="NavBar">
-        <div id="nav-left">
-            <img id="profile" src="../../../Assets/Profiles/mcado.jpg" alt="Menu Trigger" onclick="toggleSidebar()">
-        </div>
-        <div id="mainnavbar">
-            <a href="home.html"><button class="button">Dashboard</button></a>
-            <a href="manageOrder.html"><button class="button">Manage Customers</button></a>
-            <a href="shopFinances.html"><button class="button">Shop Finances</button></a>
-        </div>
-        <div id="formiscelanious">
-            <i class="fa-solid fa-bell" id="bell"></i>
-            <i class="fa-solid fa-comment-dots" id="chat"></i>
-        </div>
+<div id="NavBar">
+    <div id="nav-left">
+        <img id="profile" src="../../../Assets/Profiles/mcado.jpg" alt="Menu Trigger" onclick="toggleSidebar()">
     </div>
-
-    <div id="sidebar">
-        <div id="listsSidebar">
-            <div id="SidebarProp">
-                <a href="shopsAccountPage.html"><img id="profileSidebar" src="../../../Assets/Profiles/mcado.jpg"/></a>
-                <h2>Bungkaniko Auto Center</h2>
-                <p>Bungkaniks@Shop.com</p>
-            </div>
-            <button class="Tabs" onclick="openStaffModal()"><i class="fa-solid fa-users"></i><h1>Staff List</h1></button>
-            <button class="Tabs"><i class="fa-solid fa-arrow-trend-up"></i><h1>Performance</h1></button>
-            <button class="Tabs"><i class="fa-solid fa-gear"></i><h1>Settings</h1></button>
-            <a href="../../mechanic/Mechanic_Homepage.html" style="text-decoration: none;">
-                <button class="Tabs"><i class="fa-solid fa-house"></i><h1>Back To Home</h1></button>
-            </a>
-            <a href="../../../index.html" style="text-decoration: none;">
-                <button class="Tabs" id="Sign-Out"><h1>Sign-out</h1></button>
-            </a>
-        </div>
+    <div id="mainnavbar">
+        <a href="home.html"><button class="button">Dashboard</button></a>
+        <a href="manageOrder.html"><button class="button">Manage Customers</button></a>
+        <a href="shopFinances.html"><button class="button">Shop Finances</button></a>
     </div>
-
-    <div id="ContentArea">
-        <div class="header-section">
-            <h1>Manage Orders</h1>
-            <div class="header-actions">
-                <div class="search-box">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" id="orderSearch" placeholder="Search Order ID..." onkeyup="filterOrders()">
-                </div>
-            </div>
-        </div>
-
-        <div class="filter-row">
-            <button class="filter-btn active" onclick="filterByStatus('all', this)">All Orders</button>
-            <button class="filter-btn" onclick="filterByStatus('Pending', this)">Pending</button>
-            <button class="filter-btn" onclick="filterByStatus('In Progress', this)">In Progress</button>
-            <button class="filter-btn" onclick="filterByStatus('Completed', this)">Completed</button>
-            <button class="filter-btn" onclick="filterByStatus('Cancelled', this)">Cancelled</button>
-        </div>
-        
-        <div class="table-wrapper">
-            <table class="OrderTable" id="ordersTable">
-                <thead>
-                    <tr>
-                        <th>Order ID</th>
-                        <th>Customer</th>
-                        <th>Contact</th>
-                        <th>Service</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="clickable-row" data-status="Pending">
-                        <td>#FIX-5521</td>
-                        <td>Juan Dela Cruz</td>
-                        <td><a href="manageOrder.html" class="contact-link"><i class="fa-solid fa-phone"></i> 09123456789</a></td>
-                        <td>Engine Tune-up</td>
-                        <td><span class="status-pill pending">Pending</span></td>
-                        <td><button class="update-btn" onclick="openOrderModal('#FIX-5521', 'Juan Dela Cruz', 'Engine Tune-up', 'Pending', '09123456789', 'Toyota Vios')">Update</button></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <div id="formiscelanious">
+        <i class="fa-regular fa-bell" id="bell"></i>
+        <i class="fa-regular fa-comment-dots" id="chat"></i>
     </div>
+</div>
 
-    <div id="staffModal" class="modal">
-        <div class="modal-content staff-modal">
-            <span class="close-btn" onclick="closeStaffModal()">&times;</span>
-            <h2>Shop Mechanics</h2>
-            <button class="add-staff-btn"><i class="fa-solid fa-plus"></i> Add New Mechanic</button>
-            <div class="staff-list-container">
-                <div class="staff-card">
-                    <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
-                    <div class="staff-info">
-                        <h3>Ricardo Dalisay</h3>
-                        <p>Senior Mechanic</p>
-                    </div>
-                    <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
-                </div>
+<div id="sidebar">
+    <div id="listsSidebar">
+        <div id="SidebarProf">
+            <a href="shopsAccountPage.html"><img id="profileSidebar" src="../../../Assets/Profiles/mcado.jpg" alt="avatar"></a>
+            <h2>Bungkaniko Auto Center</h2>
+            <p>Bungkaniks@Shop.com</p>
+        </div>
+        <button class="Tabs" onclick="openStaffModal()"><i class="fa-solid fa-users"></i><h1>Staff List</h1></button>
+        <a href="Warranties_shop.html"><button class="Tabs"><i class="fa-regular fa-circle-check"></i><h1>Warranties</h1></button></a>
+        <button class="Tabs"><i class="fa-solid fa-gear"></i><h1>Settings</h1></button>
+        <a href="../../mechanic/Mechanic_Homepage.html" class="tab-link"><button class="Tabs"><i class="fa-solid fa-house"></i><h1>Back To Home</h1></button></a>
+        <a href="../../../index.html" class="tab-link"><button class="Tabs" id="Sign-Out"><h1>Sign-out</h1></button></a>
+    </div>
+</div>
+
+<div id="ContentArea">
+    <div class="header-section">
+        <h1>Manage Customers</h1>
+        <div class="header-actions">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="orderSearch" placeholder="Search Order ID..." onkeyup="filterOrders()">
             </div>
         </div>
     </div>
 
-    <div id="orderModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeOrderModal()">&times;</span>
-            <h2 id="modalOrderID">Order Details</h2>
-            <hr style="opacity: 0.1; margin: 15px 0;">
-            <div class="modal-body">
-                <div class="detail-item"><strong>Customer:</strong> <span id="mCustName"></span></div>
-                <div class="detail-item"><strong>Contact:</strong> <span id="mCustPhone"></span></div>
-                <div class="detail-item"><strong>Vehicle:</strong> <span id="mVehicle"></span></div>
-                <div class="detail-item"><strong>Service:</strong> <span id="mService"></span></div>
-                <div class="detail-item"><strong>Status:</strong> <span id="mStatus"></span></div>
-                
-                <div class="action-box">
-                    <h3>Update Status</h3>
-                    <select id="statusSelect">
-                        <option value="Pending">Pending</option>
-                        <option value="In Progress">In Progress</option>
-                        <option value="Completed">Completed</option>
-                        <option value="Cancelled">Cancelled</option>
-                    </select>
-                    <button class="save-btn" onclick="closeOrderModal()">Save Changes</button>
-                </div>
+    <div class="filter-row">
+        <button class="filter-btn active" onclick="filterByStatus('all', this)">All Orders</button>
+        <button class="filter-btn" onclick="filterByStatus('Pending', this)">Pending</button>
+        <button class="filter-btn" onclick="filterByStatus('In Progress', this)">In Progress</button>
+        <button class="filter-btn" onclick="filterByStatus('Completed', this)">Completed</button>
+        <button class="filter-btn" onclick="filterByStatus('Cancelled', this)">Cancelled</button>
+    </div>
+    
+    <div class="table-wrapper">
+        <table class="OrderTable" id="ordersTable">
+            <thead>
+                <tr><th>Order ID</th><th>Customer</th><th>Contact</th><th>Service</th><th>Status</th><th>Action</th></tr>
+            </thead>
+            <tbody>
+                <tr class="clickable-row" data-status="Pending">
+                    <td>#FIX-5521</td>
+                    <td>Juan Dela Cruz</td>
+                    <td><a href="manageOrder.html" class="contact-link"><i class="fa-solid fa-phone"></i> 09123456789</a></td>
+                    <td>Engine Tune-up</td>
+                    <td><span class="status-pill pending">Pending</span></td>
+                    <td><button class="update-btn" onclick="openOrderModal('#FIX-5521', 'Juan Dela Cruz', 'Engine Tune-up', 'Pending', '09123456789', 'Toyota Vios')">Update</button></td>
+                </tr>
+                <tr class="clickable-row" data-status="Pending">
+                    <td>#FIX-5522</td>
+                    <td>Maria Santos</td>
+                    <td><a href="manageOrder.html" class="contact-link"><i class="fa-solid fa-phone"></i> 09123456780</a></td>
+                    <td>Brake Replacement</td>
+                    <td><span class="status-pill pending">Pending</span></td>
+                    <td><button class="update-btn" onclick="openOrderModal('#FIX-5522', 'Maria Santos', 'Brake Replacement', 'Pending', '09123456780', 'Honda CR-V')">Update</button></td>
+                </tr>
+                <tr class="clickable-row" data-status="Pending">
+                    <td>#FIX-5521</td>
+                    <td>Juan Dela Cruz</td>
+                    <td><a href="manageOrder.html" class="contact-link"><i class="fa-solid fa-phone"></i> 09123456789</a></td>
+                    <td>Engine Tune-up</td>
+                    <td><span class="status-pill pending">Pending</span></td>
+                    <td><button class="update-btn" onclick="openOrderModal('#FIX-5521', 'Juan Dela Cruz', 'Engine Tune-up', 'Pending', '09123456789', 'Toyota Vios')">Update</button></td>
+                </tr>
+                <tr class="clickable-row" data-status="Pending">
+                    <td>#FIX-5522</td>
+                    <td>Maria Santos</td>
+                    <td><a href="manageOrder.html" class="contact-link"><i class="fa-solid fa-phone"></i> 09123456780</a></td>
+                    <td>Brake Replacement</td>
+                    <td><span class="status-pill pending">Pending</span></td>
+                    <td><button class="update-btn" onclick="openOrderModal('#FIX-5522', 'Maria Santos', 'Brake Replacement', 'Pending', '09123456780', 'Honda CR-V')">Update</button></td>
+                </tr>
+                <tr class="clickable-row" data-status="Pending">
+                    <td>#FIX-5521</td>
+                    <td>Juan Dela Cruz</td>
+                    <td><a href="manageOrder.html" class="contact-link"><i class="fa-solid fa-phone"></i> 09123456789</a></td>
+                    <td>Engine Tune-up</td>
+                    <td><span class="status-pill pending">Pending</span></td>
+                    <td><button class="update-btn" onclick="openOrderModal('#FIX-5521', 'Juan Dela Cruz', 'Engine Tune-up', 'Pending', '09123456789', 'Toyota Vios')">Update</button></td>
+                </tr>
+                <tr class="clickable-row" data-status="Pending">
+                    <td>#FIX-5522</td>
+                    <td>Maria Santos</td>
+                    <td><a href="manageOrder.html" class="contact-link"><i class="fa-solid fa-phone"></i> 09123456780</a></td>
+                    <td>Brake Replacement</td>
+                    <td><span class="status-pill pending">Pending</span></td>
+                    <td><button class="update-btn" onclick="openOrderModal('#FIX-5522', 'Maria Santos', 'Brake Replacement', 'Pending', '09123456780', 'Honda CR-V')">Update</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Staff Modal -->
+<div id="staffModal" class="modal">
+    <div class="modal-content staff-modal">
+        <span class="close-btn" onclick="closeStaffModal()">&times;</span>
+        <h2>Shop Mechanics</h2>
+        <button class="add-staff-btn"><i class="fa-solid fa-plus"></i> Add New Mechanic</button>
+        <div class="staff-list-container">
+            <div class="staff-card">
+                <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
+                <div class="staff-info"><h3>Ricardo Dalisay</h3><p>Senior Mechanic</p></div>
+                <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+            </div>
+            <div class="staff-card">
+                <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
+                <div class="staff-info"><h3>Cardo Dalistep</h3><p>Junior Mechanic</p></div>
+                <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+            </div>
+            <div class="staff-card">
+                <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
+                <div class="staff-info"><h3>Ricardo Dalisay</h3><p>Senior Mechanic</p></div>
+                <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+            </div>
+            <div class="staff-card">
+                <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
+                <div class="staff-info"><h3>Cardo Dalistep</h3><p>Junior Mechanic</p></div>
+                <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+            </div>
+            <div class="staff-card">
+                <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
+                <div class="staff-info"><h3>Ricardo Dalisay</h3><p>Senior Mechanic</p></div>
+                <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+            </div>
+            <div class="staff-card">
+                <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
+                <div class="staff-info"><h3>Cardo Dalistep</h3><p>Junior Mechanic</p></div>
+                <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Order Update Modal -->
+<div id="orderModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeOrderModal()">&times;</span>
+        <h2 id="modalOrderID">Order Details</h2>
+        <hr style="opacity: 0.1; margin: 15px 0;">
+        <div class="modal-body">
+            <div class="detail-item"><strong>Customer:</strong> <span id="mCustName"></span></div>
+            <div class="detail-item"><strong>Contact:</strong> <span id="mCustPhone"></span></div>
+            <div class="detail-item"><strong>Vehicle:</strong> <span id="mVehicle"></span></div>
+            <div class="detail-item"><strong>Service:</strong> <span id="mService"></span></div>
+            <div class="detail-item"><strong>Status:</strong> <span id="mStatus"></span></div>
+            <div class="action-box">
+                <h3>Update Status</h3>
+                <select id="statusSelect">
+                    <option value="Pending">Pending</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                    <option value="Cancelled">Cancelled</option>
+                </select>
+                <button class="save-btn" onclick="closeOrderModal()">Save Changes</button>
             </div>
         </div>
     </div>
+</div>
 
-    <script src="../script.js"></script>
+<!-- ========== NOTIFICATIONS MODAL ========== -->
+<div id="notificationsModal" class="modal-overlay" style="display: none;">
+    <div class="modal-box">
+        <div class="modal-header">
+            <h2><i class="fas fa-bell"></i> Notifications</h2>
+            <button class="close-modal" onclick="closeModal('notificationsModal')">&times;</button>
+        </div>
+        <div id="notificationsList">
+            <div class="notification-item">
+                <div class="notification-title">New Order</div>
+                <p>Customer Juan Dela Cruz placed an order #FIX-5521.</p>
+                <div class="notification-time">2 hours ago</div>
+            </div>
+            <div class="notification-item">
+                <div class="notification-title">Payment Received</div>
+                <p>₱5,300 for order #FIX-5521.</p>
+                <div class="notification-time">Yesterday</div>
+            </div>
+            <div class="notification-item">
+                <div class="notification-title">Warranty Expiring Soon</div>
+                <p>Warranty for order #BR-452 expires in 2 days.</p>
+                <div class="notification-time">3 days ago</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ========== CHAT MODAL ========== -->
+<div id="chatModal" class="modal-overlay" style="display: none;">
+    <div class="modal-box">
+        <div class="modal-header">
+            <h2><i class="fas fa-comment-dots"></i> Messages</h2>
+            <button class="close-modal" onclick="closeModal('chatModal')">&times;</button>
+        </div>
+        <div id="chatList">
+            <div class="chat-item">
+                <div class="chat-sender">Juan Dela Cruz</div>
+                <div class="chat-preview">When will my order be ready?</div>
+                <div class="chat-time">10:15 AM</div>
+            </div>
+            <div class="chat-item">
+                <div class="chat-sender">Mechanic Ricardo</div>
+                <div class="chat-preview">The engine repair is in progress.</div>
+                <div class="chat-time">Yesterday</div>
+            </div>
+            <div class="chat-item">
+                <div class="chat-sender">Support Team</div>
+                <div class="chat-preview">Your shop verification is complete.</div>
+                <div class="chat-time">Apr 1, 2026</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="simple-footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img src="../../../Assets/Logo/facebook.png" alt="FB"></a>
+            <a href="#"><img src="../../../Assets/Logo/instagram.png" alt="IG"></a>
+            <a href="#"><img src="../../../Assets/Logo/twitter.png" alt="Twitter"></a>
+        </div>
+        <p class="footer-copyright">© 2026 Bungkaniko Auto Center | Powered by PrecisionDrive Auto</p>
+    </div>
+</footer>
+
+<script src="../../Sidebar_Script.js"></script>
+<script src="../script.js"></script>
+<script>
+    // Sidebar toggle function
+    function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("active");
+    }
+    // Filter functions (already in script.js)
+    function filterOrders() { /* implemented in script.js */ }
+    function filterByStatus(status, btn) { /* implemented in script.js */ }
+
+    // Staff modal
+    function openStaffModal() { document.getElementById('staffModal').style.display = 'block'; }
+    function closeStaffModal() { document.getElementById('staffModal').style.display = 'none'; }
+
+    // Order modal
+    function openOrderModal(id, name, service, status, phone, vehicle) {
+        document.getElementById('modalOrderID').innerText = id;
+        document.getElementById('mCustName').innerText = name;
+        document.getElementById('mCustPhone').innerText = phone;
+        document.getElementById('mVehicle').innerText = vehicle;
+        document.getElementById('mService').innerText = service;
+        document.getElementById('mStatus').innerText = status;
+        document.getElementById('statusSelect').value = status;
+        document.getElementById('orderModal').style.display = 'block';
+    }
+    function closeOrderModal() { document.getElementById('orderModal').style.display = 'none'; }
+
+    // Global functions for notification/chat modals
+    function openModal(modalId) {
+        var modal = document.getElementById(modalId);
+        if (modal) modal.style.display = 'flex';
+    }
+    function closeModal(modalId) {
+        var modal = document.getElementById(modalId);
+        if (modal) modal.style.display = 'none';
+    }
+
+    // Attach click handlers to bell and chat icons
+    document.addEventListener('DOMContentLoaded', function() {
+        var bell = document.getElementById('bell');
+        var chat = document.getElementById('chat');
+        if (bell) bell.addEventListener('click', function() { openModal('notificationsModal'); });
+        if (chat) chat.addEventListener('click', function() { openModal('chatModal'); });
+    });
+
+    // Close modal when clicking outside the modal overlay
+    window.addEventListener('click', function(e) {
+        if (e.target.classList && e.target.classList.contains('modal-overlay')) {
+            e.target.style.display = 'none';
+        }
+        // also close staff/order modals if clicking on their backgrounds
+        if (e.target.classList.contains('modal')) {
+            closeStaffModal();
+            closeOrderModal();
+        }
+    });
+</script>
 </body>
 </html>

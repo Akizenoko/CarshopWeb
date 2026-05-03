@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Connections | PrecisionDrive Auto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles/connections.css">
+</head>
+<body>
+
+    <header class="topbar">
+      <a class="btn-link" href="Home_Page_For_Users.html">← Back to Home</a>
+    </header>
+
+<!-- ========== MAIN CONTENT ========== -->
+<main class="connections-container">
+    <div class="page-header">
+        <h1><i class="fas fa-users"></i> My Connections</h1>
+        <p>Mechanics you follow and recent conversations</p>
+    </div>
+
+    <!-- Followed Mechanics Section -->
+    <div class="section-card">
+        <div class="section-header">
+            <h2><i class="fas fa-heart"></i> Followed Mechanics</h2>
+            <span class="count-badge" id="followedCount">0</span>
+        </div>
+        <div class="mechanic-grid" id="followedMechanicsGrid">
+            <!-- Dynamically populated by JS -->
+        </div>
+    </div>
+
+    <!-- Recent Interactions Section -->
+    <div class="section-card">
+        <div class="section-header">
+            <h2><i class="fas fa-clock-rotate-left"></i> Recent Interactions</h2>
+            <span class="count-badge" id="interactionCount">0</span>
+        </div>
+        <div class="interaction-list" id="interactionsList">
+            <!-- Dynamically populated by JS -->
+        </div>
+    </div>
+</main>
+
+<footer class="simple-footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img src="../../Assets/Logo/facebook.png" alt="FB"></a>
+            <a href="#"><img src="../../Assets/Logo/instagram.png" alt="IG"></a>
+            <a href="#"><img src="../../Assets/Logo/twitter.png" alt="Twitter"></a>
+        </div>
+        <p class="footer-copyright">© 2026 PrecisionDrive Auto | Connecting Cars with Experts</p>
+    </div>
+</footer>
+
+<script src="../../Sidebar_Script.js"></script>
+<script src="scripts/connections.js"></script>
+</body>
+</html>

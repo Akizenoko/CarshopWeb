@@ -5,6 +5,7 @@ const jobsData = [
         customer: "Juan Dela Cruz",
         vehicle: "2019 Toyota Fortuner",
         issueDesc: "Engine won't start — vehicle has been unresponsive since yesterday morning. Key turns but no ignition response. Possible fuel pump or starter motor failure.",
+        phone: "+63 912 345 6789",
         email: "juan.dc@email.com",
         location: "Zamboanga City",
         budget: "₱150k",
@@ -36,6 +37,7 @@ const jobsData = [
         customer: "Maria Santos",
         vehicle: "2021 Honda CR-V",
         issueDesc: "Knocking sound from front suspension, especially on bumps and uneven roads. Suspected worn-out struts or stabilizer links.",
+        phone: "+63 917 654 3210",
         email: "maria.s@email.com",
         location: "Zamboanga City",
         budget: "₱80k",
@@ -51,6 +53,7 @@ const jobsData = [
         customer: "Pedro Lopez",
         vehicle: "2022 Mitsubishi Montero",
         issueDesc: "Check engine light on and stalling intermittently. OBD scan shows P0300 (random misfire). Suspected ignition coils or spark plugs.",
+        phone: "+63 929 111 2233",
         email: "pedro.l@email.com",
         location: "Zamboanga City",
         budget: "₱200k",
@@ -64,52 +67,62 @@ const jobsData = [
 ];
 
 // Get modal elements
-const modal = document.getElementById('jobModal');
-const closeBtn = document.getElementById('closeModalBtn');
+const jobModal = document.getElementById('jobModal');
+const closeModalBtn = document.getElementById('closeModalBtn');
 const modalCustomerName = document.getElementById('modalCustomerName');
 const modalVehicle = document.getElementById('modalVehicle');
 const modalIssueFull = document.getElementById('modalIssueFull');
+const modalPhone = document.getElementById('modalPhone');
 const modalEmail = document.getElementById('modalEmail');
 const modalLocation = document.getElementById('modalLocation');
 const modalBudget = document.getElementById('modalBudget');
 const modalCostEstimate = document.getElementById('modalCostEstimate');
-const modalCustomerImg = document.getElementById('modalCustomerImg');
 
-// Function to open modal with specific job data
-function openModal(jobId) {
+// Function to open the job details modal (renamed to avoid conflict with global openModal)
+function openJobModal(jobId) {
     const job = jobsData.find(j => j.id === jobId);
     if (!job) return;
 
     modalCustomerName.innerText = job.customer;
     modalVehicle.innerText = job.vehicle;
     modalIssueFull.innerText = job.issueDesc;
+    if (modalPhone) modalPhone.innerText = job.phone;
     modalEmail.innerText = job.email;
     modalLocation.innerText = job.location;
     modalBudget.innerText = job.budget;
     modalCostEstimate.innerHTML = job.costEstimate;
-    // You can also change the profile image per job if needed
-    // modalCustomerImg.src = job.img || "../../Assets/Profiles/mcado.jpg";
 
-    modal.style.display = 'flex';
+    jobModal.style.display = 'flex';
 }
 
-// Close modal
-function closeModal() {
-    modal.style.display = 'none';
+function closeJobModal() {
+    jobModal.style.display = 'none';
 }
 
-// Event listeners for all "More Info" buttons
-document.querySelectorAll('.infoBtn').forEach((btn, index) => {
-    // Assign job ID based on order (1,2,3) – adjust if you have different jobs
-    btn.addEventListener('click', () => {
-        const jobId = index + 1;   // first button = job 1, second = job 2, etc.
-        openModal(jobId);
+// Attach event listeners to all "More Info" buttons
+function attachInfoButtonListeners() {
+    const infoBtns = document.querySelectorAll('.infoBtn');
+    infoBtns.forEach((btn, index) => {
+        // Remove existing listeners to prevent duplicates after dynamic updates
+        btn.removeEventListener('click', btn._listener);
+        const listener = () => {
+            const jobId = (btn.getAttribute('data-job-id')) ? parseInt(btn.getAttribute('data-job-id')) : index + 1;
+            openJobModal(jobId);
+        };
+        btn.addEventListener('click', listener);
+        btn._listener = listener;
     });
+}
+
+// Close modal on X button
+if (closeModalBtn) closeModalBtn.addEventListener('click', closeJobModal);
+
+// Close modal when clicking outside the modal content
+window.addEventListener('click', (e) => {
+    if (e.target === jobModal) closeJobModal();
 });
 
-// Close on X button
-if (closeBtn) closeBtn.addEventListener('click', closeModal);
-// Close when clicking outside modal content
-window.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
+// Initialize listeners when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    attachInfoButtonListeners();
 });

@@ -6,8 +6,7 @@
     <title>Customers | PrecisionDrive Auto</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles/ClientPage.css">
 </head>
 <body>
@@ -21,8 +20,8 @@
         <a href="ClientPage.html"><button class="button">Customers</button></a>
     </div>
     <div id="formiscelanious">
-        <img id="bell" src="../../Assets/Logo/bell.png" alt="notifications">
-        <img id="chat" src="../../Assets/Logo/chat.png" alt="messages">
+        <img id="bell" src="../../Assets/Logo/bell.png" alt="notifications" onclick="openModal('notificationsModal')">
+        <img id="chat" src="../../Assets/Logo/chat.png" alt="messages" onclick="openModal('chatModal')">
     </div>
 </div>
 
@@ -33,10 +32,6 @@
             <h2>Mechanic Name</h2>
             <p>mechanic@gmail.com</p>
         </div>
-        <button class="Tabs">
-            <img src="../../Assets/Logo/multiple-users-silhouette.png" alt="connections">
-            <h1>Connections</h1>
-        </button>
         <a href="Accepted_Jobs.html">
         <button class="Tabs">
             <img src="../../Assets/Logo/check.png" alt="email">
@@ -118,6 +113,10 @@
             <div class="modal-section">
                 <h3 class="modal-section-title">
                     <i class="fa-solid fa-address-card"></i>Contact Information</h3>
+                <div class="modal-field">
+                    <span class="modal-field-label">Number</span>
+                    <span class="modal-field-value">0913456789</span>
+                </div>
                 <div class="modal-field">
                     <span class="modal-field-label">Email</span>
                     <span class="modal-field-value">yami.sukehiro@email.com</span>
@@ -231,6 +230,10 @@
             </div>
             <div class="modal-section">
                 <h3 class="modal-section-title">Contact Information</h3>
+                <div class="modal-field">
+                    <span class="modal-field-label">Number</span>
+                    <span class="modal-field-value">0913456789</span>
+                </div>
                 <div class="modal-field">
                     <span class="modal-field-label">Email</span>
                     <span class="modal-field-value">trisha.b@email.com</span>
@@ -491,6 +494,67 @@
 
 </div>
 
+
+<!-- ========== NOTIFICATIONS MODAL ========== -->
+<div id="notificationsModal" class="modal-overlay" style="display: none;">
+    <div class="modal-box">
+        <div class="modal-header">
+            <h2><i class="fas fa-bell"></i> Notifications</h2>
+            <button class="close-modal" onclick="closeModal('notificationsModal')">&times;</button>
+        </div>
+        <div id="notificationsList">
+            <div class="notification-item">
+                <div class="notification-title">New Client Request</div>
+                <p>Customer Sukehiro, Yami requested engine repair.</p>
+                <div class="notification-time">2 hours ago</div>
+            </div>
+            <div class="notification-item">
+                <div class="notification-title">Payment Received</div>
+                <p>₱3,200 for brake replacement job #BR-452.</p>
+                <div class="notification-time">Yesterday</div>
+            </div>
+            <div class="notification-item">
+                <div class="notification-title">Warranty Expiring Soon</div>
+                <p>Warranty for job #EN-991 expires in 3 days.</p>
+                <div class="notification-time">2 days ago</div>
+            </div>
+            <div class="notification-item">
+                <div class="notification-title">New Message</div>
+                <p>AutoCare Center sent you a message about your schedule.</p>
+                <div class="notification-time">3 days ago</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ========== CHAT MODAL ========== -->
+<div id="chatModal" class="modal-overlay" style="display: none;">
+    <div class="modal-box">
+        <div class="modal-header">
+            <h2><i class="fas fa-comment-dots"></i> Messages</h2>
+            <button class="close-modal" onclick="closeModal('chatModal')">&times;</button>
+        </div>
+        <div id="chatList">
+            <div class="chat-item">
+                <div class="chat-sender">Sukehiro, Yami</div>
+                <div class="chat-preview">When can you check my engine? It won't start.</div>
+                <div class="chat-time">10:30 AM</div>
+            </div>
+            <div class="chat-item">
+                <div class="chat-sender">AutoCare Shop</div>
+                <div class="chat-preview">Please confirm your availability for next week.</div>
+                <div class="chat-time">Yesterday</div>
+            </div>
+            <div class="chat-item">
+                <div class="chat-sender">Support Team</div>
+                <div class="chat-preview">Your verification is complete. You can now accept premium jobs.</div>
+                <div class="chat-time">Mar 30, 2026</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!-- ===== FOOTER (Matching user homepage) ===== -->
 <footer class="simple-footer">
     <div class="footer-content">
@@ -510,6 +574,24 @@
 </footer>
 
 <script src="../../Sidebar_Script.js"></script>
+<script>
+    // Global functions for opening/closing modals (used by onclick attributes)
+    function openModal(modalId) {
+        var modal = document.getElementById(modalId);
+        if (modal) modal.style.display = 'flex';
+    }
+    function closeModal(modalId) {
+        var modal = document.getElementById(modalId);
+        if (modal) modal.style.display = 'none';
+    }
+
+    // Close modal when clicking outside the modal overlay
+    window.addEventListener('click', function(e) {
+        if (e.target.classList && e.target.classList.contains('modal-overlay')) {
+            e.target.style.display = 'none';
+        }
+    });
+</script>
 </body>
 </html>
  

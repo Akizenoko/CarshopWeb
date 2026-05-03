@@ -3,163 +3,464 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Dashboard | PrecisionDrive Auto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../css/home.css"> 
-    <title>Shop Owner Dashboard | Fixit</title>
+    <link rel="stylesheet" href="../css/home.css">
 </head>
-
 <body>
-    <div id="NavBar">
-        <img id="profile" src="../../../Assets/Profiles/mcado.jpg">
-        <div id="mainnavbar">
-            <a href="home.html"><button class="button">Dashboard</button></a>
-            <a href="manageOrder.html"><button class="button">Manage Customers</button></a>
-            <a href="shopFinances.html"><button class="button">Shop Finances</button></a>
-        </div>
-        <div id="formiscelanious">
-            <i class="fa-solid fa-bell" id="bell"></i>
-            <i class="fa-solid fa-comment-dots" id="chat"></i>
-        </div>
-    </div>
 
-    <div id="sidebar">
-        <div id="listsSidebar">
-            <div id="SidebarProf">
-                <a href="shopsAccountPage.html"><img id="profileSidebar" src="../../../Assets/Profiles/mcado.jpg"/></a>
-                <h2>Bungkaniko Auto Center</h2>
-                <p>Bungkaniks@Shop.com</p>
-            </div>
-            <button class="Tabs" onclick="openStaffModal()"><i class="fa-solid fa-users"></i><h1>Staff List</h1></button>
-            <button class="Tabs"><i class="fa-solid fa-arrow-trend-up"></i><h1>Performance</h1></button>
-            <button class="Tabs"><i class="fa-solid fa-gear"></i><h1>Settings</h1></button>
-            <a href="../../mechanic/Mechanic_Homepage.html" style="text-decoration: none;">
-                <button class="Tabs"><i class="fa-solid fa-house"></i><h1>Back To Home</h1></button>
-            </a>
-            <a href="../../../index.html" style="text-decoration: none;">
-                <button class="Tabs" id="Sign-Out"><h1>Sign-out</h1></button>
-            </a>
-        </div>
+<div id="NavBar">
+    <img id="profile" src="../../../Assets/Profiles/mcado.jpg" alt="profile" onclick="toggleSidebar()">
+    <div id="mainnavbar">
+        <a href="home.html"><button class="button">Dashboard</button></a>
+        <a href="manageOrder.html"><button class="button">Manage Customers</button></a>
+        <a href="shopFinances.html"><button class="button">Shop Finances</button></a>
     </div>
+    <div id="formiscelanious">
+        <i class="fa-regular fa-bell" id="bell"></i>
+        <i class="fa-regular fa-comment-dots" id="chat"></i>
+    </div>
+</div>
 
-    <div id="Header">
-        <div id="HContent">
-            <h2 style="color: #5bc0de; font-size: 18px; margin-bottom: 5px;">Mabuhay!</h2>
-            <h1>Welcome back, Owner</h1>
-            <p>Shop Status: 
-                <button id="shopStatusBtn" class="status-toggle open-style">OPEN</button>
-            </p>
-            <div id="HeaderGoal">
-                <h3>Daily Goal Progress</h3>
-                <div style="display: flex; align-items: center; margin-top: 5px;">
-                    <i class="fa-solid fa-chart-line" style="font-size: 25px; color: white;"></i>
-                    <p style="color: white; font-size: 24px; margin-left: 10px; font-weight: bold;">85%</p>
-                </div>
+<div id="sidebar">
+    <div id="listsSidebar">
+        <div id="SidebarProf">
+            <a href="shopsAccountPage.html"><img id="profileSidebar" src="../../../Assets/Profiles/mcado.jpg" alt="avatar"></a>
+            <h2>Bungkaniko Auto Center</h2>
+            <p>Bungkaniks@Shop.com</p>
+        </div>
+        <button class="Tabs" onclick="openStaffModal()"><i class="fa-solid fa-users"></i><h1>Staff List</h1></button>
+        <a href="Warranties_shop.html"><button class="Tabs"><i class="fa-regular fa-circle-check"></i><h1>Warranties</h1></button></a>
+        <button class="Tabs"><i class="fa-solid fa-gear"></i><h1>Settings</h1></button>
+        <a href="../../mechanic/Mechanic_Homepage.html" class="tab-link"><button class="Tabs"><i class="fa-solid fa-house"></i><h1>Back To Home</h1></button></a>
+        <a href="../../../index.html" class="tab-link"><button class="Tabs" id="Sign-Out"><h1>Sign-out</h1></button></a>
+    </div>
+</div>
+
+<div id="Header">
+    <div id="HContent">
+        <h1>Welcome Back, Owner!</h1>
+        <p>Shop Status: 
+            <button id="shopStatusBtn" class="status-toggle open-style">OPEN</button>
+        </p>
+        <div id="HeaderGoal">
+            <h3>Daily Goal Progress</h3>
+            <div class="goal-progress">
+                <i class="fa-solid fa-chart-line"></i>
+                <p>85%</p>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="ContentSection">
-        <h1 class="SectionTitle">Weekly Schedule</h1>
-        <div id="ScheduleGrid">
-            <div class="ScheduleDay"><h4>Mon</h4><p>9am-5pm</p><span class="status-tag avail">Available</span></div>
-            <div class="ScheduleDay"><h4>Tue</h4><p>9am-5pm</p><span class="status-tag busy">Busy</span></div>
-            <div class="ScheduleDay"><h4>Wed</h4><p>9am-5pm</p><span class="status-tag avail">Available</span></div>
-            <div class="ScheduleDay"><h4>Thu</h4><p>9am-5pm</p><span class="status-tag busy">Busy</span></div>
-            <div class="ScheduleDay"><h4>Fri</h4><p>9am-3pm</p><span class="status-tag avail">Available</span></div>
-            <div class="ScheduleDay"><h4>Sat</h4><p>10am-2pm</p><span class="status-tag avail">Available</span></div>
-            <div class="ScheduleDay"><h4>Sun</h4><p>—</p><span class="status-tag off">Closed</span></div>
+<!-- Stats Cards -->
+<div class="stats-row">
+    <div class="stat-card"><i class="fa-solid fa-users"></i> <span>1,247</span> Customers Served</div>
+    <div class="stat-card"><i class="fa-solid fa-star"></i> <span>4.8 ★</span> Avg Rating</div>
+    <div class="stat-card"><i class="fa-solid fa-user-gear"></i> <span>6</span> Employees</div>
+    <div class="stat-card"><i class="fa-solid fa-heart"></i> <span>2.3k</span> Followers</div>
+    <div class="stat-card"><i class="fa-solid fa-calendar-alt"></i> <span>2023</span> Established</div>
+</div>
+
+<!-- Weekly Schedule -->
+<div class="ContentSection">
+    <h1 class="SectionTitle">Weekly Schedule & Availability</h1>
+    <div id="ScheduleGrid">
+        <div class="ScheduleDay"><h4>Mon</h4><p>9am-5pm</p><span class="status-tag avail">Available</span></div>
+        <div class="ScheduleDay"><h4>Tue</h4><p>9am-5pm</p><span class="status-tag busy">Busy</span></div>
+        <div class="ScheduleDay"><h4>Wed</h4><p>9am-5pm</p><span class="status-tag avail">Available</span></div>
+        <div class="ScheduleDay"><h4>Thu</h4><p>9am-5pm</p><span class="status-tag busy">Busy</span></div>
+        <div class="ScheduleDay"><h4>Fri</h4><p>9am-3pm</p><span class="status-tag avail">Available</span></div>
+        <div class="ScheduleDay"><h4>Sat</h4><p>10am-2pm</p><span class="status-tag avail">Available</span></div>
+        <div class="ScheduleDay"><h4>Sun</h4><p>—</p><span class="status-tag off">Closed</span></div>
+    </div>
+</div>
+
+<!-- Weekly Revenue Analytics -->
+<div class="ContentSection">
+    <h1 class="SectionTitle">Weekly Revenue Analytics</h1>
+    <div class="GraphContainer">
+        <div class="Bar" style="height: 60%;" data-day="Mon"><span>₱12k</span></div>
+        <div class="Bar" style="height: 45%;" data-day="Tue"><span>₱9k</span></div>
+        <div class="Bar" style="height: 85%;" data-day="Wed"><span>₱17k</span></div>
+        <div class="Bar" style="height: 30%;" data-day="Thu"><span>₱6k</span></div>
+        <div class="Bar" style="height: 70%;" data-day="Fri"><span>₱14k</span></div>
+        <div class="Bar" style="height: 95%;" data-day="Sat"><span>₱19k</span></div>
+        <div class="Bar" style="height: 10%;" data-day="Sun"><span>₱2k</span></div>
+    </div>
+</div>
+
+<!-- Top Performing Mechanics -->
+<div class="ContentSection">
+    <h1 class="SectionTitle"><i class="fa-solid fa-trophy"></i> Top Performing Mechanics</h1>
+    <div class="mechanics-grid">
+        <div class="mechanic-card">
+            <img src="../../../Assets/Profiles/mcado.jpg" alt="Ricardo Dalisay">
+            <h3>Ricardo Dalisay</h3>
+            <div class="mechanic-stats">
+                <span><i class="fa-solid fa-briefcase"></i> 147 jobs</span>
+                <span><i class="fa-solid fa-star"></i> 4.9 ★</span>
+                <span><i class="fa-solid fa-coin"></i> ₱89,200</span>
+            </div>
+            <div class="mechanic-badge">🏆 Senior Mechanic</div>
+        </div>
+        <div class="mechanic-card">
+            <img src="../../../Assets/Profiles/mcado.jpg" alt="Cardo Dalistep">
+            <h3>Cardo Dalistep</h3>
+            <div class="mechanic-stats">
+                <span><i class="fa-solid fa-briefcase"></i> 98 jobs</span>
+                <span><i class="fa-solid fa-star"></i> 4.7 ★</span>
+                <span><i class="fa-solid fa-coin"></i> ₱62,500</span>
+            </div>
+            <div class="mechanic-badge">⭐ Junior Mechanic</div>
+        </div>
+        <div class="mechanic-card">
+            <img src="../../../Assets/Profiles/mcado.jpg" alt="Ramon Delgado">
+            <h3>Ramon Delgado</h3>
+            <div class="mechanic-stats">
+                <span><i class="fa-solid fa-briefcase"></i> 86 jobs</span>
+                <span><i class="fa-solid fa-star"></i> 4.8 ★</span>
+                <span><i class="fa-solid fa-coin"></i> ₱55,300</span>
+            </div>
+            <div class="mechanic-badge">🔧 Engine Expert</div>
+        </div>
+        <div class="mechanic-card">
+            <img src="../../../Assets/Profiles/mcado.jpg" alt="Sofia Cruz">
+            <h3>Sofia Cruz</h3>
+            <div class="mechanic-stats">
+                <span><i class="fa-solid fa-briefcase"></i> 72 jobs</span>
+                <span><i class="fa-solid fa-star"></i> 4.9 ★</span>
+                <span><i class="fa-solid fa-coin"></i> ₱48,900</span>
+            </div>
+            <div class="mechanic-badge">⚡ Diagnostics Pro</div>
         </div>
     </div>
+</div>
 
-    <div class="ContentSection">
-        <h1 class="SectionTitle">Weekly Revenue Analytics</h1>
-        <div class="GraphContainer">
-            <div class="Bar" style="height: 60%;" data-day="Mon"><span>₱12k</span></div>
-            <div class="Bar" style="height: 45%;" data-day="Tue"><span>₱9k</span></div>
-            <div class="Bar" style="height: 85%;" data-day="Wed"><span>₱17k</span></div>
-            <div class="Bar" style="height: 30%;" data-day="Thu"><span>₱6k</span></div>
-            <div class="Bar" style="height: 70%;" data-day="Fri"><span>₱14k</span></div>
-            <div class="Bar" style="height: 95%;" data-day="Sat"><span>₱19k</span></div>
-            <div class="Bar" style="height: 10%;" data-day="Sun"><span>₱2k</span></div>
-        </div>
-    </div>
-
-    <div class="ContentSection">
-        <h1 class="SectionTitle">Recent Order History</h1>
+<!-- Recent Order History -->
+<div class="ContentSection">
+    <h1 class="SectionTitle">Recent Order History</h1>
+    <div class="table-wrapper">
         <table class="OrderTable">
-            <thead>
-                <tr>
-                    <th>Customer</th>
-                    <th>Service</th>
-                    <th>Date</th>
-                    <th>Amount</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
+            <thead><tr><th>Customer</th><th>Service</th><th>Date</th><th>Amount</th><th>Status</th></tr></thead>
             <tbody>
-                <tr>
-                    <td>Cyrus Macayan</td>
-                    <td>Oil Change</td>
-                    <td>March 25</td>
-                    <td>₱1,500.00</td>
-                    <td><span class="status-tag avail">Completed</span></td>
-                </tr>
-                <tr>
-                    <td>Rudolf Santos</td>
-                    <td>Engine Tune-up</td>
-                    <td>March 22</td>
-                    <td>₱5,500.00</td>
-                    <td><span class="status-tag avail">Completed</span></td>
-                </tr>
+                <tr><td>Cyrus Macayan</td><td>Oil Change</td><td>March 25</td><td>₱1,500.00</td><td><span class="status-tag avail">Completed</span></td></tr>
+                <tr><td>Rudolf Santos</td><td>Engine Tune-up</td><td>March 22</td><td>₱5,500.00</td><td><span class="status-tag avail">Completed</span></td></tr>
+                <tr><td>Maria Lopez</td><td>Brake Replacement</td><td>March 20</td><td>₱3,200.00</td><td><span class="status-tag avail">Completed</span></td></tr>
             </tbody>
         </table>
     </div>
+</div>
 
-    <div class="ContentSection">
-        <h1 class="SectionTitle">Incoming Job Requests</h1>
-        <div class="JobCard">
+<!-- Incoming Job Requests -->
+<div class="ContentSection">
+    <h1 class="SectionTitle">Incoming Job Requests - 3</h1>
+    <div class="JobCardsContainer">
+        <div class="JobCard" data-job-id="1">
             <div class="JobInfo">
                 <h3>Juan Dela Cruz</h3>
                 <p><strong>Issue:</strong> Engine won't start</p>
                 <p><i class="fa-solid fa-location-dot"></i> Zamboanga City</p>
+                <p><strong>Date Requested:</strong> April 2, 2025</p>
             </div>
             <div class="JobActions">
+                <button class="infoBtn">More Info</button>
+                <button class="AcceptBtn">Accept</button>
+                <button class="DeclineBtn">Decline</button>
+            </div>
+        </div>
+        <div class="JobCard" data-job-id="2">
+            <div class="JobInfo">
+                <h3>Maria Santos</h3>
+                <p><strong>Issue:</strong> Brake pads replacement</p>
+                <p><i class="fa-solid fa-location-dot"></i> Pasonanca</p>
+                <p><strong>Date Requested:</strong> April 1, 2025</p>
+            </div>
+            <div class="JobActions">
+                <button class="infoBtn">More Info</button>
+                <button class="AcceptBtn">Accept</button>
+                <button class="DeclineBtn">Decline</button>
+            </div>
+        </div>
+        <div class="JobCard" data-job-id="3">
+            <div class="JobInfo">
+                <h3>Pedro Lopez</h3>
+                <p><strong>Issue:</strong> Transmission slipping</p>
+                <p><i class="fa-solid fa-location-dot"></i> Tetuan</p>
+                <p><strong>Date Requested:</strong> April 2, 2025</p>
+            </div>
+            <div class="JobActions">
+                <button class="infoBtn">More Info</button>
                 <button class="AcceptBtn">Accept</button>
                 <button class="DeclineBtn">Decline</button>
             </div>
         </div>
     </div>
+</div>
 
-    <div id="staffModal" class="modal">
-        <div class="modal-content staff-modal">
-            <span class="close-btn" onclick="closeStaffModal()">&times;</span>
-            <h2>Shop Mechanics</h2>
-            <button class="add-staff-btn"><i class="fa-solid fa-plus"></i> Add New Mechanic</button>
-            <div class="staff-list-container">
-                <div class="staff-card">
-                    <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
-                    <div class="staff-info">
-                        <h3>Ricardo Dalisay</h3>
-                        <p>Senior Mechanic</p>
-                    </div>
-                    <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
-                </div>
-                <div class="staff-card">
-                    <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
-                    <div class="staff-info">
-                        <h3>Cardo Dalistep</h3>
-                        <p>Junior Mechanic</p>
-                    </div>
-                    <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
-                </div>
+<!-- Active / Ongoing Repairs -->
+<div class="ContentSection">
+    <h1 class="SectionTitle">Active / Ongoing Repairs - 2</h1>
+    <div class="RepairCardsContainer">
+        <div class="RepairCard">
+            <img src="../../../Assets/Profiles/mcado.jpg" alt="customer">
+            <div class="RepairInfo">
+                <h2>Carla Fernandez</h2>
+                <p><strong>Job:</strong> Transmission fluid flush</p>
+                <p><strong>Status:</strong> In Progress</p>
+                <p><strong>Started:</strong> March 30, 2025</p>
+            </div>
+            <div class="RepairStatus"><button class="UpdateBtn">Update Status</button></div>
+        </div>
+        <div class="RepairCard">
+            <img src="../../../Assets/Profiles/mcado.jpg" alt="customer">
+            <div class="RepairInfo">
+                <h2>Ramon Torres</h2>
+                <p><strong>Job:</strong> Tire rotation and alignment</p>
+                <p><strong>Status:</strong> Awaiting Parts</p>
+                <p><strong>Started:</strong> March 28, 2025</p>
+            </div>
+            <div class="RepairStatus"><button class="UpdateBtn">Update Status</button></div>
+        </div>
+    </div>
+</div>
+
+<!-- Customer Reviews -->
+<div class="ContentSection">
+    <h1 class="SectionTitle">Customer Reviews - 3</h1>
+    <div class="ReviewsContainer">
+        <div class="ReviewCard">
+            <img src="../../../Assets/Profiles/mcado.jpg" alt="customer">
+            <div class="ReviewInfo">
+                <h2>Jake R.</h2>
+                <div class="Stars">★★★★★</div>
+                <p>"Great service! Fixed my car quickly and explained everything clearly."</p>
+            </div>
+        </div>
+        <div class="ReviewCard">
+            <img src="../../../Assets/Profiles/mcado.jpg" alt="customer">
+            <div class="ReviewInfo">
+                <h2>Maria L.</h2>
+                <div class="Stars">★★★★☆</div>
+                <p>"Very professional and affordable. Will definitely book again."</p>
+            </div>
+        </div>
+        <div class="ReviewCard">
+            <img src="../../../Assets/Profiles/mcado.jpg" alt="customer">
+            <div class="ReviewInfo">
+                <h2>Carl P.</h2>
+                <div class="Stars">★★★★★</div>
+                <p>"Diagnosed the issue fast and had it done before lunch. Highly recommend."</p>
             </div>
         </div>
     </div>
+</div>
 
-    <footer>
-        <p>© 2026 Bungkaniko Auto Center | Fixit Automotive Platform</p>
-    </footer>
+<!-- ========== JOB DETAIL MODAL ========== -->
+<div id="jobModal" class="modal-overlay" style="display: none;">
+    <div class="modal-box">
+        <button class="modal-close" id="closeModalBtn">&times;</button>
+        <div class="modal-header">
+            <img id="modalCustomerImg" src="../../../Assets/Profiles/mcado.jpg" class="modal-avatar" alt="customer">
+            <div>
+                <h2 id="modalCustomerName">Customer Name</h2>
+                <p id="modalVehicle">Vehicle Model</p>
+            </div>
+        </div>
+        <div class="modal-section">
+            <h3 class="modal-section-title"><i class="fa-solid fa-circle-exclamation"></i> Issue Description</h3>
+            <p id="modalIssueFull" class="modal-issue-full">Loading...</p>
+        </div>
+        <div class="modal-section">
+            <h3 class="modal-section-title"><i class="fa-solid fa-address-card"></i> Contact Information</h3>
+            <div class="modal-field"><span class="modal-field-label">Phone</span><span id="modalPhone" class="modal-field-value">---</span></div>
+            <div class="modal-field"><span class="modal-field-label">Email</span><span id="modalEmail" class="modal-field-value">---</span></div>
+            <div class="modal-field"><span class="modal-field-label">Location</span><span id="modalLocation" class="modal-field-value">---</span></div>
+            <div class="modal-field"><span class="modal-field-label">Budget</span><span id="modalBudget" class="modal-field-value">---</span></div>
+        </div>
+        <div class="modal-section">
+            <h3 class="modal-section-title"><i class="fa-solid fa-currency-sign"></i> Repair Cost Estimate</h3>
+            <div id="modalCostEstimate" class="cost-estimate-placeholder">
+                <p class="cost-note"><i class="fa-solid fa-circle-info"></i> Estimate may vary based on diagnosis results and parts availability.</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <script src="../script.js"></script>
+<!-- ========== UPDATE STATUS MODAL ========== -->
+<div id="updateModal" class="modal-overlay" style="display: none;">
+    <div class="modal-box">
+        <button class="modal-close" id="closeUpdateModalBtn">&times;</button>
+        <div class="modal-header">
+            <img id="updateModalImg" src="../../../Assets/Profiles/mcado.jpg" class="modal-avatar" alt="customer">
+            <div>
+                <h2 id="updateModalCustomer">Customer Name</h2>
+                <p id="updateModalJob">Job: ---</p>
+            </div>
+        </div>
+        <div class="modal-section">
+            <h3 class="modal-section-title"><i class="fa-solid fa-tools"></i> Update Repair Status</h3>
+            <div class="form-group">
+                <label for="statusSelect">New Status</label>
+                <select id="statusSelect" class="status-select">
+                    <option value="In Progress">In Progress</option>
+                    <option value="Awaiting Parts">Awaiting Parts</option>
+                    <option value="Completed">Completed</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="updateNotes">Notes (optional)</label>
+                <textarea id="updateNotes" rows="3" placeholder="Add any notes about the repair..."></textarea>
+            </div>
+            <div class="modal-buttons">
+                <button id="confirmUpdateBtn" class="btn-primary">Confirm Update</button>
+                <button id="cancelUpdateBtn" class="btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Staff Modal (original) -->
+<div id="staffModal" class="modal">
+    <div class="modal-content staff-modal">
+        <span class="close-btn" onclick="closeStaffModal()">&times;</span>
+        <h2>Shop Mechanics</h2>
+        <button class="add-staff-btn"><i class="fa-solid fa-plus"></i> Add New Mechanic</button>
+        <div class="staff-list-container">
+            <div class="staff-card">
+                <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
+                <div class="staff-info"><h3>Ricardo Dalisay</h3><p>Senior Mechanic</p></div>
+                <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+            </div>
+            <div class="staff-card">
+                <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
+                <div class="staff-info"><h3>Cardo Dalistep</h3><p>Junior Mechanic</p></div>
+                <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+            </div>
+            <div class="staff-card">
+                <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
+                <div class="staff-info"><h3>Ricardo Dalisay</h3><p>Senior Mechanic</p></div>
+                <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+            </div>
+            <div class="staff-card">
+                <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
+                <div class="staff-info"><h3>Cardo Dalistep</h3><p>Junior Mechanic</p></div>
+                <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+            </div>
+            <div class="staff-card">
+                <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
+                <div class="staff-info"><h3>Ricardo Dalisay</h3><p>Senior Mechanic</p></div>
+                <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+            </div>
+            <div class="staff-card">
+                <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
+                <div class="staff-info"><h3>Cardo Dalistep</h3><p>Junior Mechanic</p></div>
+                <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ========== NOTIFICATIONS MODAL ========== -->
+<div id="notificationsModal" class="modal-overlay" style="display: none;">
+    <div class="modal-box">
+        <div class="modal-header">
+            <h2><i class="fas fa-bell"></i> Notifications</h2>
+            <button class="close-modal" onclick="closeModal('notificationsModal')">&times;</button>
+        </div>
+        <div id="notificationsList">
+            <div class="notification-item">
+                <div class="notification-title">New Job Request</div>
+                <p>Customer Juan Dela Cruz requested engine repair.</p>
+                <div class="notification-time">2 hours ago</div>
+            </div>
+            <div class="notification-item">
+                <div class="notification-title">Payment Received</div>
+                <p>₱5,300 for engine repair job #EN-123.</p>
+                <div class="notification-time">Yesterday</div>
+            </div>
+            <div class="notification-item">
+                <div class="notification-title">Warranty Expiring Soon</div>
+                <p>Warranty for job #BR-452 expires in 2 days.</p>
+                <div class="notification-time">3 days ago</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ========== CHAT MODAL ========== -->
+<div id="chatModal" class="modal-overlay" style="display: none;">
+    <div class="modal-box">
+        <div class="modal-header">
+            <h2><i class="fas fa-comment-dots"></i> Messages</h2>
+            <button class="close-modal" onclick="closeModal('chatModal')">&times;</button>
+        </div>
+        <div id="chatList">
+            <div class="chat-item">
+                <div class="chat-sender">Juan Dela Cruz</div>
+                <div class="chat-preview">When can you start my engine repair?</div>
+                <div class="chat-time">10:15 AM</div>
+            </div>
+            <div class="chat-item">
+                <div class="chat-sender">Mechanic Ricardo</div>
+                <div class="chat-preview">I'll be at the shop at 8am tomorrow.</div>
+                <div class="chat-time">Yesterday</div>
+            </div>
+            <div class="chat-item">
+                <div class="chat-sender">Support Team</div>
+                <div class="chat-preview">Your shop verification is complete.</div>
+                <div class="chat-time">Apr 1, 2026</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="simple-footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img src="../../../Assets/Logo/facebook.png" alt="FB"></a>
+            <a href="#"><img src="../../../Assets/Logo/instagram.png" alt="IG"></a>
+            <a href="#"><img src="../../../Assets/Logo/twitter.png" alt="Twitter"></a>
+        </div>
+        <p class="footer-copyright">© 2026 Bungkaniko Auto Center | Powered by PrecisionDrive Auto</p>
+    </div>
+</footer>
+
+<script src="../script/script.js"></script>
+<script>
+    // Global functions for opening/closing modals (used by onclick attributes)
+    function openModal(modalId) {
+        var modal = document.getElementById(modalId);
+        if (modal) modal.style.display = 'flex';
+    }
+    function closeModal(modalId) {
+        var modal = document.getElementById(modalId);
+        if (modal) modal.style.display = 'none';
+    }
+
+    // Attach click handlers to bell and chat icons
+    document.addEventListener('DOMContentLoaded', function() {
+        var bell = document.getElementById('bell');
+        var chat = document.getElementById('chat');
+        if (bell) bell.addEventListener('click', function() { openModal('notificationsModal'); });
+        if (chat) chat.addEventListener('click', function() { openModal('chatModal'); });
+    });
+
+    // Close modal when clicking outside the modal overlay
+    window.addEventListener('click', function(e) {
+        if (e.target.classList && e.target.classList.contains('modal-overlay')) {
+            e.target.style.display = 'none';
+        }
+    });
+</script>
 </body>
 </html>
