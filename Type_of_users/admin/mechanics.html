@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mechanics Management</title>
+    <title>Mechanics Management | Admin Panel</title>
     <link rel="stylesheet" href="styles/Styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="scripts/admin.js" defer></script>
+    <script src="scripts/Admin.js" defer></script>
+    <script src="scripts/Top_performingmech.js" defer></script>
 </head>
 
 <body>
@@ -22,15 +23,16 @@
 
     <div id="sidebar">
         <h3>Control Panel</h3>
-        <a href="Admin.html"><button class="tab active">Dashboard</button></a>
+        <a href="Admin.html"><button class="tab">Dashboard</button></a>
         <a href="users.html"><button class="tab">Users</button></a>
-        <a href="mechanics.html"><button class="tab">Mechanics</button></a>
+        <a href="mechanics.html"><button class="tab active">Mechanics</button></a>
         <a href="shops.html"><button class="tab">Shops</button></a>
         <a href="reports.html"><button class="tab">Reports</button></a>
         <a href="../../index.html"><button class="tab">Logout</button></a>
     </div>
 
     <div id="main">
+        <!-- Mechanics Management Table -->
         <div class="section">
             <h2>Mechanic Management</h2>
             <div class="search-bar">
@@ -54,13 +56,20 @@
             </div>
             <div id="mechPagination" class="pagination"></div>
         </div>
+
+        <!-- ========== NEW: TOP PERFORMING MECHANICS SECTION ========== -->
+        <div class="section">
+            <h2><i class="fa-solid fa-trophy"></i> Top Performing Mechanics</h2>
+            <div class="mechanics-grid" id="topMechanicsGrid">
+            </div>
+        </div>
     </div>
 
     <div id="createMechModal" class="modal">
         <div class="modal-content">
             <h3>Add Mechanic</h3>
             <input id="mechName" placeholder="Full Name">
-            <input id="mechShopAssign" placeholder="Shop Name">
+            <input id="mechShopAssign" placeholder="Specialty">
             <input id="mechLocation" placeholder="Location">
             <div class="modal-buttons">
                 <button class="btn-primary" onclick="addMechanicRow()">Create</button>
@@ -68,5 +77,6 @@
             </div>
         </div>
     </div>
+
 </body>
 </html>
