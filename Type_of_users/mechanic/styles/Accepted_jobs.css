@@ -1,0 +1,160 @@
+/* ---------- GLOBAL ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(0, 255, 204) rgba(8, 20, 85, 0.536);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgb(0, 62, 67), rgba(8, 8, 65, 0.609));
+  background-color: rgb(46, 39, 48);
+    color: #f0f4fa;
+}
+
+header{
+    padding: 20px;
+    background-color: #0b113a9f;
+}
+
+header button{
+    border: 1px solid rgb(0, 255, 204);
+    border-radius: 10px;
+    color: #00ffd5;
+    padding: 10px 20px;
+    background-color: #053c7789;
+    transition: all 0.2s ease-in-out;
+}
+
+header button:hover{
+    transform: translateX(-3px);
+    background-color: #2c71bb89;
+}
+
+/* ---------- MAIN CONTENT ---------- */
+main {
+    margin-left: 0;
+    padding: 30px 40px;
+    transition: margin-left 0.3s;
+}
+body.sidebar-open main { margin-left: 250px; }
+
+.page-header { margin-bottom: 30px; }
+.page-header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #9efff0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.page-header p { color: #cbd5e1; margin-top: 8px; }
+
+.stats-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.stat-card {
+    background: rgba(20, 28, 50, 0.6);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(120, 158, 223, 0.4);
+    border-radius: 24px;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #9efff0;
+}
+.stat-card i { font-size: 1.4rem; color: #00e0ff; }
+
+.jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 24px;
+}
+.job-card {
+    background: rgba(20, 28, 50, 0.6);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(120, 158, 223, 0.4);
+    border-radius: 24px;
+    padding: 20px;
+    transition: 0.2s;
+}
+.job-card:hover {
+    transform: translateY(-4px);
+    border-color: #00e0ff;
+    background: rgba(45, 44, 77, 0.5);
+}
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 10px;
+}
+.job-header h2 { font-size: 1.2rem; font-weight: 600; }
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+.s-inprogress { background: rgba(139, 92, 246, 0.2); color: #a78bfa; border: 1px solid #8b5cf6; }
+.s-completed { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid #10b981; }
+.job-details p {
+    margin: 8px 0;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #cbd5e1;
+}
+.job-details i { width: 20px; color: #00e0ff; }
+.job-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.update-btn, .view-warranty-btn {
+    background: #10b981;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 40px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.update-btn:hover, .view-warranty-btn:hover { transform: translateY(-2px); filter: brightness(1.05); }
+.view-warranty-btn { background: #3b82f6; }
+
+/* ---------- FOOTER ---------- */
+.simple-footer {
+    background: #06173b;
+    border-top: 1px solid #2a4b77;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+}
+.footer-content { max-width: 1200px; margin: 0 auto; text-align: center; }
+.footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.2rem; }
+.footer-links a { color: #bbd4ff; text-decoration: none; font-size: 0.85rem; transition: 0.2s; }
+.footer-links a:hover { color: white; text-decoration: underline; }
+.footer-social { display: flex; justify-content: center; gap: 1rem; margin-bottom: 1.2rem; }
+.footer-social img { width: 28px; background: white; border-radius: 50%; padding: 4px; transition: 0.2s; }
+.footer-social img:hover { transform: translateY(-3px); }
+.footer-copyright { font-size: 0.75rem; color: #8ca3c7; }
+
+@media (max-width: 700px) {
+    main { padding: 20px; }
+    .jobs-grid { grid-template-columns: 1fr; }
+}

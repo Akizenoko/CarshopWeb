@@ -1,109 +1,101 @@
+/* ---------- GLOBAL (Matches User Homepage Theme) ---------- */
 * {
-    padding: 0%;
-    margin: 0%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(0, 255, 204) rgba(8, 20, 85, 0.536);
+}
+
+a{
+    text-decoration: none;
 }
 
 body {
+    font-family: "Poppins", sans-serif;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    background-image: linear-gradient(rgb(4, 5, 24), rgba(6, 11, 37, 0.609));
+    background-image: linear-gradient(rgb(0, 98, 107), rgba(2, 18, 99, 0.609));
     background-color: rgb(46, 39, 48);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgb(255, 255, 255);
+    color: #f0f4fa;
 }
 
-/* Nav Bar style */
-
-#NavBar{
-    text-decoration: none;
-    background-color: rgb(17, 12, 48);
-    padding: 0px;
+/* ---------- NAVBAR ---------- */
+#NavBar {
+    background-color: #062234;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
-    top: 0px;
+    top: 0;
     z-index: 5;
     box-shadow: 0px 0px 50px rgba(4, 4, 4, 0.412);
+    height: 70px;
 }
 
-#mainnavbar .button{
-    flex-wrap: nowrap;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 12px;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    border: 0px;
-   background-color: rgb(17, 12, 48);
-    height: 60px;
-    padding: 0px 10px 0px 10px;
-    transition: all 0.2s ease-in-out;
+#mainnavbar .button {
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    color: white;
+    height: 70px;
+    padding: 0 15px;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 #mainnavbar .button:hover {
-    transform: translateY(-1px);
-    background-color: rgb(28, 24, 64)
-
+    background-color: rgba(255, 255, 255, 0.08);
 }
 
-#formiscelanious img{
+#formiscelanious img {
+    height: 24px;
     opacity: 0.8;
-    height: 25px;
-    transition: all 0.2s ease-in-out;
+    transition: 0.2s;
+    margin-right: 20px;
+    cursor: pointer;
 }
 
-#bell{
-    margin: 0px 20px 0px 0px;
-}
-
-#chat{
-    margin: 0px 20px 0px 0px;
-}
-
-
-#formiscelanious img:hover{
+#formiscelanious img:hover {
     opacity: 1;
-    height: 25px;
-    margin: 0px 20px 0px 0px;
     transform: translateY(-2px);
 }
 
-#forprofile #profile{
-    height: 37px;
+#forprofile #profile {
+    height: 42px;
     border-radius: 50%;
-    margin: 0px 20px 0px 20px;
-    transition: all 0.2s ease-in-out;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
-#forprofile #profile:hover{
-    border: 2px solid rgb(133, 160, 229);
+#forprofile #profile:hover {
+    border: 2px solid #00e0ff;
     transform: translateY(-2px);
 }
 
-/* End of Nav Bar style */
-
-/* ── SIDEBAR ── */
+/* ---------- SIDEBAR ---------- */
 #sidebar {
     color: aliceblue;
-    padding: 15px 0px 0px 0px;
-    top: 60px;
+    padding: 15px 0 0 0;
+    top: 70px;
     z-index: 6;
     position: fixed;
     left: -250px;
-    width: 220px;
-    height: 100vh;
-    background-image: linear-gradient(rgb(12, 1, 55),rgb(1, 1, 34));
-    background-color: rgba(110, 108, 151, 0.371);
+    width: 250px;
+    height: calc(100vh - 70px);
+    background: linear-gradient(145deg, #021c2c, #010d1f);
     border-right: 1px solid rgba(130, 120, 150, 0.4);
     overflow-y: auto;
-    box-shadow: 0 0 20px rgb(0, 0, 0);
-    transition: all 0.3s ease-in-out ;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
 }
 
-#sidebar.active{
-  left: 0;
+#sidebar.active {
+    left: 0;
 }
 
 #listsSidebar {
@@ -115,61 +107,55 @@ body {
 
 #SidebarProf {
     text-align: center;
-    padding: 16px 0 20px;
+    padding: 0 0 20px 0;
     border-bottom: 1px solid rgba(130, 120, 150, 0.4);
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 
 #SidebarProf img {
-    width: 64px;
-    height: 64px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid rgb(157, 203, 255);
-    margin-bottom: 8px;
-    transition: all 0.3s ease-in-out;
+    border: 2px solid #00e0ff;
+    margin-bottom: 10px;
+    transition: 0.2s;
 }
 
 #SidebarProf img:hover {
-    transform: translateY(-3px);
-    cursor: pointer;
+    transform: scale(1.02);
+    border-color: white;
 }
 
 #SidebarProf h2 {
-    color: rgb(255, 255, 255);
-    font-size: 0.95rem;
-    margin: 5px 0px 0px 0px;
+    font-size: 1rem;
+    margin-top: 5px;
 }
 
 #SidebarProf p {
-    color: rgb(157, 203, 255);
-    font-size: 0.78rem;
-}
-
-#listsSidebar a {
-    text-decoration: none;
+    font-size: 0.75rem;
+    color: #9efff0;
 }
 
 .Tabs {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     background: none;
     border: none;
-    color: rgb(255, 255, 255);
+    color: white;
     font-size: 0.9rem;
-    padding: 10px 12px;
-    border-radius: 6px;
+    padding: 12px 12px;
+    border-radius: 12px;
     cursor: pointer;
     width: 100%;
     text-align: left;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s;
 }
 
 .Tabs:hover {
-    background-color: rgba(20, 20, 162, 0.354);
-    color: rgb(157, 203, 255);
-    transform: translateY(-2px);
+    color: #00ffaa;
+    background: rgba(0, 224, 255, 0.15);
+    transform: translateX(4px);
 }
 
 .Tabs img {
@@ -184,423 +170,655 @@ body {
 }
 
 #Sign-Out {
-    color: rgb(145, 255, 253);
-    text-decoration: none;
-    border: none;
-    padding: 10px 12px;
-    font-size: 0.9rem;
+    color: #ffaa88;
+    margin-top: 20px;
 }
 
-#Sign-Out:hover {
-    background-color: rgba(20, 20, 162, 0.354);
-    color: rgb(109, 221, 255);
+/* ---------- MAIN CONTENT OFFSET ---------- */
+main {
+    margin-left: 0;
+    transition: margin-left 0.3s;
 }
 
-/* ── MAIN CONTENT — offset from sidebar and navbar ── */
-#Header,
-#JobRequests,
-#ActiveRepairs,
-#Schedule,
-#Reviews {
-    padding: 30px 40px;
+body.sidebar-open main {
+    margin-left: 250px;
 }
 
-/* ── HEADER ── */
+/* ---------- HEADER HERO ---------- */
 #Header {
-    background-image: url(../../../Assets/Images/Autorepair.webp);
-    background-position: center;
+    background: linear-gradient(rgba(18, 77, 79, 0.811), rgba(13, 21, 69, 0.811)), url(../../../Assets/Images/Autorepair.webp);
     background-size: cover;
-    background-blend-mode: darken;
-    background-color: rgba(38, 33, 73, 0.738);
+    background-position: center;
+    padding: 60px 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(130, 120, 150, 0.4);
-    padding: 80px 70px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(120, 158, 223, 0.3);
 }
 
 #Hinfo {
-    width: 700px;
+    max-width: 600px;
 }
 
 #Hinfo h1 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-shadow: 3px 3px rgba(29, 16, 16, 0.7);
     font-size: 50px;
-    color: rgb(254, 253, 255);
-    margin-bottom: 10px;
+    font-weight: 500;
+    color: #9efff0;
+    margin-bottom: 12px;
 }
 
 #Hinfo p {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-shadow: 3px 3px rgba(29, 16, 16, 0.7);
-    font-size: 18px;
-    color: rgb(255, 255, 255);
-    max-width: 500px;
-    line-height: 1.6;
-}
-
-.Availability{
-    text-shadow: 3px 3px rgba(29, 16, 16, 0.7);
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    display: flex;
-}
-
-.Availability button{
-    width: 180px;
-    margin-top: 20px;
-    border: 2px solid rgba(115, 255, 0, 0.592);
-    padding: 20px;
     font-size: 20px;
-    border-radius: 10px;
+    color: #e2e8f0;
+    line-height: 1.5;
+}
+
+.Availability {
+    text-align: center;
+}
+
+.Availability h1 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+#statusBtn {
+    width: 170px;
+    border: 2px solid rgb(136, 255, 109);
+    background: #046b486a;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 40px;
+    color: #a3ffcc;
     cursor: pointer;
-    background-color: rgba(8, 41, 12, 0.647);
-    color: rgb(174, 255, 174);
-    font-weight: bolder;
-    transition: 0.3s;
+    transition:all 0.2s ease-in-out;
+    margin-top: 12px;
 }
 
-/* Active class for Online */
-button.online {
-    border: 2px solid rgba(255, 0, 0, 0.542);
-    color: rgb(255, 190, 190);
-    background-color: rgba(35, 2, 2, 0.715);
+#statusBtn.online {
+    border: 2px solid rgb(255, 109, 109);
+    background: #2c090987;
+    color: rgb(255, 28, 28);
 }
 
-/* ── Customer Served ── */
+#statusBtn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
 
-.customerServedsec{
+/* ---------- STATS CARDS ---------- */
+.customerServedsec {
+    display: flex;
     flex-wrap: wrap;
-    background-image: linear-gradient(rgba(20, 20, 162, 0.2), rgba(35, 13, 94, 0.15));
-    gap: 20px;
-    font-size: 15px;
     justify-content: center;
-    display: flex;
-    padding: 30px;
+    gap: 20px;
+    padding: 30px 20px;
+    background: rgba(20, 28, 50, 0.3);
+    margin: 0 20px 30px 20px;
+    border-radius: 32px;
+    border: 1px solid rgba(120, 158, 223, 0.3);
 }
 
-.customerServed{
-    font-size: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(110, 108, 151, 0.2);
-    border: 1px solid rgba(130, 120, 150, 0.4);
-    border-radius: 10px;
-    padding: 20px 24px;
-    margin-bottom: 16px;
-    gap: 16px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.2s ease-in-out;
-
+.customerServed {
+    width: 265px;
+    background: rgba(20, 28, 50, 0.6);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(120, 158, 223, 0.4);
+    border-radius: 24px;
+    padding: 20px 30px;
+    text-align: center;
+    min-width: 160px;
+    transition: 0.2s;
 }
 
 .customerServed:hover {
-    background-color: rgba(110, 108, 151, 0.371);
-    border-color: rgb(157, 203, 255);
+    transform: translateY(-5px);
+    border-color: #00e0ff;
+    background: rgba(45, 44, 77, 0.4);
 }
 
-.customerServed p{
-    color: aqua;
-    display: flex;
+.customerServed h1 {
+    font-size: 20px;
+    font-weight: 300;
+    color: #cbd5e1;
+    margin-bottom: 8px;
+}
+
+.customerServed p {
+    font-size: 25px;
+    font-weight: 400;
+    color: #9efff0;
+}
+
+/* ---------- SCHEDULE ---------- */
+#Schedule, #JobRequests, #ActiveRepairs, #Reviews {
+    margin: 0 20px 40px 20px;
+    padding: 20px;
+    background: rgba(9, 37, 78, 0.4);
+    backdrop-filter: blur(4px);
+    border-radius: 32px;
+    border: 1px solid rgba(120, 158, 223, 0.3);
+}
+
+#Schedule h1, #JobRequests h1, #ActiveRepairs h1, #Reviews h1 {
     font-size: 30px;
-}
-
-.stars{
-    margin: 5px;
-    gap: 10px;
-    display: flex;
-}
-
-.stars img{
-   height: 25px;
-}
-
-strong{
-   color: rgb(0, 251, 255);
-}
-
-/* ── SECTION TITLES ── */
-#JobRequests h1,
-#ActiveRepairs h1,
-#Schedule h1,
-#Reviews h1 {
-    font-size: 1.4rem;
+    font-weight: 300;
     margin-bottom: 20px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid rgba(130, 120, 150, 0.4);
-    color: rgb(157, 203, 255);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-/* ── JOB REQUESTS ── */
-#JobRequests {
-    background-image: linear-gradient(rgba(20, 20, 162, 0.2), rgba(35, 13, 94, 0.15));
-    background-color: rgba(46, 39, 48, 0.8);
-    border-bottom: 1px solid rgba(130, 120, 150, 0.4);
-}
-
-.JobCard {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(110, 108, 151, 0.2);
-    border: 1px solid rgba(130, 120, 150, 0.4);
-    border-radius: 10px;
-    padding: 20px 24px;
-    margin-bottom: 16px;
-    gap: 16px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.2s ease-in-out;
-}
-
-.JobCard:hover {
-    background-color: rgba(110, 108, 151, 0.371);
-    border-color: rgb(157, 203, 255);
-}
-
-#JobCardInfo h2 {
-    font-size: 1.05rem;
-    margin-bottom: 6px;
-    color: rgb(255, 255, 255);
-}
-
-#JobCardInfo p {
-    font-size: 0.88rem;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 3px;
-}
-
-#JobCardActions {
-    display: flex;
-    gap: 10px;
-    flex-shrink: 0;
-}
-
-.AcceptBtn {
-    background-color: rgb(255, 255, 255);
-    color: rgb(59, 73, 73);
-    border: none;
-    padding: 9px 20px;
-    border-radius: 20px;
-    font-weight: 900;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-}
-
-.AcceptBtn:hover {
-    background-color: rgb(187, 198, 248);
-    color: rgb(28, 44, 44);
-    transform: translateY(-2px);
-}
-
-.DeclineBtn {
-    background-color: transparent;
-    color: rgb(145, 255, 253);
-    border: 1px solid rgb(145, 255, 253);
-    padding: 9px 20px;
-    border-radius: 20px;
-    font-weight: 600;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-}
-
-.DeclineBtn:hover {
-    background-color: rgba(145, 255, 253, 0.15);
-    transform: translateY(-2px);
-}
-
-/* ── ACTIVE REPAIRS ── */
-#ActiveRepairs {
-    background-color: rgba(46, 39, 48, 0.6);
-    border-bottom: 1px solid rgba(130, 120, 150, 0.4);
-}
-
-.RepairCard {
-    flex-wrap: wrap;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background-color: rgba(110, 108, 151, 0.2);
-    border: 1px solid rgba(130, 120, 150, 0.4);
-    border-radius: 10px;
-    padding: 20px 24px;
-    margin-bottom: 16px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.2s ease-in-out;
-}
-
-.RepairCard:hover {
-    background-color: rgba(110, 108, 151, 0.371);
-    border-color: rgb(157, 203, 255);
-}
-
-.RepairCard img {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid rgb(157, 203, 255);
-    flex-shrink: 0;
-}
-
-#RepairInfo {
-    flex: 1;
-}
-
-#RepairInfo h2 {
-    font-size: 1rem;
-    margin-bottom: 4px;
-    color: rgb(255, 255, 255);
-}
-
-#RepairInfo p {
-    font-size: 0.87rem;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 3px;
-}
-
-#RepairStatus {
-    flex-shrink: 0;
-}
-
-.UpdateBtn {
-    background-color: rgb(255, 255, 255);
-    color: rgb(59, 73, 73);
-    border: none;
-    padding: 9px 18px;
-    border-radius: 20px;
-    font-weight: 900;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-}
-
-.UpdateBtn:hover {
-    background-color: rgb(188, 188, 251);
-    color: rgb(28, 44, 44);
-    transform: translateY(-2px);
-}
-
-/* ── SCHEDULE ── */
-#Schedule {
-    background-image: linear-gradient(rgba(20, 20, 162, 0.2), rgba(35, 13, 94, 0.15));
-    background-color: rgba(46, 39, 48, 0.8);
-    border-bottom: 1px solid rgba(130, 120, 150, 0.4);
+    color: #9efff0;
+    padding-left: 15px;
 }
 
 #ScheduleGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
 }
 
 .ScheduleDay {
-    background-color: rgba(110, 108, 151, 0.2);
-    border: 1px solid rgba(130, 120, 150, 0.4);
-    border-radius: 10px;
-    padding: 18px 14px;
+    border: 1px solid  rgba(255, 255, 255, 0.577);
+    background: rgba(3, 82, 104, 0.6);
+    border-radius: 20px;
+    padding: 15px;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.2s ease-in-out;
+    transition: 0.2s;
 }
 
 .ScheduleDay:hover {
-    background-color: rgba(110, 108, 151, 0.371);
-    border-color: rgb(157, 203, 255);
+    background: rgba(0, 191, 255, 0.2);
+    transform: translateY(-3px);
 }
 
 .ScheduleDay h2 {
-    font-size: 0.95rem;
-    margin-bottom: 6px;
-    color: rgb(255, 255, 255);
-}
-
-.ScheduleDay p {
-    font-size: 0.82rem;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 6px;
-}
-
-.Available {
-    color: rgb(145, 255, 253) !important;
-    font-weight: 700;
-}
-
-.Busy {
-    color: rgb(188, 188, 251) !important;
-    font-weight: 700;
-}
-
-.Off {
-    color: rgba(255, 255, 255, 0.4) !important;
+    font-size: 1rem;
     font-weight: 600;
 }
 
-/* ── REVIEWS ── */
-#Reviews {
-    background-color: rgba(46, 39, 48, 0.6);
+.ScheduleDay p {
+    font-size: 0.8rem;
+    margin: 5px 0;
+    color: #cbd5e1;
 }
 
-.ReviewCard {
+.Available { color: #00ffaa !important; font-weight: 700; }
+.Busy { color: #ff6a00 !important; font-weight: 700; }
+.Off { color: #94a3b8 !important; font-weight: 700;}
+
+/* ---------- JOB CARDS ---------- */
+
+.JobCard {
     display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    background-color: rgba(110, 108, 151, 0.2);
-    border: 1px solid rgba(130, 120, 150, 0.4);
-    border-radius: 10px;
-    padding: 20px 24px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(20, 28, 50, 0.6);
+    border: 1px solid rgba(120, 158, 223, 0.4);
+    border-radius: 24px;
+    padding: 20px;
     margin-bottom: 16px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.2s ease-in-out;
+    transition: 0.2s;
 }
 
-.ReviewCard:hover {
-    background-color: rgba(110, 108, 151, 0.371);
-    border-color: rgb(157, 203, 255);
+.JobCard:hover {
+    border-color: #00e0ff;
+    background: rgba(45, 44, 77, 0.4);
+    transform: translateY(-2px);
 }
 
-.ReviewCard img {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid rgb(157, 203, 255);
-    flex-shrink: 0;
-}
-
-#ReviewInfo h2 {
-    font-size: 1rem;
-    margin-bottom: 4px;
-    color: rgb(255, 255, 255);
-}
-
-.Stars {
-    color: rgb(157, 203, 255);
-    font-size: 1.1rem;
+.JobCardInfo h2 {
+    font-size: 1.2rem;
     margin-bottom: 6px;
 }
 
-#ReviewInfo p {
-    font-size: 0.88rem;
-    color: rgba(255, 255, 255, 0.75);
+.JobCardInfo p {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    margin: 3px 0;
+}
+
+.JobCardActions {
+    display: flex;
+    gap: 12px;
+}
+
+.AcceptBtn, .DeclineBtn, .infoBtn{
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 24px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.infoBtn{
+    border: 1px solid rgb(130, 130, 130);
+    background: #d5fff1;
+    color: rgb(10, 39, 40);
+}
+
+.infoBtn:hover {
+    background: #aefeff;
+    transform: translateY(-2px);
+}
+
+.AcceptBtn {
+    border: 1px solid rgb(0, 255, 174);
+    background: #056243;
+    color: rgb(167, 255, 171);
+}
+
+.AcceptBtn:hover {
+    background: #059669;
+    transform: translateY(-2px);
+}
+
+.DeclineBtn {
+    background: transparent;
+    border: 1px solid #ef4444;
+    color: #fca5a5;
+}
+
+.DeclineBtn:hover {
+    background: rgba(239, 68, 68, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ---------- REPAIR CARDS ---------- */
+.RepairCard {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    background: rgba(20, 28, 50, 0.6);
+    border: 1px solid rgba(120, 158, 223, 0.4);
+    border-radius: 24px;
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+.RepairCard img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #00e0ff;
+    object-fit: cover;
+}
+
+.RepairInfo {
+    flex: 1;
+}
+
+.RepairInfo h2 {
+    font-size: 1.1rem;
+}
+
+.RepairInfo p {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+}
+
+.UpdateBtn {
+    background: #3b82f6;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 40px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.UpdateBtn:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* ---------- REVIEW CARDS ---------- */
+.ReviewCard {
+    display: flex;
+    gap: 20px;
+    background: rgba(20, 28, 50, 0.6);
+    border: 1px solid rgba(120, 158, 223, 0.4);
+    border-radius: 24px;
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+.ReviewCard img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2px solid #00e0ff;
+}
+
+.ReviewInfo h2 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.Stars {
+    color: #fbbf24;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.ReviewInfo p {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    line-height: 1.4;
+}
+
+/* ---------- FOOTER ---------- */
+.simple-footer {
+    background: #06173b;
+    border-top: 1px solid #2a4b77;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.footer-links a {
+    color: #bbd4ff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.footer-social img {
+    width: 28px;
+    height: 28px;
+    background: white;
+    border-radius: 50%;
+    padding: 4px;
+    transition: transform 0.2s;
+}
+
+.footer-social img:hover {
+    transform: translateY(-3px);
+}
+
+.footer-copyright {
+    font-size: 0.75rem;
+    color: #8ca3c7;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    #Header {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+    #Hinfo {
+        margin-bottom: 30px;
+    }
+    .customerServedsec {
+        flex-direction: column;
+        align-items: center;
+    }
+    .customerServed {
+        width: 90%;
+    }
+    .JobCard, .RepairCard, .ReviewCard {
+        flex-direction: column;
+        text-align: center;
+    }
+    .JobCardActions {
+        justify-content: center;
+    }
+}
+
+/* ---------- MODAL OVERLAY ---------- */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-box {
+    background: linear-gradient(145deg, #0a0f2a, #050b1f);
+    border-radius: 28px;
+    width: 550px;
+    max-width: 95vw;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 224, 255, 0.3);
+    color: #f0f4fa;
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #8ca3c7;
+    transition: 0.2s;
+}
+
+.modal-close:hover {
+    color: white;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid rgba(0, 224, 255, 0.2);
+    padding-bottom: 1rem;
+}
+
+.modal-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid #00e0ff;
+    object-fit: cover;
+}
+
+.modal-header h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.2rem;
+}
+
+.modal-header p {
+    color: #9efff0;
+    font-size: 0.85rem;
+}
+
+.modal-section {
+    margin-bottom: 1.5rem;
+}
+
+.modal-section-title {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #00e0ff;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.modal-issue-full {
+    background: rgba(20, 28, 50, 0.6);
+    padding: 0.8rem;
+    border-radius: 16px;
+    font-size: 0.85rem;
     line-height: 1.5;
 }
 
-/* FOOTER */
+.modal-field {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
 
-footer{
-    border: 1px solid rgb(71, 70, 70);
-    color:white;
-    text-align:center;
-    padding:25px;
-    margin: 0px;
+.modal-field-label {
+    color: #8ca3c7;
+    font-size: 0.8rem;
+}
+
+.modal-field-value {
+    color: white;
+    font-weight: 500;
+}
+
+/* Cost Estimator inside modal (same as client page) */
+.cost-category {
+    background: rgba(15, 25, 50, 0.5);
+    border-radius: 16px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+.cost-category-label {
+    background: rgba(0, 224, 255, 0.08);
+    padding: 8px 12px;
+    font-weight: 600;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #9efff0;
+}
+.cost-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.cost-item-name { color: #cbd5e1; }
+.cost-item-price { color: #00e0ff; font-weight: 500; }
+.cost-subtotal {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background: rgba(0, 224, 255, 0.05);
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+.cost-grand-total {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid #10b981;
+    border-radius: 12px;
+    padding: 8px 12px;
+    margin: 10px 0;
+}
+.cost-grand-total span:first-child { color: #34d399; font-weight: 600; }
+.cost-grand-total span:last-child { font-size: 1rem; font-weight: 700; color: #34d399; }
+.cost-note {
+    font-size: 0.65rem;
+    color: #8ca3c7;
+    display: flex;
+    gap: 6px;
+}
+.history-entry {
+    background: rgba(20, 28, 50, 0.4);
+    padding: 0.5rem 0.8rem;
+    border-left: 3px solid #00e0ff;
+    margin-bottom: 8px;
+    border-radius: 0 12px 12px 0;
+}
+.history-date { font-size: 0.7rem; color: #9efff0; font-weight: 600; }
+.history-desc { font-size: 0.75rem; }
+.history-cost { font-size: 0.7rem; color: #10b981; margin-top: 4px; }
+
+/* ---------- UPDATE MODAL FORM ---------- */
+.form-group {
+    margin-bottom: 1rem;
+}
+.form-group label {
+    display: block;
+    font-size: 0.8rem;
+    color: #9efff0;
+    margin-bottom: 5px;
+}
+.status-select, .form-group textarea {
+    width: 100%;
+    padding: 8px 12px;
+    background: rgba(20, 28, 50, 0.8);
+    border: 1px solid rgba(120, 158, 223, 0.5);
+    border-radius: 12px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+.form-group textarea:focus, .status-select:focus {
+    outline: none;
+    border-color: #00e0ff;
+}
+.modal-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.btn-primary {
+    background: #10b981;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 40px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btn-primary:hover {
+    background: #059669;
+    transform: translateY(-2px);
+}
+.btn-secondary {
+    background: transparent;
+    border: 1px solid #ef4444;
+    padding: 8px 20px;
+    border-radius: 40px;
+    font-weight: 600;
+    color: #fca5a5;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btn-secondary:hover {
+    background: rgba(239,68,68,0.2);
+    transform: translateY(-2px);
 }

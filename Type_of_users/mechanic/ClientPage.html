@@ -2,324 +2,514 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Customers | PrecisionDrive Auto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="styles/ClientPage.css" rel="stylesheet"/>
-    <title>Clients | PrecisionDrive Auto</title>
-</head> 
+    <link rel="stylesheet" href="styles/ClientPage.css">
+</head>
 <body>
- 
-    <div id="NavBar">
-        <div id="forprofile">
-            <img id="profile" src="../../Assets/Profiles/mcado.jpg">
-        </div>
-        <div id="mainnavbar">
-            <a href="Mechanic_Homepage.html"><button class="button">Dashboard</button></a>
-            <a href="ClientPage.html"><button class="button">Customers</button></a>
-        </div>
-        <div id="formiscelanious">
-            <img id="bell" src="../../Assets/Logo/bell.png">
-            <img id="chat" src="../../Assets/Logo/chat.png">
-        </div>
-    </div>
 
-    <div id="sidebar">
-        <div id="listsSidebar">
-            <div id="SidebarProf">
-                <a href="AccountMechanic.html"><img src="../../Assets/Profiles/mcado.jpg"></a>
-                <h2>Account Name</h2>
-                <p>Annonymous@gmail.com</p>
-            </div>
-            <Button class="Tabs">
-                <img src="../../Assets/Logo/multiple-users-silhouette.png">
-                <h1>Connections</h1>
-            </Button>
-            <Button class="Tabs">
-                <img src="../../Assets/Logo/email.png">
-                <h1>Email</h1>
-            </Button>
-            <Button class="Tabs">
-                <img src="../../Assets/Logo/settings.png">
-                <h1>Settings</h1>
-            </Button>
-            <a href="../shop/html/home.html">
-            <Button class="Tabs">
+<div id="NavBar">
+    <div id="forprofile">
+        <img id="profile" src="../../Assets/Profiles/mcado.jpg" alt="profile">
+    </div>
+    <div id="mainnavbar">
+        <a href="Mechanic_Homepage.html"><button class="button">Dashboard</button></a>
+        <a href="ClientPage.html"><button class="button">Customers</button></a>
+    </div>
+    <div id="formiscelanious">
+        <img id="bell" src="../../Assets/Logo/bell.png" alt="notifications">
+        <img id="chat" src="../../Assets/Logo/chat.png" alt="messages">
+    </div>
+</div>
+
+<div id="sidebar">
+    <div id="listsSidebar">
+        <div id="SidebarProf">
+            <a href="AccountMechanic.html"><img src="../../Assets/Profiles/mcado.jpg" alt="avatar"></a>
+            <h2>Mechanic Name</h2>
+            <p>mechanic@gmail.com</p>
+        </div>
+        <button class="Tabs">
+            <img src="../../Assets/Logo/multiple-users-silhouette.png" alt="connections">
+            <h1>Connections</h1>
+        </button>
+        <a href="Accepted_Jobs.html">
+        <button class="Tabs">
+            <img src="../../Assets/Logo/check.png" alt="email">
+            <h1>Accepted Jobs</h1>
+        </button>
+        </a>
+
+        <a href="Warranties.html">
+        <button class="Tabs">
+            <img src="../../Assets/Logo/check.png" alt="email">
+            <h1>Check Warranties</h1>
+        </button>
+        </a>
+
+        <button class="Tabs">
+            <img src="../../Assets/Logo/settings.png" alt="settings">
+            <h1>Settings</h1>
+        </button>
+        <a href="../shop/html/home.html">
+            <button class="Tabs">
                 <i class="fa-solid fa-house"></i>
                 <h1>To Shop</h1>
-            </Button>
-            </a>
-            <a href="../../index.html"><Button class="Tabs" id="Sign-Out">Sign-out</Button></a>
-        </div>
+            </button>
+        </a>
+        <a href="../../index.html"><button class="Tabs" id="Sign-Out">Sign-out</button></a>
+    </div>
+</div>
 
-    </div>
- 
-    <div id="Header">
-        <h1>Work Available</h1>
-        <div id="Searchbar">
-            <img src="../../Assets/Logo/magnifying-glass.png">
-            <input type="text" placeholder="Search">
-            <img src="../../Assets/Logo/filter.png">
-        </div>
-    </div>
- 
-    <!-- ===== CLIENTS IN A RUSH ===== -->
-    <h1 class="section-label">Clients in a Rush</h1>
-    <hr class="section-divider">
- 
-    <div class="ListOfClients">
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Sukehiro, Yami</h1>
-                    <p>2019 Toyota Fortuner</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Tumaga</p></div>
-                        <div class="detail-values"><p>Budget</p><p>$150k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Engine won't start</div>
-            <button class="inquiry-btn">Accept</button>
-        </div>
- 
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Sukehiro, Yami</h1>
-                    <p>2019 Toyota Fortuner</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Tumaga</p></div>
-                        <div class="detail-values"><p>Budget</p><p>$150k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Engine won't start</div>
-            <button class="inquiry-btn">Accept</button>
-        </div>
- 
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Sukehiro, Yami</h1>
-                    <p>2019 Toyota Fortuner</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Tumaga</p></div>
-                        <div class="detail-values"><p>Budget</p><p>$150k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Engine won't start</div>
-            <button class="inquiry-btn">Accept</button>
-        </div>
- 
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Sukehiro, Yami</h1>
-                    <p>2019 Toyota Fortuner</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Tumaga</p></div>
-                        <div class="detail-values"><p>Budget</p><p>$150k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Engine won't start</div>
-            <button class="inquiry-btn">Accept</button>
-        </div>
- 
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Sukehiro, Yami</h1>
-                    <p>2019 Toyota Fortuner</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Tumaga</p></div>
-                        <div class="detail-values"><p>Budget</p><p>$150k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Engine won't start</div>
-            <button class="inquiry-btn">Accept</button>
-        </div>
-    </div>
- 
-    <!-- ===== ALL CLIENTS ===== -->
-    <h1 class="section-label">All Clients</h1>
-    <hr class="section-divider">
- 
-    <div class="ListOfClients">
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Sukehiro, Yami</h1>
-                    <p>2019 Toyota Fortuner</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Tumaga</p></div>
-                        <div class="detail-values"><p>Budget</p><p>$150k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Engine won't start</div>
-            <button class="inquiry-btn">Accept</button>
-        </div>
- 
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Sukehiro, Yami</h1>
-                    <p>2019 Toyota Fortuner</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Tumaga</p></div>
-                        <div class="detail-values"><p>Budget</p><p>$150k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Engine won't start</div>
-            <button class="inquiry-btn">Accept</button>
-        </div>
- 
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Sukehiro, Yami</h1>
-                    <p>2019 Toyota Fortuner</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Tumaga</p></div>
-                        <div class="detail-values"><p>Budget</p><p>$150k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Engine won't start</div>
-            <button class="inquiry-btn">Accept</button>
-        </div>
- 
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Sukehiro, Yami</h1>
-                    <p>2019 Toyota Fortuner</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Tumaga</p></div>
-                        <div class="detail-values"><p>Budget</p><p>$150k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Engine won't start</div>
-            <button class="inquiry-btn">Accept</button>
-        </div>
- 
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Sukehiro, Yami</h1>
-                    <p>2019 Toyota Fortuner</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Tumaga</p></div>
-                        <div class="detail-values"><p>Budget</p><p>$150k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Engine won't start</div>
-            <button class="inquiry-btn">Accept</button>
-        </div>
- 
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Sukehiro, Yami</h1>
-                    <p>2019 Toyota Fortuner</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Tumaga</p></div>
-                        <div class="detail-values"><p>Budget</p><p>$150k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Engine won't start</div>
-            <button class="inquiry-btn">Accept</button>
-        </div>
- 
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Sukehiro, Yami</h1>
-                    <p>2019 Toyota Fortuner</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Tumaga</p></div>
-                        <div class="detail-values"><p>Budget</p><p>$150k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Engine won't start</div>
-            <button class="inquiry-btn">Accept</button>
-        </div>
- 
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Sukehiro, Yami</h1>
-                    <p>2019 Toyota Fortuner</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Tumaga</p></div>
-                        <div class="detail-values"><p>Budget</p><p>$150k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Engine won't start</div>
-            <button class="inquiry-btn">Accept</button>
-        </div>
- 
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Sukehiro, Yami</h1>
-                    <p>2019 Toyota Fortuner</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Tumaga</p></div>
-                        <div class="detail-values"><p>Budget</p><p>$150k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Engine won't start</div>
-            <button class="inquiry-btn">Accept</button>
-        </div>
- 
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Sukehiro, Yami</h1>
-                    <p>2019 Toyota Fortuner</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Tumaga</p></div>
-                        <div class="detail-values"><p>Budget</p><p>$150k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Engine won't start</div>
-            <button class="inquiry-btn">Accept</button>
-        </div>
-    </div>
- 
-</body>
 
-<footer>
-<p>© 2026 PrecisionDrive Auto | Connecting Cars with Experts</p>
+<div id="Header">
+    <h1>Work Available</h1>
+    <div id="Searchbar">
+        <img src="../../Assets/Logo/magnifying-glass.png" alt="search">
+        <input type="text" placeholder="Search clients or vehicle...">
+        <img src="../../Assets/Logo/filter.png" alt="filter">
+    </div>
+</div>
+
+
+<h1 class="section-label">Clients in a Rush</h1>
+<hr class="section-divider">
+
+<div class="ListOfClients">
+
+    <input type="checkbox" id="modal-1" class="modal-toggle">
+    <div class="ClientsAccount">
+        <div class="ClientInfo">
+            <img src="../../Assets/Profiles/mcado.jpg" class="profile-img" alt="client">
+            <div class="client-text">
+                <h1>Sukehiro, Yami</h1>
+                <p>2019 Toyota Fortuner</p>
+                <div class="infoclient">
+                    <div class="detail-labels"><p>From</p><p>Tumaga</p></div>
+                    <div class="detail-values"><p>Budget</p><p>₱150k</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="issue"><strong>Issue:</strong> Engine won't start</div>
+        <div class="btn-row">
+            <button class="inquiry-btn">Accept</button>
+            <label for="modal-1" class="details-btn">View Details</label>
+        </div>
+    </div>
+    <div class="modal-overlay">
+        <div class="modal-box">
+            <label for="modal-1" class="modal-close">&#x2715;</label>
+            <div class="modal-header">
+                <img src="../../Assets/Profiles/mcado.jpg" class="modal-avatar">
+                <div><h2>Sukehiro, Yami</h2><p>2019 Toyota Fortuner</p></div>
+            </div>
+            <div class="modal-section">
+                <h3 class="modal-section-title">
+                    <i class="fa-solid fa-circle-exclamation"></i> 
+                    Issue Description</h3>
+                    <p class="modal-issue-full">
+                        Engine won't start — vehicle has been unresponsive since yesterday morning. 
+                        Key turns but no ignition response. Possible fuel pump or starter motor failure.</p>
+                    </div>
+            <div class="modal-section">
+                <h3 class="modal-section-title">
+                    <i class="fa-solid fa-address-card"></i>Contact Information</h3>
+                <div class="modal-field">
+                    <span class="modal-field-label">Email</span>
+                    <span class="modal-field-value">yami.sukehiro@email.com</span>
+                </div>
+                <div class="modal-field">
+                    <span class="modal-field-label">Location</span>
+                    <span class="modal-field-value">Tumaga</span>
+                </div>
+                <div class="modal-field">
+                    <span class="modal-field-label">Budget</span>
+                    <span class="modal-field-value">₱150k</span>
+                </div>
+            </div>
+            <div class="modal-section">
+                <h3 class="modal-section-title">
+                    <i class="fa-solid fa-currency-sign"></i> Repair Cost Estimate</h3>
+                <div class="cost-category">
+                    <div class="cost-category-label">
+                        <i class="fa-solid fa-wrench"></i> Labor</div>
+                        <div class="cost-rows">
+                            <div class="cost-row">
+                                <span class="cost-item-name">Diagnostic Check</span>
+                                <span class="cost-item-price">₱500</span>
+                            </div>
+                            <div class="cost-row">
+                                <span class="cost-item-name">Starter Motor Removal &amp; Install</span>
+                                <span class="cost-item-price">₱1,200</span>
+                            </div>
+                            <div class="cost-row">
+                                    <span class="cost-item-name">Fuel Pump Replacement Labor</span>
+                                    <span class="cost-item-price">₱1,500</span>
+                                </div>
+                            </div>
+                            <div class="cost-subtotal">
+                                <span>Labor Subtotal</span>
+                                <span>₱3,200</span>
+                            </div>
+                        </div>
+                <div class="cost-category">
+                    <div class="cost-category-label">
+                        <i class="fa-solid fa-boxes-stacked"></i> Materials</div>
+                        <div class="cost-rows">
+                            <div class="cost-row">
+                                <span class="cost-item-name">Starter Motor (OEM)</span>
+                                <span class="cost-item-price">₱4,800</span>
+                            </div>
+                            <div class="cost-row">
+                                <span class="cost-item-name">Fuel Pump Assembly</span>
+                                <span class="cost-item-price">₱3,500</span>
+                            </div>
+                            <div class="cost-row">
+                                <span class="cost-item-name">Wiring Connectors &amp; Seals</span>
+                                <span class="cost-item-price">₱350</span>
+                            </div>
+                        </div>
+                        <div class="cost-subtotal">
+                            <span>Materials Subtotal</span>
+                            <span>₱8,650</span>
+                        </div>
+                    </div>
+                <div class="cost-grand-total">
+                    <span>Estimated Total</span>
+                    <span>₱11,850</span>
+                </div>
+                <p class="cost-note">
+                    <i class="fa-solid fa-circle-info"></i> Estimate may vary based on diagnosis results and parts availability.</p>
+            </div>
+        </div>
+    </div>
+
+    <input type="checkbox" id="modal-2" class="modal-toggle">
+    <div class="ClientsAccount">
+        <div class="ClientInfo">
+            <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
+            <div class="client-text">
+                <h1>Bolaños, Trisha</h1>
+                <p>2021 Honda CR-V</p>
+                <div class="infoclient">
+                    <div class="detail-labels">
+                        <p>From</p>
+                        <p>Pasonanca</p>
+                    </div>
+                    <div class="detail-values">
+                        <p>Budget</p>
+                        <p>₱80k</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="issue">
+            <strong>Issue:</strong> Knocking from front suspension
+        </div>
+        <div class="btn-row">
+            <button class="inquiry-btn">Accept</button>
+            <label for="modal-2" class="details-btn">View Details</label>
+        </div>
+    </div>
+    <div class="modal-overlay">
+        <div class="modal-box">
+            <label for="modal-2" class="modal-close">&#x2715;</label>
+            <div class="modal-header">
+                <img src="../../Assets/Profiles/mcado.jpg" class="modal-avatar">
+                <div>
+                    <h2>Bolaños, Trisha</h2>
+                    <p>2021 Honda CR-V</p>
+                </div>
+            </div>
+            <div class="modal-section">
+                <h3 class="modal-section-title">Issue Description</h3>
+                <p class="modal-issue-full">Unusual knocking sound from the front suspension, especially on bumps and uneven roads. Suspected worn-out struts or stabilizer links.</p>
+            </div>
+            <div class="modal-section">
+                <h3 class="modal-section-title">Contact Information</h3>
+                <div class="modal-field">
+                    <span class="modal-field-label">Email</span>
+                    <span class="modal-field-value">trisha.b@email.com</span>
+                </div>
+                <div class="modal-field">
+                    <span class="modal-field-label">Location</span>
+                    <span class="modal-field-value">Pasonanca</span>
+                </div>
+                <div class="modal-field">
+                    <span class="modal-field-label">Budget</span>
+                    <span class="modal-field-value">₱80k</span>
+                </div>
+            </div>
+            <div class="modal-section">
+                <h3 class="modal-section-title">Repair Cost Estimate</h3>
+                <div class="cost-category">
+                    <div class="cost-category-label">Labor</div>
+                    <div class="cost-rows">
+                        <div class="cost-row">
+                        <span class="cost-item-name">Suspension Inspection</span>
+                        <span class="cost-item-price">₱400</span>
+                    </div>
+                    <div class="cost-row">
+                        <span class="cost-item-name">Strut Assembly R&amp;R (per side)</span>
+                        <span class="cost-item-price">₱1,400</span>
+                    </div>
+                    <div class="cost-row">
+                        <span class="cost-item-name">Wheel Alignment Post-Repair</span>
+                        <span class="cost-item-price">₱600</span>
+                    </div>
+                </div>
+                <div class="cost-subtotal">
+                    <span>Labor Subtotal</span>
+                    <span>₱2,400</span>
+                </div>
+            </div>
+            <div class="cost-category">
+                <div class="cost-category-label">Materials</div>
+                <div class="cost-rows">
+                    <div class="cost-row">
+                        <span class="cost-item-name">Strut Assembly (x2)</span>
+                        <span class="cost-item-price">₱5,600</span>
+                    </div>
+                    <div class="cost-row"><span class="cost-item-name">Stabilizer End Links (pair)</span>
+                        <span class="cost-item-price">₱1,200</span>
+                    </div>
+                    <div class="cost-row"><span class="cost-item-name">Strut Mount Bearings</span>
+                        <span class="cost-item-price">₱800</span>
+                    </div>
+                </div>
+                <div class="cost-subtotal">
+                    <span>Materials Subtotal</span>
+                    <span>₱7,600</span>
+                </div>
+            </div>
+            <div class="cost-grand-total">
+                <span>Estimated Total</span>
+                <span>₱10,000</span>
+            </div>
+            <p class="cost-note">
+                <i class="fa-solid fa-circle-info"></i> Estimate may vary based on diagnosis results and parts availability.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1 class="section-label">All Clients</h1>
+<hr class="section-divider">
+
+<div class="ListOfClients">
+    <input type="checkbox" id="modal-1" class="modal-toggle">
+    <div class="ClientsAccount">
+        <div class="ClientInfo">
+            <img src="../../Assets/Profiles/mcado.jpg" class="profile-img" alt="client">
+            <div class="client-text">
+                <h1>Sukehiro, Yami</h1>
+                <p>2019 Toyota Fortuner</p>
+                <div class="infoclient">
+                    <div class="detail-labels"><p>From</p><p>Tumaga</p></div>
+                    <div class="detail-values"><p>Budget</p><p>₱150k</p></div>
+                </div>
+            </div>
+        </div>
+        <div class="issue"><strong>Issue:</strong> Engine won't start</div>
+        <div class="btn-row">
+            <button class="inquiry-btn">Accept</button>
+            <label for="modal-1" class="details-btn">View Details</label>
+        </div>
+    </div>
+
+    <input type="checkbox" id="modal-2" class="modal-toggle">
+    <div class="ClientsAccount">
+        <div class="ClientInfo">
+            <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
+            <div class="client-text">
+                <h1>Bolaños, Trisha</h1>
+                <p>2021 Honda CR-V</p>
+                <div class="infoclient">
+                    <div class="detail-labels">
+                        <p>From</p>
+                        <p>Pasonanca</p>
+                    </div>
+                    <div class="detail-values">
+                        <p>Budget</p>
+                        <p>₱80k</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="issue">
+            <strong>Issue:</strong> Knocking from front suspension
+        </div>
+        <div class="btn-row">
+            <button class="inquiry-btn">Accept</button>
+            <label for="modal-2" class="details-btn">View Details</label>
+        </div>
+    </div>
+
+    <div class="ClientsAccount">
+        <div class="ClientInfo">
+            <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
+            <div class="client-text">
+                <h1>Bolaños, Trisha</h1>
+                <p>2021 Honda CR-V</p>
+                <div class="infoclient">
+                    <div class="detail-labels">
+                        <p>From</p>
+                        <p>Pasonanca</p>
+                    </div>
+                    <div class="detail-values">
+                        <p>Budget</p>
+                        <p>₱80k</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="issue">
+            <strong>Issue:</strong> Knocking from front suspension
+        </div>
+        <div class="btn-row">
+            <button class="inquiry-btn">Accept</button>
+            <label for="modal-2" class="details-btn">View Details</label>
+        </div>
+    </div>
+
+
+    <div class="ClientsAccount">
+        <div class="ClientInfo">
+            <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
+            <div class="client-text">
+                <h1>Bolaños, Trisha</h1>
+                <p>2021 Honda CR-V</p>
+                <div class="infoclient">
+                    <div class="detail-labels">
+                        <p>From</p>
+                        <p>Pasonanca</p>
+                    </div>
+                    <div class="detail-values">
+                        <p>Budget</p>
+                        <p>₱80k</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="issue">
+            <strong>Issue:</strong> Knocking from front suspension
+        </div>
+        <div class="btn-row">
+            <button class="inquiry-btn">Accept</button>
+            <label for="modal-2" class="details-btn">View Details</label>
+        </div>
+    </div>
+
+
+    <div class="ClientsAccount">
+        <div class="ClientInfo">
+            <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
+            <div class="client-text">
+                <h1>Bolaños, Trisha</h1>
+                <p>2021 Honda CR-V</p>
+                <div class="infoclient">
+                    <div class="detail-labels">
+                        <p>From</p>
+                        <p>Pasonanca</p>
+                    </div>
+                    <div class="detail-values">
+                        <p>Budget</p>
+                        <p>₱80k</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="issue">
+            <strong>Issue:</strong> Knocking from front suspension
+        </div>
+        <div class="btn-row">
+            <button class="inquiry-btn">Accept</button>
+            <label for="modal-2" class="details-btn">View Details</label>
+        </div>
+    </div>
+
+
+    <div class="ClientsAccount">
+        <div class="ClientInfo">
+            <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
+            <div class="client-text">
+                <h1>Bolaños, Trisha</h1>
+                <p>2021 Honda CR-V</p>
+                <div class="infoclient">
+                    <div class="detail-labels">
+                        <p>From</p>
+                        <p>Pasonanca</p>
+                    </div>
+                    <div class="detail-values">
+                        <p>Budget</p>
+                        <p>₱80k</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="issue">
+            <strong>Issue:</strong> Knocking from front suspension
+        </div>
+        <div class="btn-row">
+            <button class="inquiry-btn">Accept</button>
+            <label for="modal-2" class="details-btn">View Details</label>
+        </div>
+    </div>
+
+    
+    <div class="ClientsAccount">
+        <div class="ClientInfo">
+            <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
+            <div class="client-text">
+                <h1>Bolaños, Trisha</h1>
+                <p>2021 Honda CR-V</p>
+                <div class="infoclient">
+                    <div class="detail-labels">
+                        <p>From</p>
+                        <p>Pasonanca</p>
+                    </div>
+                    <div class="detail-values">
+                        <p>Budget</p>
+                        <p>₱80k</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="issue">
+            <strong>Issue:</strong> Knocking from front suspension
+        </div>
+        <div class="btn-row">
+            <button class="inquiry-btn">Accept</button>
+            <label for="modal-2" class="details-btn">View Details</label>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<!-- ===== FOOTER (Matching user homepage) ===== -->
+<footer class="simple-footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img src="../../Assets/Logo/facebook.png" alt="FB"></a>
+            <a href="#"><img src="../../Assets/Logo/instagram.png" alt="IG"></a>
+            <a href="#"><img src="../../Assets/Logo/twitter.png" alt="Twitter"></a>
+        </div>
+        <p class="footer-copyright">© 2026 PrecisionDrive Auto | Connecting Cars with Experts</p>
+    </div>
 </footer>
 
 <script src="../../Sidebar_Script.js"></script>
+</body>
 </html>
  
