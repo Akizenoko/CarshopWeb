@@ -52,7 +52,7 @@ function renderJobs() {
 
     document.querySelectorAll(".view-warranty-btn").forEach(btn => {
         btn.addEventListener("click", () => {
-            window.location.href = "Mechanic_Warranties.html";
+            window.location.href = "Warranties.html";
         });
     });
 }
