@@ -2,121 +2,141 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Customers | PrecisionDrive Auto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="styles/ClientPage.css" rel="stylesheet"/>
-    <title>Clients | PrecisionDrive Auto</title>
+    <link rel="stylesheet" href="styles/ClientPage.css">
 </head>
 <body>
- 
-    <!-- ===== NAV BAR ===== -->
-    <div id="NavBar">
-        <div id="forprofile">
-            <img id="profile" src="../../Assets/Profiles/mcado.jpg">
-        </div>
-        <div id="mainnavbar">
-            <a href="Mechanic_Homepage.html"><button class="button">Dashboard</button></a>
-            <a href="ClientPage.html"><button class="button">Customers</button></a>
-        </div>
-        <div id="formiscelanious">
-            <img id="bell" src="../../Assets/Logo/bell.png">
-            <img id="chat" src="../../Assets/Logo/chat.png">
-        </div>
+
+<div id="NavBar">
+    <div id="forprofile">
+        <img id="profile" src="../../Assets/Profiles/mcado.jpg" alt="profile">
     </div>
- 
-    <!-- ===== SIDEBAR ===== -->
-    <div id="sidebar">
-        <div id="listsSidebar">
-            <div id="SidebarProf">
-                <a href="AccountMechanic.html"><img src="../../Assets/Profiles/mcado.jpg"></a>
-                <h2>Account Name</h2>
-                <p>Annonymous@gmail.com</p>
+    <div id="mainnavbar">
+        <a href="Mechanic_Homepage.html"><button class="button">Dashboard</button></a>
+        <a href="ClientPage.html"><button class="button">Customers</button></a>
+    </div>
+    <div id="formiscelanious">
+        <img id="bell" src="../../Assets/Logo/bell.png" alt="notifications">
+        <img id="chat" src="../../Assets/Logo/chat.png" alt="messages">
+    </div>
+</div>
+
+<div id="sidebar">
+    <div id="listsSidebar">
+        <div id="SidebarProf">
+            <a href="AccountMechanic.html"><img src="../../Assets/Profiles/mcado.jpg" alt="avatar"></a>
+            <h2>Mechanic Name</h2>
+            <p>mechanic@gmail.com</p>
+        </div>
+        <button class="Tabs">
+            <img src="../../Assets/Logo/multiple-users-silhouette.png" alt="connections">
+            <h1>Connections</h1>
+        </button>
+        <a href="Accepted_Jobs.html">
+        <button class="Tabs">
+            <img src="../../Assets/Logo/check.png" alt="email">
+            <h1>Accepted Jobs</h1>
+        </button>
+        </a>
+
+        <a href="Warranties.html">
+        <button class="Tabs">
+            <img src="../../Assets/Logo/check.png" alt="email">
+            <h1>Check Warranties</h1>
+        </button>
+        </a>
+
+        <button class="Tabs">
+            <img src="../../Assets/Logo/settings.png" alt="settings">
+            <h1>Settings</h1>
+        </button>
+        <a href="../shop/html/home.html">
+            <button class="Tabs">
+                <i class="fa-solid fa-house"></i>
+                <h1>To Shop</h1>
+            </button>
+        </a>
+        <a href="../../index.html"><button class="Tabs" id="Sign-Out">Sign-out</button></a>
+    </div>
+</div>
+
+
+<div id="Header">
+    <h1>Work Available</h1>
+    <div id="Searchbar">
+        <img src="../../Assets/Logo/magnifying-glass.png" alt="search">
+        <input type="text" placeholder="Search clients or vehicle...">
+        <img src="../../Assets/Logo/filter.png" alt="filter">
+    </div>
+</div>
+
+
+<h1 class="section-label">Clients in a Rush</h1>
+<hr class="section-divider">
+
+<div class="ListOfClients">
+
+    <input type="checkbox" id="modal-1" class="modal-toggle">
+    <div class="ClientsAccount">
+        <div class="ClientInfo">
+            <img src="../../Assets/Profiles/mcado.jpg" class="profile-img" alt="client">
+            <div class="client-text">
+                <h1>Sukehiro, Yami</h1>
+                <p>2019 Toyota Fortuner</p>
+                <div class="infoclient">
+                    <div class="detail-labels"><p>From</p><p>Tumaga</p></div>
+                    <div class="detail-values"><p>Budget</p><p>₱150k</p></div>
+                </div>
             </div>
-            <Button class="Tabs">
-                <img src="../../Assets/Logo/multiple-users-silhouette.png">
-                <h1>Connections</h1>
-            </Button>
-            <Button class="Tabs">
-                <img src="../../Assets/Logo/email.png">
-                <h1>Email</h1>
-            </Button>
-            <Button class="Tabs">
-                <img src="../../Assets/Logo/settings.png">
-                <h1>Settings</h1>
-            </Button>
-            <a href="../shop/html/home.html">
-                <Button class="Tabs">
-                    <i class="fa-solid fa-house"></i>
-                    <h1>To Shop</h1>
-                </Button>
-            </a>
-            <a href="../../index.html"><Button class="Tabs" id="Sign-Out">Sign-out</Button></a>
+        </div>
+        <div class="issue"><strong>Issue:</strong> Engine won't start</div>
+        <div class="btn-row">
+            <button class="inquiry-btn">Accept</button>
+            <label for="modal-1" class="details-btn">View Details</label>
         </div>
     </div>
- 
-    <!-- ===== HEADER / SEARCH ===== -->
-    <div id="Header">
-        <h1>Work Available</h1>
-        <div id="Searchbar">
-            <img src="../../Assets/Logo/magnifying-glass.png">
-            <input type="text" placeholder="Search">
-            <img src="../../Assets/Logo/filter.png">
-        </div>
-    </div>
- 
-    <!-- ===== CLIENTS IN A RUSH ===== -->
-    <h1 class="section-label">Clients in a Rush</h1>
-    <hr class="section-divider">
- 
-    <div class="ListOfClients">
- 
-        <!-- CLIENT 1 -->
-        <input type="checkbox" id="modal-1" class="modal-toggle">
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Sukehiro, Yami</h1>
-                    <p>2019 Toyota Fortuner</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Tumaga</p></div>
-                        <div class="detail-values"><p>Budget</p><p>₱150k</p></div>
+    <div class="modal-overlay">
+        <div class="modal-box">
+            <label for="modal-1" class="modal-close">&#x2715;</label>
+            <div class="modal-header">
+                <img src="../../Assets/Profiles/mcado.jpg" class="modal-avatar">
+                <div><h2>Sukehiro, Yami</h2><p>2019 Toyota Fortuner</p></div>
+            </div>
+            <div class="modal-section">
+                <h3 class="modal-section-title">
+                    <i class="fa-solid fa-circle-exclamation"></i> 
+                    Issue Description</h3>
+                    <p class="modal-issue-full">
+                        Engine won't start — vehicle has been unresponsive since yesterday morning. 
+                        Key turns but no ignition response. Possible fuel pump or starter motor failure.</p>
                     </div>
+            <div class="modal-section">
+                <h3 class="modal-section-title">
+                    <i class="fa-solid fa-address-card"></i>Contact Information</h3>
+                <div class="modal-field">
+                    <span class="modal-field-label">Email</span>
+                    <span class="modal-field-value">yami.sukehiro@email.com</span>
+                </div>
+                <div class="modal-field">
+                    <span class="modal-field-label">Location</span>
+                    <span class="modal-field-value">Tumaga</span>
+                </div>
+                <div class="modal-field">
+                    <span class="modal-field-label">Budget</span>
+                    <span class="modal-field-value">₱150k</span>
                 </div>
             </div>
-            <div class="issue"><strong>Issue:</strong> Engine won't start</div>
-            <span class="status-badge s-pending">Pending</span>
-            <div class="btn-row">
-                <button class="inquiry-btn">Accept</button>
-                <label for="modal-1" class="details-btn">View Details</label>
-            </div>
-        </div>
-        <div class="modal-overlay">
-            <div class="modal-box">
-                <label for="modal-1" class="modal-close">&#x2715;</label>
-                <div class="modal-header">
-                    <img src="../../Assets/Profiles/mcado.jpg" class="modal-avatar">
-                    <div>
-                        <h2>Sukehiro, Yami</h2>
-                        <p>2019 Toyota Fortuner</p>
-                    </div>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Issue Description</h3>
-                    <p class="modal-issue-full">Engine won't start — vehicle has been unresponsive since yesterday morning. Key turns but no ignition response. Possible fuel pump or starter motor failure.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Contact Information</h3>
-                    <div class="modal-field"><span class="modal-field-label">Phone</span><span class="modal-field-value">+63 912 345 6789</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Email</span><span class="modal-field-value">yami.sukehiro@email.com</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Location</span><span class="modal-field-value">Tumaga</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Budget</span><span class="modal-field-value">₱150k</span></div>
-                </div>
-                <!-- COST ESTIMATOR -->
-                <div class="modal-section">
-                    <h3 class="modal-section-title"><i class="fa-solid fa-peso-sign"></i> Repair Cost Estimate</h3>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-wrench"></i> Labor</div>
+            <div class="modal-section">
+                <h3 class="modal-section-title">
+                    <i class="fa-solid fa-currency-sign"></i> Repair Cost Estimate</h3>
+                <div class="cost-category">
+                    <div class="cost-category-label">
+                        <i class="fa-solid fa-wrench"></i> Labor</div>
                         <div class="cost-rows">
                             <div class="cost-row">
                                 <span class="cost-item-name">Diagnostic Check</span>
@@ -127,17 +147,18 @@
                                 <span class="cost-item-price">₱1,200</span>
                             </div>
                             <div class="cost-row">
-                                <span class="cost-item-name">Fuel Pump Replacement Labor</span>
-                                <span class="cost-item-price">₱1,500</span>
+                                    <span class="cost-item-name">Fuel Pump Replacement Labor</span>
+                                    <span class="cost-item-price">₱1,500</span>
+                                </div>
+                            </div>
+                            <div class="cost-subtotal">
+                                <span>Labor Subtotal</span>
+                                <span>₱3,200</span>
                             </div>
                         </div>
-                        <div class="cost-subtotal">
-                            <span>Labor Subtotal</span>
-                            <span>₱3,200</span>
-                        </div>
-                    </div>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-boxes-stacked"></i> Materials</div>
+                <div class="cost-category">
+                    <div class="cost-category-label">
+                        <i class="fa-solid fa-boxes-stacked"></i> Materials</div>
                         <div class="cost-rows">
                             <div class="cost-row">
                                 <span class="cost-item-name">Starter Motor (OEM)</span>
@@ -157,1467 +178,338 @@
                             <span>₱8,650</span>
                         </div>
                     </div>
-                    <div class="cost-grand-total">
-                        <span>Estimated Total</span>
-                        <span>₱11,850</span>
-                    </div>
-                    <p class="cost-note"><i class="fa-solid fa-circle-info"></i> Estimate may vary based on diagnosis results and parts availability.</p>
+                <div class="cost-grand-total">
+                    <span>Estimated Total</span>
+                    <span>₱11,850</span>
                 </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Vehicle Service History</h3>
-                    <div class="history-entry">
-                        <div class="history-date">Jan 2024</div>
-                        <div class="history-desc">Oil change &amp; filter replacement</div>
-                        <div class="history-cost">₱850</div>
+                <p class="cost-note">
+                    <i class="fa-solid fa-circle-info"></i> Estimate may vary based on diagnosis results and parts availability.</p>
+            </div>
+        </div>
+    </div>
+
+    <input type="checkbox" id="modal-2" class="modal-toggle">
+    <div class="ClientsAccount">
+        <div class="ClientInfo">
+            <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
+            <div class="client-text">
+                <h1>Bolaños, Trisha</h1>
+                <p>2021 Honda CR-V</p>
+                <div class="infoclient">
+                    <div class="detail-labels">
+                        <p>From</p>
+                        <p>Pasonanca</p>
                     </div>
-                    <div class="history-entry">
-                        <div class="history-date">Aug 2023</div>
-                        <div class="history-desc">Brake pad replacement (front)</div>
-                        <div class="history-cost">₱3,200</div>
-                    </div>
-                    <div class="history-entry">
-                        <div class="history-date">Mar 2023</div>
-                        <div class="history-desc">Aircon regas &amp; compressor check</div>
-                        <div class="history-cost">₱2,500</div>
+                    <div class="detail-values">
+                        <p>Budget</p>
+                        <p>₱80k</p>
                     </div>
                 </div>
             </div>
         </div>
- 
-        <!-- CLIENT 2 -->
-        <input type="checkbox" id="modal-2" class="modal-toggle">
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Bolaños, Trisha</h1>
+        <div class="issue">
+            <strong>Issue:</strong> Knocking from front suspension
+        </div>
+        <div class="btn-row">
+            <button class="inquiry-btn">Accept</button>
+            <label for="modal-2" class="details-btn">View Details</label>
+        </div>
+    </div>
+    <div class="modal-overlay">
+        <div class="modal-box">
+            <label for="modal-2" class="modal-close">&#x2715;</label>
+            <div class="modal-header">
+                <img src="../../Assets/Profiles/mcado.jpg" class="modal-avatar">
+                <div>
+                    <h2>Bolaños, Trisha</h2>
                     <p>2021 Honda CR-V</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Pasonanca</p></div>
-                        <div class="detail-values"><p>Budget</p><p>₱80k</p></div>
-                    </div>
                 </div>
             </div>
-            <div class="issue"><strong>Issue:</strong> Knocking from front suspension</div>
-            <span class="status-badge s-accepted">Accepted</span>
-            <div class="btn-row">
-                <button class="inquiry-btn">Accept</button>
-                <label for="modal-2" class="details-btn">View Details</label>
+            <div class="modal-section">
+                <h3 class="modal-section-title">Issue Description</h3>
+                <p class="modal-issue-full">Unusual knocking sound from the front suspension, especially on bumps and uneven roads. Suspected worn-out struts or stabilizer links.</p>
             </div>
-        </div>
-        <div class="modal-overlay">
-            <div class="modal-box">
-                <label for="modal-2" class="modal-close">&#x2715;</label>
-                <div class="modal-header">
-                    <img src="../../Assets/Profiles/mcado.jpg" class="modal-avatar">
-                    <div>
-                        <h2>Bolaños, Trisha</h2>
-                        <p>2021 Honda CR-V</p>
+            <div class="modal-section">
+                <h3 class="modal-section-title">Contact Information</h3>
+                <div class="modal-field">
+                    <span class="modal-field-label">Email</span>
+                    <span class="modal-field-value">trisha.b@email.com</span>
+                </div>
+                <div class="modal-field">
+                    <span class="modal-field-label">Location</span>
+                    <span class="modal-field-value">Pasonanca</span>
+                </div>
+                <div class="modal-field">
+                    <span class="modal-field-label">Budget</span>
+                    <span class="modal-field-value">₱80k</span>
+                </div>
+            </div>
+            <div class="modal-section">
+                <h3 class="modal-section-title">Repair Cost Estimate</h3>
+                <div class="cost-category">
+                    <div class="cost-category-label">Labor</div>
+                    <div class="cost-rows">
+                        <div class="cost-row">
+                        <span class="cost-item-name">Suspension Inspection</span>
+                        <span class="cost-item-price">₱400</span>
+                    </div>
+                    <div class="cost-row">
+                        <span class="cost-item-name">Strut Assembly R&amp;R (per side)</span>
+                        <span class="cost-item-price">₱1,400</span>
+                    </div>
+                    <div class="cost-row">
+                        <span class="cost-item-name">Wheel Alignment Post-Repair</span>
+                        <span class="cost-item-price">₱600</span>
                     </div>
                 </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Issue Description</h3>
-                    <p class="modal-issue-full">Unusual knocking sound from the front suspension, especially on bumps and uneven roads. Suspected worn-out struts or stabilizer links.</p>
+                <div class="cost-subtotal">
+                    <span>Labor Subtotal</span>
+                    <span>₱2,400</span>
                 </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Contact Information</h3>
-                    <div class="modal-field"><span class="modal-field-label">Phone</span><span class="modal-field-value">+63 917 654 3210</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Email</span><span class="modal-field-value">trisha.b@email.com</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Location</span><span class="modal-field-value">Pasonanca</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Budget</span><span class="modal-field-value">₱80k</span></div>
-                </div>
-                <!-- COST ESTIMATOR -->
-                <div class="modal-section">
-                    <h3 class="modal-section-title"><i class="fa-solid fa-peso-sign"></i> Repair Cost Estimate</h3>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-wrench"></i> Labor</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">Suspension Inspection</span>
-                                <span class="cost-item-price">₱400</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Strut Assembly R&amp;R (per side)</span>
-                                <span class="cost-item-price">₱1,400</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Wheel Alignment Post-Repair</span>
-                                <span class="cost-item-price">₱600</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Labor Subtotal</span>
-                            <span>₱2,400</span>
-                        </div>
+            </div>
+            <div class="cost-category">
+                <div class="cost-category-label">Materials</div>
+                <div class="cost-rows">
+                    <div class="cost-row">
+                        <span class="cost-item-name">Strut Assembly (x2)</span>
+                        <span class="cost-item-price">₱5,600</span>
                     </div>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-boxes-stacked"></i> Materials</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">Strut Assembly (x2)</span>
-                                <span class="cost-item-price">₱5,600</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Stabilizer End Links (pair)</span>
-                                <span class="cost-item-price">₱1,200</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Strut Mount Bearings</span>
-                                <span class="cost-item-price">₱800</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Materials Subtotal</span>
-                            <span>₱7,600</span>
-                        </div>
+                    <div class="cost-row"><span class="cost-item-name">Stabilizer End Links (pair)</span>
+                        <span class="cost-item-price">₱1,200</span>
                     </div>
-                    <div class="cost-grand-total">
-                        <span>Estimated Total</span>
-                        <span>₱10,000</span>
-                    </div>
-                    <p class="cost-note"><i class="fa-solid fa-circle-info"></i> Estimate may vary based on diagnosis results and parts availability.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Vehicle Service History</h3>
-                    <div class="history-entry">
-                        <div class="history-date">Feb 2024</div>
-                        <div class="history-desc">Wheel alignment &amp; balancing</div>
-                        <div class="history-cost">₱600</div>
-                    </div>
-                    <div class="history-entry">
-                        <div class="history-date">Sep 2023</div>
-                        <div class="history-desc">Transmission fluid flush</div>
-                        <div class="history-cost">₱1,800</div>
+                    <div class="cost-row"><span class="cost-item-name">Strut Mount Bearings</span>
+                        <span class="cost-item-price">₱800</span>
                     </div>
                 </div>
+                <div class="cost-subtotal">
+                    <span>Materials Subtotal</span>
+                    <span>₱7,600</span>
+                </div>
+            </div>
+            <div class="cost-grand-total">
+                <span>Estimated Total</span>
+                <span>₱10,000</span>
+            </div>
+            <p class="cost-note">
+                <i class="fa-solid fa-circle-info"></i> Estimate may vary based on diagnosis results and parts availability.</p>
             </div>
         </div>
- 
-        <!-- CLIENT 3 -->
-        <input type="checkbox" id="modal-3" class="modal-toggle">
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Reyes, Marco</h1>
-                    <p>2018 Mitsubishi Montero</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Tetuan</p></div>
-                        <div class="detail-values"><p>Budget</p><p>₱200k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Check engine light + stalling</div>
-            <span class="status-badge s-inprogress">In Progress</span>
-            <div class="btn-row">
-                <button class="inquiry-btn">Accept</button>
-                <label for="modal-3" class="details-btn">View Details</label>
-            </div>
-        </div>
-        <div class="modal-overlay">
-            <div class="modal-box">
-                <label for="modal-3" class="modal-close">&#x2715;</label>
-                <div class="modal-header">
-                    <img src="../../Assets/Profiles/mcado.jpg" class="modal-avatar">
-                    <div>
-                        <h2>Reyes, Marco</h2>
-                        <p>2018 Mitsubishi Montero</p>
-                    </div>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Issue Description</h3>
-                    <p class="modal-issue-full">Check engine light is on and vehicle is stalling intermittently. OBD scan shows P0300 (random misfire). Suspected faulty ignition coils or spark plugs.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Contact Information</h3>
-                    <div class="modal-field"><span class="modal-field-label">Phone</span><span class="modal-field-value">+63 929 111 2233</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Email</span><span class="modal-field-value">marco.reyes@email.com</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Location</span><span class="modal-field-value">Tetuan</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Budget</span><span class="modal-field-value">₱200k</span></div>
-                </div>
-                <!-- COST ESTIMATOR -->
-                <div class="modal-section">
-                    <h3 class="modal-section-title"><i class="fa-solid fa-peso-sign"></i> Repair Cost Estimate</h3>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-wrench"></i> Labor</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">OBD Diagnostic Scan</span>
-                                <span class="cost-item-price">₱350</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Ignition Coil Replacement (x4)</span>
-                                <span class="cost-item-price">₱1,600</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Spark Plug Replacement</span>
-                                <span class="cost-item-price">₱800</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Labor Subtotal</span>
-                            <span>₱2,750</span>
-                        </div>
-                    </div>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-boxes-stacked"></i> Materials</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">Ignition Coils (x4 OEM)</span>
-                                <span class="cost-item-price">₱6,400</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Iridium Spark Plugs (x4)</span>
-                                <span class="cost-item-price">₱1,800</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Throttle Body Cleaner</span>
-                                <span class="cost-item-price">₱220</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Materials Subtotal</span>
-                            <span>₱8,420</span>
-                        </div>
-                    </div>
-                    <div class="cost-grand-total">
-                        <span>Estimated Total</span>
-                        <span>₱11,170</span>
-                    </div>
-                    <p class="cost-note"><i class="fa-solid fa-circle-info"></i> Estimate may vary based on diagnosis results and parts availability.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Vehicle Service History</h3>
-                    <div class="history-entry">
-                        <div class="history-date">Mar 2024</div>
-                        <div class="history-desc">Fuel injector cleaning</div>
-                        <div class="history-cost">₱2,200</div>
-                    </div>
-                    <div class="history-entry">
-                        <div class="history-date">Nov 2023</div>
-                        <div class="history-desc">Timing belt &amp; water pump replacement</div>
-                        <div class="history-cost">₱8,500</div>
-                    </div>
-                    <div class="history-entry">
-                        <div class="history-date">May 2023</div>
-                        <div class="history-desc">Battery replacement</div>
-                        <div class="history-cost">₱3,800</div>
-                    </div>
-                </div>
-            </div>
-        </div>
- 
-        <!-- CLIENT 4 -->
-        <input type="checkbox" id="modal-4" class="modal-toggle">
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Aguilar, Dana</h1>
-                    <p>2022 Mazda CX-5</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Canelar</p></div>
-                        <div class="detail-values"><p>Budget</p><p>₱120k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> AC not blowing cold air</div>
-            <span class="status-badge s-completed">Completed</span>
-            <div class="btn-row">
-                <button class="inquiry-btn">Accept</button>
-                <label for="modal-4" class="details-btn">View Details</label>
-            </div>
-        </div>
-        <div class="modal-overlay">
-            <div class="modal-box">
-                <label for="modal-4" class="modal-close">&#x2715;</label>
-                <div class="modal-header">
-                    <img src="../../Assets/Profiles/mcado.jpg" class="modal-avatar">
-                    <div>
-                        <h2>Aguilar, Dana</h2>
-                        <p>2022 Mazda CX-5</p>
-                    </div>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Issue Description</h3>
-                    <p class="modal-issue-full">AC not blowing cold air. Refrigerant leak suspected. Compressor makes rattling noise when AC is switched on.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Contact Information</h3>
-                    <div class="modal-field"><span class="modal-field-label">Phone</span><span class="modal-field-value">+63 908 765 4321</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Email</span><span class="modal-field-value">dana.aguilar@email.com</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Location</span><span class="modal-field-value">Canelar</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Budget</span><span class="modal-field-value">₱120k</span></div>
-                </div>
-                <!-- COST ESTIMATOR -->
-                <div class="modal-section">
-                    <h3 class="modal-section-title"><i class="fa-solid fa-peso-sign"></i> Repair Cost Estimate</h3>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-wrench"></i> Labor</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">AC System Leak Detection</span>
-                                <span class="cost-item-price">₱500</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Compressor R&amp;R</span>
-                                <span class="cost-item-price">₱2,000</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">System Regas &amp; Vacuum</span>
-                                <span class="cost-item-price">₱600</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Labor Subtotal</span>
-                            <span>₱3,100</span>
-                        </div>
-                    </div>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-boxes-stacked"></i> Materials</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">AC Compressor (OEM)</span>
-                                <span class="cost-item-price">₱9,500</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">R134a Refrigerant (1kg)</span>
-                                <span class="cost-item-price">₱1,200</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">O-rings &amp; Seals Kit</span>
-                                <span class="cost-item-price">₱450</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Materials Subtotal</span>
-                            <span>₱11,150</span>
-                        </div>
-                    </div>
-                    <div class="cost-grand-total">
-                        <span>Estimated Total</span>
-                        <span>₱14,250</span>
-                    </div>
-                    <p class="cost-note"><i class="fa-solid fa-circle-info"></i> Estimate may vary based on diagnosis results and parts availability.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Vehicle Service History</h3>
-                    <div class="history-entry">
-                        <div class="history-date">Jan 2024</div>
-                        <div class="history-desc">AC regas</div>
-                        <div class="history-cost">₱1,200</div>
-                    </div>
-                    <div class="history-entry">
-                        <div class="history-date">Jul 2023</div>
-                        <div class="history-desc">Oil change (synthetic)</div>
-                        <div class="history-cost">₱1,500</div>
-                    </div>
-                </div>
-            </div>
-        </div>
- 
-        <!-- CLIENT 5 -->
-        <input type="checkbox" id="modal-5" class="modal-toggle">
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Villanueva, Jess</h1>
-                    <p>2020 Ford Ranger</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Divisoria</p></div>
-                        <div class="detail-values"><p>Budget</p><p>₱95k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Spongy brake pedal</div>
-            <span class="status-badge s-pending">Pending</span>
-            <div class="btn-row">
-                <button class="inquiry-btn">Accept</button>
-                <label for="modal-5" class="details-btn">View Details</label>
-            </div>
-        </div>
-        <div class="modal-overlay">
-            <div class="modal-box">
-                <label for="modal-5" class="modal-close">&#x2715;</label>
-                <div class="modal-header">
-                    <img src="../../Assets/Profiles/mcado.jpg" class="modal-avatar">
-                    <div>
-                        <h2>Villanueva, Jess</h2>
-                        <p>2020 Ford Ranger</p>
-                    </div>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Issue Description</h3>
-                    <p class="modal-issue-full">Brakes feel spongy and pedal goes too far down before engaging. Brake fluid may be low or brake lines could have air in them.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Contact Information</h3>
-                    <div class="modal-field"><span class="modal-field-label">Phone</span><span class="modal-field-value">+63 935 222 8899</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Email</span><span class="modal-field-value">jess.v@email.com</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Location</span><span class="modal-field-value">Divisoria</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Budget</span><span class="modal-field-value">₱95k</span></div>
-                </div>
-                <!-- COST ESTIMATOR -->
-                <div class="modal-section">
-                    <h3 class="modal-section-title"><i class="fa-solid fa-peso-sign"></i> Repair Cost Estimate</h3>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-wrench"></i> Labor</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">Brake System Inspection</span>
-                                <span class="cost-item-price">₱300</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Brake Line Bleeding (all 4)</span>
-                                <span class="cost-item-price">₱800</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Master Cylinder R&amp;R (if needed)</span>
-                                <span class="cost-item-price">₱1,200</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Labor Subtotal</span>
-                            <span>₱2,300</span>
-                        </div>
-                    </div>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-boxes-stacked"></i> Materials</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">DOT 4 Brake Fluid (1L)</span>
-                                <span class="cost-item-price">₱280</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Master Cylinder (if needed)</span>
-                                <span class="cost-item-price">₱2,800</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Brake Line Fittings</span>
-                                <span class="cost-item-price">₱350</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Materials Subtotal</span>
-                            <span>₱3,430</span>
-                        </div>
-                    </div>
-                    <div class="cost-grand-total">
-                        <span>Estimated Total</span>
-                        <span>₱5,730</span>
-                    </div>
-                    <p class="cost-note"><i class="fa-solid fa-circle-info"></i> Estimate may vary based on diagnosis results and parts availability.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Vehicle Service History</h3>
-                    <div class="history-entry">
-                        <div class="history-date">Dec 2023</div>
-                        <div class="history-desc">Brake fluid top-up</div>
-                        <div class="history-cost">₱300</div>
-                    </div>
-                    <div class="history-entry">
-                        <div class="history-date">Jun 2023</div>
-                        <div class="history-desc">Full brake inspection</div>
-                        <div class="history-cost">₱500</div>
-                    </div>
-                </div>
-            </div>
-        </div>
- 
     </div>
- 
-    <!-- ===== ALL CLIENTS ===== -->
-    <h1 class="section-label">All Clients</h1>
-    <hr class="section-divider">
- 
-    <div class="ListOfClients">
- 
-        <!-- CLIENT 6 -->
-        <input type="checkbox" id="modal-6" class="modal-toggle">
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Santos, Lia</h1>
-                    <p>2017 Hyundai Tucson</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Guiwan</p></div>
-                        <div class="detail-values"><p>Budget</p><p>₱60k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Heavy power steering</div>
-            <span class="status-badge s-accepted">Accepted</span>
-            <div class="btn-row">
-                <button class="inquiry-btn">Accept</button>
-                <label for="modal-6" class="details-btn">View Details</label>
-            </div>
-        </div>
-        <div class="modal-overlay">
-            <div class="modal-box">
-                <label for="modal-6" class="modal-close">&#x2715;</label>
-                <div class="modal-header">
-                    <img src="../../Assets/Profiles/mcado.jpg" class="modal-avatar">
-                    <div>
-                        <h2>Santos, Lia</h2>
-                        <p>2017 Hyundai Tucson</p>
-                    </div>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Issue Description</h3>
-                    <p class="modal-issue-full">Power steering feels heavy and unresponsive. Steering fluid is dark and below minimum level. May need full flush and refill.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Contact Information</h3>
-                    <div class="modal-field"><span class="modal-field-label">Phone</span><span class="modal-field-value">+63 923 456 7890</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Email</span><span class="modal-field-value">lia.santos@email.com</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Location</span><span class="modal-field-value">Guiwan</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Budget</span><span class="modal-field-value">₱60k</span></div>
-                </div>
-                <!-- COST ESTIMATOR -->
-                <div class="modal-section">
-                    <h3 class="modal-section-title"><i class="fa-solid fa-peso-sign"></i> Repair Cost Estimate</h3>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-wrench"></i> Labor</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">Steering System Inspection</span>
-                                <span class="cost-item-price">₱300</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Power Steering Flush &amp; Refill</span>
-                                <span class="cost-item-price">₱600</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Pump Replacement (if needed)</span>
-                                <span class="cost-item-price">₱1,500</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Labor Subtotal</span>
-                            <span>₱2,400</span>
-                        </div>
-                    </div>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-boxes-stacked"></i> Materials</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">Power Steering Fluid (1L)</span>
-                                <span class="cost-item-price">₱350</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">PS Pump (if needed)</span>
-                                <span class="cost-item-price">₱3,200</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Hose Clamps &amp; Seals</span>
-                                <span class="cost-item-price">₱220</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Materials Subtotal</span>
-                            <span>₱3,770</span>
-                        </div>
-                    </div>
-                    <div class="cost-grand-total">
-                        <span>Estimated Total</span>
-                        <span>₱6,170</span>
-                    </div>
-                    <p class="cost-note"><i class="fa-solid fa-circle-info"></i> Estimate may vary based on diagnosis results and parts availability.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Vehicle Service History</h3>
-                    <div class="history-entry">
-                        <div class="history-date">Feb 2024</div>
-                        <div class="history-desc">Power steering fluid flush</div>
-                        <div class="history-cost">₱900</div>
-                    </div>
+</div>
+
+<h1 class="section-label">All Clients</h1>
+<hr class="section-divider">
+
+<div class="ListOfClients">
+    <input type="checkbox" id="modal-1" class="modal-toggle">
+    <div class="ClientsAccount">
+        <div class="ClientInfo">
+            <img src="../../Assets/Profiles/mcado.jpg" class="profile-img" alt="client">
+            <div class="client-text">
+                <h1>Sukehiro, Yami</h1>
+                <p>2019 Toyota Fortuner</p>
+                <div class="infoclient">
+                    <div class="detail-labels"><p>From</p><p>Tumaga</p></div>
+                    <div class="detail-values"><p>Budget</p><p>₱150k</p></div>
                 </div>
             </div>
         </div>
- 
-        <!-- CLIENT 7 -->
-        <input type="checkbox" id="modal-7" class="modal-toggle">
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Cruz, Emilio</h1>
-                    <p>2016 Toyota Vios</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Talon-Talon</p></div>
-                        <div class="detail-values"><p>Budget</p><p>₱40k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Overheating + coolant leak</div>
-            <span class="status-badge s-inprogress">In Progress</span>
-            <div class="btn-row">
-                <button class="inquiry-btn">Accept</button>
-                <label for="modal-7" class="details-btn">View Details</label>
-            </div>
+        <div class="issue"><strong>Issue:</strong> Engine won't start</div>
+        <div class="btn-row">
+            <button class="inquiry-btn">Accept</button>
+            <label for="modal-1" class="details-btn">View Details</label>
         </div>
-        <div class="modal-overlay">
-            <div class="modal-box">
-                <label for="modal-7" class="modal-close">&#x2715;</label>
-                <div class="modal-header">
-                    <img src="../../Assets/Profiles/mcado.jpg" class="modal-avatar">
-                    <div>
-                        <h2>Cruz, Emilio</h2>
-                        <p>2016 Toyota Vios</p>
-                    </div>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Issue Description</h3>
-                    <p class="modal-issue-full">Overheating engine with coolant leak visible under vehicle. Possible cracked hose or blown head gasket. Temperature gauge pegs to red within 5 minutes of driving.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Contact Information</h3>
-                    <div class="modal-field"><span class="modal-field-label">Phone</span><span class="modal-field-value">+63 945 333 6677</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Email</span><span class="modal-field-value">emilio.c@email.com</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Location</span><span class="modal-field-value">Talon-Talon</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Budget</span><span class="modal-field-value">₱40k</span></div>
-                </div>
-                <!-- COST ESTIMATOR -->
-                <div class="modal-section">
-                    <h3 class="modal-section-title"><i class="fa-solid fa-peso-sign"></i> Repair Cost Estimate</h3>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-wrench"></i> Labor</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">Cooling System Pressure Test</span>
-                                <span class="cost-item-price">₱400</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Radiator Hose Replacement</span>
-                                <span class="cost-item-price">₱700</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Head Gasket R&amp;R (if blown)</span>
-                                <span class="cost-item-price">₱6,500</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Labor Subtotal</span>
-                            <span>₱7,600</span>
-                        </div>
-                    </div>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-boxes-stacked"></i> Materials</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">Radiator Hose Set</span>
-                                <span class="cost-item-price">₱850</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Head Gasket Kit (if needed)</span>
-                                <span class="cost-item-price">₱4,200</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Coolant (2L)</span>
-                                <span class="cost-item-price">₱380</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Materials Subtotal</span>
-                            <span>₱5,430</span>
-                        </div>
-                    </div>
-                    <div class="cost-grand-total">
-                        <span>Estimated Total</span>
-                        <span>₱13,030</span>
-                    </div>
-                    <p class="cost-note"><i class="fa-solid fa-circle-info"></i> Estimate may vary based on diagnosis results and parts availability.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Vehicle Service History</h3>
-                    <div class="history-entry">
-                        <div class="history-date">Jan 2024</div>
-                        <div class="history-desc">Radiator flush &amp; coolant top-up</div>
-                        <div class="history-cost">₱1,100</div>
-                    </div>
-                    <div class="history-entry">
-                        <div class="history-date">Oct 2023</div>
-                        <div class="history-desc">Thermostat replacement</div>
-                        <div class="history-cost">₱2,400</div>
-                    </div>
-                </div>
-            </div>
-        </div>
- 
-        <!-- CLIENT 8 -->
-        <input type="checkbox" id="modal-8" class="modal-toggle">
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Mendoza, Clara</h1>
-                    <p>2023 Kia Sportage</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Lunzuran</p></div>
-                        <div class="detail-values"><p>Budget</p><p>₱180k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Infotainment screen flickering</div>
-            <span class="status-badge s-pending">Pending</span>
-            <div class="btn-row">
-                <button class="inquiry-btn">Accept</button>
-                <label for="modal-8" class="details-btn">View Details</label>
-            </div>
-        </div>
-        <div class="modal-overlay">
-            <div class="modal-box">
-                <label for="modal-8" class="modal-close">&#x2715;</label>
-                <div class="modal-header">
-                    <img src="../../Assets/Profiles/mcado.jpg" class="modal-avatar">
-                    <div>
-                        <h2>Mendoza, Clara</h2>
-                        <p>2023 Kia Sportage</p>
-                    </div>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Issue Description</h3>
-                    <p class="modal-issue-full">Infotainment screen flickering and occasionally going completely black. Bluetooth connectivity issues with all paired devices. Issue began after a recent firmware update.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Contact Information</h3>
-                    <div class="modal-field"><span class="modal-field-label">Phone</span><span class="modal-field-value">+63 917 888 9900</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Email</span><span class="modal-field-value">clara.m@email.com</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Location</span><span class="modal-field-value">Lunzuran</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Budget</span><span class="modal-field-value">₱180k</span></div>
-                </div>
-                <!-- COST ESTIMATOR -->
-                <div class="modal-section">
-                    <h3 class="modal-section-title"><i class="fa-solid fa-peso-sign"></i> Repair Cost Estimate</h3>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-wrench"></i> Labor</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">System Diagnostic &amp; Reset</span>
-                                <span class="cost-item-price">₱500</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Head Unit Removal &amp; Reinstall</span>
-                                <span class="cost-item-price">₱1,000</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Firmware Rollback / Re-flash</span>
-                                <span class="cost-item-price">₱700</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Labor Subtotal</span>
-                            <span>₱2,200</span>
-                        </div>
-                    </div>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-boxes-stacked"></i> Materials</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">Infotainment Head Unit (if needed)</span>
-                                <span class="cost-item-price">₱18,000</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Wiring Harness Adapter</span>
-                                <span class="cost-item-price">₱600</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Diagnostic Cable &amp; License</span>
-                                <span class="cost-item-price">₱350</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Materials Subtotal</span>
-                            <span>₱18,950</span>
-                        </div>
-                    </div>
-                    <div class="cost-grand-total">
-                        <span>Estimated Total</span>
-                        <span>₱21,150</span>
-                    </div>
-                    <p class="cost-note"><i class="fa-solid fa-circle-info"></i> Estimate may vary based on diagnosis results and parts availability.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Vehicle Service History</h3>
-                    <div class="history-entry">
-                        <div class="history-date">Mar 2024</div>
-                        <div class="history-desc">Software update &amp; system reset</div>
-                        <div class="history-cost">₱500</div>
-                    </div>
-                </div>
-            </div>
-        </div>
- 
-        <!-- CLIENT 9 -->
-        <input type="checkbox" id="modal-9" class="modal-toggle">
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Fernandez, Roy</h1>
-                    <p>2015 Isuzu D-Max</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Putik</p></div>
-                        <div class="detail-values"><p>Budget</p><p>₱70k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Excessive exhaust smoke</div>
-            <span class="status-badge s-completed">Completed</span>
-            <div class="btn-row">
-                <button class="inquiry-btn">Accept</button>
-                <label for="modal-9" class="details-btn">View Details</label>
-            </div>
-        </div>
-        <div class="modal-overlay">
-            <div class="modal-box">
-                <label for="modal-9" class="modal-close">&#x2715;</label>
-                <div class="modal-header">
-                    <img src="../../Assets/Profiles/mcado.jpg" class="modal-avatar">
-                    <div>
-                        <h2>Fernandez, Roy</h2>
-                        <p>2015 Isuzu D-Max</p>
-                    </div>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Issue Description</h3>
-                    <p class="modal-issue-full">Black smoke coming from exhaust, especially during acceleration. Engine runs rough and fuel consumption has increased significantly. Possible turbo or injector issue.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Contact Information</h3>
-                    <div class="modal-field"><span class="modal-field-label">Phone</span><span class="modal-field-value">+63 956 444 0011</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Email</span><span class="modal-field-value">roy.fernandez@email.com</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Location</span><span class="modal-field-value">Putik</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Budget</span><span class="modal-field-value">₱70k</span></div>
-                </div>
-                <!-- COST ESTIMATOR -->
-                <div class="modal-section">
-                    <h3 class="modal-section-title"><i class="fa-solid fa-peso-sign"></i> Repair Cost Estimate</h3>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-wrench"></i> Labor</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">Turbo &amp; Injector Diagnosis</span>
-                                <span class="cost-item-price">₱600</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Injector Removal &amp; Cleaning</span>
-                                <span class="cost-item-price">₱1,800</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Turbo R&amp;R (if needed)</span>
-                                <span class="cost-item-price">₱3,500</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Labor Subtotal</span>
-                            <span>₱5,900</span>
-                        </div>
-                    </div>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-boxes-stacked"></i> Materials</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">Turbocharger Unit (rebuilt)</span>
-                                <span class="cost-item-price">₱12,500</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Injector Nozzles (x4)</span>
-                                <span class="cost-item-price">₱6,800</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Turbo Gasket &amp; Oil Line Kit</span>
-                                <span class="cost-item-price">₱780</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Materials Subtotal</span>
-                            <span>₱20,080</span>
-                        </div>
-                    </div>
-                    <div class="cost-grand-total">
-                        <span>Estimated Total</span>
-                        <span>₱25,980</span>
-                    </div>
-                    <p class="cost-note"><i class="fa-solid fa-circle-info"></i> Estimate may vary based on diagnosis results and parts availability.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Vehicle Service History</h3>
-                    <div class="history-entry">
-                        <div class="history-date">Apr 2024</div>
-                        <div class="history-desc">Injector cleaning &amp; turbo inspection</div>
-                        <div class="history-cost">₱4,500</div>
-                    </div>
-                    <div class="history-entry">
-                        <div class="history-date">Dec 2023</div>
-                        <div class="history-desc">Oil &amp; filter change</div>
-                        <div class="history-cost">₱900</div>
-                    </div>
-                    <div class="history-entry">
-                        <div class="history-date">Jun 2023</div>
-                        <div class="history-desc">Air filter replacement</div>
-                        <div class="history-cost">₱450</div>
-                    </div>
-                </div>
-            </div>
-        </div>
- 
-        <!-- CLIENT 10 -->
-        <input type="checkbox" id="modal-10" class="modal-toggle">
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Lim, Patricia</h1>
-                    <p>2020 Toyota Innova</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Baliwasan</p></div>
-                        <div class="detail-values"><p>Budget</p><p>₱110k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Transmission slipping</div>
-            <span class="status-badge s-inprogress">In Progress</span>
-            <div class="btn-row">
-                <button class="inquiry-btn">Accept</button>
-                <label for="modal-10" class="details-btn">View Details</label>
-            </div>
-        </div>
-        <div class="modal-overlay">
-            <div class="modal-box">
-                <label for="modal-10" class="modal-close">&#x2715;</label>
-                <div class="modal-header">
-                    <img src="../../Assets/Profiles/mcado.jpg" class="modal-avatar">
-                    <div>
-                        <h2>Lim, Patricia</h2>
-                        <p>2020 Toyota Innova</p>
-                    </div>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Issue Description</h3>
-                    <p class="modal-issue-full">Automatic transmission slipping between gears, especially from 2nd to 3rd. Delayed engagement when shifting from Park to Drive. Transmission fluid is burnt and dark.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Contact Information</h3>
-                    <div class="modal-field"><span class="modal-field-label">Phone</span><span class="modal-field-value">+63 918 555 7723</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Email</span><span class="modal-field-value">patricia.lim@email.com</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Location</span><span class="modal-field-value">Baliwasan</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Budget</span><span class="modal-field-value">₱110k</span></div>
-                </div>
-                <!-- COST ESTIMATOR -->
-                <div class="modal-section">
-                    <h3 class="modal-section-title"><i class="fa-solid fa-peso-sign"></i> Repair Cost Estimate</h3>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-wrench"></i> Labor</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">Transmission Diagnostic Scan</span>
-                                <span class="cost-item-price">₱500</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">ATF Drain &amp; Flush</span>
-                                <span class="cost-item-price">₱1,200</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Solenoid Pack Replacement</span>
-                                <span class="cost-item-price">₱2,500</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Labor Subtotal</span>
-                            <span>₱4,200</span>
-                        </div>
-                    </div>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-boxes-stacked"></i> Materials</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">ATF Type WS (4L)</span>
-                                <span class="cost-item-price">₱2,400</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Solenoid Pack Assembly</span>
-                                <span class="cost-item-price">₱7,800</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Transmission Filter &amp; Gasket</span>
-                                <span class="cost-item-price">₱950</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Materials Subtotal</span>
-                            <span>₱11,150</span>
-                        </div>
-                    </div>
-                    <div class="cost-grand-total">
-                        <span>Estimated Total</span>
-                        <span>₱15,350</span>
-                    </div>
-                    <p class="cost-note"><i class="fa-solid fa-circle-info"></i> Estimate may vary based on diagnosis results and parts availability.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Vehicle Service History</h3>
-                    <div class="history-entry">
-                        <div class="history-date">Feb 2024</div>
-                        <div class="history-desc">Transmission fluid change</div>
-                        <div class="history-cost">₱2,000</div>
-                    </div>
-                    <div class="history-entry">
-                        <div class="history-date">Aug 2023</div>
-                        <div class="history-desc">Full vehicle inspection</div>
-                        <div class="history-cost">₱800</div>
-                    </div>
-                </div>
-            </div>
-        </div>
- 
-        <!-- CLIENT 11 (NEW) -->
-        <input type="checkbox" id="modal-11" class="modal-toggle">
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Dela Cruz, Anton</h1>
-                    <p>2019 Nissan Navara</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Sta. Maria</p></div>
-                        <div class="detail-values"><p>Budget</p><p>₱85k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Grinding noise when braking</div>
-            <span class="status-badge s-pending">Pending</span>
-            <div class="btn-row">
-                <button class="inquiry-btn">Accept</button>
-                <label for="modal-11" class="details-btn">View Details</label>
-            </div>
-        </div>
-        <div class="modal-overlay">
-            <div class="modal-box">
-                <label for="modal-11" class="modal-close">&#x2715;</label>
-                <div class="modal-header">
-                    <img src="../../Assets/Profiles/mcado.jpg" class="modal-avatar">
-                    <div>
-                        <h2>Dela Cruz, Anton</h2>
-                        <p>2019 Nissan Navara</p>
-                    </div>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Issue Description</h3>
-                    <p class="modal-issue-full">Loud metallic grinding whenever brakes are applied. Especially bad at low speeds. Brake pads likely fully worn down to the rotors. Possible rotor scoring.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Contact Information</h3>
-                    <div class="modal-field"><span class="modal-field-label">Phone</span><span class="modal-field-value">+63 912 777 3344</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Email</span><span class="modal-field-value">anton.dc@email.com</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Location</span><span class="modal-field-value">Sta. Maria</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Budget</span><span class="modal-field-value">₱85k</span></div>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title"><i class="fa-solid fa-peso-sign"></i> Repair Cost Estimate</h3>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-wrench"></i> Labor</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">Brake Inspection (all wheels)</span>
-                                <span class="cost-item-price">₱400</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Brake Pad Replacement (front)</span>
-                                <span class="cost-item-price">₱800</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Rotor Resurfacing / Replacement</span>
-                                <span class="cost-item-price">₱1,200</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Labor Subtotal</span>
-                            <span>₱2,400</span>
-                        </div>
-                    </div>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-boxes-stacked"></i> Materials</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">Front Brake Pads (set)</span>
-                                <span class="cost-item-price">₱1,600</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Brake Rotors x2 (front)</span>
-                                <span class="cost-item-price">₱4,200</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Brake Grease &amp; Hardware Kit</span>
-                                <span class="cost-item-price">₱280</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Materials Subtotal</span>
-                            <span>₱6,080</span>
-                        </div>
-                    </div>
-                    <div class="cost-grand-total">
-                        <span>Estimated Total</span>
-                        <span>₱8,480</span>
-                    </div>
-                    <p class="cost-note"><i class="fa-solid fa-circle-info"></i> Estimate may vary based on diagnosis results and parts availability.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Vehicle Service History</h3>
-                    <div class="history-entry">
-                        <div class="history-date">Nov 2023</div>
-                        <div class="history-desc">Brake pad check — wear noted</div>
-                        <div class="history-cost">₱300</div>
-                    </div>
-                    <div class="history-entry">
-                        <div class="history-date">May 2023</div>
-                        <div class="history-desc">Oil &amp; filter change</div>
-                        <div class="history-cost">₱950</div>
-                    </div>
-                </div>
-            </div>
-        </div>
- 
-        <!-- CLIENT 12 (NEW) -->
-        <input type="checkbox" id="modal-12" class="modal-toggle">
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Ramos, Celeste</h1>
-                    <p>2021 Suzuki Jimny</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Camino Nuevo</p></div>
-                        <div class="detail-values"><p>Budget</p><p>₱55k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> 4WD not engaging</div>
-            <span class="status-badge s-accepted">Accepted</span>
-            <div class="btn-row">
-                <button class="inquiry-btn">Accept</button>
-                <label for="modal-12" class="details-btn">View Details</label>
-            </div>
-        </div>
-        <div class="modal-overlay">
-            <div class="modal-box">
-                <label for="modal-12" class="modal-close">&#x2715;</label>
-                <div class="modal-header">
-                    <img src="../../Assets/Profiles/mcado.jpg" class="modal-avatar">
-                    <div>
-                        <h2>Ramos, Celeste</h2>
-                        <p>2021 Suzuki Jimny</p>
-                    </div>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Issue Description</h3>
-                    <p class="modal-issue-full">4WD system fails to engage when the transfer case lever is shifted. Dashboard 4WD indicator light does not illuminate. Suspected actuator failure or transfer case issue.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Contact Information</h3>
-                    <div class="modal-field"><span class="modal-field-label">Phone</span><span class="modal-field-value">+63 925 111 5566</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Email</span><span class="modal-field-value">celeste.r@email.com</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Location</span><span class="modal-field-value">Camino Nuevo</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Budget</span><span class="modal-field-value">₱55k</span></div>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title"><i class="fa-solid fa-peso-sign"></i> Repair Cost Estimate</h3>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-wrench"></i> Labor</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">4WD System Diagnosis</span>
-                                <span class="cost-item-price">₱500</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Actuator Removal &amp; Install</span>
-                                <span class="cost-item-price">₱1,200</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Transfer Case Fluid Flush</span>
-                                <span class="cost-item-price">₱600</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Labor Subtotal</span>
-                            <span>₱2,300</span>
-                        </div>
-                    </div>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-boxes-stacked"></i> Materials</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">4WD Actuator Motor</span>
-                                <span class="cost-item-price">₱3,800</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Transfer Case Gear Oil (1L)</span>
-                                <span class="cost-item-price">₱450</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Vacuum Lines &amp; Connectors</span>
-                                <span class="cost-item-price">₱320</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Materials Subtotal</span>
-                            <span>₱4,570</span>
-                        </div>
-                    </div>
-                    <div class="cost-grand-total">
-                        <span>Estimated Total</span>
-                        <span>₱6,870</span>
-                    </div>
-                    <p class="cost-note"><i class="fa-solid fa-circle-info"></i> Estimate may vary based on diagnosis results and parts availability.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Vehicle Service History</h3>
-                    <div class="history-entry">
-                        <div class="history-date">Jan 2024</div>
-                        <div class="history-desc">Transfer case oil check</div>
-                        <div class="history-cost">₱200</div>
-                    </div>
-                    <div class="history-entry">
-                        <div class="history-date">Aug 2023</div>
-                        <div class="history-desc">PMS — oil, filters, fluids</div>
-                        <div class="history-cost">₱2,800</div>
-                    </div>
-                </div>
-            </div>
-        </div>
- 
-        <!-- CLIENT 13 (NEW) -->
-        <input type="checkbox" id="modal-13" class="modal-toggle">
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Tan, Raphael</h1>
-                    <p>2014 Honda Civic</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>Lal-lo</p></div>
-                        <div class="detail-values"><p>Budget</p><p>₱35k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Battery draining overnight</div>
-            <span class="status-badge s-pending">Pending</span>
-            <div class="btn-row">
-                <button class="inquiry-btn">Accept</button>
-                <label for="modal-13" class="details-btn">View Details</label>
-            </div>
-        </div>
-        <div class="modal-overlay">
-            <div class="modal-box">
-                <label for="modal-13" class="modal-close">&#x2715;</label>
-                <div class="modal-header">
-                    <img src="../../Assets/Profiles/mcado.jpg" class="modal-avatar">
-                    <div>
-                        <h2>Tan, Raphael</h2>
-                        <p>2014 Honda Civic</p>
-                    </div>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Issue Description</h3>
-                    <p class="modal-issue-full">Battery completely dead every morning. Alternator recently replaced 3 months ago. Suspected parasitic draw from an aftermarket accessory or faulty relay keeping the circuit alive.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Contact Information</h3>
-                    <div class="modal-field"><span class="modal-field-label">Phone</span><span class="modal-field-value">+63 931 888 2200</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Email</span><span class="modal-field-value">raphael.tan@email.com</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Location</span><span class="modal-field-value">Lal-lo</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Budget</span><span class="modal-field-value">₱35k</span></div>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title"><i class="fa-solid fa-peso-sign"></i> Repair Cost Estimate</h3>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-wrench"></i> Labor</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">Parasitic Draw Test</span>
-                                <span class="cost-item-price">₱500</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Electrical Wiring Trace</span>
-                                <span class="cost-item-price">₱800</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Relay / Fuse Replacement</span>
-                                <span class="cost-item-price">₱400</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Labor Subtotal</span>
-                            <span>₱1,700</span>
-                        </div>
-                    </div>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-boxes-stacked"></i> Materials</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">Car Battery (50Ah MF)</span>
-                                <span class="cost-item-price">₱3,200</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Relay Assemblies (x2)</span>
-                                <span class="cost-item-price">₱480</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Fuse Box Terminals</span>
-                                <span class="cost-item-price">₱180</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Materials Subtotal</span>
-                            <span>₱3,860</span>
-                        </div>
-                    </div>
-                    <div class="cost-grand-total">
-                        <span>Estimated Total</span>
-                        <span>₱5,560</span>
-                    </div>
-                    <p class="cost-note"><i class="fa-solid fa-circle-info"></i> Estimate may vary based on diagnosis results and parts availability.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Vehicle Service History</h3>
-                    <div class="history-entry">
-                        <div class="history-date">Feb 2024</div>
-                        <div class="history-desc">Alternator replacement</div>
-                        <div class="history-cost">₱5,500</div>
-                    </div>
-                    <div class="history-entry">
-                        <div class="history-date">Sep 2023</div>
-                        <div class="history-desc">Battery terminals cleaned</div>
-                        <div class="history-cost">₱150</div>
-                    </div>
-                </div>
-            </div>
-        </div>
- 
-        <!-- CLIENT 14 (NEW) -->
-        <input type="checkbox" id="modal-14" class="modal-toggle">
-        <div class="ClientsAccount">
-            <div class="ClientInfo">
-                <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
-                <div class="client-text">
-                    <h1>Bautista, Nico</h1>
-                    <p>2022 Ford EcoSport</p>
-                    <div class="infoclient">
-                        <div class="detail-labels"><p>From</p><p>San Jose Cawa-cawa</p></div>
-                        <div class="detail-values"><p>Budget</p><p>₱130k</p></div>
-                    </div>
-                </div>
-            </div>
-            <div class="issue"><strong>Issue:</strong> Vibration at highway speed</div>
-            <span class="status-badge s-completed">Completed</span>
-            <div class="btn-row">
-                <button class="inquiry-btn">Accept</button>
-                <label for="modal-14" class="details-btn">View Details</label>
-            </div>
-        </div>
-        <div class="modal-overlay">
-            <div class="modal-box">
-                <label for="modal-14" class="modal-close">&#x2715;</label>
-                <div class="modal-header">
-                    <img src="../../Assets/Profiles/mcado.jpg" class="modal-avatar">
-                    <div>
-                        <h2>Bautista, Nico</h2>
-                        <p>2022 Ford EcoSport</p>
-                    </div>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Issue Description</h3>
-                    <p class="modal-issue-full">Strong vibration felt through the steering wheel at speeds above 80 km/h. Gets worse at 100–120 km/h. Possible wheel imbalance, bent rim, or worn CV axle.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Contact Information</h3>
-                    <div class="modal-field"><span class="modal-field-label">Phone</span><span class="modal-field-value">+63 947 333 9988</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Email</span><span class="modal-field-value">nico.bautista@email.com</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Location</span><span class="modal-field-value">San Jose Cawa-cawa</span></div>
-                    <div class="modal-field"><span class="modal-field-label">Budget</span><span class="modal-field-value">₱130k</span></div>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title"><i class="fa-solid fa-peso-sign"></i> Repair Cost Estimate</h3>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-wrench"></i> Labor</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">Wheel Balancing (4 wheels)</span>
-                                <span class="cost-item-price">₱400</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">CV Axle Inspection &amp; R&amp;R</span>
-                                <span class="cost-item-price">₱1,800</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Rim Runout Check</span>
-                                <span class="cost-item-price">₱300</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Labor Subtotal</span>
-                            <span>₱2,500</span>
-                        </div>
-                    </div>
-                    <div class="cost-category">
-                        <div class="cost-category-label"><i class="fa-solid fa-boxes-stacked"></i> Materials</div>
-                        <div class="cost-rows">
-                            <div class="cost-row">
-                                <span class="cost-item-name">CV Axle Assembly (if needed)</span>
-                                <span class="cost-item-price">₱4,500</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">Wheel Balancing Weights</span>
-                                <span class="cost-item-price">₱200</span>
-                            </div>
-                            <div class="cost-row">
-                                <span class="cost-item-name">CV Boot &amp; Grease Kit</span>
-                                <span class="cost-item-price">₱650</span>
-                            </div>
-                        </div>
-                        <div class="cost-subtotal">
-                            <span>Materials Subtotal</span>
-                            <span>₱5,350</span>
-                        </div>
-                    </div>
-                    <div class="cost-grand-total">
-                        <span>Estimated Total</span>
-                        <span>₱7,850</span>
-                    </div>
-                    <p class="cost-note"><i class="fa-solid fa-circle-info"></i> Estimate may vary based on diagnosis results and parts availability.</p>
-                </div>
-                <div class="modal-section">
-                    <h3 class="modal-section-title">Vehicle Service History</h3>
-                    <div class="history-entry">
-                        <div class="history-date">Mar 2024</div>
-                        <div class="history-desc">Tire rotation &amp; balancing</div>
-                        <div class="history-cost">₱500</div>
-                    </div>
-                    <div class="history-entry">
-                        <div class="history-date">Oct 2023</div>
-                        <div class="history-desc">Wheel alignment</div>
-                        <div class="history-cost">₱600</div>
-                    </div>
-                    <div class="history-entry">
-                        <div class="history-date">Apr 2023</div>
-                        <div class="history-desc">Full PMS service</div>
-                        <div class="history-cost">₱3,200</div>
-                    </div>
-                </div>
-            </div>
-        </div>
- 
     </div>
- 
-</body>
- 
-<footer>
-    <p>© 2026 PrecisionDrive Auto | Connecting Cars with Experts</p>
+
+    <input type="checkbox" id="modal-2" class="modal-toggle">
+    <div class="ClientsAccount">
+        <div class="ClientInfo">
+            <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
+            <div class="client-text">
+                <h1>Bolaños, Trisha</h1>
+                <p>2021 Honda CR-V</p>
+                <div class="infoclient">
+                    <div class="detail-labels">
+                        <p>From</p>
+                        <p>Pasonanca</p>
+                    </div>
+                    <div class="detail-values">
+                        <p>Budget</p>
+                        <p>₱80k</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="issue">
+            <strong>Issue:</strong> Knocking from front suspension
+        </div>
+        <div class="btn-row">
+            <button class="inquiry-btn">Accept</button>
+            <label for="modal-2" class="details-btn">View Details</label>
+        </div>
+    </div>
+
+    <div class="ClientsAccount">
+        <div class="ClientInfo">
+            <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
+            <div class="client-text">
+                <h1>Bolaños, Trisha</h1>
+                <p>2021 Honda CR-V</p>
+                <div class="infoclient">
+                    <div class="detail-labels">
+                        <p>From</p>
+                        <p>Pasonanca</p>
+                    </div>
+                    <div class="detail-values">
+                        <p>Budget</p>
+                        <p>₱80k</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="issue">
+            <strong>Issue:</strong> Knocking from front suspension
+        </div>
+        <div class="btn-row">
+            <button class="inquiry-btn">Accept</button>
+            <label for="modal-2" class="details-btn">View Details</label>
+        </div>
+    </div>
+
+
+    <div class="ClientsAccount">
+        <div class="ClientInfo">
+            <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
+            <div class="client-text">
+                <h1>Bolaños, Trisha</h1>
+                <p>2021 Honda CR-V</p>
+                <div class="infoclient">
+                    <div class="detail-labels">
+                        <p>From</p>
+                        <p>Pasonanca</p>
+                    </div>
+                    <div class="detail-values">
+                        <p>Budget</p>
+                        <p>₱80k</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="issue">
+            <strong>Issue:</strong> Knocking from front suspension
+        </div>
+        <div class="btn-row">
+            <button class="inquiry-btn">Accept</button>
+            <label for="modal-2" class="details-btn">View Details</label>
+        </div>
+    </div>
+
+
+    <div class="ClientsAccount">
+        <div class="ClientInfo">
+            <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
+            <div class="client-text">
+                <h1>Bolaños, Trisha</h1>
+                <p>2021 Honda CR-V</p>
+                <div class="infoclient">
+                    <div class="detail-labels">
+                        <p>From</p>
+                        <p>Pasonanca</p>
+                    </div>
+                    <div class="detail-values">
+                        <p>Budget</p>
+                        <p>₱80k</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="issue">
+            <strong>Issue:</strong> Knocking from front suspension
+        </div>
+        <div class="btn-row">
+            <button class="inquiry-btn">Accept</button>
+            <label for="modal-2" class="details-btn">View Details</label>
+        </div>
+    </div>
+
+
+    <div class="ClientsAccount">
+        <div class="ClientInfo">
+            <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
+            <div class="client-text">
+                <h1>Bolaños, Trisha</h1>
+                <p>2021 Honda CR-V</p>
+                <div class="infoclient">
+                    <div class="detail-labels">
+                        <p>From</p>
+                        <p>Pasonanca</p>
+                    </div>
+                    <div class="detail-values">
+                        <p>Budget</p>
+                        <p>₱80k</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="issue">
+            <strong>Issue:</strong> Knocking from front suspension
+        </div>
+        <div class="btn-row">
+            <button class="inquiry-btn">Accept</button>
+            <label for="modal-2" class="details-btn">View Details</label>
+        </div>
+    </div>
+
+    
+    <div class="ClientsAccount">
+        <div class="ClientInfo">
+            <img src="../../Assets/Profiles/mcado.jpg" class="profile-img">
+            <div class="client-text">
+                <h1>Bolaños, Trisha</h1>
+                <p>2021 Honda CR-V</p>
+                <div class="infoclient">
+                    <div class="detail-labels">
+                        <p>From</p>
+                        <p>Pasonanca</p>
+                    </div>
+                    <div class="detail-values">
+                        <p>Budget</p>
+                        <p>₱80k</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="issue">
+            <strong>Issue:</strong> Knocking from front suspension
+        </div>
+        <div class="btn-row">
+            <button class="inquiry-btn">Accept</button>
+            <label for="modal-2" class="details-btn">View Details</label>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<!-- ===== FOOTER (Matching user homepage) ===== -->
+<footer class="simple-footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img src="../../Assets/Logo/facebook.png" alt="FB"></a>
+            <a href="#"><img src="../../Assets/Logo/instagram.png" alt="IG"></a>
+            <a href="#"><img src="../../Assets/Logo/twitter.png" alt="Twitter"></a>
+        </div>
+        <p class="footer-copyright">© 2026 PrecisionDrive Auto | Connecting Cars with Experts</p>
+    </div>
 </footer>
- 
+
 <script src="../../Sidebar_Script.js"></script>
+</body>
 </html>
  

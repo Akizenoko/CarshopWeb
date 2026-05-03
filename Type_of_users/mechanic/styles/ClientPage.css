@@ -1,789 +1,448 @@
-/* =============================================
-   Global Selectors
-   ============================================= */
+/* ---------- GLOBAL (Dark Blue + Cyan Theme, Poppins) ---------- */
 * {
-    padding: 0%;
-    margin: 0%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(0, 255, 204) rgba(8, 20, 85, 0.536);
 }
 
 body {
-    text-align: center;
+    font-family: "Poppins", sans-serif;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    background-image: linear-gradient(rgb(4, 5, 24), rgba(6, 11, 37, 0.609));
+    background-image: linear-gradient(rgb(0, 98, 107), rgba(2, 18, 99, 0.609));
     background-color: rgb(46, 39, 48);
+    color: #f0f4fa;
 }
 
-
-/* =============================================
-   Nav Bar
-   ============================================= */
+/* ---------- Navbar (same as mechanic homepage) ---------- */
 #NavBar {
-    text-decoration: none;
-    background-color: rgb(17, 12, 48);
-    padding: 0px;
+    background-color: #062234;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
-    top: 0px;
+    top: 0;
     z-index: 5;
-    box-shadow: 0px 0px 50px rgba(4, 4, 4, 0.412);
+    box-shadow: 0 0 50px rgba(4, 4, 4, 0.4);
+    height: 70px;
+    padding: 0 20px;
 }
 
 #mainnavbar .button {
-    flex-wrap: nowrap;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 12px;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    border: 0px;
-    background-color: rgb(17, 12, 48);
-    height: 60px;
-    padding: 0px 10px 0px 10px;
-    transition: all 0.2s ease-in-out;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 0.9rem;
+    height: 70px;
+    padding: 0 15px;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 #mainnavbar .button:hover {
-    transform: translateY(-1px);
-    background-color: rgb(28, 24, 64);
+    background-color: rgba(255, 255, 255, 0.08);
 }
 
 #formiscelanious img {
+    height: 24px;
     opacity: 0.8;
-    height: 25px;
-    transition: all 0.2s ease-in-out;
+    margin-right: 20px;
+    transition: 0.2s;
+    cursor: pointer;
 }
-
-#bell { margin: 0px 20px 0px 0px; }
-#chat { margin: 0px 20px 0px 0px; }
 
 #formiscelanious img:hover {
     opacity: 1;
-    height: 25px;
-    margin: 0px 20px 0px 0px;
     transform: translateY(-2px);
 }
 
 #forprofile #profile {
-    height: 37px;
+    height: 42px;
     border-radius: 50%;
-    margin: 0px 20px 0px 20px;
-    transition: all 0.2s ease-in-out;
-}
-
-#forprofile #profile:hover {
-    border: 2px solid rgb(133, 160, 229);
-    transform: translateY(-2px);
-}
-
-
-/* =============================================
-   Side Bar
-   ============================================= */
-#sidebar {
-    color: aliceblue;
-    padding: 15px 0px 0px 0px;
-    top: 60px;
-    z-index: 4;
-    position: fixed;
-    left: -250px;
-    width: 220px;
-    height: 100vh;
-    background-image: linear-gradient(rgb(12, 1, 55), rgb(1, 1, 34));
-    background-color: rgba(110, 108, 151, 0.371);
-    border-right: 1px solid rgba(130, 120, 150, 0.4);
-    overflow-y: auto;
-    box-shadow: 0 0 20px rgb(0, 0, 0);
-    transition: all 0.3s ease-in-out;
-}
-
-#sidebar.active {
-    left: 0;
-}
-
-#listsSidebar {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 12px;
-    gap: 8px;
-}
-
-#SidebarProf {
-    text-align: center;
-    padding: 16px 0 20px;
-    border-bottom: 1px solid rgba(130, 120, 150, 0.4);
-    margin-bottom: 8px;
-}
-
-#SidebarProf img {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid rgb(157, 203, 255);
-    margin-bottom: 8px;
-    transition: all 0.3s ease-in-out;
-}
-
-#SidebarProf img:hover {
-    transform: translateY(-3px);
+    transition: 0.2s;
     cursor: pointer;
 }
 
-#SidebarProf h2 {
-    color: rgb(255, 255, 255);
-    font-size: 0.95rem;
-    margin: 5px 0px 0px 0px;
+#forprofile #profile:hover {
+    border: 2px solid #00e0ff;
+    transform: translateY(-2px);
 }
 
-#SidebarProf p {
-    color: rgb(157, 203, 255);
-    font-size: 0.78rem;
+/* ---------- Sidebar (glass) ---------- */
+#sidebar {
+    position: fixed;
+    top: 70px;
+    left: -250px;
+    width: 250px;
+    height: calc(100vh - 70px);
+    background: linear-gradient(145deg, #021c2c, #010d1f);
+    backdrop-filter: blur(8px);
+    border-right: 1px solid rgba(120, 158, 223, 0.4);
+    overflow-y: auto;
+    transition: 0.3s;
+    z-index: 6;
 }
 
-#listsSidebar a {
-    text-decoration: none;
+#sidebar.active { left: 0; }
+
+#listsSidebar { padding: 20px 15px; display: flex; flex-direction: column; gap: 8px; }
+
+#SidebarProf {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(120, 158, 223, 0.3);
+    margin-bottom: 15px;
 }
+
+#SidebarProf img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #00e0ff;
+    margin-bottom: 8px;
+}
+
+#SidebarProf h2 { font-size: 1rem; margin-top: 5px; color: white; }
+#SidebarProf p { font-size: 0.75rem; color: #9efff0; }
 
 .Tabs {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     background: none;
     border: none;
-    color: rgb(255, 255, 255);
-    font-size: 0.9rem;
-    padding: 10px 12px;
-    border-radius: 6px;
-    cursor: pointer;
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
     width: 100%;
     text-align: left;
-    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 .Tabs:hover {
-    background-color: rgba(20, 20, 162, 0.354);
-    color: rgb(157, 203, 255);
-    transform: translateY(-2px);
+    color: #00ffaa;
+    background: rgba(0, 224, 255, 0.15);
+    transform: translateX(4px);
 }
 
-.Tabs img {
-    width: 20px;
-    height: 20px;
-    filter: brightness(0) invert(1);
-}
+.Tabs img { width: 20px; filter: brightness(0) invert(1); }
+.Tabs h1 { font-size: 0.9rem; font-weight: 500; }
 
-.Tabs h1 {
-    font-size: 0.9rem;
-    font-weight: 500;
-}
+#Sign-Out { color: #ffaa88; margin-top: 20px; }
 
-
-/* =============================================
-   Search Bar
-   ============================================= */
+/* ---------- Header / Search ---------- */
 #Header {
-    flex-wrap: wrap;
-    background-color: rgb(17, 12, 48);
-    padding: 20px 10px 20px 10px;
+    background: rgba(17, 12, 48, 0.7);
+    backdrop-filter: blur(4px);
+    padding: 20px;
     display: flex;
-    align-content: center;
-    align-items: flex-start;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 20px 0 20px;
+    border-radius: 28px;
+    border: 1px solid rgba(120, 158, 223, 0.3);
 }
 
 #Header h1 {
-    color: rgb(252, 252, 252);
-    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #9efff0;
 }
 
 #Searchbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 12px;
 }
 
 #Searchbar input {
-    color: rgb(255, 255, 255);
-    border: 0px solid black;
-    padding: 10px 10px 10px 20px;
-    width: 250px;
-    border-radius: 20px;
-    background-color: rgb(38, 49, 95);
+    background: rgba(20, 28, 50, 0.8);
+    border: 1px solid rgba(120, 158, 223, 0.4);
+    border-radius: 40px;
+    padding: 10px 20px;
+    color: white;
+    width: 260px;
+    font-family: "Poppins", sans-serif;
 }
 
-#Searchbar img {
-    opacity: 0.8;
-    height: 25px;
-    margin: 0px 10px 0px 10px;
-}
+#Searchbar input::placeholder { color: #8ca3c7; }
+#Searchbar img { height: 22px; opacity: 0.7; cursor: pointer; transition: 0.2s; }
+#Searchbar img:hover { opacity: 1; transform: scale(1.05); }
 
-
-/* =============================================
-   Section Labels
-   ============================================= */
+/* ---------- Section Labels ---------- */
 .section-label {
-    color: rgba(133, 160, 229, 1);
-    font-size: 1.4rem;
-    font-weight: 600;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: left;
-    padding: 14px 0px 0px 20px;
-    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #9efff0;
+    margin: 30px 20px 0 20px;
+    padding-left: 12px;
+    border-left: 4px solid #00e0ff;
 }
-
 .section-divider {
     border: none;
-    border-top: 1px solid rgba(133, 160, 229, 0.3);
-    margin: 6px 20px 0px 20px;
+    border-top: 1px solid rgba(120, 158, 223, 0.3);
+    margin: 8px 20px 20px 20px;
 }
 
-
-/* =============================================
-   Client Cards Grid
-   ============================================= */
+/* ---------- Client Cards Grid ---------- */
 .ListOfClients {
-    justify-content: center;
-    flex-wrap: wrap;
     display: flex;
-    gap: 30px 20px;
-    padding: 10px 20px 14px 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 10px 20px;
 }
 
 .ClientsAccount {
+    background: rgba(20, 28, 50, 0.6);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(120, 158, 223, 0.4);
+    border-radius: 24px;
+    padding: 20px;
+    width: 320px;
+    transition: 0.2s;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-start;
-    padding: 16px 18px;
-    border-radius: 16px;
-    background-image: linear-gradient(rgba(79, 108, 153, 0.252), rgba(29, 1, 93, 0.127));
-    background-color: rgba(33, 36, 64, 0.558);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.398);
-    transition: all 0.2s ease-in-out;
 }
 
 .ClientsAccount:hover {
-    transform: translateY(-2px);
-    background-color: rgba(48, 46, 90, 0.538);
+    transform: translateY(-5px);
+    border-color: #00e0ff;
+    background: rgba(45, 44, 77, 0.5);
 }
 
 .ClientInfo {
     display: flex;
+    gap: 12px;
     align-items: center;
-    gap: 10px;
-    text-align: left;
+    margin-bottom: 12px;
 }
 
 .profile-img {
-    height: 65px;
-    width: 65px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
+    border: 2px solid #00e0ff;
     object-fit: cover;
-    flex-shrink: 0;
 }
 
-.client-text {
-    flex: 1;
-    min-width: 0;
-}
-
-.ClientInfo h1 {
+.client-text h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
     color: white;
-    font-size: 20px;
-    margin-bottom: 1px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
-
-.ClientInfo p {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 15px;
-    margin-bottom: 3px;
-}
+.client-text p { font-size: 0.8rem; color: #cbd5e1; }
 
 .infoclient {
-    gap: 14px;
     display: flex;
-    margin-top: 3px;
+    gap: 16px;
+    margin-top: 6px;
 }
+.detail-labels p, .detail-values p { font-size: 0.7rem; line-height: 1.3; }
+.detail-values p { color: #9efff0; font-weight: 500; }
 
-.detail-labels,
-.detail-values {
-    display: flex;
-    flex-direction: column;
-}
-
-.detail-labels p {
-    font-size: 10px;
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.detail-values p {
-    font-size: 15px;
-    color: white;
-}
-
-
-/* =============================================
-   Issue Field
-   ============================================= */
 .issue {
-    margin-top: 15px;
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.6);
-    background-color: rgba(38, 49, 95, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    border-radius: 8px;
-    padding: 4px 8px;
-    text-align: left;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 8px 10px;
+    font-size: 0.8rem;
+    margin: 12px 0;
+    color: #cbd5e1;
 }
+.issue strong { color: white; }
 
-.issue strong {
-    color: rgba(255, 255, 255, 0.85);
-}
-
-
-/* =============================================
-   Status Badges
-   ============================================= */
 .status-badge {
     display: inline-block;
-    padding: 3px 10px;
-    border-radius: 20px;
-    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-size: 0.7rem;
     font-weight: 600;
-    margin-top: 10px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: fit-content;
+    margin-bottom: 12px;
 }
+.s-pending { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid #f59e0b; }
+.s-accepted { background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid #3b82f6; }
+.s-inprogress { background: rgba(139, 92, 246, 0.2); color: #a78bfa; border: 1px solid #8b5cf6; }
+.s-completed { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid #10b981; }
 
-.s-pending {
-    background-color: rgba(186, 117, 23, 0.2);
-    color: #EF9F27;
-    border: 1px solid rgba(186, 117, 23, 0.45);
-}
-
-.s-accepted {
-    background-color: rgba(23, 117, 186, 0.2);
-    color: #85B7EB;
-    border: 1px solid rgba(23, 117, 186, 0.45);
-}
-
-.s-inprogress {
-    background-color: rgba(83, 74, 183, 0.2);
-    color: #AFA9EC;
-    border: 1px solid rgba(83, 74, 183, 0.45);
-}
-
-.s-completed {
-    background-color: rgba(63, 109, 17, 0.2);
-    color: #97C459;
-    border: 1px solid rgba(63, 109, 17, 0.45);
-}
-
-
-/* =============================================
-   Button Row
-   ============================================= */
 .btn-row {
     display: flex;
-    gap: 8px;
-    margin-top: 10px;
+    gap: 10px;
 }
-
-.inquiry-btn {
+.inquiry-btn, .details-btn {
     flex: 1;
-    padding: 5px 0;
     background: transparent;
-    border: 1px solid rgba(133, 160, 229, 0.6);
-    color: rgba(133, 160, 229, 1);
-    border-radius: 10px;
-    font-size: 14px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 1px solid rgba(120, 158, 223, 0.5);
+    border-radius: 40px;
+    padding: 8px 0;
     font-weight: 600;
+    font-size: 0.8rem;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
-}
-
-.inquiry-btn:hover {
-    background-color: rgba(133, 160, 229, 0.15);
-    border-color: rgba(133, 160, 229, 1);
-    transform: translateY(-1px);
-}
-
-/* "View Details" is a label styled as a button */
-.details-btn {
-    flex: 1;
-    padding: 5px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: rgba(255, 255, 255, 0.7);
-    border-radius: 10px;
-    font-size: 14px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
+    transition: 0.2s;
     text-align: center;
+    font-family: "Poppins", sans-serif;
 }
+.inquiry-btn { color: #9efff0; border-color: #9efff0; }
+.inquiry-btn:hover { background: rgba(0, 224, 255, 0.15); transform: translateY(-2px); }
+.details-btn { color: #cbd5e1; }
+.details-btn:hover { background: rgba(255,255,255,0.08); transform: translateY(-2px); border-color: rgba(255,255,255,0.3); }
 
-.details-btn:hover {
-    background-color: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.4);
-    transform: translateY(-1px);
-}
-
-
-/* =============================================
-   Modal — Checkbox Hack (no JS needed)
-   ============================================= */
-.modal-toggle {
-    display: none;
-}
-
+/* ---------- Modal (Glass + same style as before) ---------- */
+.modal-toggle { display: none; }
 .modal-overlay {
     display: none;
     position: fixed;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.65);
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(5px);
     z-index: 100;
     align-items: center;
     justify-content: center;
 }
-
-.modal-toggle:checked + .ClientsAccount + .modal-overlay {
-    display: flex;
-}
-
+.modal-toggle:checked + .ClientsAccount + .modal-overlay { display: flex; }
 .modal-box {
-    position: relative;
-    background-image: linear-gradient(rgb(12, 1, 55), rgb(5, 5, 38));
-    background-color: rgb(13, 15, 40);
-    border: 1px solid rgba(133, 160, 229, 0.3);
-    border-radius: 18px;
+    background: linear-gradient(145deg, #0a0f2a, #050b1f);
+    border: 1px solid rgba(0, 224, 255, 0.3);
+    border-radius: 32px;
     padding: 24px;
-    width: 500px;
+    width: 550px;
     max-width: 95vw;
     max-height: 85vh;
     overflow-y: auto;
-    text-align: left;
+    position: relative;
 }
-
 .modal-close {
     position: absolute;
     top: 16px;
-    right: 18px;
-    background: none;
-    border: none;
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 20px;
+    right: 20px;
+    font-size: 1.4rem;
     cursor: pointer;
-    line-height: 1;
-    transition: color 0.2s;
-    display: block;
+    color: #8ca3c7;
+    transition: 0.2s;
 }
-
-.modal-close:hover {
-    color: #ffffff;
-}
-
-
-/* =============================================
-   Modal — Header
-   ============================================= */
+.modal-close:hover { color: white; }
 .modal-header {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
     margin-bottom: 20px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid rgba(133, 160, 229, 0.2);
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(0, 224, 255, 0.2);
 }
+.modal-avatar { width: 64px; height: 64px; border-radius: 50%; border: 2px solid #00e0ff; }
+.modal-header h2 { font-size: 1.3rem; color: white; }
+.modal-header p { color: #9efff0; font-size: 0.85rem; }
 
-.modal-avatar {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid rgba(133, 160, 229, 0.5);
-    flex-shrink: 0;
-}
-
-.modal-header h2 {
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 4px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.modal-header p {
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 13px;
-}
-
-
-/* =============================================
-   Modal — Sections
-   ============================================= */
-.modal-section {
-    margin-bottom: 18px;
-}
-
+.modal-section { margin-bottom: 20px; }
 .modal-section-title {
-    color: rgba(133, 160, 229, 0.9);
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.07em;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 1px;
+    color: #00e0ff;
     margin-bottom: 10px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid rgba(133, 160, 229, 0.2);
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
 }
-
 .modal-issue-full {
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.7;
-    background-color: rgba(38, 49, 95, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    border-radius: 8px;
-    padding: 10px 12px;
+    background: rgba(20, 28, 50, 0.6);
+    padding: 12px;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    line-height: 1.5;
 }
 
-
-/* =============================================
-   Modal — Contact Fields
-   ============================================= */
 .modal-field {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 7px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    font-size: 13px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
+.modal-field-label { color: #8ca3c7; font-size: 0.8rem; }
+.modal-field-value { color: white; font-weight: 500; }
 
-.modal-field:last-child {
-    border-bottom: none;
-}
-
-.modal-field-label {
-    color: rgba(255, 255, 255, 0.45);
-}
-
-.modal-field-value {
-    color: rgba(255, 255, 255, 0.9);
-    text-align: right;
-    max-width: 65%;
-    word-break: break-all;
-}
-
-
-/* =============================================
-   Modal — Vehicle History Entries
-   ============================================= */
-.history-entry {
-    background-color: rgba(38, 49, 95, 0.35);
-    border-left: 2px solid rgba(133, 160, 229, 0.5);
-    padding: 8px 12px;
-    border-radius: 0 6px 6px 0;
-    margin-bottom: 8px;
-}
-
-.history-entry:last-child {
-    margin-bottom: 0;
-}
-
-.history-date {
-    color: rgba(133, 160, 229, 0.9);
-    font-size: 11px;
-    margin-bottom: 3px;
-    font-weight: 600;
-}
-
-.history-desc {
-    color: rgba(255, 255, 255, 0.75);
-    font-size: 13px;
-}
-
-.history-cost {
-    color: #97C459;
-    font-size: 11px;
-    margin-top: 3px;
-    font-weight: 600;
-}
-
-
-/* =============================================
-   Cost Estimator — Category Block
-   ============================================= */
+/* Cost estimator sections */
 .cost-category {
-    background-color: rgba(20, 25, 60, 0.5);
-    border: 1px solid rgba(133, 160, 229, 0.12);
-    border-radius: 10px;
+    background: rgba(15, 25, 50, 0.5);
+    border-radius: 16px;
+    margin-bottom: 12px;
     overflow: hidden;
-    margin-bottom: 10px;
 }
-
 .cost-category-label {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    background-color: rgba(133, 160, 229, 0.08);
-    color: rgba(133, 160, 229, 0.85);
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
+    background: rgba(0, 224, 255, 0.08);
+    padding: 8px 12px;
+    font-weight: 600;
+    font-size: 0.7rem;
     text-transform: uppercase;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    padding: 7px 12px;
-    border-bottom: 1px solid rgba(133, 160, 229, 0.12);
+    color: #9efff0;
 }
-
-.cost-category-label i {
-    font-size: 10px;
-    opacity: 0.8;
-}
-
-/* =============================================
-   Cost Estimator — Line Items
-   ============================================= */
-.cost-rows {
-    padding: 4px 0;
-}
-
 .cost-row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 6px 12px;
-    font-size: 12.5px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-    transition: background-color 0.15s ease;
+    font-size: 0.75rem;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
 }
-
-.cost-row:last-child {
-    border-bottom: none;
-}
-
-.cost-row:hover {
-    background-color: rgba(133, 160, 229, 0.06);
-}
-
-.cost-item-name {
-    color: rgba(255, 255, 255, 0.72);
-    flex: 1;
-    padding-right: 12px;
-}
-
-.cost-item-price {
-    color: rgba(255, 255, 255, 0.92);
-    font-weight: 600;
-    white-space: nowrap;
-    font-variant-numeric: tabular-nums;
-}
-
-/* =============================================
-   Cost Estimator — Subtotals
-   ============================================= */
+.cost-item-name { color: #cbd5e1; }
+.cost-item-price { color: #00e0ff; font-weight: 500; }
 .cost-subtotal {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 7px 12px;
-    background-color: rgba(133, 160, 229, 0.06);
-    border-top: 1px solid rgba(133, 160, 229, 0.15);
-    font-size: 12px;
-    font-weight: 700;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 8px 12px;
+    background: rgba(0, 224, 255, 0.05);
+    font-size: 0.7rem;
+    font-weight: 600;
 }
-
-.cost-subtotal span:first-child {
-    color: rgba(133, 160, 229, 0.75);
-    text-transform: uppercase;
-    font-size: 10.5px;
-    letter-spacing: 0.04em;
-}
-
-.cost-subtotal span:last-child {
-    color: rgba(133, 160, 229, 1);
-    font-variant-numeric: tabular-nums;
-}
-
-/* =============================================
-   Cost Estimator — Grand Total
-   ============================================= */
 .cost-grand-total {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 11px 14px;
-    border-radius: 10px;
-    background: linear-gradient(135deg, rgba(151, 196, 89, 0.12), rgba(63, 109, 17, 0.18));
-    border: 1px solid rgba(151, 196, 89, 0.3);
-    margin-top: 4px;
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid #10b981;
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin: 8px 0;
+}
+.cost-grand-total span:first-child { color: #34d399; font-weight: 600; }
+.cost-grand-total span:last-child { font-size: 1.2rem; font-weight: 700; color: #34d399; }
+.cost-note { font-size: 0.65rem; color: #8ca3c7; margin-top: 6px; display: flex; gap: 6px; }
+
+.history-entry {
+    background: rgba(20, 28, 50, 0.4);
+    padding: 8px 12px;
+    border-left: 3px solid #00e0ff;
     margin-bottom: 8px;
+    border-radius: 0 12px 12px 0;
 }
+.history-date { font-size: 0.7rem; color: #9efff0; font-weight: 600; }
+.history-desc { font-size: 0.8rem; }
+.history-cost { font-size: 0.7rem; color: #10b981; margin-top: 4px; }
 
-.cost-grand-total span:first-child {
-    color: rgba(151, 196, 89, 0.85);
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.07em;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/* ---------- Footer (same as user homepage) ---------- */
+.simple-footer {
+    background: #06173b;
+    border-top: 1px solid #2a4b77;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
 }
+.footer-content { max-width: 1200px; margin: 0 auto; text-align: center; }
+.footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.2rem; }
+.footer-links a { color: #bbd4ff; text-decoration: none; font-size: 0.85rem; transition: 0.2s; }
+.footer-links a:hover { color: white; text-decoration: underline; }
+.footer-social { display: flex; justify-content: center; gap: 1rem; margin-bottom: 1.2rem; }
+.footer-social img { width: 28px; background: white; border-radius: 50%; padding: 4px; transition: 0.2s; }
+.footer-social img:hover { transform: translateY(-3px); }
+.footer-copyright { font-size: 0.75rem; color: #8ca3c7; }
 
-.cost-grand-total span:last-child {
-    color: #97C459;
-    font-size: 17px;
-    font-weight: 800;
-    font-variant-numeric: tabular-nums;
-    letter-spacing: -0.01em;
-}
-
-/* =============================================
-   Cost Estimator — Disclaimer Note
-   ============================================= */
-.cost-note {
-    display: flex;
-    align-items: flex-start;
-    gap: 6px;
-    font-size: 11px;
-    color: rgba(255, 255, 255, 0.38);
-    line-height: 1.5;
-    font-style: italic;
-    padding: 0 2px;
-}
-
-.cost-note i {
-    color: rgba(133, 160, 229, 0.5);
-    font-size: 11px;
-    margin-top: 1px;
-    flex-shrink: 0;
-}
-
-
-/* =============================================
-   Footer
-   ============================================= */
-footer {
-    border: 1px solid rgb(71, 70, 70);
-    color: white;
-    text-align: center;
-    padding: 25px;
-    margin: 0px;
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+    .ClientsAccount { width: 90%; }
+    #Header { flex-direction: column; gap: 15px; text-align: center; }
+    .modal-box { width: 95%; padding: 20px; }
 }

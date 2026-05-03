@@ -1,141 +1,326 @@
-/* ===== Body & Background ===== */
+/* ---------- GLOBAL (Matches User Homepage Theme) ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(0, 255, 204) rgba(8, 20, 85, 0.536);
+}
+
 body {
+    font-family: "Poppins", sans-serif;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    background-image: linear-gradient(rgb(4,5,24), rgba(6,11,37,0.61));
-    background-color: rgb(46,39,48);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(rgb(0, 98, 107), rgba(2, 18, 99, 0.609));
+    background-color: rgb(46, 39, 48);
+    color: #f0f4fa;
+    min-height: 100vh;
 }
 
-/* ===== Container ===== */
-#signin {
+/* ---------- NAVBAR (Same as auth pages) ---------- */
+.nav-auth {
+    background-color: #062234;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    box-shadow: 0px 0px 50px rgba(4, 4, 4, 0.412);
+    height: 70px;
+}
+
+.nav-auth h1 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.nav-auth a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 0 15px;
+    height: 70px;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    font-size: 0.95rem;
+}
+
+.nav-auth a:hover {
+    background-color: rgba(255, 255, 255, 0.055);
+}
+
+/* ---------- AUTH CONTAINER ---------- */
+.auth-container {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding: 40px 10px;
-    animation: signin 0.4s ease-in-out;
+    align-items: center;
+    padding: 50px 20px;
+    min-height: calc(100vh - 70px - 250px);
 }
 
-@keyframes signin {
-    0% { transform: translateY(15px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+.auth-card {
+    background: rgba(9, 37, 78, 0.5);
+    backdrop-filter: blur(8px);
+    border-radius: 32px;
+    border: 1px solid rgba(120, 158, 223, 0.5);
+    padding: 40px 35px;
+    width: 100%;
+    max-width: 580px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    animation: fadeUp 0.4s ease-out;
 }
 
-/* ===== Sign-in Box ===== */
-#signin-box {
-    width: 400px;
-    max-width: 100%;
-    padding: 40px 30px;
-    border-radius: 12px;
-    background: rgba(20,20,162,0.25);
-    box-shadow: 0 0 25px rgba(0,0,0,0.35);
-    color: #fff;
+/* Wider card for mechanic signup */
+.auth-card-wide {
+    max-width: 650px;
+}
+
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(15px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.auth-card h1 {
+    font-size: 2rem;
+    font-weight: 600;
     text-align: center;
+    color: #9efff0;
+    margin-bottom: 10px;
 }
 
-#signin-box h1 {
-    color: #f8f8f8;
-    margin-bottom: 15px;
-    font-size: 28px;
+.auth-card h3 {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #bbd4ff;
+    margin-bottom: 25px;
+    font-weight: 400;
 }
 
-#signin-box h3 {
-    font-family: Georgia, serif;
-    color: #9dcbff;
-    font-size: 14px;
+/* ---------- FIELDSETS & FORM ELEMENTS ---------- */
+fieldset {
+    border: 1px solid rgba(120, 158, 223, 0.4);
+    border-radius: 20px;
+    padding: 20px 25px;
     margin-bottom: 25px;
 }
 
-/* ===== Fieldsets ===== */
-form fieldset {
-    border: 1px solid rgba(255,255,255,0.3);
-    border-radius: 8px;
-    padding: 15px 20px;
-    margin-bottom: 20px;
+legend {
+    padding: 0 12px;
+    font-size: 0.9rem;
+    color: #9efff0;
+    width: auto;
+    font-weight: 500;
 }
 
-form fieldset legend {
-    padding: 0 5px;
-    font-size: 14px;
-    color: #c0d8ff;
+legend i {
+    margin-right: 8px;
+    color: #00e0ff;
 }
 
-/* ===== Form Fields ===== */
-.form-group, .form-field {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.form-group {
+    margin-bottom: 18px;
 }
 
-.form-field input[type="file"],
-.form-field textarea {
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #827896;
-    font-size: 13px;
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #cbd5e1;
 }
 
-textarea {
-    resize: none;
+.form-group label i {
+    margin-right: 8px;
+    color: #00e0ff;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    background: rgba(20, 28, 50, 0.7);
+    border: 1px solid rgba(120, 158, 223, 0.4);
+    border-radius: 14px;
+    color: white;
+    font-size: 0.9rem;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #00e0ff;
+    background: rgba(20, 28, 50, 0.9);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.form-group textarea {
+    resize: vertical;
     min-height: 100px;
-    background-color: rgba(46, 53, 74, 0.9);
-    color: #fff;
 }
 
-input{
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.681);
+/* File inputs */
+input[type="file"] {
     padding: 10px;
-    background: none;
-    color: #fff;
+    background: rgba(10, 24, 57, 0.6);
+    cursor: pointer;
 }
 
-/* ===== Terms ===== */
-#terms-conditions {
+input[type="file"]::file-selector-button {
+    background: #00e0ff;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-weight: 600;
+    color: #021c36;
+    cursor: pointer;
+    margin-right: 12px;
+    transition: 0.2s;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background: #00ffd0;
+    transform: translateY(-1px);
+}
+
+/* Terms checkbox */
+.terms-checkbox {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+}
+
+.terms-checkbox input {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    accent-color: #00e0ff;
+}
+
+.terms-checkbox label {
+    width: 350px;
+    color: #cbd5e1;
+}
+
+.terms-checkbox a {
+    color: #00e0ff;
+    text-decoration: none;
+}
+
+.terms-checkbox a:hover {
+    text-decoration: underline;
+}
+
+/* Submit Button */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background: #00ffd0;
+    border: none;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #021c36;
+    cursor: pointer;
+    transition: all 0.2s;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    font-size: 13px;
-    margin-bottom: 20px;
+    gap: 8px;
 }
 
-#terms-conditions input {
-    width: 16px;
-    height: 16px;
+.btn-submit:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.05);
+    box-shadow: 0 6px 14px rgba(0, 255, 200, 0.3);
 }
 
-/* ===== Buttons ===== */
-#signin-box button {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: 25px;
-    border: none;
-    background-color: #fff;
-    color: #3b4949;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
+/* ---------- FOOTER (Same as other pages) ---------- */
+.simple-footer {
+    background: #06173b;
+    border-top: 1px solid #2a4b77;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
 }
 
-#signin-box button:hover {
-    background-color: #bcbcfc;
-    color: #1c2c2c;
-    transform: translateY(-2px);
-}
-
-/* ===== Footer ===== */
-footer {
-    border-top: 1px solid rgb(71,70,70);
-    color: white;
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
-    padding: 25px;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 500px) {
-    #signin-box { padding: 30px 20px; width: 100%; }
-    textarea { min-height: 80px; }
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.footer-links a {
+    color: #bbd4ff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.footer-social img {
+    width: 28px;
+    height: 28px;
+    background: white;
+    border-radius: 50%;
+    padding: 4px;
+    transition: transform 0.2s;
+}
+
+.footer-social img:hover {
+    transform: translateY(-3px);
+}
+
+.footer-copyright {
+    font-size: 0.75rem;
+    color: #8ca3c7;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 650px) {
+    .auth-card {
+        padding: 30px 20px;
+    }
+    fieldset {
+        padding: 15px 18px;
+    }
+    .nav-auth {
+        padding: 0 15px;
+    }
+    .nav-auth h1 {
+        font-size: 1.2rem;
+    }
 }

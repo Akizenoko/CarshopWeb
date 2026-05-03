@@ -3,262 +3,295 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanic Dashboard | PrecisionDrive Auto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-   <link href="styles/Mechanic_Homepage.css" rel="stylesheet"/>
-    <title>Home Mechanic | PrecisionDrive Auto</title>
+    <link rel="stylesheet" href="styles/Mechanic_Homepage.css">
 </head>
-
 <body>
 
-    <div id = "NavBar">
-        <div id="forprofile">
-            <img id = "profile" src="../../Assets/Profiles/mcado.jpg">
-        </div>
-        
-        <div id="mainnavbar">
-            <a href="Mechanic_Homepage.html"><button class="button">Dashboard</button></a>
-            <a href="ClientPage.html"><button class="button">Customers</button></a>
-        </div>
-
-        <div id="formiscelanious">
-            <img id="bell" src="../../Assets/Logo/bell.png">
-            <img id="chat" src="../../Assets/Logo/chat.png">
-        </div>
+<div id="NavBar">
+    <div id="forprofile">
+        <img id="profile" src="../../Assets/Profiles/mcado.jpg" alt="profile">
     </div>
+    <div id="mainnavbar">
+        <a href="Mechanic_Homepage.html"><button class="button">Dashboard</button></a>
+        <a href="ClientPage.html"><button class="button">Customers</button></a>
+    </div>
+    <div id="formiscelanious">
+        <img id="bell" src="../../Assets/Logo/bell.png" alt="notifications">
+        <img id="chat" src="../../Assets/Logo/chat.png" alt="messages">
+    </div>
+</div>
 
+<div id="sidebar">
+    <div id="listsSidebar">
+        <div id="SidebarProf">
+            <a href="AccountMechanic.html"><img src="../../Assets/Profiles/mcado.jpg" alt="avatar"></a>
+            <h2>Mechanic Name</h2>
+            <p>mechanic@gmail.com</p>
+        </div>
+        <button class="Tabs">
+            <img src="../../Assets/Logo/multiple-users-silhouette.png" alt="connections">
+            <h1>Connections</h1>
+        </button>
+        <a href="Accepted_Jobs.html">
+        <button class="Tabs">
+            <img src="../../Assets/Logo/check.png" alt="email">
+            <h1>Accepted Jobs</h1>
+        </button>
+        </a>
 
-    <div id="sidebar">
-        <div id="listsSidebar">
-            <div id="SidebarProf">
-                <a href="AccountMechanic.html"><img src="../../Assets/Profiles/mcado.jpg"></a>
-                <h2>Mechanic Name</h2>
-                <p>mechanic@gmail.com</p>
-            </div>
-            <Button class="Tabs">
-                <img src="../../Assets/Logo/multiple-users-silhouette.png">
-                <h1>Connections</h1>
-            </Button>
-            <Button class="Tabs">
-                <img src="../../Assets/Logo/email.png">
-                <h1>Email</h1>
-            </Button>
-            <Button class="Tabs">
-                <img src="../../Assets/Logo/settings.png">
-                <h1>Settings</h1>
-            </Button>
-            <a href="../shop/html/home.html">
-            <Button class="Tabs">
+        <a href="Warranties.html">
+        <button class="Tabs">
+            <img src="../../Assets/Logo/check.png" alt="email">
+            <h1>Check Warranties</h1>
+        </button>
+        </a>
+
+        <button class="Tabs">
+            <img src="../../Assets/Logo/settings.png" alt="settings">
+            <h1>Settings</h1>
+        </button>
+        <a href="../shop/html/home.html">
+            <button class="Tabs">
                 <i class="fa-solid fa-house"></i>
                 <h1>To Shop</h1>
-            </Button>
-            </a>
-            <a href="../../index.html"><Button class="Tabs" id="Sign-Out">Sign-out</Button></a>
-        </div>
+            </button>
+        </a>
+        <a href="../../index.html"><button class="Tabs" id="Sign-Out">Sign-out</button></a>
     </div>
+</div>
 
+<main>
+    <!-- Hero Section -->
     <div id="Header">
         <div id="Hinfo">
             <h1>Welcome, Mechanic!</h1>
-            <p>Here's what's happening with your jobs today.
-               Stay on top of your requests, active repairs, schedule, and reviews.</p>
+            <p>Here's what's happening with your jobs today. Stay on top of your requests, active repairs, schedule, and reviews.</p>
         </div>
         <div class="Availability">
             <h1>Available Today?</h1>
             <button id="statusBtn">Available</button>
         </div>
-        
     </div>
 
+    <!-- Stats Cards -->
     <div class="customerServedsec">
-        <div class="customerServed">
-            <h1>Customer Served</h1>
-            <p>20</p>
-        </div>
-        
-        <div class="customerServed">
-            <h1>Followers</h1>
-            <p> 12,345</p>
-        </div>
-
-        <div class="customerServed">
-            <h1>Average Rating</h1>
-            <p>★★★★</p>
-        </div>
-
-        <div class="customerServed">
-            <h1>Total Earnings</h1>
-            <p>200,000 php</p>
-        </div>
-
-        <div class="customerServed">
-            <h1>Time on the Website</h1>
-            <p> 54 days</p>
-        </div>
-
-
+        <div class="customerServed"><h1>Customers Served</h1><p>20</p></div>
+        <div class="customerServed"><h1>Followers</h1><p>12,345</p></div>
+        <div class="customerServed"><h1>Average Rating</h1><p>★★★★</p></div>
+        <div class="customerServed"><h1>Total Earnings</h1><p>200,000 PHP</p></div>
+        <div class="customerServed"><h1>Time on Website</h1><p>54 days</p></div>
     </div>
 
+    <!-- Schedule Section -->
     <div id="Schedule">
         <h1>Schedule & Availability</h1>
-
         <div id="ScheduleGrid">
-
-            <div class="ScheduleDay" id="sched1">
-                <h2>Monday</h2>
-                <p>9:00 AM – 5:00 PM</p>
-                <p class="Available">Available</p>
-            </div>
-
-            <div class="ScheduleDay" id="sched2">
-                <h2>Tuesday</h2>
-                <p>9:00 AM – 5:00 PM</p>
-                <p class="Busy">Busy</p>
-            </div>
-
-            <div class="ScheduleDay" id="sched3">
-                <h2>Wednesday</h2>
-                <p>9:00 AM – 5:00 PM</p>
-                <p class="Available">Available</p>
-            </div>
-
-            <div class="ScheduleDay" id="sched4">
-                <h2>Thursday</h2>
-                <p>9:00 AM – 5:00 PM</p>
-                <p class="Busy">Busy</p>
-            </div>
-
-            <div class="ScheduleDay" id="sched5">
-                <h2>Friday</h2>
-                <p>9:00 AM – 3:00 PM</p>
-                <p class="Available">Available</p>
-            </div>
-
-            <div class="ScheduleDay" id="sched6">
-                <h2>Saturday</h2>
-                <p>10:00 AM – 2:00 PM</p>
-                <p class="Available">Available</p>
-            </div>
-
-            <div class="ScheduleDay" id="sched7">
-                <h2>Sunday</h2>
-                <p>—</p>
-                <p class="Off">Day Off</p>
-            </div>
-
+            <div class="ScheduleDay"><h2>Monday</h2><p>9:00 AM – 5:00 PM</p><p class="Available">Available</p></div>
+            <div class="ScheduleDay"><h2>Tuesday</h2><p>9:00 AM – 5:00 PM</p><p class="Busy">Busy</p></div>
+            <div class="ScheduleDay"><h2>Wednesday</h2><p>9:00 AM – 5:00 PM</p><p class="Available">Available</p></div>
+            <div class="ScheduleDay"><h2>Thursday</h2><p>9:00 AM – 5:00 PM</p><p class="Busy">Busy</p></div>
+            <div class="ScheduleDay"><h2>Friday</h2><p>9:00 AM – 3:00 PM</p><p class="Available">Available</p></div>
+            <div class="ScheduleDay"><h2>Saturday</h2><p>10:00 AM – 2:00 PM</p><p class="Available">Available</p></div>
+            <div class="ScheduleDay"><h2>Sunday</h2><p>—</p><p class="Off">Day Off</p></div>
         </div>
     </div>
-    
+
+    <!-- Job Requests -->
     <div id="JobRequests">
         <h1>Incoming Job Requests - 3</h1>
-
-        <div class="JobCard" id="job1">
-            <div id="JobCardInfo">
+        <div class="JobCard">
+            <div class="JobCardInfo">
                 <h2>Customer Name</h2>
                 <p><strong>Issue:</strong> Engine won't start</p>
                 <p><strong>Location:</strong> Zamboanga City</p>
                 <p><strong>Date Requested:</strong> March 13, 2025</p>
             </div>
-            <div id="JobCardActions">
+            <div class="JobCardActions">
+                <button class="infoBtn">More Info</button>
                 <button class="AcceptBtn">Accept</button>
                 <button class="DeclineBtn">Decline</button>
             </div>
         </div>
-
-        <div class="JobCard" id="job2">
-            <div id="JobCardInfo">
+        <div class="JobCard">
+            <div class="JobCardInfo">
                 <h2>Customer Name</h2>
                 <p><strong>Issue:</strong> Brake pads replacement</p>
                 <p><strong>Location:</strong> Zamboanga City</p>
                 <p><strong>Date Requested:</strong> March 13, 2025</p>
             </div>
-            <div id="JobCardActions">
+            <div class="JobCardActions">
+                <button class="infoBtn">More Info</button>
                 <button class="AcceptBtn">Accept</button>
                 <button class="DeclineBtn">Decline</button>
             </div>
         </div>
-
-        <div class="JobCard" id="job3">
-            <div id="JobCardInfo">
+        <div class="JobCard">
+            <div class="JobCardInfo">
                 <h2>Customer Name</h2>
                 <p><strong>Issue:</strong> Oil change and general checkup</p>
                 <p><strong>Location:</strong> Zamboanga City</p>
                 <p><strong>Date Requested:</strong> March 14, 2025</p>
             </div>
-            <div id="JobCardActions">
+            <div class="JobCardActions">
+                <button class="infoBtn">More Info</button>
                 <button class="AcceptBtn">Accept</button>
                 <button class="DeclineBtn">Decline</button>
             </div>
         </div>
-
     </div>
 
+    <!-- Active Repairs -->
     <div id="ActiveRepairs">
         <h1>Active / Ongoing Repairs - 2</h1>
-
-        <div class="RepairCard" id="repair1">
-            <img src="../../Assets/Profiles/mcado.jpg">
-            <div id="RepairInfo">
+        <div class="RepairCard">
+            <img src="../../Assets/Profiles/mcado.jpg" alt="customer">
+            <div class="RepairInfo">
                 <h2>Customer Name</h2>
                 <p><strong>Job:</strong> Transmission fluid flush</p>
                 <p><strong>Status:</strong> In Progress</p>
                 <p><strong>Started:</strong> March 12, 2025</p>
             </div>
-            <div id="RepairStatus">
-                <button class="UpdateBtn">Update Status</button>
-            </div>
+            <div class="RepairStatus"><button class="UpdateBtn">Update Status</button></div>
         </div>
-
-        <div class="RepairCard" id="repair2">
-            <img src="../../Assets/Profiles/mcado.jpg">
-            <div id="RepairInfo">
+        <div class="RepairCard">
+            <img src="../../Assets/Profiles/mcado.jpg" alt="customer">
+            <div class="RepairInfo">
                 <h2>Customer Name</h2>
                 <p><strong>Job:</strong> Tire rotation and alignment</p>
                 <p><strong>Status:</strong> Awaiting Parts</p>
                 <p><strong>Started:</strong> March 11, 2025</p>
             </div>
-            <div id="RepairStatus">
-                <button class="UpdateBtn">Update Status</button>
-            </div>
+            <div class="RepairStatus"><button class="UpdateBtn">Update Status</button></div>
         </div>
-
     </div>
 
-
+    <!-- Reviews -->
     <div id="Reviews">
         <h1>Customer Reviews - 3</h1>
-
-        <div class="ReviewCard" id="review1">
-            <img src="../../Assets/Profiles/mcado.jpg">
-            <div id="ReviewInfo">
+        <div class="ReviewCard">
+            <img src="../../Assets/Profiles/mcado.jpg" alt="customer">
+            <div class="ReviewInfo">
                 <h2>Customer Name</h2>
-                <p class="Stars">★★★★★</p>
+                <div class="Stars">★★★★★</div>
                 <p>"Great service! Fixed my car quickly and explained everything clearly."</p>
             </div>
         </div>
-
-        <div class="ReviewCard" id="review2">
-            <img src="../../Assets/Profiles/mcado.jpg">
-            <div id="ReviewInfo">
+        <div class="ReviewCard">
+            <img src="../../Assets/Profiles/mcado.jpg" alt="customer">
+            <div class="ReviewInfo">
                 <h2>Customer Name</h2>
-                <p class="Stars">★★★★☆</p>
+                <div class="Stars">★★★★☆</div>
                 <p>"Very professional and affordable. Will definitely book again."</p>
             </div>
         </div>
-
-        <div class="ReviewCard" id="review3">
-            <img src="../../Assets/Profiles/mcado.jpg">
-            <div id="ReviewInfo">
+        <div class="ReviewCard">
+            <img src="../../Assets/Profiles/mcado.jpg" alt="customer">
+            <div class="ReviewInfo">
                 <h2>Customer Name</h2>
-                <p class="Stars">★★★★★</p>
+                <div class="Stars">★★★★★</div>
                 <p>"Diagnosed the issue fast and had it done before lunch. Highly recommend."</p>
             </div>
         </div>
-
     </div>
+</main>
 
-</body>
-<footer>
-<p>© 2026 PrecisionDrive Auto | Connecting Cars with Experts</p>
+<!-- ========== MODAL OVERLAY (hidden initially) ========== -->
+<div id="jobModal" class="modal-overlay" style="display: none;">
+    <div class="modal-box">
+        <button class="modal-close" id="closeModalBtn">&times;</button>
+        <div class="modal-header">
+            <img id="modalCustomerImg" src="../../Assets/Profiles/mcado.jpg" class="modal-avatar" alt="customer">
+            <div>
+                <h2 id="modalCustomerName">Customer Name</h2>
+                <p id="modalVehicle">Vehicle Model</p>
+            </div>
+        </div>
+        <div class="modal-section">
+            <h3 class="modal-section-title"><i class="fa-solid fa-circle-exclamation"></i> Issue Description</h3>
+            <p id="modalIssueFull" class="modal-issue-full">Loading...</p>
+        </div>
+        <div class="modal-section">
+            <h3 class="modal-section-title"><i class="fa-solid fa-address-card"></i> Contact Information</h3>
+            <div class="modal-field"><span class="modal-field-label">Email</span><span id="modalEmail" class="modal-field-value">---</span></div>
+            <div class="modal-field"><span class="modal-field-label">Location</span><span id="modalLocation" class="modal-field-value">---</span></div>
+            <div class="modal-field"><span class="modal-field-label">Budget</span><span id="modalBudget" class="modal-field-value">---</span></div>
+        </div>
+        <div class="modal-section">
+            <h3 class="modal-section-title"><i class="fa-solid fa-currency-sign"></i> Repair Cost Estimate</h3>
+            <div id="modalCostEstimate" class="cost-estimate-placeholder">
+                <!-- Dynamic cost estimate will be inserted here -->
+                <p class="cost-note"><i class="fa-solid fa-circle-info"></i> Estimate may vary based on diagnosis results and parts availability.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ========== UPDATE STATUS MODAL ========== -->
+<div id="updateModal" class="modal-overlay" style="display: none;">
+    <div class="modal-box">
+        <button class="modal-close" id="closeUpdateModalBtn">&times;</button>
+        <div class="modal-header">
+            <img id="updateModalImg" src="../../Assets/Profiles/mcado.jpg" class="modal-avatar" alt="customer">
+            <div>
+                <h2 id="updateModalCustomer">Customer Name</h2>
+                <p id="updateModalJob">Job: ---</p>
+            </div>
+        </div>
+        <div class="modal-section">
+            <h3 class="modal-section-title"><i class="fa-solid fa-tools"></i> Update Repair Status</h3>
+            <div class="form-group">
+                <label for="statusSelect">New Status</label>
+                <select id="statusSelect" class="status-select">
+                    <option value="In Progress">In Progress</option>
+                    <option value="Awaiting Parts">Awaiting Parts</option>
+                    <option value="Completed">Completed</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="updateNotes">Notes (optional)</label>
+                <textarea id="updateNotes" rows="3" placeholder="Add any notes about the repair..."></textarea>
+            </div>
+            <div class="modal-buttons">
+                <button id="confirmUpdateBtn" class="btn-primary">Confirm Update</button>
+                <button id="cancelUpdateBtn" class="btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer class="simple-footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img src="../../Assets/Logo/facebook.png" alt="FB"></a>
+            <a href="#"><img src="../../Assets/Logo/instagram.png" alt="IG"></a>
+            <a href="#"><img src="../../Assets/Logo/twitter.png" alt="Twitter"></a>
+        </div>
+        <p class="footer-copyright">© 2026 PrecisionDrive Auto | Connecting Cars with Experts</p>
+    </div>
 </footer>
+
 <script src="../../Sidebar_Script.js"></script>
+<script src="scripts/mechanicmodal.js"></script>
+<script src="scripts/mechanic_update_modal.js"></script>
+<script>
+    // Toggle availability button
+    const statusBtn = document.getElementById('statusBtn');
+    statusBtn.addEventListener('click', () => {
+        statusBtn.classList.toggle('online');
+        statusBtn.textContent = statusBtn.classList.contains('online') ? 'Unavailable' : 'Available';
+    });
+</script>
+</body>
 </html>
