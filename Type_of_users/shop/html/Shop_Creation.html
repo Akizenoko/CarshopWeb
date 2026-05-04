@@ -4,94 +4,84 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Precision Drive Auto - Add Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/Shop_Creation.css">
 </head>
 <body>
 
-  <div class="wrap">
-    <div class="card">
+<div class="wrap">
+  <div class="card">
 
-      <!-- Header -->
-      <div class="card-header">
-        <div class="brand-text">
-          <a href="../../mechanic/AccountMechanic.html"><p class="goback">Back</p></a>
-          <br>
-          <h2>Add Your Car Repair Shop</h2>
-          <p class="subtitle">Precision Drive Auto — Partner Registration</p>
-        </div>
+    <!-- Header -->
+    <div class="card-header">
+      <div class="brand-text">
+        <a href="../../mechanic/AccountMechanic.html"><p class="goback">← Back</p></a>
+        <h2>Add Your Car Repair Shop</h2>
+        <p class="subtitle">Precision Drive Auto — Partner Registration</p>
       </div>
-
-      <!-- Shop Info Section -->
-      <div class="section">
-        <p class="section-label">Shop information</p>
-
-        <div class="grid-2">
-          <div class="input-group">
-            <label for="shop-name">Shop Name</label>
-            <input id="shop-name" type="text" placeholder="e.g. FastFix Garage">
-          </div>
-
-          <div class="input-group">
-            <label for="contact">Contact Number</label>
-            <input id="contact" type="tel" placeholder="+63 9XX XXX XXXX">
-          </div>
-
-          <div class="input-group">
-            <label for="email">Email Address</label>
-            <input id="email" type="email" placeholder="shop@example.com">
-          </div>
-
-          <div class="input-group full">
-            <label for="address">Shop Address</label>
-            <input id="address" type="text" placeholder="Street, City, Province">
-          </div>
-
-          <div class="input-group full">
-            <label for="services">Services Offered</label>
-            <textarea id="services" placeholder="e.g. Engine Repair, Oil Change, Brake Service, Tire Rotation..."></textarea>
-          </div>
-        </div>
-
-        <a href="home.html"><button class="btn-submit" type="submit">Register Shop</button></a>
-      </div>
-
-      <hr class="divider">
-
-      <!-- Find Mechanics Section -->
-      <div class="section">
-        <p class="section-label">Find mechanics</p>
-
-        <div class="tabs">
-          <button class="tab active" onclick="switchTab('search', this)">Search</button>
-          <button class="tab" onclick="switchTab('browse', this)">Browse all</button>
-        </div>
-
-        <div id="searchPanel">
-          <div class="search-row">
-            <input class="search-input" id="searchInput" type="text" placeholder="Search by name or ID (e.g. M-003)...">
-            <button class="btn-search" onclick="doSearch()">Search</button>
-          </div>
-        </div>
-
-        <div id="browsePanel" style="display: none;">
-          <div class="filter-row" id="filterRow"></div>
-        </div>
-
-        <div class="results-area" id="resultsArea"></div>
-      </div>
-
-      <hr class="divider">
-
-      <!-- Shop Team Section -->
-      <div class="team-section">
-        <p class="section-label">Your shop team <span class="team-count" id="teamCount"></span></p>
-        <div id="teamList"></div>
-      </div>
-
     </div>
+
+    <!-- Shop Info Section (unchanged) -->
+    <div class="section">
+      <p class="section-label">Shop information</p>
+      <div class="grid-2">
+        <div class="input-group"><label>Shop Name</label><input id="shop-name" type="text" placeholder="e.g. FastFix Garage"></div>
+        <div class="input-group"><label>Contact Number</label><input id="contact" type="tel" placeholder="+63 9XX XXX XXXX"></div>
+        <div class="input-group"><label>Email Address</label><input id="email" type="email" placeholder="shop@example.com"></div>
+        <div class="input-group full"><label>Shop Address</label><input id="address" type="text" placeholder="Street, City, Province"></div>
+        <div class="input-group full"><label>Services Offered</label><textarea id="services" placeholder="e.g. Engine Repair, Oil Change, Brake Service..."></textarea></div>
+        <div class="input-group full"><label>Certificate of Operation</label><input id="address" type="file"></div>
+      </div>
+    </div>
+    
+    <hr class="divider">
+    
+    <!-- Find Mechanics Section (unchanged) -->
+    <div class="section">
+      <p class="section-label">Find mechanics</p>
+      <div class="tabs">
+        <button class="tab active" onclick="switchTab('search', this)">Search</button>
+        <button class="tab" onclick="switchTab('browse', this)">Browse all</button>
+      </div>
+      <div id="searchPanel">
+        <div class="search-row">
+          <input class="search-input" id="searchInput" type="text" placeholder="Search by name or ID (e.g. M-003)...">
+          <button class="btn-search" onclick="doSearch()">Search</button>
+        </div>
+      </div>
+      <div id="browsePanel" style="display: none;">
+        <div class="filter-row" id="filterRow"></div>
+      </div>
+      <div class="results-area" id="resultsArea"></div>
+    </div>
+    
+    <hr class="divider">
+    
+    <!-- ========== NEW: OFF‑PLATFORM MECHANIC REGISTRATION ========== -->
+    <div class="section">
+      <p class="section-label">Add off‑platform mechanic</p>
+      <div class="grid-2">
+        <div class="input-group"><label>Full name</label><input id="offName" type="text" placeholder="e.g. Ricardo Gomez"></div>
+        <div class="input-group"><label>Role / specialty</label><input id="offRole" type="text" placeholder="e.g. Transmission Expert"></div>
+        <div class="input-group full"><label>Contact number</label><input id="offContact" type="tel" placeholder="+63 9XX XXX XXXX"></div>
+      </div>
+      <button id="addOffPlatformBtn" class="btn-submit">+ Add to Team</button>
+    </div>
+    
+    <hr class="divider">
+    
+    <!-- Shop Team Section -->
+    <div class="team-section">
+      <p class="section-label">Your shop team <span class="team-count" id="teamCount"></span></p>
+      <div id="teamList"></div>
+    </div>
+    <a href="home.html"><button id="regbtn" class="btn-submit" type="submit">Register Shop</button></a>
+    
   </div>
+</div>
 
-  <script src="../script/addaccount.js"></script>
-
+<script src="../script/addaccount.js"></script>
 </body>
 </html>

@@ -4,20 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Account | My Profile - PrecisionDrive</title>
+  <link rel="stylesheet" href="styles/AccountUser.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/AccountMechanic.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="page-shell">
     <header class="topbar">
-      <a class="btn-link" href="Mechanic_Homepage.html">← Back to Dashboard</a>
+      <a class="btn-link" href="Home_Page_For_Users.html">← Back to Home</a>
     </header>
 
     <main class="content">
-      <!-- Profile Hero -->
       <section class="section profile-card">
         <div class="section-head">
           <div>
@@ -30,29 +29,12 @@
           <img src="../../Assets/Profiles/mcado.jpg" alt="Profile" />
           <div class="profile-meta">
             <h2>Your Name</h2>
-            <p>mechanic@gmail.com</p>
-            <span class="badge-role">Mechanic</span>
+            <p>anonymous@gmail.com</p>
+            <span class="badge-role">Customer</span>
             <p>Street, Country</p>
           </div>
         </div>
       </section>
-
-      <!-- Schedule & Availability (from original) -->
-      <div id="Schedule">
-        <div class="HeadSched">
-          <h1>Schedule & Availability</h1>
-          <button class="btn-tiny">Edit</button>
-        </div>
-        <div id="ScheduleGrid">
-          <div class="ScheduleDay"><h2>Monday</h2><p>9:00 AM – 5:00 PM</p><p class="Available">Available</p></div>
-          <div class="ScheduleDay"><h2>Tuesday</h2><p>9:00 AM – 5:00 PM</p><p class="Busy">Busy</p></div>
-          <div class="ScheduleDay"><h2>Wednesday</h2><p>9:00 AM – 5:00 PM</p><p class="Available">Available</p></div>
-          <div class="ScheduleDay"><h2>Thursday</h2><p>9:00 AM – 5:00 PM</p><p class="Busy">Busy</p></div>
-          <div class="ScheduleDay"><h2>Friday</h2><p>9:00 AM – 3:00 PM</p><p class="Available">Available</p></div>
-          <div class="ScheduleDay"><h2>Saturday</h2><p>10:00 AM – 2:00 PM</p><p class="Available">Available</p></div>
-          <div class="ScheduleDay"><h2>Sunday</h2><p>—</p><p class="Off">Day Off</p></div>
-        </div>
-      </div>
 
       <!-- Personal Information -->
       <section class="section card">
@@ -62,17 +44,16 @@
         </div>
         <div class="grid-2">
           <div class="field"><h3>First Name</h3><p>Your first name</p></div>
+          <div class="field"><h3>Middle Name</h3><p>Your middle name</p></div>
           <div class="field"><h3>Last Name</h3><p>Your last name</p></div>
-          <div class="field"><h3>Email Address</h3><p>mechanic@gmail.com</p></div>
+          <div class="field"><h3>Email Address</h3><p>anonymous@gmail.com</p></div>
           <div class="field"><h3>Phone Number</h3><p>0912345678910</p></div>
-          <div class="field"><h3>Date of Birth</h3><p>01/17/1990</p></div>
-          <div class="field"><h3>User Role</h3><p>Mechanic</p><p class="role-hint"><a href="../user/Mechanic_User.html">Go back to Customer profile</a></p></div>
-          <div class="field"><h3>Member of the website for:</h3><p>54 days</p></div>
-          <div class="field"><h3>Specialty</h3><p>Engine Diagnostics</p></div>
+          <div class="field"><h3>Date of Birth</h3><p>01/17/2007</p></div>
+          <div class="field"><h3>User Role</h3><p>Customer</p><p class="role-hint"><a href="../mechanic/AccountMechanic.html">Back to mechanic profile</a></p></div>
         </div>
       </section>
 
-      <!-- Address -->
+      <!-- Address section -->
       <section class="section card">
         <div class="section-head">
           <h2>Address</h2>
@@ -138,30 +119,26 @@
           </div>
           <div class="field"><h3>Postal Code</h3><p>12345</p></div>
         </div>
-
-        <div class="AddShop">
-          <h3>Owner of a Shop?</h3>
-          <a href="../shop/html/Shop_Creation.html"><button>Connect Now</button></a>
-        </div>
       </section>
     </main>
 
     <footer class="simple-footer">
       <div class="footer-content">
-        <div class="footer-links">
-          <a href="#">About Us</a>
-          <a href="#">Contact</a>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-        </div>
-        <div class="footer-social">
-          <a href="#"><img src="../../Assets/Logo/facebook.png" alt="FB"></a>
-          <a href="#"><img src="../../Assets/Logo/instagram.png" alt="IG"></a>
-          <a href="#"><img src="../../Assets/Logo/twitter.png" alt="Twitter"></a>
-        </div>
-        <p class="footer-copyright">© 2026 PrecisionDrive Auto | Connecting Cars with Experts</p>
+          <div class="footer-links">
+              <a href="#">About Us</a>
+              <a href="#">Contact</a>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+          </div>
+          <div class="footer-social">
+              <a href="#"><img src="../../Assets/Logo/facebook.png" alt="FB"></a>
+              <a href="#"><img src="../../Assets/Logo/instagram.png" alt="IG"></a>
+              <a href="#"><img src="../../Assets/Logo/twitter.png" alt="Twitter"></a>
+          </div>
+          <p class="footer-copyright">© 2026 PrecisionDrive Auto | Connecting Cars with Experts</p>
       </div>
     </footer>
+
   </div>
 </body>
 </html>

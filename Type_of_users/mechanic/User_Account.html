@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Profile | PrecisionDrive Auto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles/User_Account.css">
+</head>
+<body>
+
+<div class="page-shell">
+  <header class="topbar">
+    <a class="btn-link" href="Mechanic_Homepage.html"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
+  </header>
+
+  <main class="content">
+    <!-- Customer Profile Hero -->
+    <section class="section profile-card">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">customer information</p>
+          <h1>Client's Account</h1>
+        </div>
+      </div>
+      <div class="profile-row">
+        <img src="../../Assets/Profiles/mcado.jpg" alt="Customer Avatar" />
+        <div class="profile-meta">
+          <h2>Customer Name</h2>
+          <p>customer@email.com</p>
+          <span class="badge-role">Customer</span>
+          <p><i class="fas fa-map-marker-alt"></i> Zamboanga City, Philippines</p>
+        </div>
+        <button class="message-btn"><i class="fas fa-comment-dots"></i> Message</button>
+      </div>
+    </section>
+
+    <!-- Personal Information -->
+    <section class="section card">
+      <div class="section-head">
+        <h2>Personal Information</h2>
+      </div>
+      <div class="grid-2">
+        <div class="field"><h3>First Name</h3><p>Juan</p></div>
+        <div class="field"><h3>Middle Name</h3><p>D.</p></div>
+        <div class="field"><h3>Last Name</h3><p>Dela Cruz</p></div>
+        <div class="field"><h3>Email Address</h3><p>juan.dc@email.com</p></div>
+        <div class="field"><h3>Phone Number</h3><p>+63 912 345 6789</p></div>
+        <div class="field"><h3>Date of Birth</h3><p>March 15, 1990</p></div>
+        <div class="field"><h3>User Role</h3><p>Customer</p></div>
+        <div class="field"><h3>Member Since</h3><p>January 2025</p></div>
+      </div>
+    </section>
+
+    <!-- Address -->
+    <section class="section card">
+      <div class="section-head">
+        <h2>Address</h2>
+      </div>
+      <div class="grid-3">
+        <div class="field"><h3>Country</h3><p>Philippines</p></div>
+        <div class="field"><h3>City</h3><p>Zamboanga</p></div>
+        <div class="field"><h3>Barangay</h3><p>Canelar</p></div>
+        <div class="field"><h3>Postal Code</h3><p>7000</p></div>
+        <div class="field"><h3>Street</h3><p>123 Main St.</p></div>
+      </div>
+    </section>
+
+    <button id="report"><i class="fas fa-flag"></i> Report Customer</button>
+  </main>
+
+  <footer class="simple-footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <div class="footer-social">
+        <a href="#"><img src="../../Assets/Logo/facebook.png" alt="FB"></a>
+        <a href="#"><img src="../../Assets/Logo/instagram.png" alt="IG"></a>
+        <a href="#"><img src="../../Assets/Logo/twitter.png" alt="Twitter"></a>
+      </div>
+      <p class="footer-copyright">© 2026 PrecisionDrive Auto | Connecting Cars with Experts</p>
+    </div>
+  </footer>
+</div>
+
+<!-- ========== REPORT MODAL ========== -->
+<div id="reportModal" class="modal-overlay" style="display: none;">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2><i class="fas fa-flag"></i> Report Customer</h2>
+      <button class="close-modal" onclick="closeModal('reportModal')">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <label>Reason for report</label>
+        <select id="reportReason">
+          <option value="Harassment">Harassment or abusive behavior</option>
+          <option value="Spam">Spam or fake requests</option>
+          <option value="Scam">Scam or fraudulent activity</option>
+          <option value="Inappropriate">Inappropriate messages</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Description (optional)</label>
+        <textarea id="reportDesc" placeholder="Provide additional details..."></textarea>
+      </div>
+      <div class="modal-buttons">
+        <button class="btn-secondary" onclick="closeModal('reportModal')">Cancel</button>
+        <button class="btn-primary" id="submitReportBtn">Submit Report</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../../Sidebar_Script.js"></script>
+<script>
+  // Open/close modal functions
+  function openModal(modalId) {
+    document.getElementById(modalId).style.display = 'flex';
+  }
+  function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+  }
+
+  // Report button click
+  document.getElementById('report').addEventListener('click', () => {
+    openModal('reportModal');
+  });
+
+  // Submit report
+  document.getElementById('submitReportBtn').addEventListener('click', () => {
+    const reason = document.getElementById('reportReason').value;
+    const description = document.getElementById('reportDesc').value;
+    alert(`Report submitted!\nReason: ${reason}\nDescription: ${description || 'No additional details.'}\n\nThank you for helping keep our community safe.`);
+    closeModal('reportModal');
+    // Reset form
+    document.getElementById('reportDesc').value = '';
+  });
+
+  // Close modal when clicking outside the modal content
+  window.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal-overlay')) {
+      e.target.style.display = 'none';
+    }
+  });
+
+  // Message button (demo)
+  document.querySelector('.message-btn')?.addEventListener('click', () => {
+    alert('Messaging feature will open chat with this customer.');
+  });
+</script>
+</body>
+</html>

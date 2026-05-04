@@ -516,3 +516,20 @@ tr:hover {
     display: inline-block;
     color: var(--blue-light);
 }
+
+/* Status pill styles for reports table */
+.status-pill {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+.pending {
+    background: rgba(245, 158, 11, 0.2);
+    color: #fbbf24;
+}
+.progress {
+    background: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+}

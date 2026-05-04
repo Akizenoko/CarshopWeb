@@ -24,8 +24,35 @@ let team = [];
 let activeTab = 'search';
 let activeFilter = 'All';
 
-function initials(name) {
-  return name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
+// Helper to generate unique ID for off‑platform mechanics
+function generateOffPlatformId() {
+  const maxId = team.filter(m => m.id && m.id.startsWith('OFF-'))
+    .reduce((max, m) => {
+      const num = parseInt(m.id.split('-')[1]) || 0;
+      return num > max ? num : max;
+    }, 0);
+  const nextNum = maxId + 1;
+  return `OFF-${nextNum.toString().padStart(3, '0')}`;
+}
+
+function addOffPlatformMechanic(name, role, contact) {
+  if (!name.trim()) { alert('Please enter a name'); return false; }
+  if (!contact.trim()) { alert('Please enter a contact number'); return false; }
+  const newId = generateOffPlatformId();
+  const newMech = {
+    id: newId,
+    name: name.trim(),
+    role: role.trim() || 'General Mechanic',
+    contact: contact.trim(),
+    isOffPlatform: true
+  };
+  team.push(newMech);
+  renderTeam();
+  // Optionally add to MECHANICS array so it appears in search (if desired)
+  // MECHANICS.push(newMech);
+  // Instead, we just add to team directly.
+  alert(`Mechanic "${name}" added to your team with ID ${newId}`);
+  return true;
 }
 
 function switchTab(tab, el) {
@@ -33,16 +60,14 @@ function switchTab(tab, el) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   el.classList.add('active');
   document.getElementById('searchPanel').style.display = tab === 'search' ? 'block' : 'none';
-  document.getElementById('browsePanel').style.display  = tab === 'browse'  ? 'block' : 'none';
+  document.getElementById('browsePanel').style.display = tab === 'browse' ? 'block' : 'none';
   if (tab === 'browse') renderFilters();
   renderResults(tab === 'search' ? [] : MECHANICS);
 }
 
 function renderFilters() {
   const row = document.getElementById('filterRow');
-  row.innerHTML = ROLES.map(r =>
-    `<button class="filter-chip${activeFilter === r ? ' active' : ''}" onclick="applyFilter('${r}', this)">${r}</button>`
-  ).join('');
+  row.innerHTML = ROLES.map(r => `<button class="filter-chip${activeFilter === r ? ' active' : ''}" onclick="applyFilter('${r}', this)">${r}</button>`).join('');
 }
 
 function applyFilter(role, el) {
@@ -56,28 +81,26 @@ function applyFilter(role, el) {
 function doSearch() {
   const q = document.getElementById('searchInput').value.trim().toLowerCase();
   if (!q) { renderResults([]); return; }
-  renderResults(MECHANICS.filter(m =>
-    m.name.toLowerCase().includes(q) || m.id.toLowerCase().includes(q)
-  ));
+  renderResults(MECHANICS.filter(m => m.name.toLowerCase().includes(q) || m.id.toLowerCase().includes(q)));
 }
 
 function mechanicCardHTML(m) {
   const added = team.some(t => t.id === m.id);
   return `
     <div class="mechanic-card" id="res-${m.id}">
-      <img src="../../../Assets/Profiles/mcado.jpg" class="avatar"></img>
+      <img src="../../../Assets/Profiles/mcado.jpg" class="avatar">
       <div class="mech-info">
         <div class="mech-name">
-          ${m.name}
+          ${escapeHtml(m.name)}
           <span class="mech-id">${m.id}</span>
         </div>
-        <div class="mech-role">${m.role}</div>
+        <div class="mech-role">${escapeHtml(m.role)}</div>
         <div class="mech-contact">
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" width="12" height="12">
             <rect x="2" y="3" width="12" height="10" rx="2"/>
             <path d="M2 6l6 4 6-4"/>
           </svg>
-          ${m.contact}
+          ${escapeHtml(m.contact)}
         </div>
       </div>
       <button class="btn-add${added ? ' added' : ''}" onclick="addToTeam('${m.id}')" ${added ? 'disabled' : ''}>
@@ -113,45 +136,56 @@ function removeFromTeam(id) {
 }
 
 function renderTeam() {
-  const list  = document.getElementById('teamList');
+  const list = document.getElementById('teamList');
   const count = document.getElementById('teamCount');
   count.textContent = team.length ? `(${team.length})` : '';
-
   if (!team.length) {
-    list.innerHTML = `
-      <div class="empty-team">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-          <circle cx="12" cy="8" r="4"/>
-          <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-        </svg>
-        No team members yet.
-      </div>`;
+    list.innerHTML = `<div class="empty-team">No team members yet.<br>Add mechanics from the lists or use the "off‑platform" form.</div>`;
     return;
   }
-
   list.innerHTML = team.map(m => `
     <div class="team-card">
-      <img src="../../../Assets/Profiles/mcado.jpg" class="avatar"></img>
+      <img src="../../../Assets/Profiles/mcado.jpg" class="avatar">
       <div class="mech-info">
         <div class="mech-name">
-          ${m.name}
+          ${escapeHtml(m.name)}
           <span class="mech-id">${m.id}</span>
         </div>
-        <div class="mech-role">${m.role}</div>
+        <div class="mech-role">${escapeHtml(m.role)}</div>
         <div class="mech-contact">
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" width="12" height="12">
             <rect x="2" y="3" width="12" height="10" rx="2"/>
             <path d="M2 6l6 4 6-4"/>
           </svg>
-          ${m.contact}
+          ${escapeHtml(m.contact)}
         </div>
       </div>
       <button class="rm-btn" onclick="removeFromTeam('${m.id}')">×</button>
     </div>`).join('');
 }
 
-document.getElementById('searchInput').addEventListener('keydown', e => {
-  if (e.key === 'Enter') doSearch();
+function escapeHtml(str) {
+  if (!str) return '';
+  return str.replace(/[&<>]/g, function(m) {
+    if (m === '&') return '&amp;';
+    if (m === '<') return '&lt;';
+    if (m === '>') return '&gt;';
+    return m;
+  });
+}
+
+// Event listeners
+document.getElementById('searchInput').addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+document.getElementById('addOffPlatformBtn').addEventListener('click', () => {
+  const name = document.getElementById('offName').value;
+  const role = document.getElementById('offRole').value;
+  const contact = document.getElementById('offContact').value;
+  if (addOffPlatformMechanic(name, role, contact)) {
+    document.getElementById('offName').value = '';
+    document.getElementById('offRole').value = '';
+    document.getElementById('offContact').value = '';
+  }
 });
 
+// Initial render
 renderTeam();

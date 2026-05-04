@@ -2,35 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Reports</title>
+    <title>Reports | Admin Panel</title>
     <link rel="stylesheet" href="styles/Styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">\
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="scripts/admin.js" defer></script>
 </head>
-
 <body>
 
     <div id="NavBar">
         <button id="menuBtn">☰</button>
-        <h2>Admin Panel</h2><a href="../../index.html">
+        <h2>Admin Panel</h2>
+        <a href="../../index.html">
             <button id="logout">Logout</button>
         </a>
     </div>
 
     <div id="sidebar">
         <h3>Control Panel</h3>
-        <a href="Admin.html"><button class="tab active">Dashboard</button></a>
+        <a href="Admin.html"><button class="tab">Dashboard</button></a>
         <a href="users.html"><button class="tab">Users</button></a>
         <a href="mechanics.html"><button class="tab">Mechanics</button></a>
         <a href="shops.html"><button class="tab">Shops</button></a>
-        <a href="reports.html"><button class="tab">Reports</button></a>
+        <a href="reports.html"><button class="tab active">Reports</button></a>
         <a href="../../index.html"><button class="tab">Logout</button></a>
     </div>
 
     <div id="main">
+        <!-- Monthly Overview & Violation Trends -->
         <div class="dashboard-grid">
             <div class="section">
                 <h2>Monthly Overview</h2>
@@ -46,6 +47,8 @@
                 <canvas id="violationChart" height="150"></canvas>
             </div>
         </div>
+
+        <!-- Top Shops & Violation Breakdown -->
         <div class="section">
             <h2>Top Shops by Performance</h2>
             <ul class="activity-list">
@@ -64,6 +67,135 @@
             </ul>
             <button class="btn-warning" onclick="alert('Resolved violations cleared')">Clear Resolved Violations</button>
         </div>
+
+        <!-- ========== REPORTED CONTENT SECTION ========== -->
+        <div class="section">
+            <h2>Reported Content</h2>
+            <div class="search-bar">
+                <input type="text" id="reportSearch" placeholder="Search reported item..." onkeyup="filterReports()">
+                <select id="reportTypeFilter" onchange="filterReports()">
+                    <option value="all">All types</option>
+                    <option value="user">Users</option>
+                    <option value="mechanic">Mechanics</option>
+                    <option value="shop">Shops</option>
+                </select>
+                <select id="reportStatusFilter" onchange="filterReports()">
+                    <option value="all">All statuses</option>
+                    <option value="pending">Pending</option>
+                    <option value="reviewed">Reviewed</option>
+                    <option value="dismissed">Dismissed</option>
+                </select>
+            </div>
+            <div class="table-container">
+                <table id="reportsTable">
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Reported Item</th>
+                            <th>Reporter</th>
+                            <th>Reason</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reportsTableBody">
+                        <!-- populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-</body>
+
+    <script>
+        // Sample report data – replace with real API calls later
+        let reportsData = [
+            { id: 1, type: 'user', item: 'john_doe', reporter: 'admin@example.com', reason: 'Spam messages', date: '2025-04-01', status: 'pending' },
+            { id: 2, type: 'mechanic', item: 'Ricardo Dalisay', reporter: 'customer1@email.com', reason: 'No-show appointment', date: '2025-04-02', status: 'pending' },
+            { id: 3, type: 'shop', item: 'Speed Garage', reporter: 'user@example.com', reason: 'Overcharging', date: '2025-03-28', status: 'pending' },
+            { id: 4, type: 'user', item: 'maria_s', reporter: 'mechanic@example.com', reason: 'Harassment', date: '2025-03-30', status: 'reviewed' },
+            { id: 5, type: 'mechanic', item: 'Cardo Dalistep', reporter: 'shop@example.com', reason: 'Late response', date: '2025-03-25', status: 'dismissed' },
+            { id: 6, type: 'shop', item: 'AutoFix Pasig', reporter: 'customer2@email.com', reason: 'Fake reviews', date: '2025-04-03', status: 'pending' }
+        ];
+
+        function renderReportsTable() {
+            const tbody = document.getElementById('reportsTableBody');
+            if (!tbody) return;
+            const searchTerm = document.getElementById('reportSearch')?.value.toLowerCase() || '';
+            const typeFilter = document.getElementById('reportTypeFilter')?.value || 'all';
+            const statusFilter = document.getElementById('reportStatusFilter')?.value || 'all';
+
+            const filtered = reportsData.filter(report => {
+                const matchesSearch = report.item.toLowerCase().includes(searchTerm) || 
+                                      report.reporter.toLowerCase().includes(searchTerm) ||
+                                      report.reason.toLowerCase().includes(searchTerm);
+                const matchesType = typeFilter === 'all' || report.type === typeFilter;
+                const matchesStatus = statusFilter === 'all' || report.status === statusFilter;
+                return matchesSearch && matchesType && matchesStatus;
+            });
+
+            tbody.innerHTML = filtered.map(report => `
+                <tr data-id="${report.id}">
+                    <td><span class="badge-role">${report.type.charAt(0).toUpperCase() + report.type.slice(1)}</span></td>
+                    <td><strong>${escapeHtml(report.item)}</strong></td>
+                    <td>${escapeHtml(report.reporter)}</td>
+                    <td>${escapeHtml(report.reason)}</td>
+                    <td>${report.date}</td>
+                    <td><span class="status-pill ${report.status === 'pending' ? 'pending' : (report.status === 'reviewed' ? 'progress' : '')}">${report.status.charAt(0).toUpperCase() + report.status.slice(1)}</span></td>
+                    <td>
+                        ${report.status === 'pending' ? `
+                            <button class="btn-primary" style="padding:4px 12px; margin-right:5px;" onclick="reviewReport(${report.id})">Review</button>
+                            <button class="btn-warning" style="padding:4px 12px;" onclick="dismissReport(${report.id})">Dismiss</button>
+                        ` : (report.status === 'reviewed' ? '<span class="badge-active">Reviewed</span>' : '<span class="badge-offline">Dismissed</span>')}
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function reviewReport(id) {
+            const report = reportsData.find(r => r.id === id);
+            if (report && report.status === 'pending') {
+                if (confirm(`Review report for ${report.item}?\nThis will mark it as reviewed and may trigger actions.`)) {
+                    report.status = 'reviewed';
+                    renderReportsTable();
+                    alert(`Report for ${report.item} has been marked as reviewed.`);
+                }
+            }
+        }
+
+        function dismissReport(id) {
+            const report = reportsData.find(r => r.id === id);
+            if (report && report.status === 'pending') {
+                if (confirm(`Dismiss report for ${report.item}?\nNo further action will be taken.`)) {
+                    report.status = 'dismissed';
+                    renderReportsTable();
+                    alert(`Report for ${report.item} has been dismissed.`);
+                }
+            }
+        }
+
+        function filterReports() {
+            renderReportsTable();
+        }
+
+        function escapeHtml(str) {
+            if (!str) return '';
+            return str.replace(/[&<>]/g, function(m) {
+                if (m === '&') return '&amp;';
+                if (m === '<') return '&lt;';
+                if (m === '>') return '&gt;';
+                return m;
+            });
+        }
+
+        // Initial render
+        renderReportsTable();
+
+        // Make functions globally available for inline onclick
+        window.reviewReport = reviewReport;
+        window.dismissReport = dismissReport;
+        window.filterReports = filterReports;
+    </script>
+
+    </body>
 </html>

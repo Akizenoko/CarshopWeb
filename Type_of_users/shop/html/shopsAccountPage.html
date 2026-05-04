@@ -46,7 +46,7 @@
   <!-- Stats Grid -->
   <div class="stats-grid">
     <div class="stat-card"><h3>Customers Served</h3><p>1,247</p></div>
-    <div class="stat-card"><h3>Avg Rating</h3><p>★★★★½</p></div>
+    <div class="stat-card"><h3>Avg Rating</h3><p>★★★★</p></div>
     <div class="stat-card"><h3>Employees</h3><p>6</p></div>
     <div class="stat-card"><h3>Followers</h3><p>2.3k</p></div>
     <div class="stat-card"><h3>Established</h3><p>2023</p></div>
@@ -105,9 +105,6 @@
         <div class="field"><h3>Postal Code</h3><p>7000</p></div>
         <div class="field"><h3>Street Address</h3><p>1234 Main St, Zamboanga City</p></div>
       </div>
-      <div class="map-placeholder">
-        <i class="fas fa-map-marked-alt"></i> <span>Interactive map preview</span>
-      </div>
     </section>
   </div>
 
@@ -129,18 +126,54 @@
   </section>
 
   <!-- Team Members -->
-  <section class="team-section">
+   <section class="team-section">
     <div class="section-header">
       <h2><i class="fas fa-users"></i> Shop Mechanics & Crew</h2>
       <button class="btn-tiny"><i class="fas fa-user-plus"></i> Manage</button>
     </div>
     <div class="members-grid">
-      <div class="member-card"><img src="../../../Assets/Profiles/mcado.jpg" alt="Ramon"><h4>Ramon Delgado</h4><p>Senior Mechanic</p><p class="member-email">ramon@bungkaniko.com</p></div>
-      <div class="member-card"><img src="../../../Assets/Profiles/mcado.jpg" alt="Luis"><h4>Luis Mendez</h4><p>Engine Specialist</p><p class="member-email">luis@bungkaniko.com</p></div>
-      <div class="member-card"><img src="../../../Assets/Profiles/mcado.jpg" alt="Sofia"><h4>Sofia Cruz</h4><p>Diagnostics Expert</p><p class="member-email">sofia@bungkaniko.com</p></div>
-      <div class="member-card"><img src="../../../Assets/Profiles/mcado.jpg" alt="Marcus"><h4>Marcus Tan</h4><p>Transmission Tech</p><p class="member-email">marcus@bungkaniko.com</p></div>
-      <div class="member-card"><img src="../../../Assets/Profiles/mcado.jpg" alt="Ellie"><h4>Ellie Rivera</h4><p>Body & Paint</p><p class="member-email">ellie@bungkaniko.com</p></div>
-      <div class="member-card"><img src="../../../Assets/Profiles/mcado.jpg" alt="Carlos"><h4>Carlos Yu</h4><p>Electrical Systems</p><p class="member-email">carlos@bungkaniko.com</p></div>
+      <div class="member-card">
+        <img src="../../../Assets/Profiles/mcado.jpg" alt="Ramon">
+        <h4>Ramon Delgado</h4>
+        <p>Senior Mechanic</p>
+        <p class="member-email">ramon@bungkaniko.com</p>
+        <button class="performance-btn" data-name="Ramon Delgado" data-role="Senior Mechanic" data-jobs="147" data-rating="4.9" data-revenue="89200">📊 View Performance</button>
+      </div>
+      <div class="member-card">
+        <img src="../../../Assets/Profiles/mcado.jpg" alt="Luis">
+        <h4>Luis Mendez</h4>
+        <p>Engine Specialist</p>
+        <p class="member-email">luis@bungkaniko.com</p>
+        <button class="performance-btn" data-name="Luis Mendez" data-role="Engine Specialist" data-jobs="98" data-rating="4.7" data-revenue="62500">📊 View Performance</button>
+      </div>
+      <div class="member-card">
+        <img src="../../../Assets/Profiles/mcado.jpg" alt="Sofia">
+        <h4>Sofia Cruz</h4>
+        <p>Diagnostics Expert</p>
+        <p class="member-email">sofia@bungkaniko.com</p>
+        <button class="performance-btn" data-name="Sofia Cruz" data-role="Diagnostics Expert" data-jobs="86" data-rating="4.8" data-revenue="55300">📊 View Performance</button>
+      </div>
+      <div class="member-card">
+        <img src="../../../Assets/Profiles/mcado.jpg" alt="Marcus">
+        <h4>Marcus Tan</h4>
+        <p>Transmission Tech</p>
+        <p class="member-email">marcus@bungkaniko.com</p>
+        <button class="performance-btn" data-name="Marcus Tan" data-role="Transmission Tech" data-jobs="72" data-rating="4.9" data-revenue="48900">📊 View Performance</button>
+      </div>
+      <div class="member-card">
+        <img src="../../../Assets/Profiles/mcado.jpg" alt="Ellie">
+        <h4>Ellie Rivera</h4>
+        <p>Body & Paint</p>
+        <p class="member-email">ellie@bungkaniko.com</p>
+        <button class="performance-btn" data-name="Ellie Rivera" data-role="Body & Paint" data-jobs="65" data-rating="4.8" data-revenue="42100">📊 View Performance</button>
+      </div>
+      <div class="member-card">
+        <img src="../../../Assets/Profiles/mcado.jpg" alt="Carlos">
+        <h4>Carlos Yu</h4>
+        <p>Electrical Systems</p>
+        <p class="member-email">carlos@bungkaniko.com</p>
+        <button class="performance-btn" data-name="Carlos Yu" data-role="Electrical Systems" data-jobs="58" data-rating="4.7" data-revenue="38700">📊 View Performance</button>
+      </div>
     </div>
   </section>
 
@@ -173,6 +206,68 @@
     </div>
   </footer>
 </div>
+
+<!-- ========== PERFORMANCE MODAL ========== -->
+<div id="performanceModal" class="modal-overlay" style="display: none;">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2><i class="fas fa-chart-line"></i> Mechanic Performance</h2>
+      <button class="close-modal" onclick="closeModal('performanceModal')">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="performance-stats">
+        <div class="stat-item"><i class="fas fa-user"></i> <span id="modalMechanicName">---</span></div>
+        <div class="stat-item"><i class="fas fa-briefcase"></i> <span id="modalJobs">0</span> jobs completed</div>
+        <div class="stat-item"><i class="fas fa-star"></i> <span id="modalRating">0.0</span> ★ average rating</div>
+        <div class="stat-item"><i class="fas fa-coin"></i> <span id="modalRevenue">₱0</span> total revenue</div>
+        <div class="stat-item"><i class="fas fa-calendar-alt"></i> Member since: <span id="modalMemberSince">---</span></div>
+        <div class="stat-item"><i class="fas fa-check-circle"></i> Completion rate: <span id="modalCompletionRate">0%</span></div>
+      </div>
+      <div class="modal-buttons" style="justify-content: center;">
+        <button class="btn-primary" onclick="closeModal('performanceModal')">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Modal functions
+  function openModal(modalId) {
+    document.getElementById(modalId).style.display = 'flex';
+  }
+  function closeModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
+  }
+
+  // Attach performance button handlers
+  document.querySelectorAll('.performance-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const name = btn.getAttribute('data-name');
+      const role = btn.getAttribute('data-role');
+      const jobs = btn.getAttribute('data-jobs');
+      const rating = btn.getAttribute('data-rating');
+      const revenue = btn.getAttribute('data-revenue');
+
+      document.getElementById('modalMechanicName').innerHTML = `${name} <span style="font-size:0.8rem; color:#8ca3c7;">(${role})</span>`;
+      document.getElementById('modalJobs').innerText = jobs;
+      document.getElementById('modalRating').innerText = rating;
+      document.getElementById('modalRevenue').innerText = `₱${parseInt(revenue).toLocaleString()}`;
+      document.getElementById('modalMemberSince').innerText = 'Jan 2025'; // example
+      // compute completion rate (example: jobs completed / total accepted)
+      const completionRate = Math.min(98, Math.floor((jobs / 150) * 100));
+      document.getElementById('modalCompletionRate').innerText = `${completionRate}%`;
+
+      openModal('performanceModal');
+    });
+  });
+
+  // Close modal when clicking outside
+  window.addEventListener('click', (e) => {
+    if (e.target.classList && e.target.classList.contains('modal-overlay')) {
+      e.target.style.display = 'none';
+    }
+  });
+</script>
 
 </body>
 </html>
