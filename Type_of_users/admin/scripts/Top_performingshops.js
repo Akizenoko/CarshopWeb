@@ -11,7 +11,9 @@ function renderTopShops() {
     if (!container) return;
     container.innerHTML = topShops.map(shop => `
         <div class="shop-card">
+            <a href="Shop_Profile.html">
             <img src="${shop.avatar}" alt="${shop.name}">
+            </a>
             <h3>${shop.name}</h3>
             <div class="shop-stats">
                 <span><i class="fa-solid fa-briefcase"></i> ${shop.jobs} jobs</span>

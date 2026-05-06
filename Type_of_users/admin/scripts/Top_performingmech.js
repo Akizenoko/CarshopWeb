@@ -11,7 +11,9 @@ function renderTopMechanics() {
     if (!container) return;
     container.innerHTML = topMechanics.map(m => `
         <div class="mechanic-card">
+            <a href="Mechanic_Profile_For_Admin.html">
             <img src="${m.avatar}" alt="${m.name}">
+            </a>
             <h3>${m.name}</h3>
             <div class="mechanic-stats">
                 <span><i class="fa-solid fa-briefcase"></i> ${m.jobs} jobs</span>

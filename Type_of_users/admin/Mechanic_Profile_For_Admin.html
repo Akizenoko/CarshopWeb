@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mechanic Profile | PrecisionDrive Auto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/Mechanic_Profile_for_admin.css">
+</head>
+<body>
+
+<!-- Header with back button -->
+<header class="topbar">
+    <a class="btn-link" href="mechanics.html">← Back to Admin</a>
+</header>
+
+<main>
+    <!-- Mechanic profile hero -->
+    <section class="profile-hero">
+        <img src="../../Assets/Profiles/mcado.jpg" alt="Mechanic profile">
+        <div class="profile-info">
+            <div class="name-status">
+                <h1>Mechanic Name</h1>
+                <span class="status-badge available">Available</span>
+            </div>
+            <p>anonymous@gmail.com</p>
+            <span class="role-badge">Mechanic</span>
+            <p>street, country</p>
+            <p id="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Earum accusamus voluptatem, iusto corporis officiis soluta maxime ipsum hic, 
+            blanditiis cumque deleniti delectus, enim distinctio nisi eaque dolor autem reiciendis veritatis!</p>
+        </div>
+        <div class="profile-actions">
+            <button class="btn-follow">Follow</button>
+            <a href="Inquire.html"><button class="btn-inquire">Inquire</button></a>
+            <button class="btn-report" id="reportBtn"><i class="fas fa-flag"></i> Report</button>
+        </div>
+    </section>
+
+    <!-- stats cards -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h3>Customers Served</h3>
+            <p>67</p>
+        </div>
+        <div class="stat-card">
+            <h3>Average Rating</h3>
+            <p>★★★★☆</p>
+        </div>
+        <div class="stat-card">
+            <h3>Time on Website</h3>
+            <p>54 days</p>
+        </div>
+        <div class="stat-card">
+            <h3>Followers</h3>
+            <p>12,345</p>
+        </div>
+    </div>
+
+    <!-- Weekly schedule -->
+    <section class="schedule-section">
+        <h2>Schedule & Availability</h2>
+        <div class="schedule-grid">
+            <div class="schedule-day">
+                <h3>Monday</h3>
+                <p>9:00 AM – 5:00 PM</p>
+                <span class="day-status available">Available</span>
+            </div>
+            <div class="schedule-day">
+                <h3>Tuesday</h3>
+                <p>9:00 AM – 5:00 PM</p>
+                <span class="day-status busy">Busy</span>
+            </div>
+            <div class="schedule-day">
+                <h3>Wednesday</h3>
+                <p>9:00 AM – 5:00 PM</p>
+                <span class="day-status available">Available</span>
+            </div>
+            <div class="schedule-day">
+                <h3>Thursday</h3>
+                <p>9:00 AM – 5:00 PM</p>
+                <span class="day-status busy">Busy</span>
+            </div>
+            <div class="schedule-day">
+                <h3>Friday</h3>
+                <p>9:00 AM – 3:00 PM</p>
+                <span class="day-status available">Available</span>
+            </div>
+            <div class="schedule-day">
+                <h3>Saturday</h3>
+                <p>10:00 AM – 2:00 PM</p>
+                <span class="day-status available">Available</span>
+            </div>
+            <div class="schedule-day">
+                <h3>Sunday</h3>
+                <p>—</p>
+                <span class="day-status off">Day Off</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal information + address -->
+    <div class="info-wrapper">
+        <section class="personal-info">
+            <div class="section-header">
+                <h2>Personal Information</h2>
+            </div>
+            <div class="info-grid">
+                <div class="info-field">
+                    <h3>First Name</h3>
+                    <p>First Name</p>
+                </div>
+                <div class="info-field">
+                    <h3>Last Name</h3>
+                    <p>Last Name</p>
+                </div>
+                <div class="info-field">
+                    <h3>Email Address</h3>
+                    <p>annon@gmail.com</p>
+                </div>
+                <div class="info-field">
+                    <h3>Phone Number</h3>
+                    <p>+1 (912) 345-6789</p>
+                </div>
+                <div class="info-field">
+                    <h3>Experience</h3>
+                    <p>8 years</p>
+                </div>
+                <div class="info-field">
+                    <h3>Specialty</h3>
+                    <p>Engine Diagnostics</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="address-info">
+            <div class="section-header">
+                <h2>Address</h2>
+            </div>
+            <div class="address-grid">
+                <div class="address-field">
+                    <h3>Country</h3>
+                    <p>United States</p>
+                </div>
+                <div class="address-field">
+                    <h3>City</h3>
+                    <p>Los Angeles</p>
+                </div>
+                <div class="address-field">
+                    <h3>Postal Code</h3>
+                    <p>90017</p>
+                </div>
+                <div class="address-field">
+                    <h3>Street</h3>
+                    <p>1234 Wilshire Blvd</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Customer reviews -->
+    <h2 id="Reviews">Customer Reviews — 4</h2>
+    <section class="reviews-section">
+        <div class="review-card">
+            <img src="../../Assets/Profiles/mcado.jpg" alt="customer">
+            <div class="review-content">
+                <h3>Customer Name</h3>
+                <div class="stars">★★★★★</div>
+                <p>"Great service! Fixed my car quickly and explained everything clearly."</p>
+            </div>
+        </div>
+        <div class="review-card">
+            <img src="../../Assets/Profiles/mcado.jpg" alt="customer">
+            <div class="review-content">
+                <h3>Customer Name</h3>
+                <div class="stars">★★★★☆</div>
+                <p>"Very professional and affordable. Will definitely book again."</p>
+            </div>
+        </div>
+        <div class="review-card">
+            <img src="../../Assets/Profiles/mcado.jpg" alt="customer">
+            <div class="review-content">
+                <h3>Customer Name</h3>
+                <div class="stars">★★★★★</div>
+                <p>"Diagnosed the issue fast and had it done before lunch. Highly recommend."</p>
+            </div>
+        </div>
+        <div class="review-card">
+            <img src="../../Assets/Profiles/mcado.jpg" alt="customer">
+            <div class="review-content">
+                <h3>Customer Name</h3>
+                <div class="stars">★★★★☆</div>
+                <p>"Very professional and affordable. Will definitely book again."</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- ========== REPORT MODAL ========== -->
+<div id="reportModal" class="modal-overlay" style="display: none;">
+    <div class="modal-box">
+        <div class="modal-header">
+            <h2><i class="fas fa-flag"></i> Report Mechanic</h2>
+            <button class="close-modal" onclick="closeModal('reportModal')">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label>Reason for report</label>
+                <select id="reportReason">
+                    <option value="Harassment">Harassment or abusive behavior</option>
+                    <option value="Spam">Spam or fake inquiries</option>
+                    <option value="Scam">Scam or fraudulent activity</option>
+                    <option value="Inappropriate">Inappropriate messages</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Description (optional)</label>
+                <textarea id="reportDesc" rows="4" placeholder="Provide additional details..."></textarea>
+            </div>
+            <div class="modal-buttons">
+                <button class="btn-secondary" onclick="closeModal('reportModal')">Cancel</button>
+                <button class="btn-primary" id="submitReportBtn">Submit Report</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="simple-footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img src="../../Assets/Logo/facebook.png" alt="FB"></a>
+            <a href="#"><img src="../../Assets/Logo/instagram.png" alt="IG"></a>
+            <a href="#"><img src="../../Assets/Logo/twitter.png" alt="Twitter"></a>
+        </div>
+        <p class="footer-copyright">© 2026 PrecisionDrive Auto | Connecting Cars with Experts</p>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+<script>
+    // Modal functions
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = 'flex';
+    }
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = 'none';
+    }
+
+    // Report button click
+    const reportBtn = document.getElementById('reportBtn');
+    if (reportBtn) {
+        reportBtn.addEventListener('click', () => openModal('reportModal'));
+    }
+
+    // Submit report
+    const submitBtn = document.getElementById('submitReportBtn');
+    if (submitBtn) {
+        submitBtn.addEventListener('click', () => {
+            const reason = document.getElementById('reportReason').value;
+            const description = document.getElementById('reportDesc').value;
+            alert(`Report submitted!\nReason: ${reason}\nDescription: ${description || 'No additional details.'}\n\nThank you for helping keep our community safe.`);
+            closeModal('reportModal');
+            document.getElementById('reportDesc').value = '';
+        });
+    }
+
+    // Close modal when clicking outside
+    window.addEventListener('click', (e) => {
+        if (e.target.classList && e.target.classList.contains('modal-overlay')) {
+            e.target.style.display = 'none';
+        }
+    });
+</script>
+</body>
+</html>
