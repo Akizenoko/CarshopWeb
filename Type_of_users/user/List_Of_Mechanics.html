@@ -41,6 +41,12 @@
                 <h1>Connections</h1>
             </Button>
             </a>
+            <a href="OngoingRepairs.html">
+            <Button class="Tabs">
+                <img src="../../Assets/Logo/support.png">
+                <h1>On-going Repairs</h1>
+            </Button>
+            </a>
             <a href="UserFinishedInquiry.html">
             <Button class="Tabs">
                 <img src="../../Assets/Logo/check.png">
@@ -60,11 +66,11 @@
 
 
     <div id="Header">
-        <h1>Mechanics Available</h1>
+        <h1>Mechanics Available</h1>                    
         <div id="Searchbar">
         <img src="../../Assets/Logo/magnifying-glass.png">
         <input type="text" placeholder="Search">
-        <img src="../../Assets/Logo/filter.png">
+        <img id="filterIcon" src="../../Assets/Logo/filter.png">
         </div>
     </div>
 
@@ -283,6 +289,52 @@
         </div>
     </div>
 
+      <!-- FILTER SETTINGS MODAL -->
+<div id="filterModal" class="modal-overlay">
+    <div class="modal-box">
+        <div class="modal-header">
+            <h2><i class="fas fa-sliders-h"></i> Filter Mechanics</h2>
+            <button class="close-modal" id="closeFilterModalBtn">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="filter-group">
+                <label>Rating</label>
+                <select>
+                    <option>Any</option>
+                    <option>★★★★★ (5)</option>
+                    <option>★★★★☆ (4+)</option>
+                    <option>★★★☆☆ (3+)</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Availability</label>
+                <select>
+                    <option>All</option>
+                    <option>Open Now</option>
+                    <option>Closed</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Location</label>
+                <input type="text" placeholder="Enter city or area">
+            </div>
+            <div class="filter-group">
+                <label>Services</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox"> Engine Repair</label>
+                    <label><input type="checkbox"> Oil Change</label>
+                    <label><input type="checkbox"> Brake Service</label>
+                    <label>Other <input type="text"></label>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="btn-apply">Apply Filters</button>
+                <button class="btn-reset">Reset</button>
+            </div>
+        </div>
+    </div>
+</div>
+
     <!-- ========== FOOTER (unchanged) ========== -->
     <footer class="simple-footer">
         <div class="footer-content">
@@ -303,26 +355,64 @@
 
     <script src="../../Sidebar_Script.js"></script>
     <script>
-        // Open modal by ID
-        function openModal(modalId) {
-            document.getElementById(modalId).style.display = 'flex';
+            // ===== FILTER MODAL =====
+    const filterIcon = document.getElementById('filterIcon');
+    const filterModal = document.getElementById('filterModal');
+    const closeFilterBtn = document.getElementById('closeFilterModalBtn');
+
+    function openFilterModal() {
+        if (filterModal) filterModal.style.display = 'flex';
+    }
+    function closeFilterModal() {
+        if (filterModal) filterModal.style.display = 'none';
+    }
+
+    if (filterIcon) {
+        filterIcon.addEventListener('click', openFilterModal);
+    }
+    if (closeFilterBtn) {
+        closeFilterBtn.addEventListener('click', closeFilterModal);
+    }
+
+    // Close modal when clicking outside the modal box
+    window.addEventListener('click', function(e) {
+        if (e.target === filterModal) {
+            closeFilterModal();
         }
-        function closeModal(modalId) {
-            document.getElementById(modalId).style.display = 'none';
+    });
+
+    // Close with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && filterModal && filterModal.style.display === 'flex') {
+            closeFilterModal();
         }
-        // Attach click events to bell and chat icons after page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            const bellIcon = document.getElementById('bell');
-            const chatIcon = document.getElementById('chat');
-            if (bellIcon) bellIcon.addEventListener('click', () => openModal('notificationsModal'));
-            if (chatIcon) chatIcon.addEventListener('click', () => openModal('chatModal'));
-        });
-        // Close modal when clicking outside the modal box
-        window.addEventListener('click', function(e) {
-            if (e.target.classList.contains('modal-overlay')) {
-                e.target.style.display = 'none';
-            }
-        });
+    });
+
+    // ===== NOTIFICATIONS & CHAT MODALS (reuse same open/close) =====
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) modal.style.display = 'flex';
+    }
+    function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) modal.style.display = 'none';
+    }
+
+    // Attach click handlers to bell and chat icons
+    document.addEventListener('DOMContentLoaded', function() {
+        const bell = document.getElementById('bell');
+        const chat = document.getElementById('chat');
+        if (bell) bell.addEventListener('click', () => openModal('notificationsModal'));
+        if (chat) chat.addEventListener('click', () => openModal('chatModal'));
+    });
+
+    // Also close notification/chat modals when clicking outside
+    window.addEventListener('click', function(e) {
+        const notifModal = document.getElementById('notificationsModal');
+        const chatModal = document.getElementById('chatModal');
+        if (e.target === notifModal) notifModal.style.display = 'none';
+        if (e.target === chatModal) chatModal.style.display = 'none';
+    });
     </script>
 </body>
 

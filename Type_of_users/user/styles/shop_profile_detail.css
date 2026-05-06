@@ -27,6 +27,11 @@ body {
     min-height: 100vh;
 }
 
+#bio{
+  border-top: 1px solid rgba(255, 255, 255, 0.369);
+  padding: 20px;
+}
+
 /* Header */
 .topbar {
     border-bottom: 1px solid var(--border-light);

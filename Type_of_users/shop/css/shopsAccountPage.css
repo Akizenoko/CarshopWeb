@@ -16,6 +16,11 @@ body {
   min-height: 100vh;
 }
 
+#bio{
+  border-top: 1px solid rgba(255, 255, 255, 0.369);
+  padding: 20px;
+}
+
 .page-shell {
   max-width: 1400px;
   margin: 0 auto;

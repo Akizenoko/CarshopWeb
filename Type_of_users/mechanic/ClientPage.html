@@ -34,8 +34,8 @@
         </div>
         <a href="Accepted_Jobs.html">
         <button class="Tabs">
-            <img src="../../Assets/Logo/check.png" alt="email">
-            <h1>Accepted Jobs</h1>
+            <img src="../../Assets/Logo/support.png" alt="support">
+            <h1>Your Repairs</h1>
         </button>
         </a>
 
@@ -69,7 +69,7 @@
     <div id="Searchbar">
         <img src="../../Assets/Logo/magnifying-glass.png" alt="search">
         <input type="text" placeholder="Search clients or vehicle...">
-        <img src="../../Assets/Logo/filter.png" alt="filter">
+        <img id="filterIcon" src="../../Assets/Logo/filter.png">
     </div>
 </div>
 
@@ -579,6 +579,41 @@
     </div>
 </div>
 
+  <!-- FILTER SETTINGS MODAL -->
+<div id="filterModal" class="modal-overlay">
+    <div class="modal-box">
+        <div class="modal-header">
+            <h2><i class="fas fa-sliders-h"></i> Filter Clients</h2>
+            <button class="close-modal" id="closeFilterModalBtn">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="filter-group">
+                <label>Status</label>
+                <select>
+                    <option>All</option>
+                    <option>In a Rush</option>
+                    <option>Normal</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Location</label>
+                <input type="text" placeholder="Enter city or area">
+            </div>
+            <div class="filter-group">
+                <label>Cost</label>
+                <div class="costgroup">
+                    <label>Estimated Cost <input type="text"></label>
+                    <label>Available Budget <input type="text"></label>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="btn-apply">Apply Filters</button>
+                <button class="btn-reset">Reset</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <!-- ===== FOOTER (Matching user homepage) ===== -->
 <footer class="simple-footer">
@@ -600,23 +635,65 @@
 
 <script src="../../Sidebar_Script.js"></script>
 <script>
-    // Global functions for opening/closing modals (used by onclick attributes)
+            // ===== FILTER MODAL =====
+    const filterIcon = document.getElementById('filterIcon');
+    const filterModal = document.getElementById('filterModal');
+    const closeFilterBtn = document.getElementById('closeFilterModalBtn');
+
+    function openFilterModal() {
+        if (filterModal) filterModal.style.display = 'flex';
+    }
+    function closeFilterModal() {
+        if (filterModal) filterModal.style.display = 'none';
+    }
+
+    if (filterIcon) {
+        filterIcon.addEventListener('click', openFilterModal);
+    }
+    if (closeFilterBtn) {
+        closeFilterBtn.addEventListener('click', closeFilterModal);
+    }
+
+    // Close modal when clicking outside the modal box
+    window.addEventListener('click', function(e) {
+        if (e.target === filterModal) {
+            closeFilterModal();
+        }
+    });
+
+    // Close with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && filterModal && filterModal.style.display === 'flex') {
+            closeFilterModal();
+        }
+    });
+
+    // ===== NOTIFICATIONS & CHAT MODALS (reuse same open/close) =====
     function openModal(modalId) {
-        var modal = document.getElementById(modalId);
+        const modal = document.getElementById(modalId);
         if (modal) modal.style.display = 'flex';
     }
     function closeModal(modalId) {
-        var modal = document.getElementById(modalId);
+        const modal = document.getElementById(modalId);
         if (modal) modal.style.display = 'none';
     }
 
-    // Close modal when clicking outside the modal overlay
-    window.addEventListener('click', function(e) {
-        if (e.target.classList && e.target.classList.contains('modal-overlay')) {
-            e.target.style.display = 'none';
-        }
+    // Attach click handlers to bell and chat icons
+    document.addEventListener('DOMContentLoaded', function() {
+        const bell = document.getElementById('bell');
+        const chat = document.getElementById('chat');
+        if (bell) bell.addEventListener('click', () => openModal('notificationsModal'));
+        if (chat) chat.addEventListener('click', () => openModal('chatModal'));
     });
-</script>
+
+    // Also close notification/chat modals when clicking outside
+    window.addEventListener('click', function(e) {
+        const notifModal = document.getElementById('notificationsModal');
+        const chatModal = document.getElementById('chatModal');
+        if (e.target === notifModal) notifModal.style.display = 'none';
+        if (e.target === chatModal) chatModal.style.display = 'none';
+    });
+    </script>
 </body>
 </html>
  

@@ -578,3 +578,127 @@ body{
         justify-content: flex-start;
     }
 }
+
+/* ---------- FILTER MODAL STYLES ---------- */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal-box {
+    background: linear-gradient(145deg, #0a0f2a, #050b1f);
+    border-radius: 28px;
+    width: 480px;
+    max-width: 90vw;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 224, 255, 0.4);
+    color: #f0f4fa;
+    font-family: 'Poppins', sans-serif;
+}
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 224, 255, 0.2);
+    padding-bottom: 0.8rem;
+    margin-bottom: 1rem;
+}
+.modal-header h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #9efff0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #8ca3c7;
+    transition: 0.2s;
+    line-height: 1;
+}
+.close-modal:hover {
+    color: white;
+}
+.filter-group {
+    margin-bottom: 1.2rem;
+}
+.filter-group label {
+    display: block;
+    font-size: 0.8rem;
+    color: #9efff0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+.filter-group select,
+.filter-group input {
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 12px;
+    background: rgba(20, 28, 50, 0.8);
+    border: 1px solid rgba(120, 158, 223, 0.5);
+    color: white;
+    font-family: inherit;
+}
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.checkbox-group input[type="checkbox"]{
+    scale: 1.5;
+}
+.checkbox-group input[type="text"]{
+    width: 300px;
+}
+.checkbox-group label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: #cbd5e1;
+    cursor: pointer;
+}
+.modal-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+.btn-apply, .btn-reset {
+    flex: 1;
+    padding: 0.6rem;
+    border-radius: 40px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s;
+}
+.btn-apply {
+    background: #10b981;
+    color: white;
+}
+.btn-apply:hover {
+    background: #059669;
+}
+.btn-reset {
+    background: transparent;
+    border: 1px solid #ef4444;
+    color: #fca5a5;
+}
+.btn-reset:hover {
+    background: rgba(239, 68, 68, 0.2);
+}

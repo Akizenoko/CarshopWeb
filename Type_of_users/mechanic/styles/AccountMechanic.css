@@ -24,6 +24,11 @@ body {
   color: var(--text);
 }
 
+#bio{
+  border-top: 1px solid rgba(255, 255, 255, 0.369);
+  padding: 20px;
+}
+
 .page-shell {
   margin: 0 auto;
   display: flex;

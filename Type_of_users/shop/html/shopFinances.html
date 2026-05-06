@@ -3,324 +3,349 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Shop Finances | PrecisionDrive Auto</title>
+    <title>PrecisionDrive Auto | Shop Finances</title>
+    <!-- Google Fonts & Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- External CSS & Chart.js -->
     <link rel="stylesheet" href="../css/shopFinances.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
-<div id="NavBar">
-    <div id="nav-left">
-        <img id="profile" src="../../../Assets/Profiles/mcado.jpg" alt="Menu Trigger" onclick="toggleSidebar()">
-    </div>
-    <div id="mainnavbar">
-        <a href="home.html"><button class="button">Dashboard</button></a>
-        <a href="manageOrder.html"><button class="button">Manage Customers</button></a>
-        <a href="shopFinances.html"><button class="button">Shop Finances</button></a>
-    </div>
-    <div id="formiscelanious">
-        <i class="fa-regular fa-bell" id="bell"></i>
-        <i class="fa-regular fa-comment-dots" id="chat"></i>
-    </div>
-</div>
-
-<div id="sidebar">
-    <div id="listsSidebar">
-        <div id="SidebarProf">
-            <a href="shopsAccountPage.html"><img id="profileSidebar" src="../../../Assets/Profiles/mcado.jpg" alt="avatar"></a>
-            <h2>Bungkaniko Auto Center</h2>
-            <p>Bungkaniks@Shop.com</p>
+    <!-- Navigation Bar -->
+    <div id="NavBar">
+        <div id="nav-left">
+            <img id="profile" src="../../../Assets/Profiles/mcado.jpg" alt="Menu Trigger" onclick="toggleSidebar()">
         </div>
-        <button class="Tabs" onclick="openStaffModal()"><i class="fa-solid fa-users"></i><h1>Staff List</h1></button>
-        <a href="Warranties_shop.html"><button class="Tabs"><i class="fa-regular fa-circle-check"></i><h1>Warranties</h1></button></a>
-        <a href="settings.html"><button class="Tabs"><i class="fa-solid fa-gear"></i><h1>Settings</h1></button></a>
-        <a href="../../mechanic/Mechanic_Homepage.html" class="tab-link"><button class="Tabs"><i class="fa-solid fa-house"></i><h1>Back To Home</h1></button></a>
-        <a href="../../../index.html" class="tab-link"><button class="Tabs" id="Sign-Out"><h1>Sign-out</h1></button></a>
-    </div>
-</div>
-
-<div id="ContentArea">
-    <div class="header-section">
-        <h1>Shop Finances</h1>
-        <div class="header-actions">
-            <input type="date" class="date-input" id="reportDate">
-            <button class="btn-primary" id="newTransactionBtn"><i class="fa-solid fa-plus"></i> New Transaction</button>
+        <div id="mainnavbar">
+            <a href="home.html"><button class="button">Dashboard</button></a>
+            <a href="manageOrder.html"><button class="button">Manage Customers</button></a>
+            <a href="shopFinances.html"><button class="button">Shop Finances</button></a>
         </div>
-    </div>
-    
-    <!-- Main Finance Cards -->
-    <div class="finance-cards">
-        <div class="card">
-            <h3>Total Revenue</h3>
-            <p>₱124,850</p>
-            <span class="growth-label positive"><i class="fa-solid fa-caret-up"></i> +15%</span>
-        </div>
-        <div class="card">
-            <h3>Total Expenses</h3>
-            <p>₱42,300</p>
-            <span class="growth-label negative"><i class="fa-solid fa-caret-up"></i> +8%</span>
-        </div>
-        <div class="card">
-            <h3>Net Profit</h3>
-            <p>₱82,550</p>
-            <span class="growth-label positive"><i class="fa-solid fa-caret-up"></i> +12%</span>
-        </div>
-        <div class="card">
-            <h3>Pending Payments</h3>
-            <p>₱8,200</p>
-            <button class="btn-outline">View Unpaid</button>
+        <div id="formiscelanious">
+            <i class="fa-regular fa-bell" id="bell"></i>
+            <i class="fa-regular fa-comment-dots" id="chat"></i>
         </div>
     </div>
 
-    <!-- Charts Row: Monthly Revenue + Expense Breakdown -->
-    <div class="charts-row">
-        <div class="chart-card">
-            <h3>Monthly Revenue (Last 6 Months)</h3>
-            <canvas id="revenueChart" width="400" height="200"></canvas>
-        </div>
-        <div class="chart-card">
-            <h3>Expense Breakdown</h3>
-            <canvas id="expenseChart" width="400" height="200"></canvas>
-        </div>
-    </div>
-
-    <!-- Profit Margin Gauge (visual) -->
-    <div class="profit-card">
-        <h3>Profit Margin</h3>
-        <div class="gauge-container">
-            <div class="gauge-fill" style="width: 66%;"></div>
-            <span class="gauge-label">66%</span>
-        </div>
-        <p>Industry average: 55% | <strong>+11% above average</strong></p>
-    </div>
-
-    <!-- Top Earning Mechanics -->
-    <div class="section-title">
-        <h2><i class="fa-solid fa-trophy"></i> Top Earning Mechanics</h2>
-    </div>
-    <div class="mechanics-grid" id="topMechanicsContainer">
-        <!-- populated by JS -->
-    </div>
-
-    <!-- Recent Transactions (Enhanced Table) -->
-    <div class="section-title">
-        <h2><i class="fa-solid fa-clock-rotate-left"></i> Recent Transactions</h2>
-    </div>
-    <div class="table-wrapper">
-        <table class="OrderTable" id="transactionsTable">
-            <thead>
-                <tr><th>Date</th><th>Customer</th><th>Service</th><th>Mechanic</th><th>Payment Method</th><th>Amount</th><th>Status</th><th>Action</th></tr>
-            </thead>
-            <tbody>
-                <!-- populated by JS -->
-            </tbody>
-        </table>
-    </div>
-</div>
-
-<!-- ========== PARTS EXPENSES SECTION ========== -->
-<div class="section-title">
-    <h2 id="partsexpense"><i class="fa-solid fa-boxes-stacked"></i> Parts Expenses</h2>
-</div>
-<div class="parts-summary-card">
-    <div class="parts-total">
-        <h3>Total Parts Cost (This Month)</h3>
-        <p>₱12,800</p>
-        <span class="growth-label negative"><i class="fa-solid fa-caret-down"></i> -5% vs last month</span>
-    </div>
-    <div class="parts-note">
-        <i class="fa-solid fa-circle-info"></i> Includes all part purchases from approved suppliers.
-    </div>
-</div>
-
-<div class="table-wrapper">
-    <table class="OrderTable" id="partsTable">
-        <thead>
-            <tr>
-                <th>Part Name</th>
-                <th>Quantity</th>
-                <th>Unit Price</th>
-                <th>Total</th>
-                <th>Supplier</th>
-                <th>Date</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- populated by JavaScript -->
-        </tbody>
-    </table>
-</div>
-
-<!-- Staff Modal -->
-<div id="staffModal" class="modal">
-    <div class="modal-content staff-modal">
-        <div class="modal-header">
-            <h2>Shop Mechanics</h2>
-            <span class="close-btn" onclick="closeStaffModal()">&times;</span>
-        </div>
-        <button class="btn-primary" style="width: 100%; margin-bottom: 20px;">
-            <i class="fa-solid fa-plus"></i> Add New Mechanic
-        </button>
-        <div class="staff-list-container">
-            <div class="staff-card">
-                <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
-                <div class="staff-info">
-                    <h3>Ricardo Dalisay</h3>
-                    <p>Senior Mechanic</p>
-                </div>
-                <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div id="listsSidebar">
+            <div id="SidebarProf">
+                <a href="shopsAccountPage.html">
+                    <img id="profileSidebar" src="../../../Assets/Profiles/mcado.jpg" alt="avatar">
+                </a>
+                <h2>Bungkaniko Auto Center</h2>
+                <p>Bungkaniks@Shop.com</p>
             </div>
-            <div class="staff-card">
-                <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
-                <div class="staff-info">
-                    <h3>Cardo Dalistep</h3>
-                    <p>Junior Mechanic</p>
-                </div>
-                <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
-            </div>
-            <div class="staff-card">
-                <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
-                <div class="staff-info"><h3>Ricardo Dalisay</h3><p>Senior Mechanic</p></div>
-                <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
-            </div>
-            <div class="staff-card">
-                <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
-                <div class="staff-info"><h3>Cardo Dalistep</h3><p>Junior Mechanic</p></div>
-                <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
-            </div>
-            <div class="staff-card">
-                <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
-                <div class="staff-info"><h3>Ricardo Dalisay</h3><p>Senior Mechanic</p></div>
-                <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
-            </div>
-            <div class="staff-card">
-                <img src="../../../Assets/Profiles/mcado.jpg" alt="Mechanic">
-                <div class="staff-info"><h3>Cardo Dalistep</h3><p>Junior Mechanic</p></div>
-                <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+            <button class="Tabs" onclick="openStaffModal()">
+                <i class="fa-solid fa-users"></i>
+                <h1>Staff List</h1>
+            </button>
+            <a href="ShopOngoingJobs.html">
+                <button class="Tabs">
+                    <i class="fa-solid fa-wrench"></i>
+                    <h1>Repairs</h1>
+                </button>
+            </a>
+            <a href="Warranties_shop.html">
+                <button class="Tabs">
+                    <i class="fa-regular fa-circle-check"></i>
+                    <h1>Warranties</h1>
+                </button>
+            </a>
+            <a href="settings.html">
+                <button class="Tabs">
+                    <i class="fa-solid fa-gear"></i>
+                    <h1>Settings</h1>
+                </button>
+            </a>
+            <a href="../../mechanic/Mechanic_Homepage.html" class="tab-link">
+                <button class="Tabs">
+                    <i class="fa-solid fa-house"></i>
+                    <h1>Back To Home</h1>
+                </button>
+            </a>
+            <a href="../../../index.html" class="tab-link">
+                <button class="Tabs" id="Sign-Out">
+                    <h1>Sign-out</h1>
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div id="ContentArea">
+        <!-- Header Section -->
+        <div class="header-section">
+            <h1>Shop Finances</h1>
+            <div class="header-actions">
+                <input type="date" class="date-input" id="reportDate">
+                <button class="btn-primary" id="newTransactionBtn">
+                    <i class="fa-solid fa-plus"></i> New Transaction
+                </button>
             </div>
         </div>
+
+        <!-- Finance Cards -->
+        <div class="finance-cards">
+            <div class="card">
+                <h3>Total Revenue</h3>
+                <p id="totalRevenue">₱0</p>
+                <span class="growth-label positive" id="revenueGrowth">
+                    <i class="fa-solid fa-caret-up"></i> +0%
+                </span>
+            </div>
+            <div class="card">
+                <h3>Total Expenses</h3>
+                <p id="totalExpenses">₱42,300</p>
+                <span class="growth-label negative">
+                    <i class="fa-solid fa-caret-up"></i> +8%
+                </span>
+            </div>
+            <div class="card">
+                <h3>Net Profit</h3>
+                <p id="netProfit">₱0</p>
+                <span class="growth-label positive" id="profitGrowth">
+                    <i class="fa-solid fa-caret-up"></i> +0%
+                </span>
+            </div>
+            <div class="card">
+                <h3>Pending Payments</h3>
+                <p id="pendingTotal">₱0</p>
+                <button class="btn-outline" id="viewUnpaidBtn">View Unpaid</button>
+            </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="charts-row">
+            <div class="chart-card">
+                <h3>Monthly Revenue (Last 6 Months)</h3>
+                <canvas id="revenueChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h3>Expense Breakdown</h3>
+                <canvas id="expenseChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Profit Margin Gauge -->
+        <div class="profit-card">
+            <h3>Profit Margin</h3>
+            <div class="gauge-container">
+                <div class="gauge-fill" id="gaugeFill"></div>
+                <span class="gauge-label" id="gaugePercent">0%</span>
+            </div>
+            <p>Industry average: 55% | <strong id="marginCompare">--</strong></p>
+        </div>
+
+        <!-- Top Earning Mechanics -->
+        <div class="section-title">
+            <h2><i class="fa-solid fa-trophy"></i> Top Earning Mechanics</h2>
+        </div>
+        <div class="mechanics-grid" id="topMechanicsContainer"></div>
+
+        <!-- Recent Transactions Table -->
+        <div class="section-title">
+            <h2><i class="fa-solid fa-clock-rotate-left"></i> Recent Transactions</h2>
+        </div>
+        <div class="table-wrapper">
+            <table class="OrderTable">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Customer</th>
+                        <th>Service</th>
+                        <th>Mechanic</th>
+                        <th>Payment Method</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="transactionsTableBody"></tbody>
+            </table>
+        </div>
+
+        <!-- Parts Expenses Section -->
+        <div class="section-title">
+            <h2 id="partsexpense"><i class="fa-solid fa-boxes-stacked"></i> Parts Expenses</h2>
+        </div>
+        <div class="parts-summary-card">
+            <div class="parts-total">
+                <h3>Total Parts Cost (This Month)</h3>
+                <p id="totalPartsCost">₱0</p>
+                <span class="growth-label negative">
+                    <i class="fa-solid fa-caret-down"></i> -5% vs last month
+                </span>
+            </div>
+            <div class="parts-note">
+                <i class="fa-solid fa-circle-info"></i> Includes all part purchases from approved suppliers.
+            </div>
+        </div>
+        <div class="table-wrapper">
+            <table class="OrderTable">
+                <thead>
+                    <tr>
+                        <th>Part Name</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                        <th>Total</th>
+                        <th>Supplier</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="partsTableBody"></tbody>
+            </table>
+        </div>
     </div>
-</div>
 
-<!-- ========== NOTIFICATIONS MODAL ========== -->
-<div id="notificationsModal" class="modal-overlay" style="display: none;">
-    <div class="modal-box">
-        <div class="modal-header">
-            <h2><i class="fas fa-bell"></i> Notifications</h2>
-            <button class="close-modal" onclick="closeModal('notificationsModal')">&times;</button>
-        </div>
-        <div id="notificationsList">
-            <div class="notification-item">
-                <div class="notification-title">New Transaction</div>
-                <p>Payment of ₱5,300 received from Juan Dela Cruz.</p>
-                <div class="notification-time">2 hours ago</div>
+    <!-- MODALS -->
+    <!-- Staff Modal -->
+    <div id="staffModal" class="modal">
+        <div class="modal-content staff-modal">
+            <div class="modal-header">
+                <h2>Shop Mechanics</h2>
+                <span class="close-btn" onclick="closeStaffModal()">&times;</span>
             </div>
-            <div class="notification-item">
-                <div class="notification-title">Expense Alert</div>
-                <p>Parts purchase of ₱12,800 recorded.</p>
-                <div class="notification-time">Yesterday</div>
-            </div>
-            <div class="notification-item">
-                <div class="notification-title">Low Stock</div>
-                <p>Brake pads stock below threshold. Please reorder.</p>
-                <div class="notification-time">3 days ago</div>
-            </div>
+            <button class="btn-primary" style="width:100%; margin-bottom:20px;" id="addMechanicBtn">
+                <i class="fa-solid fa-plus"></i> Add New Mechanic
+            </button>
+            <div class="staff-list-container" id="staffListContainer"></div>
         </div>
     </div>
-</div>
 
-<!-- ========== CHAT MODAL ========== -->
-<div id="chatModal" class="modal-overlay" style="display: none;">
-    <div class="modal-box">
-        <div class="modal-header">
-            <h2><i class="fas fa-comment-dots"></i> Messages</h2>
-            <button class="close-modal" onclick="closeModal('chatModal')">&times;</button>
-        </div>
-        <div id="chatList">
-            <div class="chat-item">
-                <div class="chat-sender">Juan Dela Cruz</div>
-                <div class="chat-preview">Can I get a receipt for my payment?</div>
-                <div class="chat-time">10:15 AM</div>
+    <!-- New Transaction Modal -->
+    <div id="newTransactionModal" class="modal-overlay" style="display:none;">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-plus-circle"></i> New Transaction</h2>
+                <button class="close-modal" onclick="closeModal('newTransactionModal')">&times;</button>
             </div>
-            <div class="chat-item">
-                <div class="chat-sender">Supplier: AutoParts Co.</div>
-                <div class="chat-preview">Your order of brake pads is ready for pickup.</div>
-                <div class="chat-time">Yesterday</div>
-            </div>
-            <div class="chat-item">
-                <div class="chat-sender">Support Team</div>
-                <div class="chat-preview">Your monthly financial report is ready.</div>
-                <div class="chat-time">Apr 1, 2026</div>
-            </div>
+            <form id="transactionForm">
+                <input type="date" id="transDate" required>
+                <input type="text" id="transCustomer" placeholder="Customer Name" required>
+                <input type="text" id="transService" placeholder="Service" required>
+                <select id="transMechanic" required></select>
+                <select id="transPayment" required>
+                    <option value="Cash">Cash</option>
+                    <option value="GCash">GCash</option>
+                    <option value="Bank Transfer">Bank Transfer</option>
+                </select>
+                <input type="number" id="transAmount" placeholder="Amount (₱)" required>
+                <select id="transStatus" required>
+                    <option value="paid">Paid</option>
+                    <option value="pending">Pending</option>
+                </select>
+                <button type="submit" class="btn-primary">Save Transaction</button>
+            </form>
         </div>
     </div>
-</div>
 
-<footer class="simple-footer">
-    <div class="footer-content">
-        <div class="footer-links">
-            <a href="#">About Us</a>
-            <a href="#">Contact</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+    <!-- Transaction Details Modal -->
+    <div id="transactionDetailModal" class="modal-overlay" style="display:none;">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-receipt"></i> Transaction Details</h2>
+                <button class="close-modal" onclick="closeModal('transactionDetailModal')">&times;</button>
+            </div>
+            <div id="transactionDetailContent"></div>
         </div>
-        <div class="footer-social">
-            <a href="#"><img src="../../../Assets/Logo/facebook.png" alt="FB"></a>
-            <a href="#"><img src="../../../Assets/Logo/instagram.png" alt="IG"></a>
-            <a href="#"><img src="../../../Assets/Logo/twitter.png" alt="Twitter"></a>
-        </div>
-        <p class="footer-copyright">© 2026 Bungkaniko Auto Center | Powered by PrecisionDrive Auto</p>
     </div>
-</footer>
 
-<script src="../script/shopfinances.js"></script>
-<script>
-    // Sidebar toggle (if not already defined)
-    function toggleSidebar() {
-        document.getElementById("sidebar").classList.toggle("active");
-    }
+    <!-- Part Details Modal -->
+    <div id="partDetailModal" class="modal-overlay" style="display:none;">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-microchip"></i> Part Details</h2>
+                <button class="close-modal" onclick="closeModal('partDetailModal')">&times;</button>
+            </div>
+            <div id="partDetailContent"></div>
+        </div>
+    </div>
 
-    // Staff modal functions
-    function openStaffModal() {
-        document.getElementById('staffModal').style.display = 'block';
-    }
-    function closeStaffModal() {
-        document.getElementById('staffModal').style.display = 'none';
-    }
+    <!-- Unpaid Transactions Modal -->
+    <div id="unpaidModal" class="modal-overlay" style="display:none;">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-clock"></i> Unpaid Transactions</h2>
+                <button class="close-modal" onclick="closeModal('unpaidModal')">&times;</button>
+            </div>
+            <div id="unpaidListContainer"></div>
+        </div>
+    </div>
 
-    // Global functions for notification/chat modals
-    function openModal(modalId) {
-        var modal = document.getElementById(modalId);
-        if (modal) modal.style.display = 'flex';
-    }
-    function closeModal(modalId) {
-        var modal = document.getElementById(modalId);
-        if (modal) modal.style.display = 'none';
-    }
+    <!-- Notifications Modal -->
+    <div id="notificationsModal" class="modal-overlay" style="display:none;">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2><i class="fas fa-bell"></i> Notifications</h2>
+                <button class="close-modal" onclick="closeModal('notificationsModal')">&times;</button>
+            </div>
+            <div id="notificationsList"></div>
+        </div>
+    </div>
 
-    // Attach click handlers to bell and chat icons
-    document.addEventListener('DOMContentLoaded', function() {
-        var bell = document.getElementById('bell');
-        var chat = document.getElementById('chat');
-        if (bell) bell.addEventListener('click', function() { openModal('notificationsModal'); });
-        if (chat) chat.addEventListener('click', function() { openModal('chatModal'); });
-    });
+    <!-- Chat Modal -->
+    <div id="chatModal" class="modal-overlay" style="display:none;">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2><i class="fas fa-comment-dots"></i> Messages</h2>
+                <button class="close-modal" onclick="closeModal('chatModal')">&times;</button>
+            </div>
+            <div id="chatList"></div>
+        </div>
+    </div>
 
-    // Close modal when clicking outside the modal overlay
-    window.addEventListener('click', function(e) {
-        if (e.target.classList && e.target.classList.contains('modal-overlay')) {
-            e.target.style.display = 'none';
-        }
-        // also close staff modal if clicking on its background
-        if (e.target.classList.contains('modal')) {
-            closeStaffModal();
-        }
-    });
-</script>
+    <!-- Footer -->
+    <footer class="simple-footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="../../../Assets/Logo/facebook.png" alt="FB"></a>
+                <a href="#"><img src="../../../Assets/Logo/instagram.png" alt="IG"></a>
+                <a href="#"><img src="../../../Assets/Logo/twitter.png" alt="Twitter"></a>
+            </div>
+            <p class="footer-copyright">© 2026 PrecisionDrive Auto | Connecting Cars with Experts</p>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="../script/shopfinances.js"></script>
+
+    <!-- Inline Global Scripts -->
+    <script>
+        // Sidebar and basic modal triggers (global)
+        window.toggleSidebar = () => document.getElementById("sidebar")?.classList.toggle("active");
+        window.openStaffModal = () => document.getElementById('staffModal').style.display = 'block';
+        window.closeStaffModal = () => document.getElementById('staffModal').style.display = 'none';
+        window.openModal = (id) => document.getElementById(id).style.display = 'flex';
+        window.closeModal = (id) => document.getElementById(id).style.display = 'none';
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const bell = document.getElementById('bell');
+            const chat = document.getElementById('chat');
+            if (bell) bell.onclick = () => openModal('notificationsModal');
+            if (chat) chat.onclick = () => openModal('chatModal');
+
+            window.onclick = (e) => {
+                if (e.target.classList?.contains('modal-overlay')) {
+                    e.target.style.display = 'none';
+                }
+                if (e.target.classList?.contains('modal')) {
+                    closeStaffModal();
+                }
+            };
+        });
+    </script>
 </body>
 </html>

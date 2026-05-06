@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(145deg, #0a1a2f 0%, #0b2b44 100%);
+    color: #f0f4fa;
+    min-height: 100vh;
+}
+
+.page-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Top bar */
+.topbar {
+    margin-bottom: 2rem;
+}
+.back-link {
+    text-decoration: none;
+    color: #9efff0;
+    background: rgba(0, 224, 255, 0.1);
+    padding: 0.5rem 1.2rem;
+    border-radius: 40px;
+    font-size: 0.85rem;
+    transition: 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.back-link:hover {
+    background: rgba(0, 224, 255, 0.25);
+    transform: translateX(-3px);
+}
+
+/* Forgot card (glassmorphism) */
+.forgot-card {
+    background: rgba(20, 28, 50, 0.65);
+    backdrop-filter: blur(8px);
+    border-radius: 2rem;
+    border: 1px solid rgba(120, 158, 223, 0.4);
+    padding: 2rem;
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.card-header i {
+    font-size: 3rem;
+    color: #00e0ff;
+    background: rgba(0, 224, 255, 0.15);
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+.card-header h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #9efff0;
+    margin-bottom: 0.5rem;
+}
+.card-header p {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+}
+
+/* Form */
+.input-group {
+    margin-bottom: 1.5rem;
+}
+.input-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #9efff0;
+    margin-bottom: 0.5rem;
+}
+.input-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.input-icon i {
+    position: absolute;
+    left: 1rem;
+    color: #00e0ff;
+    font-size: 1rem;
+}
+.input-icon input {
+    width: 100%;
+    padding: 0.9rem 1rem 0.9rem 2.5rem;
+    background: rgba(15, 25, 45, 0.8);
+    border: 1px solid rgba(120, 158, 223, 0.5);
+    border-radius: 1.2rem;
+    color: white;
+    font-size: 0.9rem;
+    font-family: inherit;
+    transition: 0.2s;
+}
+.input-icon input:focus {
+    outline: none;
+    border-color: #00e0ff;
+    box-shadow: 0 0 0 2px rgba(0, 224, 255, 0.2);
+}
+.input-icon input::placeholder {
+    color: #8ca3c7;
+}
+
+.btn-submit {
+    width: 100%;
+    background: #10b981;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.btn-submit:hover {
+    background: #059669;
+    transform: translateY(-2px);
+}
+
+/* Success message */
+.success-message {
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid #10b981;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.success-message i {
+    font-size: 1.5rem;
+    color: #34d399;
+}
+.success-message p {
+    font-size: 0.9rem;
+    color: #a5f0c0;
+    margin: 0;
+}
+
+/* Card footer */
+.card-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.card-footer a {
+    color: #9efff0;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: 0.2s;
+}
+.card-footer a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/* Footer */
+.simple-footer {
+    background: #06173b;
+    border-top: 1px solid #2a4b77;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+.footer-links a {
+    color: #bbd4ff;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+.footer-links a:hover {
+    color: white;
+    text-decoration: underline;
+}
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+.footer-social img {
+    width: 28px;
+    background: white;
+    border-radius: 50%;
+    padding: 4px;
+    transition: 0.2s;
+}
+.footer-social img:hover {
+    transform: translateY(-3px);
+}
+.footer-copyright {
+    font-size: 0.75rem;
+    color: #8ca3c7;
+}
+
+/* Responsive */
+@media (max-width: 550px) {
+    .page-wrapper {
+        padding: 1rem;
+    }
+    .forgot-card {
+        padding: 1.5rem;
+    }
+    .card-header h1 {
+        font-size: 1.5rem;
+    }
+}

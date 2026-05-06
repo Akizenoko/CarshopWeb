@@ -186,7 +186,7 @@ body.sidebar-open main {
 
 /* ---------- HEADER HERO ---------- */
 #Header {
-    background: linear-gradient(rgba(18, 77, 79, 0.811), rgba(13, 21, 69, 0.811)), url(../../../Assets/Images/Autorepair.webp);
+    background: linear-gradient(rgba(18, 77, 79, 0.811), rgba(13, 21, 69, 0.811)), url(../../../Assets/Images/carshopmain.jpg);
     background-size: cover;
     background-position: center;
     padding: 60px 50px;
@@ -294,6 +294,12 @@ body.sidebar-open main {
 }
 
 /* ---------- SCHEDULE ---------- */
+
+#ActiveRepairs{
+    height: 400px;
+    overflow: auto;
+}
+
 #Schedule, #JobRequests, #ActiveRepairs, #Reviews {
     margin: 0 20px 40px 20px;
     padding: 20px;

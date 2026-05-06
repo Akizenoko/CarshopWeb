@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Ongoing Repairs | PrecisionDrive Auto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles/OngoingRepairs.css">
+</head>
+<body>
+
+<!-- Top Navigation Bar -->
+<div class="topbar">
+    <a href="Home_Page_For_Users.html" class="btn-link">
+        <i class="fas fa-arrow-left"></i> Back to Home
+    </a>
+</div>
+
+<div class="dashboard-container">
+    <!-- Hero Card -->
+    <div class="hero-card">
+        <div class="hero-title">
+            <span><i class="fas fa-tools"></i> PrecisionDrive Auto · Ongoing Repairs</span>
+            <span class="badge-warranty"><i class="fas fa-hourglass-half"></i> Real‑time tracking</span>
+        </div>
+        <div class="subhead">
+            <i class="fas fa-sync-alt"></i> Track progress. Pay only when all steps are completed.
+        </div>
+    </div>
+
+    <!-- Stats Row -->
+    <div class="stats-row" id="statsContainer">
+        <div class="stat-card"><i class="fas fa-tasks"></i> <span id="acceptedCount">0</span> Accepted Repairs</div>
+        <div class="stat-card"><i class="fas fa-check-circle"></i> <span id="completedCount">0</span> Ready for Payment</div>
+    </div>
+
+    <!-- Section Title -->
+    <h3 class="section-title"><i class="fas fa-play-circle"></i> Currently in progress</h3>
+    
+    <!-- Repair Cards Grid -->
+    <div id="repairsGrid" class="repairs-grid"></div>
+</div>
+
+<footer class="simple-footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img src="../../Assets/Logo/facebook.png" alt="FB"></a>
+            <a href="#"><img src="../../Assets/Logo/instagram.png" alt="IG"></a>
+            <a href="#"><img src="../../Assets/Logo/twitter.png" alt="Twitter"></a>
+        </div>
+        <p class="footer-copyright">© 2026 PrecisionDrive Auto | Connecting Cars with Experts</p>
+    </div>
+</footer>
+
+<!-- Track Progress Modal -->
+<div id="trackModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2><i class="fas fa-chart-line"></i> Repair Progress</h2>
+            <span class="close-modal">&times;</span>
+        </div>
+        <div class="modal-body" id="modalBody"></div>
+    </div>
+</div>
+
+<!-- Payment Modal -->
+<div id="paymentModal" class="modal">
+    <div class="modal-content payment-modal">
+        <div class="modal-header">
+            <h2><i class="fas fa-credit-card"></i> Secure Payment</h2>
+            <span class="close-payment-modal">&times;</span>
+        </div>
+        <div class="modal-body" id="paymentModalBody">
+            <!-- dynamic content -->
+        </div>
+    </div>
+</div>
+
+<script src="scripts/OnoingRepairs.js"></script>
+</body>
+</html>

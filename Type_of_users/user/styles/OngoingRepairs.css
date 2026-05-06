@@ -1,4 +1,3 @@
-/* ---------- GLOBAL (Same theme as user homepage) ---------- */
 * {
     margin: 0;
     padding: 0;
@@ -12,14 +11,12 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    background-image: linear-gradient( rgb(0, 62, 67),rgba(8, 8, 65, 0.609));
+    background-image: linear-gradient(rgb(0, 62, 67), rgba(8, 8, 65, 0.609));
     background-color: rgb(46, 39, 48);
     color: #f0f4fa;
     min-height: 100vh;
-    padding: 0;
 }
 
-/* ---------- Top Navigation Bar ---------- */
 .topbar {
     border-bottom: 1px solid rgba(120, 158, 223, 0.5);
     background: rgba(10, 32, 47, 0.9);
@@ -53,14 +50,12 @@ body {
     border-color: #00e0ff;
 }
 
-/* ---------- Dashboard Container ---------- */
 .dashboard-container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 2rem 1.5rem;
 }
 
-/* ---------- Hero Card (glassmorphism) ---------- */
 .hero-card {
     background: rgba(9, 37, 78, 0.5);
     backdrop-filter: blur(8px);
@@ -110,7 +105,6 @@ body {
     padding-left: 1rem;
 }
 
-/* ---------- Stats Cards ---------- */
 .stats-row {
     display: flex;
     gap: 1.2rem;
@@ -145,7 +139,6 @@ body {
     background: rgba(45, 44, 77, 0.4);
 }
 
-/* ---------- Section Title ---------- */
 .section-title {
     color: #9efff0;
     margin-bottom: 1.2rem;
@@ -156,7 +149,6 @@ body {
     font-size: 1.4rem;
 }
 
-/* ---------- Repair Cards Grid ---------- */
 .repairs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
@@ -227,72 +219,58 @@ body {
     padding-bottom: 8px;
 }
 
-/* Warranty Status */
-.warranty-status {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 1rem;
-    padding: 0.6rem;
-    margin: 12px 0;
-    font-size: 0.8rem;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.active-warranty {
-    background: rgba(0, 180, 200, 0.2);
-    border-left: 4px solid #00e0ff;
-    color: #9efff0;
-}
-
-.expired-warranty {
-    background: rgba(239, 68, 68, 0.15);
-    border-left: 4px solid #ef4444;
-    color: #fca5a5;
-}
-
-.claimed-badge {
-    background: rgba(16, 185, 129, 0.15);
-    color: #34d399;
-}
-
-/* Buttons */
-.btn-claim {
-    background: #10b981;
-    color: white;
-    border: none;
+.status-accepted {
+    background: #2c5282;
+    color: #b8e1ff;
+    border: 1px solid #639cd9;
+    padding: 0.3rem 0.9rem;
     border-radius: 2rem;
-    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
     font-weight: 600;
+    display: inline-block;
+    margin: 0.5rem 0;
+}
+
+.status-paid {
+    background: #1f5e3a;
+    color: #c6f7d0;
+    border: 1px solid #2ecc71;
+}
+
+.track-btn, .pay-btn {
+    background: #1f3a4b;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
     cursor: pointer;
     transition: 0.2s;
-    font-size: 0.8rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
+    width: 100%;
+    margin-top: 0.5rem;
 }
 
-.btn-claim:hover {
-    background: #059669;
+.track-btn:hover {
+    background: #00e0ff;
+    color: #021c2c;
     transform: translateY(-2px);
 }
 
-.btn-claim:disabled {
-    background: #0f767c;
+.pay-btn {
+    background: #2c6e2c;
+}
+
+.pay-btn:hover {
+    background: #3eaa3e;
+    transform: translateY(-2px);
+}
+
+.pay-btn:disabled {
+    background: #4a5b6e;
     cursor: not-allowed;
-    opacity: 0.6;
+    transform: none;
 }
 
-.claim-status-text {
-    font-size: 0.75rem;
-    font-weight: 600;
-    margin-top: 6px;
-    color: #34d399;
-}
-
-/* FOOTER */
 .simple-footer {
     background: #06173b;
     border-top: 1px solid #2a4b77;
@@ -351,7 +329,176 @@ body {
     color: #8ca3c7;
 }
 
-/* Responsive */
+/* MODALS */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    animation: fadeIn 0.2s ease;
+}
+
+.modal-content {
+    background: linear-gradient(145deg, #0e1a2e, #0a1424);
+    margin: 5% auto;
+    width: 90%;
+    max-width: 550px;
+    border-radius: 1.8rem;
+    border: 1px solid #2c5270;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
+    animation: slideDown 0.25s ease;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid #2c3e66;
+}
+
+.modal-header h2 {
+    font-size: 1.4rem;
+    color: #7bc5ff;
+    margin: 0;
+}
+
+.close-modal, .close-payment-modal {
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #9bb8da;
+    transition: 0.2s;
+    line-height: 1;
+}
+
+.close-modal:hover, .close-payment-modal:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.modal-body {
+    padding: 1.5rem;
+    max-height: 65vh;
+    overflow-y: auto;
+}
+
+.progress-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0 1.5rem;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.7rem;
+    background: rgba(20, 30, 50, 0.6);
+    border-radius: 1rem;
+    border-left: 4px solid #4b6e8a;
+    transition: 0.2s;
+}
+
+.step.completed {
+    border-left-color: #2ecc71;
+    background: rgba(46, 204, 113, 0.1);
+}
+
+.step.in-progress {
+    border-left-color: #f39c12;
+    background: rgba(243, 156, 18, 0.1);
+}
+
+.step .step-icon {
+    font-size: 1.8rem;
+    min-width: 45px;
+    text-align: center;
+}
+
+.step .step-info h4 {
+    margin: 0 0 4px;
+    font-size: 1rem;
+    color: white;
+}
+
+.step .step-info p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #b0d4ff;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #334155;
+    font-size: 0.9rem;
+}
+
+.detail-row strong {
+    color: #7bc5ff;
+}
+
+.modal-note {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #ffd966;
+    text-align: center;
+    border-top: 1px solid #2c3e66;
+    padding-top: 1rem;
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.payment-form input {
+    padding: 12px;
+    border-radius: 40px;
+    border: none;
+    background: #1e2a3a;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+.payment-form button {
+    background: #2ecc71;
+    border: none;
+    padding: 12px;
+    border-radius: 40px;
+    font-weight: bold;
+    color: #0a1424;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.payment-form button:hover {
+    background: #27ae60;
+    transform: scale(1.01);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
 @media (max-width: 680px) {
     .dashboard-container {
         padding: 1rem;

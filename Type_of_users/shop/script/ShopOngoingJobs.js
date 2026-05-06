@@ -113,7 +113,7 @@ function renderActiveJobs() {
                 <i class="fa-solid fa-tag"></i> Cost: ${job.cost}
             </div>
             <div class="job-actions">
-                <button class="btn-view" onclick="openJobModal(${job.id})"><i class="fa-solid fa-eye"></i> Manage Repair</button>
+                <button class="btn-view" onclick="openJobModal(${job.id})"><i class="fa-solid fa-eye"></i> Manage Job</button>
                 <button class="btn-finish" onclick="markAsFinished(${job.id})"><i class="fa-solid fa-check-double"></i> Mark as Finished</button>
                 <button class="btn-cancel"><i class="fa-solid fa-ban"></i> Cancel</button>
             </div>
