@@ -491,3 +491,200 @@ tr:hover {
     background: rgba(59, 130, 246, 0.2);
     color: #60a5fa;
 }
+
+/* Tablet & Small Desktop */
+@media (max-width: 1024px) {
+    #sidebar {
+        width: 260px;
+    }
+    #main {
+        margin-left: 260px;
+    }
+    .dashboard-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+/* Mobile Landscape & Portrait */
+@media (max-width: 768px) {
+    /* Sidebar becomes overlay style when collapsed, but we keep existing transform */
+    #sidebar {
+        width: 85%;
+        max-width: 280px;
+        z-index: 200;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+    #sidebar.sidebar-collapsed {
+        transform: translateX(-100%);
+    }
+    /* When sidebar is not collapsed (open), we show it. We need a state for open */
+    #sidebar:not(.sidebar-collapsed) {
+        transform: translateX(0);
+        box-shadow: 4px 0 20px rgba(0,0,0,0.5);
+    }
+    /* Main content full width */
+    #main {
+        margin-left: 0 !important;
+        padding: 1.2rem;
+        margin-top: 65px;
+    }
+    /* Navbar spacing */
+    #NavBar {
+        padding: 0.7rem 1rem;
+    }
+    #NavBar h2 {
+        font-size: 1.2rem;
+    }
+    #logout {
+        padding: 0.4rem 1rem;
+        font-size: 0.8rem;
+    }
+    /* Stats grid vertical */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .stat-card {
+        padding: 0.8rem;
+    }
+    .stat-card h2 {
+        font-size: 1.5rem;
+    }
+    /* Dashboard sections */
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .section {
+        padding: 1.2rem;
+    }
+    .section h2 {
+        font-size: 1.5rem;
+    }
+    /* Table horizontal scroll is already handled by overflow, but adjust font */
+    th, td {
+        padding: 0.7rem;
+        font-size: 0.85rem;
+    }
+    /* Buttons and badges */
+    .btn-primary, .btn-danger, .btn-restore {
+        padding: 0.4rem 1rem;
+        font-size: 0.8rem;
+    }
+    /* Search bar */
+    .search-bar {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .search-bar input, .search-bar select {
+        width: 100%;
+    }
+    /* Mechanics & shops grid */
+    .mechanics-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .mechanic-card img, .shop-card img {
+        width: 70px;
+        height: 70px;
+    }
+    .shop-card img {
+        width: 100%;
+        height: 130px;
+        object-fit: cover;
+    }
+    /* Modal */
+    .modal-content {
+        width: 95%;
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    .modal-buttons {
+        flex-wrap: wrap;
+    }
+    /* Pagination buttons */
+    .pagination button {
+        padding: 4px 10px;
+        font-size: 0.75rem;
+    }
+    /* Activity list */
+    .activity-list li {
+        font-size: 0.85rem;
+    }
+}
+
+/* Small Mobile (<= 480px) */
+@media (max-width: 480px) {
+    #NavBar {
+        padding: 0.6rem 0.8rem;
+    }
+    #main {
+        padding: 1rem;
+        margin-top: 60px;
+    }
+    .stats-grid {
+        grid-template-columns: 1fr;  /* single column for very small screens */
+        gap: 10px;
+    }
+    .stat-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 0.8rem 1rem;
+    }
+    .stat-card h2 {
+        margin-bottom: 0;
+        font-size: 1.8rem;
+    }
+    .stat-card p {
+        margin-bottom: 0;
+    }
+    .section h2 {
+        font-size: 1.3rem;
+    }
+    th, td {
+        padding: 0.5rem;
+        font-size: 0.75rem;
+    }
+    .badge-active, .badge-busy, .badge-suspended, .violation-badge {
+        padding: 2px 8px;
+        font-size: 0.7rem;
+    }
+    .btn-primary, .btn-danger, .btn-restore, .btn-warning {
+        padding: 0.35rem 0.8rem;
+        font-size: 0.7rem;
+        margin-right: 4px;
+    }
+    .mechanic-stats, .shop-stats {
+        font-size: 0.7rem;
+        gap: 0.5rem;
+    }
+    .modal-content h3 {
+        font-size: 1.2rem;
+    }
+    .modal-content input, .modal-content select, .modal-content textarea {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Fix sidebar toggle button on mobile (ensure menu button is always visible) */
+@media (max-width: 768px) {
+    #menuBtn {
+        font-size: 1.6rem;
+    }
+    /* Prevents body scroll when sidebar is open */
+    body.sidebar-open {
+        overflow: hidden;
+    }
+    /* optional overlay effect (can be added via JS, but CSS only for backdrop if needed) */
+    #sidebar::before {
+        display: none;
+    }
+}
