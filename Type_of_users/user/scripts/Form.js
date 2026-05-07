@@ -1,6 +1,6 @@
 // ---------- COST CALCULATION ENGINE (PHP) ----------
 // Exchange rate: 1 USD = 56 PHP (adjust as needed)
-const USD_TO_PHP = 56;
+const USD_TO_PHP = 25;
 
 // Base service costs in USD
 const servicePricesUSD = {
@@ -44,7 +44,7 @@ function updateCost() {
     const vehicle = vehicleSelect.value;
     let vehicleExtraUSD = vehicleExtraMapUSD[vehicle] || 0;
     let subtotalUSD = baseUSD + vehicleExtraUSD;
-    let rushFeeUSD = rushCheckbox.checked ? subtotalUSD * 0.30 : 0;
+    let rushFeeUSD = rushCheckbox.checked ? subtotalUSD * 0.60 : 0;
     let totalUSD = subtotalUSD + rushFeeUSD;
     
     // Convert to PHP
