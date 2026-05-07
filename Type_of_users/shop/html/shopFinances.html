@@ -227,16 +227,23 @@
                 <button class="close-modal" onclick="closeModal('newTransactionModal')">&times;</button>
             </div>
             <form id="transactionForm">
+                <label>Date</label>
                 <input type="date" id="transDate" required>
+                <label>Customer Name</label>
                 <input type="text" id="transCustomer" placeholder="Customer Name" required>
+                <label>Service</label>
                 <input type="text" id="transService" placeholder="Service" required>
+                <label>Mechanic</label>
                 <select id="transMechanic" required></select>
+                <label>Payment</label>
                 <select id="transPayment" required>
                     <option value="Cash">Cash</option>
                     <option value="GCash">GCash</option>
                     <option value="Bank Transfer">Bank Transfer</option>
                 </select>
+                <label>Ammount Cost</label>
                 <input type="number" id="transAmount" placeholder="Amount (₱)" required>
+                <label>Status</label>
                 <select id="transStatus" required>
                     <option value="paid">Paid</option>
                     <option value="pending">Pending</option>
