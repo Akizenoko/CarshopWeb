@@ -3,56 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Users Management</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/Styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="scripts/Admin.js" defer></script>
+    <script src="scripts/User.js" defer></script>
 </head>
-
 <body>
     <div id="NavBar">
         <button id="menuBtn">☰</button>
         <h2>Admin Panel</h2>
-        <a href="../../index.html">
-            <button id="logout">Logout</button>
-        </a>
+        <a href="../../index.html"><button id="logout">Logout</button></a>
     </div>
 
     <div id="sidebar">
         <h3>Control Panel</h3>
-        <a href="Admin.html"><button class="tab active">Dashboard</button></a>
-        <a href="users.html"><button class="tab">Users</button></a>
+        <a href="Admin.html"><button class="tab">Dashboard</button></a>
+        <a href="users.html"><button class="tab active">Users</button></a>
         <a href="mechanics.html"><button class="tab">Mechanics</button></a>
         <a href="shops.html"><button class="tab">Shops</button></a>
         <a href="reports.html"><button class="tab">Reports</button></a>
         <a href="../../index.html"><button class="tab">Logout</button></a>
     </div>
+
     <div id="main">
-    <div class="section">
-        <h2>User Management</h2>
-        <div class="search-bar">
-            <input type="text" id="userSearch" placeholder="Search users..." onkeyup="filterUsers()">
-            <button class="btn-primary" onclick="openModal('createUserModal')">Create User</button>
-            <button class="btn-warning" onclick="alert('Violation report exported')">Violations Report</button>
+        <div class="section">
+            <h2>User Management</h2>
+            <div class="search-bar">
+                <input type="text" id="userSearch" placeholder="Search users..." onkeyup="filterUsers()">
+                <button class="btn-primary" onclick="openModal('createUserModal')">Create User</button>
+            </div>
+            <div class="table-container">
+                <table id="userTable">
+                    <thead>
+                        <tr><th>Name</th><th>Email</th><th>Status</th><th>Violations</th><th>Actions</th></tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div id="userPagination" class="pagination"></div>
         </div>
-        <div class="table-container">
-            <table id="userTable">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Status</th>
-                        <th>Violations</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
-        <div id="userPagination" class="pagination"></div>
     </div>
-    </div>
+
     <div id="createUserModal" class="modal">
         <div class="modal-content">
             <h3>Create User</h3>

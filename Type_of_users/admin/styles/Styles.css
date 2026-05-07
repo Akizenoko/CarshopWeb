@@ -1,4 +1,3 @@
-/* ========== BLUISH THEME (Clean & Modern) ========== */
 :root {
     --bg-deep: #0a0e1a;
     --bg-card: #0f172a;
@@ -239,7 +238,7 @@ tr:hover {
     padding: 4px 12px; 
     border-radius: 30px; 
 }
-.badge-suspended, .badge-offline { 
+.badge-suspended, .badge-offline, .badge-terminated { 
     color: var(--red-danger); 
     background: rgba(239,68,68,0.15); 
     padding: 4px 12px; 
@@ -295,6 +294,19 @@ tr:hover {
 .btn-warning:hover { 
     background: var(--yellow-warning); 
     color: black; 
+}
+.btn-restore {
+    background: rgba(34,197,94,0.2);
+    border: 1px solid #22c55e;
+    color: #22c55e;
+    padding: 0.5rem 1rem;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btn-restore:hover {
+    background: #22c55e;
+    color: white;
 }
 
 /* Modals */
@@ -401,14 +413,14 @@ tr:hover {
     border-color: var(--blue-primary);
 }
 
-/* ---------- TOP PERFORMING MECHANICS ---------- */
+/* Top performing cards */
 .mechanics-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
     margin-top: 1rem;
 }
-.mechanic-card {
+.mechanic-card, .shop-card {
     background: rgba(15, 23, 42, 0.8);
     backdrop-filter: blur(4px);
     border: 1px solid var(--border-dim);
@@ -417,12 +429,12 @@ tr:hover {
     text-align: center;
     transition: all 0.2s;
 }
-.mechanic-card:hover {
+.mechanic-card:hover, .shop-card:hover {
     transform: translateY(-5px);
     border-color: var(--blue-primary);
     background: rgba(59, 130, 246, 0.1);
 }
-.mechanic-card img {
+.mechanic-card img, .shop-card img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -430,70 +442,17 @@ tr:hover {
     object-fit: cover;
     margin-bottom: 12px;
 }
-.mechanic-card h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 4px;
-}
-.mechanic-stats {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin: 12px 0;
-    font-size: 0.8rem;
-    color: var(--text-muted);
-}
-.mechanic-stats i {
-    margin-right: 4px;
-    color: var(--blue-light);
-}
-.mechanic-badge {
-    background: rgba(59, 130, 246, 0.15);
-    border: 1px solid rgba(59, 130, 246, 0.3);
-    border-radius: 30px;
-    padding: 4px 12px;
-    font-size: 0.7rem;
-    font-weight: 600;
-    display: inline-block;
-    color: var(--blue-light);
-}
-
-/* ---------- TOP PERFORMING SHOPS (same grid as mechanics) ---------- */
-.mechanics-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
-.shop-card {
-    background: rgba(15, 23, 42, 0.8);
-    backdrop-filter: blur(4px);
-    border: 1px solid var(--border-dim);
-    border-radius: 24px;
-    padding: 1.2rem;
-    text-align: center;
-    transition: all 0.2s;
-}
-.shop-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--blue-primary);
-    background: rgba(59, 130, 246, 0.1);
-}
 .shop-card img {
-    border-radius: 10px;
     width: 200px;
     height: 150px;
-    border: 1px solid #b9d4ff99;
-    object-fit: cover;
-    margin-bottom: 12px;
+    border-radius: 10px;
 }
-.shop-card h3 {
+.mechanic-card h3, .shop-card h3 {
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 4px;
 }
-.shop-stats {
+.mechanic-stats, .shop-stats {
     display: flex;
     justify-content: center;
     gap: 1rem;
@@ -502,11 +461,11 @@ tr:hover {
     font-size: 0.8rem;
     color: var(--text-muted);
 }
-.shop-stats i {
+.mechanic-stats i, .shop-stats i {
     margin-right: 4px;
     color: var(--blue-light);
 }
-.shop-badge {
+.mechanic-badge, .shop-badge {
     background: rgba(59, 130, 246, 0.15);
     border: 1px solid rgba(59, 130, 246, 0.3);
     border-radius: 30px;
@@ -517,7 +476,6 @@ tr:hover {
     color: var(--blue-light);
 }
 
-/* Status pill styles for reports table */
 .status-pill {
     display: inline-block;
     padding: 4px 12px;
