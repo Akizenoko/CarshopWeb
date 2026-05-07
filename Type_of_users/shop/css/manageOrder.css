@@ -1,4 +1,4 @@
-/* ---------- GLOBAL (same as mechanic & shop pages) ---------- */
+/* ---------- GLOBAL ---------- */
 * {
     margin: 0;
     padding: 0;
@@ -573,4 +573,147 @@ body {
     text-align: center;
     color: #8ca3c7;
     padding: 1rem;
+}
+
+/* ── Tablet: ≤ 1024px ─────────────────────────────────────── */
+@media (max-width: 1024px) {
+
+  #ContentArea { padding: 24px 24px; margin: 14px; border-radius: 22px; }
+
+  .header-section h1 { font-size: 1.5rem; }
+
+  .search-box input { width: 170px; }
+
+  .filter-row { gap: 8px; }
+  .filter-btn { padding: 7px 16px; font-size: 0.78rem; }
+
+  .OrderTable th,
+  .OrderTable td { padding: 12px 10px; font-size: 0.82rem; }
+}
+
+/* ── Mobile: ≤ 768px ──────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* ── Navbar ── */
+  #NavBar { height: 54px; padding: 0 8px; }
+
+  #mainnavbar {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  #mainnavbar::-webkit-scrollbar { display: none; }
+
+  #mainnavbar .button {
+    font-size: 10px;
+    padding: 0 9px;
+    height: 54px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  #formiscelanious i { font-size: 1.1rem; margin-left: 12px; }
+  #profile { width: 34px; }
+
+  /* ── Sidebar ── */
+  #sidebar {
+    top: 54px;
+    height: 100%;
+  }
+
+  /* ── Content Area ── */
+  #ContentArea {
+    padding: 16px 14px;
+    margin: 10px;
+    border-radius: 18px;
+  }
+
+  /* Header section */
+  .header-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .header-section h1 { font-size: 1.2rem; }
+
+  /* Search box */
+  .search-box { width: 100%; border-radius: 30px; padding: 8px 14px; }
+  .search-box input { width: 100%; flex: 1; font-size: 0.85rem; }
+
+  /* Filter row */
+  .filter-row { gap: 7px; margin-bottom: 18px; }
+  .filter-btn { padding: 6px 14px; font-size: 0.75rem; }
+
+  /* Table */
+  .table-wrapper { border-radius: 14px; }
+
+  .OrderTable th,
+  .OrderTable td { padding: 10px 8px; font-size: 0.76rem; }
+
+  .status-pill { padding: 3px 9px; font-size: 0.65rem; }
+
+  .update-btn { padding: 5px 10px; font-size: 0.68rem; }
+  .contact-link { font-size: 0.76rem; gap: 4px; }
+
+  /* Modals */
+  .modal-content {
+    width: 96vw;
+    max-width: 96vw;
+    padding: 20px;
+    border-radius: 20px;
+    height: auto;
+    max-height: 82vh;
+    margin: 8% auto;
+    overflow-y: auto;
+  }
+
+  .staff-modal { width: 96vw; }
+
+  .detail-item { font-size: 0.82rem; margin: 10px 0; }
+
+  .action-box { padding: 12px; border-radius: 16px; }
+  .action-box h3 { font-size: 0.85rem; }
+
+  #statusSelect { padding: 9px; font-size: 0.85rem; }
+  .save-btn { padding: 9px; font-size: 0.85rem; }
+
+  .staff-card { padding: 10px; gap: 10px; border-radius: 16px; }
+  .staff-card img { width: 44px; height: 44px; }
+
+  /* Notification / Chat modal box */
+  .modal-box {
+    width: 96vw;
+    max-width: 96vw;
+    padding: 1rem;
+    border-radius: 20px;
+    max-height: 86vh;
+  }
+  .modal-header h2 { font-size: 1.05rem; }
+
+  /* Footer */
+  .simple-footer { padding: 1.2rem 1rem; margin-top: 1.5rem; }
+  .footer-links { gap: 0.8rem; flex-wrap: wrap; }
+  .footer-links a { font-size: 0.78rem; }
+  .footer-copyright { font-size: 0.68rem; }
+}
+
+/* ── Small phones: ≤ 420px ───────────────────────────────── */
+@media (max-width: 420px) {
+
+  #mainnavbar .button { font-size: 9px; padding: 0 6px; }
+
+  #ContentArea { padding: 12px 10px; margin: 8px; }
+
+  .header-section h1 { font-size: 1.05rem; }
+
+  .filter-btn { padding: 5px 11px; font-size: 0.7rem; }
+
+  .OrderTable th,
+  .OrderTable td { padding: 8px 6px; font-size: 0.7rem; }
+
+  .status-pill { font-size: 0.6rem; padding: 2px 7px; }
+
+  .modal-content { padding: 14px; border-radius: 16px; }
+  .modal-box { padding: 0.8rem; border-radius: 16px; }
 }

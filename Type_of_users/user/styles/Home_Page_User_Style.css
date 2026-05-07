@@ -912,3 +912,325 @@ body{
     color: #8ca3c7;
 }
 
+/* ---------- TABLET (max-width: 1024px) ---------- */
+@media (max-width: 1024px) {
+    #Hinfo h1 {
+        font-size: 50px;
+    }
+
+    .GetMech h1 {
+        font-size: 38px;
+        width: 90%;
+    }
+
+    .PostedIssues {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .shops {
+        width: 90%;
+    }
+
+    .Profiles {
+        width: 80%;
+    }
+
+    #recinfo {
+        width: 100%;
+        padding: 10px 0 0 0;
+    }
+
+    #recinfo h2 {
+        font-size: 20px;
+    }
+}
+
+/* ---------- MOBILE (max-width: 768px) ---------- */
+@media (max-width: 768px) {
+
+    /* NAV BAR */
+    #NavBar {
+        padding: 0 5px;
+    }
+
+    #mainnavbar .button {
+        font-size: 10px;
+        padding: 0 6px;
+        height: 50px;
+    }
+
+    #formiscelanious img {
+        height: 20px;
+    }
+
+    #bell, #chat {
+        margin: 0 10px 0 0;
+    }
+
+    #forprofile #profile {
+        height: 30px;
+        margin: 0 10px;
+    }
+
+    /* SIDEBAR */
+    #sidebar {
+       top: 50px;
+    }
+
+    /* HEADER */
+    #Header {
+        padding: 30px 20px 60px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    #Hinfo {
+        width: 100%;
+    }
+
+    #Hinfo h1 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    #Hinfo p {
+        font-size: 14px;
+    }
+
+    #socials {
+        width: 100%;
+        height: auto;
+        justify-content: flex-start;
+        margin: 10px 0 0 0;
+        gap: 10px;
+    }
+
+    #socials h1 {
+        font-size: 18px;
+        text-align: left;
+        flex-basis: 100%;
+    }
+
+    #socials img {
+        height: 48px;
+        margin: 0 8px 0 0;
+    }
+
+    /* FIND MECHANIC SECTION */
+    #FindMechanicSection {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .GetMech {
+        width: 100%;
+    }
+
+    .GetMech h1 {
+        font-size: 28px;
+        width: 100%;
+    }
+
+    .GetMech button {
+        font-size: 18px;
+        width: 100%;
+        max-width: 300px;
+        padding: 20px;
+    }
+
+    /* POSTED ISSUES */
+    .PostedIssues {
+        width: calc(100% - 20px);
+        margin: 10px;
+        height: auto;
+        max-height: 500px;
+        padding: 15px;
+    }
+
+    .IssueTab {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .IssueInfo h1,
+    .IssueInfo h1 strong {
+        font-size: 18px;
+    }
+
+    .IssueButtons {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .IssueButtons p {
+        margin: 0;
+        flex-basis: auto;
+    }
+
+    #btn1, #btn2 {
+        width: 100%;
+        padding: 10px 30px;
+        margin: 0;
+    }
+
+    .statusofposts {
+        margin: 0;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    /* RECOMMENDATIONS */
+    #Recommendations {
+        margin: 40px 10px 30px 10px;
+    }
+
+    #Recommendations h1 {
+        font-size: 32px;
+        margin: 0 10px 40px 10px;
+    }
+
+
+    #recinfo {
+        width: 100%;
+        padding: 10px 0 0 0;
+    }
+
+    #recinfo h2 {
+        font-size: 18px;
+    }
+
+    #recinfo p {
+        font-size: 12px;
+    }
+
+    #MS {
+        font-size: 12px;
+        gap: 10px;
+    }
+
+    #buttonsforS {
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    #btn1S, #btn2S {
+        width: 100%;
+        text-align: center;
+        padding: 10px 30px;
+    }
+
+    /* MECHANIC RECOMMENDATIONS */
+    #MechanicsRecommendation {
+        margin: 10px 10px 60px 10px;
+        gap: 16px;
+    }
+
+    #MechanicsRecommendation h1 {
+        font-size: 32px;
+        margin: 30px 0;
+    }
+
+    .Profiles {
+        width: calc(100% - 20px);
+        border-radius: 24px;
+        padding: 16px;
+    }
+
+    .Profiles img {
+        height: 75px;
+    }
+
+    #ProfileInfo {
+        margin: 0 0 0 12px;
+        width: calc(100% - 100px);
+    }
+
+    #ProfileInfo h1 {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    #ProfileInfo p {
+        font-size: 13px;
+        width: 100%;
+    }
+
+    #MD {
+        font-size: 14px;
+        margin: 12px 0 8px 0;
+    }
+
+    #buttonsforM {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    /* MODAL */
+    .modal-box {
+        width: 95vw;
+        max-height: 85vh;
+        padding: 1.2rem;
+        border-radius: 20px;
+    }
+
+    /* FOOTER */
+    .simple-footer {
+        padding: 1.5rem 1rem;
+    }
+
+    .footer-links {
+        gap: 1rem;
+    }
+
+    .footer-links a {
+        font-size: 0.8rem;
+    }
+}
+
+/* ---------- SMALL MOBILE (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+
+    #Hinfo h1 {
+        font-size: 28px;
+    }
+
+    .GetMech h1 {
+        font-size: 22px;
+    }
+
+    .GetMech button {
+        font-size: 16px;
+        padding: 16px;
+    }
+
+    #Recommendations h1,
+    #MechanicsRecommendation h1 {
+        font-size: 26px;
+    }
+
+    .IssueInfo h1,
+    .IssueInfo h1 strong {
+        font-size: 16px;
+    }
+
+    #ProfileInfo h1 {
+        font-size: 16px;
+    }
+
+    #btn1S, #btn2S {
+        max-width: 100%;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.6rem;
+    }
+}

@@ -669,3 +669,191 @@ body {
 .btn-reset:hover {
     background: rgba(239, 68, 68, 0.2);
 }
+
+/* ── Tablet: ≤ 1024px ─────────────────────────────────────── */
+@media (max-width: 1024px) {
+
+  /* Header */
+  #Header { margin: 14px 14px 0 14px; padding: 16px 18px; gap: 14px; }
+  #Header h1 { font-size: 1.2rem; }
+
+  #Searchbar input { width: 210px; }
+
+  /* Client cards */
+  .ClientsAccount { width: 280px; }
+
+  /* Section labels */
+  .section-label { font-size: 1.3rem; margin: 22px 14px 0 14px; }
+  .section-divider { margin: 6px 14px 16px 14px; }
+
+  .ListOfClients { gap: 18px; padding: 10px 14px; }
+}
+
+/* ── Mobile: ≤ 768px ──────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* ── Navbar ── */
+  #NavBar { height: 54px; padding: 0 8px; }
+
+  #mainnavbar {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  #mainnavbar::-webkit-scrollbar { display: none; }
+
+  #mainnavbar .button {
+    font-size: 10px;
+    padding: 0 9px;
+    height: 54px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  #formiscelanious img { height: 20px; margin-right: 10px; }
+
+  #forprofile #profile {
+    height: 34px;
+    margin: 0 8px 0 10px;
+  }
+
+  /* ── Sidebar ── */
+  #sidebar {
+    height: 100%;
+    top: 54px;
+  }
+
+  /* ── Header / Search ── */
+  #Header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 10px 0 10px;
+    padding: 14px 16px;
+    gap: 12px;
+    border-radius: 20px;
+  }
+
+  #Header h1 { font-size: 1.1rem; }
+
+  #Searchbar { width: 100%; }
+  #Searchbar input {
+    width: 100%;
+    flex: 1;
+    padding: 9px 16px;
+    font-size: 0.85rem;
+  }
+
+  /* ── Section Labels ── */
+  .section-label { font-size: 1.15rem; margin: 20px 10px 0 10px; }
+  .section-divider { margin: 6px 10px 14px 10px; }
+
+  /* ── Client Cards Grid ── */
+  .ListOfClients {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 8px 10px;
+  }
+
+  .ClientsAccount {
+    width: 100%;
+    max-width: 480px;
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  /* Client info row */
+  .ClientInfo { gap: 10px; margin-bottom: 10px; }
+  .profile-img { width: 52px; height: 52px; }
+  .client-text h1 { font-size: 1rem; }
+  .client-text p  { font-size: 0.75rem; }
+
+  /* Detail labels / values */
+  .infoclient { gap: 12px; margin-top: 4px; }
+  .detail-labels p, .detail-values p { font-size: 0.68rem; }
+
+  /* Issue block */
+  .issue { font-size: 0.77rem; padding: 7px 9px; margin: 10px 0; }
+
+  /* Status badge */
+  .status-badge { font-size: 0.68rem; padding: 3px 10px; }
+
+  /* Action buttons */
+  .btn-row { gap: 8px; }
+  .inquiry-btn, .details-btn { font-size: 0.75rem; padding: 7px 0; }
+
+  /* ── Modals ── */
+  .modal-box {
+    width: 96vw;
+    max-width: 96vw;
+    padding: 1rem;
+    border-radius: 20px;
+    max-height: 88vh;
+  }
+
+  .modal-header {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 0.7rem;
+    margin-bottom: 0.9rem;
+  }
+  .modal-header h2 { font-size: 1.05rem; }
+  .modal-avatar { width: 52px; height: 52px; }
+
+  .modal-section-title { font-size: 0.68rem; }
+  .modal-issue-full { font-size: 0.8rem; padding: 10px; }
+
+  .modal-field { flex-direction: column; gap: 2px; padding: 6px 0; }
+  .modal-field-label { font-size: 0.75rem; }
+  .modal-field-value { font-size: 0.82rem; }
+
+  /* Cost estimator */
+  .cost-row { font-size: 0.72rem; }
+  .cost-subtotal { font-size: 0.68rem; }
+  .cost-grand-total { padding: 8px 12px; }
+  .cost-grand-total span:last-child { font-size: 1rem; }
+
+  /* History entries */
+  .history-desc { font-size: 0.75rem; }
+
+  /* Filter modal groups */
+  .filter-group select,
+  .filter-group input { font-size: 0.85rem; padding: 0.55rem; }
+
+  .costgroup { gap: 8px; }
+  .costgroup input { width: 100%; }
+  .costgroup label { font-size: 13px; }
+
+  .modal-buttons { flex-wrap: wrap; gap: 0.7rem; }
+  .btn-apply, .btn-reset { padding: 0.55rem; font-size: 0.85rem; }
+
+  /* ── Footer ── */
+  .simple-footer { padding: 1.2rem 1rem; margin-top: 2rem; }
+  .footer-links { gap: 0.8rem; }
+  .footer-links a { font-size: 0.78rem; }
+  .footer-social img { width: 24px; height: 24px; }
+  .footer-copyright { font-size: 0.68rem; }
+}
+
+/* ── Small phones: ≤ 420px ───────────────────────────────── */
+@media (max-width: 420px) {
+
+  #mainnavbar .button { font-size: 9px; padding: 0 6px; }
+
+  #Header h1 { font-size: 1rem; }
+  #Searchbar input { padding: 8px 12px; font-size: 0.8rem; }
+
+  .section-label { font-size: 1rem; }
+
+  .ClientsAccount { padding: 13px; border-radius: 16px; }
+  .profile-img { width: 46px; height: 46px; }
+  .client-text h1 { font-size: 0.92rem; }
+
+  .inquiry-btn, .details-btn { font-size: 0.72rem; }
+
+  .modal-box { padding: 0.85rem; border-radius: 16px; }
+  .modal-header h2 { font-size: 0.95rem; }
+  .modal-avatar { width: 44px; height: 44px; }
+
+  .cost-grand-total span:last-child { font-size: 0.9rem; }
+}

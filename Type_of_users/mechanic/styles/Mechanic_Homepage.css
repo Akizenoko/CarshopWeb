@@ -935,3 +935,241 @@ body.sidebar-open main {
     text-align: right;
     margin-top: 4px;
 }
+
+
+/* ── Tablet: ≤ 1024px ─────────────────────────────────────── */
+@media (max-width: 1024px) {
+
+  /* Header */
+  #Header { padding: 40px 30px; gap: 20px; }
+  #Hinfo h1 { font-size: 38px; }
+  #Hinfo p  { font-size: 17px; }
+
+  /* Stats */
+  .customerServedsec { margin: 0 12px 24px 12px; }
+  .customerServed { width: 200px; }
+
+  /* Sections */
+  #Schedule, #JobRequests, #ActiveRepairs, #Reviews {
+    margin: 0 12px 28px 12px;
+  }
+
+  /* Job / Repair / Review cards */
+  .JobCardActions { flex-wrap: wrap; }
+
+  /* Profiles layout in mechanic cards */
+  .Profiles { width: 85%; }
+}
+
+/* ── Mobile: ≤ 768px ──────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* ── Navbar ── */
+  #NavBar { height: 54px; padding: 0 6px; }
+
+  #mainnavbar {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  #mainnavbar::-webkit-scrollbar { display: none; }
+
+  #mainnavbar .button {
+    font-size: 10px;
+    padding: 0 9px;
+    height: 54px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  #formiscelanious img { height: 20px; margin-right: 10px; }
+
+  #forprofile #profile {
+    height: 34px;
+    margin: 0 8px 0 10px;
+  }
+
+  /* ── Sidebar ── */
+  #sidebar {
+    top:53px;
+    height: 100%;
+  }
+
+  /* ── Header Hero ── */
+  #Header {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 18px;
+    margin-bottom: 18px;
+    gap: 18px;
+  }
+
+  #Hinfo { max-width: 100%; margin-bottom: 0; }
+  #Hinfo h1 { font-size: 28px; margin-bottom: 8px; }
+  #Hinfo p  { font-size: 14px; }
+
+  .Availability { width: 100%; }
+  #statusBtn { width: 150px; font-size: 0.9rem; padding: 10px 20px; }
+
+  /* ── Stats Cards ── */
+  .customerServedsec {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px 20px 10px;
+    padding: 20px 14px;
+    gap: 14px;
+    border-radius: 22px;
+  }
+
+  .customerServed {
+    width: 100%;
+    max-width: 360px;
+    padding: 16px 20px;
+    border-radius: 18px;
+  }
+
+  .customerServed h1 { font-size: 16px; }
+  .customerServed p  { font-size: 22px; }
+
+  /* ── Section containers ── */
+  #Schedule, #JobRequests, #ActiveRepairs, #Reviews {
+    margin: 0 10px 24px 10px;
+    padding: 16px 12px;
+    border-radius: 22px;
+  }
+
+  #Schedule h1, #JobRequests h1,
+  #ActiveRepairs h1, #Reviews h1 {
+    font-size: 22px;
+    padding-left: 8px;
+    margin-bottom: 14px;
+  }
+
+  #ActiveRepairs { height: auto; max-height: 60vh; }
+
+  /* ── Schedule Grid ── */
+  #ScheduleGrid {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 10px;
+  }
+
+  .ScheduleDay { padding: 12px 8px; border-radius: 14px; }
+  .ScheduleDay h2 { font-size: 0.85rem; }
+  .ScheduleDay p  { font-size: 0.72rem; }
+
+  /* ── Job Cards ── */
+  .JobCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px;
+    border-radius: 18px;
+    margin-bottom: 12px;
+  }
+
+  .JobCardInfo h2 { font-size: 1rem; }
+  .JobCardInfo p  { font-size: 0.8rem; }
+
+  .JobCardActions {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .AcceptBtn, .DeclineBtn, .infoBtn {
+    font-size: 12px;
+    padding: 7px 16px;
+  }
+
+  /* ── Repair Cards ── */
+  .RepairCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px;
+    border-radius: 18px;
+    margin-bottom: 12px;
+  }
+
+  .RepairCard img { width: 50px; height: 50px; }
+  .RepairInfo h2 { font-size: 1rem; }
+  .RepairInfo p  { font-size: 0.8rem; }
+
+  .UpdateBtn {
+    width: 100%;
+    padding: 9px;
+    font-size: 0.85rem;
+  }
+
+  /* ── Review Cards ── */
+  .ReviewCard {
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px;
+    border-radius: 18px;
+    margin-bottom: 12px;
+  }
+
+  .ReviewCard img { width: 46px; height: 46px; }
+  .ReviewInfo h2  { font-size: 0.95rem; }
+  .ReviewInfo p   { font-size: 0.8rem; }
+  .Stars          { font-size: 0.85rem; }
+
+  /* ── Modals ── */
+  .modal-box {
+    width: 96vw;
+    padding: 1rem;
+    border-radius: 18px;
+    max-height: 88vh;
+  }
+
+  .modal-header { flex-wrap: wrap; gap: 8px; }
+  .modal-header h2 { font-size: 1.05rem; }
+  .modal-avatar { width: 52px; height: 52px; }
+
+  .modal-field { flex-direction: column; gap: 2px; }
+  .modal-field-value { font-size: 0.85rem; }
+
+  .modal-buttons { flex-wrap: wrap; }
+  .btn-primary, .btn-secondary {
+    flex: 1;
+    text-align: center;
+    padding: 9px 14px;
+  }
+
+  /* ── Footer ── */
+  .simple-footer { padding: 1.2rem 1rem; margin-top: 1.5rem; }
+  .footer-links { gap: 0.8rem; }
+  .footer-links a { font-size: 0.78rem; }
+  .footer-social img { width: 24px; height: 24px; }
+  .footer-copyright { font-size: 0.68rem; }
+}
+
+/* ── Small phones: ≤ 420px ───────────────────────────────── */
+@media (max-width: 420px) {
+
+  #mainnavbar .button { font-size: 9px; padding: 0 6px; }
+
+  #Hinfo h1 { font-size: 23px; }
+  #Hinfo p  { font-size: 13px; }
+
+  #statusBtn { width: 135px; font-size: 0.82rem; }
+
+  .customerServed h1 { font-size: 14px; }
+  .customerServed p  { font-size: 19px; }
+
+  #Schedule h1, #JobRequests h1,
+  #ActiveRepairs h1, #Reviews h1 { font-size: 19px; }
+
+  #ScheduleGrid { grid-template-columns: repeat(2, 1fr); }
+
+  .JobCardInfo h2 { font-size: 0.9rem; }
+
+  .AcceptBtn, .DeclineBtn, .infoBtn {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+
+  .cost-row, .cost-subtotal, .cost-grand-total { font-size: 0.7rem; }
+}

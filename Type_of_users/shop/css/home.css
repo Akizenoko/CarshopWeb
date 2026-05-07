@@ -328,7 +328,7 @@ body {
 
 /* Order Table */
 .table-wrapper {
-    overflow-x: auto;
+    overflow: auto;
 }
 .OrderTable {
     width: 100%;
@@ -1024,4 +1024,233 @@ body {
     text-align: center;
     color: #8ca3c7;
     padding: 1rem;
+}
+
+
+/* ── Tablet: ≤ 1024px ─────────────────────────────────────── */
+@media (max-width: 1024px) {
+
+  /* Header */
+  #Header { padding: 36px 6%; margin: 14px 14px 0 14px; }
+  #HContent h1 { font-size: 1.6rem; }
+
+  /* Stats row */
+  .stats-row { margin: 14px; gap: 14px; }
+  .stat-card { min-width: 140px; font-size: 0.9rem; padding: 12px 18px; }
+
+  /* Content sections */
+  .ContentSection { margin: 14px; padding: 28px 16px; }
+  .SectionTitle { font-size: 1.2rem; }
+
+  /* Mechanics grid */
+  .mechanics-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+
+  /* Revenue bars */
+  .Bar { width: 32px; }
+
+  /* Schedule grid */
+  #ScheduleGrid { grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 10px; }
+}
+
+/* ── Mobile: ≤ 768px ──────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* ── Navbar ── */
+  #NavBar { height: 54px; padding: 0 8px; }
+
+  #mainnavbar {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  #mainnavbar::-webkit-scrollbar { display: none; }
+
+  #mainnavbar .button {
+    font-size: 10px;
+    padding: 0 9px;
+    height: 54px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  #formiscelanious i { font-size: 1.1rem; margin-left: 12px; }
+
+  #profile { width: 34px; }
+
+  /* ── Sidebar ── */
+  #sidebar {
+    top: 54px;
+    height: 100%;
+  }
+
+  /* ── Header Hero ── */
+  #Header {
+    padding: 28px 18px;
+    margin: 10px 10px 0 10px;
+    border-radius: 20px;
+    text-align: center;
+  }
+
+  #HContent h1 { font-size: 1.3rem; margin-bottom: 8px; }
+
+  .status-toggle { padding: 7px 18px; font-size: 0.85rem; margin-left: 6px; }
+
+  .goal-progress { justify-content: center; gap: 8px; margin-top: 12px; }
+  .goal-progress i { font-size: 1.2rem; }
+  .goal-progress p { font-size: 1.15rem; }
+
+  /* ── Stats Row ── */
+  .stats-row {
+    margin: 10px;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .stat-card {
+    width: calc(50% - 10px);
+    min-width: 0;
+    flex-direction: column;
+    text-align: center;
+    padding: 12px 10px;
+    font-size: 0.82rem;
+    border-radius: 18px;
+    gap: 6px;
+  }
+
+  .stat-card i { font-size: 1.2rem; }
+
+  /* ── Content Sections ── */
+  .ContentSection {
+    margin: 10px;
+    padding: 18px 12px;
+    border-radius: 20px;
+  }
+
+  .SectionTitle { font-size: 1.05rem; padding-left: 10px; margin-bottom: 14px; }
+
+  /* ── Schedule Grid ── */
+  #ScheduleGrid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+
+  .ScheduleDay { padding: 12px 8px; border-radius: 14px; }
+  .ScheduleDay h4 { font-size: 0.82rem; }
+  .ScheduleDay p  { font-size: 0.7rem; }
+  .status-tag { font-size: 0.6rem; padding: 2px 8px; }
+
+  /* ── Revenue Graph ── */
+  .GraphContainer {
+    height: 140px;
+    padding: 14px 10px;
+    gap: 6px;
+    border-radius: 18px;
+    overflow-x: auto;
+  }
+
+  .Bar { width: 26px; }
+  .Bar span { font-size: 0.62rem; top: -18px; }
+  .Bar::after { font-size: 0.62rem; bottom: -20px; }
+
+  /* ── Order Table ── */
+  .table-wrapper { border-radius: 14px; overflow: hidden; }
+
+  .OrderTable th,
+  .OrderTable td { padding: 9px 8px; font-size: 0.78rem; }
+                    
+
+  .ReviewCard img { width: 46px; height: 46px; }
+  .ReviewInfo h2  { font-size: 0.92rem; }
+  .ReviewInfo p   { font-size: 0.78rem; }
+  .Stars          { font-size: 0.82rem; }
+
+  /* ── Mechanics Grid ── */
+  .mechanics-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+
+  .mechanic-card { padding: 1rem; border-radius: 18px; }
+  .mechanic-card img { width: 64px; height: 64px; }
+  .mechanic-card h3 { font-size: 1rem; }
+  .mechanic-stats { font-size: 0.72rem; gap: 0.6rem; }
+  .mechanic-badge { font-size: 0.65rem; padding: 3px 10px; }
+
+  /* ── Staff Modal ── */
+  .staff-modal {
+    width: 95vw;
+    padding: 20px;
+    border-radius: 20px;
+    height: auto;
+    max-height: 80vh;
+    margin: 10% auto;
+  }
+
+  .staff-card { padding: 10px; gap: 10px; border-radius: 16px; }
+  .staff-card img { width: 44px; height: 44px; }
+  .staff-info h3 { font-size: 0.88rem; }
+  .staff-info p  { font-size: 0.7rem; }
+
+  /* ── Main Modals ── */
+  .modal-box {
+    width: 96vw;
+    max-width: 96vw;
+    padding: 1rem;
+    border-radius: 20px;
+    max-height: 88vh;
+  }
+
+  .modal-header { flex-wrap: wrap; gap: 8px; }
+  .modal-header h2 { font-size: 1.05rem; }
+  .modal-avatar { width: 50px; height: 50px; }
+
+  .modal-field { flex-direction: column; gap: 2px; padding: 6px 0; }
+  .modal-field-label { font-size: 0.75rem; }
+  .modal-field-value { font-size: 0.82rem; }
+
+  .modal-issue-full { font-size: 0.8rem; padding: 10px; border-radius: 12px; }
+
+  .cost-row { font-size: 0.7rem; }
+  .cost-subtotal { font-size: 0.67rem; }
+  .cost-grand-total { padding: 8px 10px; }
+  .cost-grand-total span:last-child { font-size: 0.92rem; }
+
+  .modal-buttons { flex-wrap: wrap; gap: 0.7rem; margin-top: 0.8rem; }
+  .btn-primary, .btn-secondary { flex: 1; text-align: center; padding: 8px 14px; }
+
+  /* ── Footer ── */
+  .simple-footer { padding: 1.2rem 1rem; margin-top: 1.5rem; }
+  .footer-links { gap: 0.8rem; }
+  .footer-links a { font-size: 0.78rem; }
+  .footer-social img { width: 24px; }
+  .footer-copyright { font-size: 0.68rem; }
+}
+
+/* ── Small phones: ≤ 420px ───────────────────────────────── */
+@media (max-width: 420px) {
+
+  #mainnavbar .button { font-size: 9px; padding: 0 6px; }
+
+  #HContent h1 { font-size: 1.1rem; }
+  .status-toggle { font-size: 0.78rem; padding: 6px 14px; }
+
+  .goal-progress p { font-size: 1rem; }
+
+  .stat-card { font-size: 0.75rem; padding: 10px 8px; }
+  .stat-card i { font-size: 1rem; }
+
+  .SectionTitle { font-size: 0.95rem; }
+
+  #ScheduleGrid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .ScheduleDay h4 { font-size: 0.75rem; }
+
+  .GraphContainer { height: 120px; }
+  .Bar { width: 20px; }
+
+  .JobInfo h3 { font-size: 0.88rem; }
+  .infoBtn, .AcceptBtn, .DeclineBtn { font-size: 11px; padding: 6px 12px; }
+
+  .mechanics-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .mechanic-card img { width: 52px; height: 52px; }
+  .mechanic-card h3 { font-size: 0.88rem; }
+
+  .modal-box { padding: 0.8rem; border-radius: 16px; }
+  .modal-header h2 { font-size: 0.95rem; }
+  .modal-avatar { width: 42px; height: 42px; }
+
+  .cost-grand-total span:last-child { font-size: 0.85rem; }
 }

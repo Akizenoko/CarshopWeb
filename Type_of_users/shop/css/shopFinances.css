@@ -508,3 +508,202 @@ body {
     #ContentArea { padding: 20px; margin: 15px; }
     .finance-cards { flex-direction: column; }
 }
+
+/* ── Tablet: ≤ 1024px ─────────────────────────────────────── */
+@media (max-width: 1024px) {
+
+  #ContentArea { padding: 24px; margin: 14px; border-radius: 22px; }
+
+  .header-section h1 { font-size: 1.5rem; }
+  .header-actions { flex-wrap: wrap; gap: 10px; }
+
+  .finance-cards { gap: 14px; }
+  .card { min-width: 150px; padding: 16px; }
+  .card p { font-size: 1.5rem; }
+
+  .charts-row { grid-template-columns: 1fr; gap: 16px; }
+
+  .mechanics-grid { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+
+  .OrderTable th,
+  .OrderTable td { padding: 12px 10px; font-size: 0.82rem; }
+}
+
+/* ── Mobile: ≤ 768px ──────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* ── Navbar ── */
+  #NavBar { height: 54px; padding: 0 8px; }
+
+  #mainnavbar {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  #mainnavbar::-webkit-scrollbar { display: none; }
+
+  #mainnavbar .button {
+    font-size: 10px;
+    padding: 0 9px;
+    height: 54px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  #formiscelanious i { font-size: 1.1rem; margin-left: 12px; }
+  #profile { width: 34px; }
+
+  /* ── Sidebar ── */
+  #sidebar {
+    top: 54px;
+    height: 100%;
+  }
+
+  /* ── Content Area ── */
+  #ContentArea {
+    padding: 14px 12px;
+    margin: 10px;
+    border-radius: 18px;
+  }
+
+  /* Header */
+  .header-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+  .header-section h1 { font-size: 1.2rem; }
+
+  .header-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .date-input { width: 100%; font-size: 0.85rem; padding: 8px 14px; }
+
+  .btn-primary { width: 100%; justify-content: center; padding: 9px 16px; font-size: 0.88rem; }
+
+  /* Finance Cards */
+  .finance-cards {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    min-width: 0;
+    width: 100%;
+    padding: 16px;
+    border-radius: 18px;
+  }
+  .card h3 { font-size: 0.75rem; }
+  .card p  { font-size: 1.5rem; }
+  .growth-label { font-size: 0.68rem; }
+
+  /* Charts row */
+  .charts-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 1rem;
+  }
+
+  .chart-card { padding: 14px; border-radius: 18px; }
+  .chart-card h3 { font-size: 0.9rem; margin-bottom: 0.7rem; }
+  .chart-card canvas { max-height: 180px; }
+
+  /* Profit gauge */
+  .profit-card { padding: 1rem; border-radius: 18px; margin-bottom: 1rem; }
+  .gauge-container { height: 16px; }
+
+  /* Parts summary */
+  .parts-summary-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px;
+    border-radius: 18px;
+    margin: 14px 0;
+  }
+  .parts-total p { font-size: 1.4rem; }
+
+  /* Mechanics grid */
+  .mechanics-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+
+  .mechanic-card { padding: 0.85rem; border-radius: 16px; }
+  .mechanic-card img { width: 50px; height: 50px; }
+
+  /* Tables */
+  .table-wrapper { border-radius: 14px; margin: 14px 0; }
+
+  .OrderTable th,
+  .OrderTable td { padding: 10px 8px; font-size: 0.75rem; }
+
+  .status-pill { padding: 3px 9px; font-size: 0.62rem; }
+  .update-btn { padding: 4px 10px; font-size: 0.65rem; }
+
+  /* Transaction form */
+  #transactionForm { gap: 14px; padding: 8px; }
+  #transactionForm input,
+  #transactionForm select { font-size: 0.85rem; padding: 9px; }
+  #transactionForm button { padding: 14px; font-size: 0.88rem; }
+
+  /* Modals */
+  .modal-content {
+    width: 96vw;
+    max-width: 96vw;
+    padding: 18px;
+    border-radius: 20px;
+    margin: 8% auto;
+    max-height: 82vh;
+    overflow-y: auto;
+  }
+
+  .modal-box {
+    width: 96vw;
+    max-width: 96vw;
+    padding: 1rem;
+    border-radius: 20px;
+    max-height: 86vh;
+  }
+  .modal-header h2 { font-size: 1.05rem; }
+
+  .staff-card { padding: 10px; gap: 10px; border-radius: 16px; }
+  .staff-card img { width: 44px; height: 44px; }
+
+  .btn-outline { font-size: 0.7rem; padding: 5px 12px; }
+
+  /* Footer */
+  .simple-footer { padding: 1.2rem 1rem; margin-top: 1.5rem; }
+  .footer-links { gap: 0.8rem; flex-wrap: wrap; justify-content: center; }
+  .footer-links a { font-size: 0.78rem; }
+  .footer-copyright { font-size: 0.68rem; }
+}
+
+/* ── Small phones: ≤ 420px ───────────────────────────────── */
+@media (max-width: 420px) {
+
+  #mainnavbar .button { font-size: 9px; padding: 0 6px; }
+
+  #ContentArea { padding: 10px 9px; margin: 8px; }
+
+  .header-section h1 { font-size: 1rem; }
+
+  .card p { font-size: 1.3rem; }
+
+  .charts-row { gap: 10px; }
+  .chart-card canvas { max-height: 150px; }
+
+  .mechanics-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .mechanic-card img { width: 44px; height: 44px; }
+
+  .OrderTable th,
+  .OrderTable td { padding: 8px 6px; font-size: 0.7rem; }
+
+  .modal-content { padding: 14px; border-radius: 16px; }
+  .modal-box { padding: 0.8rem; border-radius: 16px; }
+
+  #transactionForm { gap: 10px; }
+}
