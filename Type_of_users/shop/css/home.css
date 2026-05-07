@@ -1254,3 +1254,15 @@ body {
 
   .cost-grand-total span:last-child { font-size: 0.85rem; }
 }
+
+#Carimage{
+    border: 1px solid rgba(173, 251, 255, 0.697) ;
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: rgba(0, 110, 255, 0.316);
+    color: #ffffffd8;
+    transition: all 0.2s ease-in-out;
+} 
+#Carimage:hover{
+    background-color: rgba(0, 110, 255, 0.606);
+}

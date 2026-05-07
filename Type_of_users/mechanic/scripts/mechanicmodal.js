@@ -1,4 +1,4 @@
-// Sample job data (matching the "More Info" buttons in your JobRequests)
+
 const jobsData = [
     {
         id: 1,
